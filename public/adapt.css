@@ -55,11 +55,8 @@ div.main-block-2 {
     height: auto;
 }
 
-div.m-1 {
-    padding: 2.1875vw 2.8125vw 0 2.8125vw;
-}
-
 div.m-g-1 {
+    padding: 2.1875vw 0 0 2.8125vw;
     display: grid;
     height:4.22vw;
     grid-template-columns: 20.9375vw 52.1875vw 21.25vw;
@@ -268,6 +265,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    border:0.078125vw solid hsl(70, 19%, 94%);
 }
 
 div.panel-s-b:hover {
@@ -536,7 +534,8 @@ div.show-product-3 {
     align-items: center;
 }
 
-div.show-p-b {
+a.show-p-b {
+    margin-left:2.8125vw;
     z-index: 3;
     position: fixed;
     width: 3.90625vw;
@@ -550,7 +549,7 @@ div.show-p-b {
     cursor: pointer;
 }
 
-div.show-p-b:hover {
+a.show-p-b:hover {
     border: 0.15625vw solid hsl(165, 100%, 40%);
 }
 

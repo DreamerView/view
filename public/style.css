@@ -44,10 +44,12 @@ button {
 }
 
 body {
+    position: relative;
     width: 100%;
     font-family: 'Segoe UI', sans-serif;
     background-color: hsl(0, 0%, 97%);
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 header.main-block-1 {
@@ -61,19 +63,21 @@ div.main-block-2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    min-width: 1280px;
     max-width: 1440px;
-    width: 1280px;
     height: auto;
 }
 
-div.m-1 {
-    padding: 28px 36px 0 36px;
+div.m-s-1 {
+    width: 100%;
 }
 
 div.m-g-1 {
+    padding-top:28px;
+    justify-content: center;
     display: grid;
     grid-template-columns: 268px 668px 272px;
-    padding-bottom: 28px
+    padding-bottom: 28px;
 }
 
 div.m-f-1 {
@@ -277,6 +281,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    border:1px solid hsl(70, 19%, 94%);
 }
 
 div.panel-s-b:hover {
@@ -549,23 +554,46 @@ div.show-product-3 {
     align-items: center;
 }
 
-div.show-p-b {
-    z-index: 3;
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: white;
-    border: 2px solid #F1F2EC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+@media screen and (min-width: 1440px) {
+    a.show-p-b {
+        z-index: 3;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: white;
+        border: 2px solid #F1F2EC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    a.show-p-b:hover {
+        border: 2px solid hsl(165, 100%, 40%);
+    }
+}
+@media screen and (max-width: 1439px) {
+    a.show-p-b {
+        margin-left:36px;
+        z-index: 3;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: white;
+        border: 2px solid #F1F2EC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    a.show-p-b:hover {
+        border: 2px solid hsl(165, 100%, 40%);
+    }
 }
 
-div.show-p-b:hover {
-    border: 2px solid hsl(165, 100%, 40%);
-}
 
 div.show-p-b-p {
     position: relative;

@@ -11,12 +11,10 @@ const Show = (props) => {
     };
     return(
         <div>
-        <Link className="block" to={GetHistoryLocation+"/"}>
-        <div className="show-p-b">
+        <Link className="show-p-b" to={GetHistoryLocation+"/"}>
           <div className="show-p-b-p">
             <img className="show-p-b-i" src={`${GetHistoryLocation}/images/left.svg`} alt="left" />
           </div>
-        </div>
         </Link>
         <div className="show-product">
           <div className="show-product-2">

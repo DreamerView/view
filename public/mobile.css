@@ -62,7 +62,7 @@ div.main-block-2 {
 
 div.m-g-1 {
     flex: 1;
-    padding: 19.8vw 5.6vw 0 5.6vw;
+    padding: 6.8vw 5.6vw 0 5.6vw;
     height: auto;
     display: grid;
     grid-template-columns: 44.4vw 44.4vw;
@@ -73,7 +73,7 @@ div#first {
 }
 
 div#second {
-    margin: 8.375vw 0 5.4vw 0;
+    margin: 7.3vw 0 5.4vw 0;
     order: 3;
 }
 
@@ -135,7 +135,7 @@ input.m-s-1 {
     background-color: hsl(0, 0%, 97%);
     border: 0 none;
     border-radius: 4.17vw;
-    font-size: 4vw;
+    font-size: 3.33vw;
     font-weight: 300;
 }
 
@@ -166,6 +166,7 @@ input.m-s-1:focus {
     border: 0.5vw solid hsl(165, 100%, 40%);
     outline: none;
     color: black;
+    font-weight: normal;
 }
 
 
@@ -224,10 +225,7 @@ div.menu-select {
     height: 14.2vw;
     display: flex;
     justify-content: center;
-    background: transparent;
-    backdrop-filter: blur(6.9vw);
-    --webkit-backdrop-filter: blur(6.9vw);
-    background-color: rgba(255, 255, 255, 0.5);
+    background: white;
     bottom: 0;
     border-radius: 4.17vw 4.17vw 0 0;
 }
@@ -347,7 +345,7 @@ div.m-block {
 h1.m-p {
     padding-left: 5.625vw;
     font-size: 4.7vw;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 div.b {
@@ -476,7 +474,7 @@ div.maybe-flex {
 
 h1.maybe {
     font-size: 4.7vw;
-    font-weight: 600;
+    font-weight: normal;
     padding: 8.4vw 0 0 5.625vw;
 }
 
