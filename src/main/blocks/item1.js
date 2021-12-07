@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import GetHistoryLocation from "../../locate";
 
 const Item1 = (products)=> {
   const ScrollToTop = () =>{
@@ -10,7 +11,7 @@ const Item1 = (products)=> {
 
     return(
         <div className="m-d-b">
-              <Link onClick={ScrollToTop}  className="m-p-b" to={`/products/${products.item.id}`}>
+              <Link onClick={ScrollToTop}  className="m-p-b" to={`${GetHistoryLocation}/products/${products.item.id}`}>
                 <div className="m-i-1-1">
                   <img loading="lazy" src={products.item.image} alt="Panakea 1" className="m-i" />
                 </div>
@@ -22,7 +23,7 @@ const Item1 = (products)=> {
                       <h1 className="l-p">{products.item.price}</h1>
                       <div className="p-p">
                         <div className="i-p-1">
-                          <img loading="lazy" src="/images/shopping-basket-add.svg" alt="Panakea 1" className="p" />
+                          <img loading="lazy" src={GetHistoryLocation+"/images/shopping-basket-add.svg"} alt="Panakea 1" className="p" />
                         </div>
                       </div>
                     </div>

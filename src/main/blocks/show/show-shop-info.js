@@ -1,3 +1,5 @@
+import GetHistoryLocation from "../../../locate";
+
 const ShowShopInfo = (info) => {
     return(
         <div className="p-b-n">
@@ -17,7 +19,7 @@ const ShowShopInfo = (info) => {
                                 <div className="t-p">
                                 <div className="t-p-b">
                                     <div className="i-g">
-                                    <img src="/images/clock.svg" alt="Panakea Show" loading="lazy" className="i-g-p" />
+                                    <img src={GetHistoryLocation+"/images/clock.svg"} alt="Panakea Show" loading="lazy" className="i-g-p" />
                                     <div className="t-t-p">
                                         <h1 className="t-t">{info.item.time}</h1>
                                     </div>

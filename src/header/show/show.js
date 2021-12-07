@@ -1,6 +1,7 @@
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import DataBase from '../../database/database.json';
+import GetHistoryLocation from '../../locate'
 
 const Show = (props) => {
 
@@ -10,17 +11,17 @@ const Show = (props) => {
     };
     return(
         <div>
-        <Link className="block" to="/">
+        <Link className="block" to={GetHistoryLocation+"/"}>
         <div className="show-p-b">
           <div className="show-p-b-p">
-            <img className="show-p-b-i" src="/images/left.svg" alt="left" />
+            <img className="show-p-b-i" src={`${GetHistoryLocation}/images/left.svg`} alt="left" />
           </div>
         </div>
         </Link>
         <div className="show-product">
           <div className="show-product-2">
             <div className="show-p-p">
-              <img src="/images/fur.jpg" alt="" loading="lazy" className="show-p-i" />
+              <img src={`${GetHistoryLocation}/images/fur.jpg`} alt="" loading="lazy" className="show-p-i" />
             </div>
           </div>
           <div className="show-product-3">
@@ -42,7 +43,7 @@ const Show = (props) => {
                 </button>
                 <button type="button" className="show-favourite">
                   <div className="show-f-p">
-                    <img className="show-f-i" src="/images/heart-red.svg" alt="" />
+                    <img className="show-f-i" src={`${GetHistoryLocation}/images/heart-red.svg`} alt="" />
                   </div> Добавить избранное
                 </button>
               </div>
