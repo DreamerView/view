@@ -320,8 +320,9 @@ h1.m-p {
     font-size: 1.875vw;
     color: hsl(0, 0%, 20%);
 }
+
 h1.m-p-content {
-    margin-top:0.78125vw;
+    margin-top: 0.78125vw;
     font-weight: normal;
     font-size: 1.02vw;
     text-align: center;
@@ -451,7 +452,7 @@ div.maybe-flex-picture {
     position: relative;
     width: 11.875vw;
     height: 11.875vw;
-    margin:0.625vw;
+    margin: 0.625vw;
 }
 
 img.maybe-flex-image {
@@ -710,7 +711,8 @@ img.i-m-i {
     background-color: hsl(0, 0%, 100%);
 } */
 
-div.z-c-pb, div.p {
+div.z-c-pb,
+div.p {
     display: flex;
     flex-direction: column;
 }
@@ -866,7 +868,7 @@ h1.b1-t2 {
 /*  */
 
 div.b-f-h {
-    margin-top:2.34vw;
+    margin-top: 2.34vw;
     display: grid;
     grid-template-columns: 50% 50%;
     width: 97.265625vw;
@@ -935,6 +937,239 @@ button.btn {
 }
 
 .btn:hover {
-    background-color:  hsl(165, 100%, 40%);
-    color:white;
+    background-color: hsl(165, 100%, 40%);
+    color: white;
+}
+
+div.b-backet {
+    margin-top: 2.3vw;
+    margin-right: auto;
+    margin-left: auto;
+    width: 97.1vw;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.17vw;
+}
+
+h1.u-backet {
+    font-size: 1.87vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1.product-b {
+    font-size: 1vw;
+    font-weight: 153;
+    text-align: center;
+    margin-top: 0.78vw;
+}
+
+div.grid-backet {
+    display: grid;
+    grid-template-columns: 84.6vw;
+    margin: 3.59vw 0 0 6.25vw;
+
+}
+
+div.backet-p {
+    border: 0.078vw solid hsl(70, 19%, 94%);
+    display: flex;
+    margin-top: 1.17vw;
+    border-radius: 0.78vw;
+}
+
+div.img-basket-picture {
+    margin: 0.62vw 0 0.62vw 0.62vw;
+    position: relative;
+    width: 11.7vw;
+    height: 11.7vw;
+}
+
+img.img-backet {
+    position: absolute;
+    width: 11.7vw;
+    height: 11.7vw;
+}
+
+div.id-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 42vw;
+}
+
+h1.id-b-t1 {
+    font-size: 1.25vw;
+    font-weight: 600;
+    margin-left: 2.4vw;
+    color: hsl(166, 75%, 48%);
+}
+
+h1.id-b-t2 {
+    font-size: 1.25vw;
+    font-weight: 600;
+    margin: 0.93vw 0 0 2.4vw;
+
+}
+
+h1.id-b-t3 {
+    font-size: 1.25vw;
+    font-weight: normal;
+    margin: 0.93vw 0 0 2.4vw;
+    color: hsl(0, 0%, 73%);
+}
+
+div.quantity-block {
+    width: 11.25vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.quantity {
+    width: auto;
+    height: 4.37vw;
+    display: flex;
+    border: 0.078vw solid hsl(70, 19%, 94%);
+    border-radius: 0.78vw;
+}
+
+
+button.but {
+    width: 2.6vw;
+    ;
+    height: 4.37vw;
+    border: none;
+    font-size: 2.18vw;
+    font-weight: normal;
+    color: hsl(0, 0%, 72%);
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    padding: 0 0.93vw;
+}
+
+div.but-quantity-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.but-quantity {
+    font-size: 1.25vw;
+    font-weight: normal;
+}
+
+button.but-p {
+    width: 2.6vw;
+    height: 4.37vw;
+    border: none;
+    font-size: 2.18vw;
+    font-weight: normal;
+    color: hsl(0, 0%, 72%);
+    background-color: hsl(0, 0%, 100%);
+    padding: 0 0.93vw;
+    cursor: pointer;
+}
+
+div.priceb {
+    width: 18.28vw;
+    height: 4.37vw;
+    display: flex;
+    flex-direction: column;
+}
+
+h1.price-backet {
+    margin-top: 3.1vw;
+    font-size: 1.7vw;
+    font-weight: normal;
+    color: hsl(0, 0%, 40%);
+    text-align: right;
+    margin-right: 3.59vw;
+}
+
+button.add {
+    width: auto;
+    margin-top: 0.62vw;
+    font-size: 1.17vw;
+    font-weight: normal;
+    color: hsl(165, 100%, 40%);
+    text-align: right;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 3.59vw;
+}
+
+button.delete {
+    width: auto;
+    margin-top: 0.54vw;
+    font-size: 1.17vw;
+    font-weight: normal;
+    color: hsl(12, 91%, 57%);
+    text-align: right;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 3.59vw;
+}
+
+div.payment {
+    width: 84.68vw;
+    height: 12.89vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.payment-block {
+    margin-top: 2.3vw;
+    width: 27.7vw;
+    float: right;
+}
+
+.payment-flex {
+    display: flex;
+}
+
+h1.result {
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+h1.quantity-payment {
+    font-size: 1.09vw;
+    font-weight: normal;
+    color: hsl(0, 0%, 40%);
+}
+
+div.price-payment-0 {
+    width: 50%;
+}
+
+div.price-payment-1 {
+    width: 50%;
+}
+
+h1.price-payment {
+    font-weight: 600;
+    font-size: 2.1vw;
+    text-align: right;
+}
+
+button.pay {
+    width: 27.7vw;
+    height: 5.15vw;
+    font-size: 1.25vw;
+    font-weight: normal;
+    margin-top: 2.5vw;
+    border-radius: 0.78vw;
+    border: none;
+    background-color: hsl(166, 75%, 48%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+button.pay:hover {
+    background-color: hsl(165, 99%, 35%);
 }
