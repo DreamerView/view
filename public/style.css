@@ -25,16 +25,21 @@
         --main-color: #9BC53D;
     }
 }
+
 @media screen and (max-width: 1263px) {
     :root {
         --main-color: #9BC53D;
-      }
+    }
 }
 
 a {
     display: block;
     text-decoration: none;
-    color:black;
+    color: black;
+}
+
+html {
+    overflow-y: overlay;
 }
 
 button {
@@ -49,7 +54,6 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: hsl(0, 0%, 97%);
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 header.main-block-1 {
@@ -73,7 +77,7 @@ div.m-s-1 {
 }
 
 div.m-g-1 {
-    padding-top:28px;
+    padding-top: 28px;
     justify-content: center;
     display: grid;
     grid-template-columns: 268px 668px 272px;
@@ -213,7 +217,7 @@ a.menu-s-b {
     padding: 15px;
     cursor: pointer;
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 a.menu-s-b:hover {
@@ -281,7 +285,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border:1px solid hsl(70, 19%, 94%);
+    border: 1px solid hsl(70, 19%, 94%);
 }
 
 div.panel-s-b:hover {
@@ -307,7 +311,7 @@ div.panel-s-b-t {
 }
 
 h1.panel-s-b-t-1 {
-    width:86px;
+    width: 86px;
     font-size: 13px;
     line-height: 20px;
     text-align: center;
@@ -326,17 +330,25 @@ div.m {
 }
 
 div.m-block {
-    max-width:1440px;
-    min-width:1263px;
-    width:100%;
-    margin-left:auto;
-    margin-right:auto;
+    max-width: 1440px;
+    min-width: 1263px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1.m-p {
-    margin: 0 0 17.5px 80px;
-    font-size: 22px;
+    text-align: center;
     font-weight: 600;
+    font-size: 24px;
+    color: hsl(0, 0%, 20%);
+}
+h1.m-p-content {
+    margin-top:10px;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+    color: hsl(0, 0%, 20%);
 }
 
 h1.m-p-1 {
@@ -346,6 +358,7 @@ h1.m-p-1 {
 }
 
 div.b {
+    margin-top: 30px;
     display: grid;
     margin-left: 67.5px;
     grid-template-columns: repeat(auto-fit, 222px);
@@ -360,7 +373,7 @@ a.m-p-b {
     border: 1px solid hsl(70, 19%, 94%);
     cursor: pointer;
     text-decoration: none;
-    color:black;
+    color: black;
     text-decoration: none;
 }
 
@@ -455,16 +468,10 @@ div.maybe-panel-block {
     margin-right: auto;
 }
 
-h1.maybe {
-    font-size: 22px;
-    font-weight: 600;
-    margin-left: 98px;
-}
-
 div.maybe-g-p {
     display: grid;
     grid-template-columns: repeat(auto-fit, 373px);
-    margin: 15px 0 0 83px;
+    margin: 30px 0 0 83px;
 }
 
 div.maybe-g-p-b {
@@ -483,14 +490,26 @@ div.maybe-g-p-b1:hover {
     border: 1px solid hsl(165, 100%, 40%);
 }
 
-img.image {
-    width: 152px;
-    height: 152px;
-    margin: 8px;
-}
-
 div.maybe-flex {
     display: flex;
+}
+
+div.maybe-flex-picture {
+    position: relative;
+    width: 152px;
+    height: 152px;
+    margin:8px;
+}
+
+img.maybe-flex-image {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    object-fit: cover;
+}
+
+div.maybe-flex-container {
+    width: 175px;
 }
 
 h1.b-t1 {
@@ -568,14 +587,15 @@ div.show-product-3 {
         justify-content: center;
         cursor: pointer;
     }
-    
+
     a.show-p-b:hover {
         border: 2px solid hsl(165, 100%, 40%);
     }
 }
+
 @media screen and (max-width: 1439px) {
     a.show-p-b {
-        margin-left:36px;
+        margin-left: 36px;
         z-index: 3;
         position: fixed;
         width: 50px;
@@ -588,7 +608,7 @@ div.show-product-3 {
         justify-content: center;
         cursor: pointer;
     }
-    
+
     a.show-p-b:hover {
         border: 2px solid hsl(165, 100%, 40%);
     }
@@ -651,6 +671,7 @@ button.show-button {
     font-weight: normal;
     cursor: pointer;
 }
+
 button.show-button:hover {
     background-color: #01b185;
 }
@@ -685,18 +706,14 @@ button.show-favourite:hover {
 
 /*  */
 div.c-b {
-    float:right;
-    padding-right:80px;
+    float: right;
+    padding-right: 80px;
 }
 
 h1.c-b-t {
     font-size: 22px;
     font-weight: 600;
     padding-bottom: 30px;
-}
-
-div.b {
-    margin-top: 30px;
 }
 
 div.b-m {
@@ -731,17 +748,12 @@ img.i-m-i {
 
 /* баг я хз почему но если мы уберем это свойство то пизда всему*/
 div.b-t-p {
-    margin: 0;
-}
-
-div.b-t {
     width: 345px;
-    height: 140px;
     background-color: hsl(0, 0%, 100%);
 }
 
-div.z-c-p {
-    padding-top: 20px;
+div.z-c-pb {
+    margin-top: 20px;
 }
 
 h1.z-c {
@@ -749,11 +761,8 @@ h1.z-c {
     font-weight: 600;
 }
 
-div.p {
-    margin-top: 12px;
-}
-
 p.p-t {
+    margin-top: 12px;
     font-size: 13px;
     font-weight: normal;
 }
@@ -823,6 +832,7 @@ button.p-r-b {
     border-radius: 4px;
     cursor: pointer;
 }
+
 button.p-r-b:hover {
     background-color: #01b185;
 }
@@ -852,14 +862,14 @@ div.m-i-1-b>div {
 h1.characteristic {
     font-size: 22px;
     font-weight: 600;
-    margin-left:80px;
+    margin-left: 80px;
     padding-bottom: 30px;
 }
 
 div.flex {
     display: flex;
     /* width: 219px; */
-    height:auto;
+    height: auto;
     margin: 0 0 36px 80px;
 }
 
@@ -888,5 +898,81 @@ h1.b1-t2 {
     font-weight: 120;
     margin: 6px 0 0 12px;
     font-weight: 300;
-    width:211px;
+    width: 211px;
+}
+
+/*  */
+div.b-f-h {
+    margin-top:30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 1440px;
+    width: 1245px;
+    height: 488px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.o-b-f {
+    width: auto;
+    height: 488px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1.f-o-f {
+    font-size: 151px;
+    font-weight: 700;
+}
+
+div.t-b-t {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 488px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 15px 15px 0;
+}
+
+h1.t-n-h {
+    font-size: 34px;
+    font-weight: 700;
+    color: hsl(60, 3%, 22%);
+}
+
+div.n-a-w-p {
+    margin-top: 14px;
+}
+
+h1.n-a-w {
+    font-size: 22px;
+    font-weight: 600;
+    color: hsl(0, 0%, 77%);
+}
+
+div.btn-p {
+    margin-top: 45px;
+}
+
+button.btn {
+    width: 318px;
+    height: 68px;
+    border-radius: 50px;
+    background-color: hsl(0, 0%, 97%);
+    border: 1px solid transparent;
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(165, 100%, 40%);
+    color:white;
 }

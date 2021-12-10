@@ -27,6 +27,10 @@ a {
     color: black;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 button {
     background-color: transparent;
     border: 0 none;
@@ -62,7 +66,7 @@ div.main-block-2 {
 
 div.m-g-1 {
     flex: 1;
-    padding: 6.8vw 5.6vw 0 5.6vw;
+    padding: 8.33vw 5.6vw 8.33vw 5.6vw;
     height: auto;
     display: grid;
     grid-template-columns: 44.4vw 44.4vw;
@@ -73,7 +77,7 @@ div#first {
 }
 
 div#second {
-    margin: 7.3vw 0 5.4vw 0;
+    margin-top: 8.3vw;
     order: 3;
 }
 
@@ -137,6 +141,7 @@ input.m-s-1 {
     border-radius: 4.17vw;
     font-size: 3.33vw;
     font-weight: 300;
+    color:#98999b;
 }
 
 input.m-s-1::placeholder {
@@ -284,7 +289,7 @@ div.panel-select {
     display: grid;
     grid-template-columns: repeat(4, 23.8vw);
     padding: 0 2.2vw;
-    padding-bottom: 11.25vw;
+    padding-bottom: 11.94vw;
 }
 
 div.panel-s-b {
@@ -320,7 +325,7 @@ div.panel-s-b-t {
 }
 
 h1.panel-s-b-t-1 {
-    width: 17.7vw;
+    width: 20.7vw;
     font-size: 2.7vw;
     line-height: 4.17vw;
     text-align: center;
@@ -339,31 +344,38 @@ div.m {
 
 div.m-block {
     width: 100%;
-    padding-top: 8.4vw;
+    padding-top: 8.3vw;
 }
 
 h1.m-p {
-    padding-left: 5.625vw;
-    font-size: 4.7vw;
+    font-weight: 600;
+    font-size: 5.56vw;
+    text-align: center;
+    color: hsl(0, 0%, 20%);
+}
+h1.m-p-content {
+    margin-top:1.39vw;
     font-weight: normal;
+    font-size: 3.05vw;
+    text-align: center;
+    color: hsl(0, 0%, 20%);
 }
 
 div.b {
-    margin-left: 2.97vw;
     display: grid;
-    grid-template-columns: 47vw 47vw;
-    padding: 5.65vw 0 5.75vw 0;
+    grid-template-columns: 50vw 50vw;
+    padding: 8.3vw 0 5.75vw 0;
 }
 
 div.m-d-b {
-    margin: 2.65vw;
+    margin: 1.39vw;
 }
 
 a.m-p-b {
     display: block;
     text-decoration: none;
-    width: 41.7vw;
-    height: 65.3vw;
+    width: 47.2vw;
+    height: 78.83vw;
     background-color: hsl(0, 0%, 100%);
     border-radius: 2.08vw;
     border: 0.14vw solid hsl(70, 19%, 94%);
@@ -375,29 +387,32 @@ a.m-p-b:hover {
 }
 
 div.m-i-1-1 {
-    padding: 1.5vw;
+    padding: 2.64vw;
     position: relative;
-    width: 37.08vw;
-    height: 37.08vw;
+    width: 41.95vw;
+    height: 41.95vw;
 }
 
 img.m-i {
     position: absolute;
-    width: 37.08vw;
-    height: 37.08vw;
+    width: 41.95vw;
+    height: 41.95vw;
+    object-fit: cover;
 }
 
 div.m-t-p {
-    margin: 2.97vw 2.3vw 0 2.3vw;
+    margin: 3.36vw 2.64vw 0 2.64vw;
 }
 
 h1.m-t {
-    font-size: 3.1vw;
+    height: 9.44vw;
+    font-size: 3.33vw;
+    line-height: 5vw;
     font-weight: normal;
 }
 
 div.l-t-p {
-    margin-top: 1.39vw;
+    margin-top: 2.65vw;
 }
 
 h1.l-t {
@@ -413,7 +428,7 @@ div.m-l-p {
 }
 
 h1.l-p {
-    font-size: 3.1vw;
+    font-size: 3.3vw;
     font-weight: 600;
 }
 
@@ -421,96 +436,498 @@ div.p-p {
     background-color: hsl(120, 100%, 97%);
     display: flex;
     align-items: center;
-    width: 8.475vw;
-    height: 8.475vw;
-    border-radius: 100vw;
+    width: 9.6vw;
+    height: 9.6vw;
+    border-radius: 100%;
     justify-content: center;
     margin-left: auto;
 }
 
 div.i-p-1 {
     position: relative;
-    width: 3.8vw;
-    height: 2.9vw;
+    width: 4.3vw;
+    height: 3.3vw;
 }
 
 img.p {
     position: absolute;
-    width: 3.8vw;
-    height: 2.9vw;
+    width: 4.3vw;
+    height: 3.3vw;
 }
 
 /*  */
 
 div.maybe-panel {
-    margin-top:4.2vw;
+    margin-top: 4.2vw;
     width: 100vw;
     background-color: white;
     height: auto;
     border-radius: 1.38vw;
-    padding-bottom: 40vw;
+    padding-top:8.3vw;
+}
+
+div.maybe-g-p {
+    margin-top:8.3vw;
 }
 
 div.maybe-g-p-b {
-    margin: 5.625vw 0 0 5.55vw;
-    display: grid;
-    grid-template-columns:88.9vw;
+    width:97.2vw;
+    margin:2.78vw 1.39vw;
 }
+
 div.maybe-g-p-b1 {
     background-color: white;
-    margin: 2.8vw 0;
-    border:0.13vw solid hsl(70, 19%, 94%);
+    border: 0.13vw solid hsl(70, 19%, 94%);
     border-radius: 2.08vw;
     cursor: pointer;
 }
 
 div.maybe-g-p-b1:hover {
-    border:0.13vw solid hsl(165, 100%, 40%);
+    border: 0.13vw solid hsl(165, 100%, 40%);
 }
 
 div.maybe-flex {
     display: flex;
 }
 
-h1.maybe {
-    font-size: 4.7vw;
-    font-weight: normal;
-    padding: 8.4vw 0 0 5.625vw;
+div.maybe-flex-picture {
+    position: relative;
+    width:43.19vw;
+    height:43.19vw;
+    margin: 2.22vw;
 }
 
-img.image {
-    width: 39.4vw;
-    height: 39.4vw;
-    margin: 2.08vw;
+img.maybe-flex-image {
+    position: absolute;
+    width:43.19vw;
+    height:43.19vw;
+    object-fit: cover;
+}
+
+div.maybe-flex-container {
+    width:49.58vw;
 }
 
 h1.b-t1 {
-    font-size: 3.3vw;
+    font-size: 3.47vw;
+    line-height: 5.56vw;
+    height: 10.14vw;
     font-weight: normal;
     margin-top: 1.79vw;
     margin-left: 3.3vw;
 }
 
 h1.b-t2 {
-    font-size: 2.2vw;
-    font-weight: 100;
+    font-size: 2.36vw;
+    font-weight: 300;
     margin: 3.3vw;
     color: #AEAEAE;
 }
 
 h1.b-t3 {
-    font-size: 3.3vw;
+    font-size: 3.6vw;
     font-weight: 600;
-    margin: 2.91vw 0 0 3.3vw;
+    margin: 2.92vw 0 0 3.3vw;
 }
 
 div.b-p-p {
     background-color: hsl(120, 100%, 97%);
     display: flex;
     align-items: center;
-    width: 8.475vw;
-    height: 8.475vw;
-    border-radius: 100vw;
+    width: 11.39vw;
+    height: 11.39vw;
+    border-radius: 100%;
     justify-content: center;
-    margin:2.36vw 0 0 3.05vw;
+    margin: 2.36vw 0 0 3.05vw;
+}
+
+/*  */
+
+div.b-f-h {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4.17vw;
+    width: 100vw;
+    height: 100vw;
+    border-radius: 4.17vw;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.o-b-f {
+    width: 45vw;
+    height: 30.5vw;
+    background-color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+}
+
+h1.f-o-f {
+    font-size: 26.1vw;
+    font-weight: 600;
+}
+
+div.t-b-t {
+    margin-top: 6vw;
+    text-align: center;
+}
+
+div.p-t-n-h {
+    height: 7.36vw;
+}
+
+h1.t-n-h {
+    font-size: 6.25vw;
+    font-weight: 600;
+}
+
+div.n-a-w-p {
+    width: 86.52vw;
+    height: 4.58vw;
+}
+
+h1.n-a-w {
+    color: hsl(0, 0%, 77%);
+    font-size: 3.88vw;
+    font-weight: normal;
+    margin-bottom: 7.2vw;
+}
+
+
+button.btn {
+    padding: 4vw 6vw;
+    font-size: 3.61vw;
+    font-weight: 600;
+    background-color: hsl(0, 0%, 97%);
+    border: none;
+    margin-top: 4.08vw;
+    cursor: pointer;
+    border-radius: 4.8vw;
+}
+
+button.btn:hover {
+    background-color: hsl(165, 100%, 40%);
+    color: white;
+}
+
+div.mobile-shop-info {
+    margin-left: auto;
+    margin-right: auto;
+    width: 88.89vw;
+    height: auto;
+    border-radius: 0.56vw;
+    background: #fff;
+    border: 0.14vw solid #f1f2ec;
+    margin-top: 4.17vw;
+}
+
+div.mobile-shop-info-block-1 {
+    display: flex;
+}
+
+div.mobile-shop-info-block-item-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28.056vw;
+    height: 28.056vw;
+}
+
+div.mobile-shop-info-block-item-p-1 {
+    position: relative;
+    width: 25.28vw;
+    height: 25.28vw;
+}
+
+img.mobile-shop-info-block-item-i-1 {
+    position: absolute;
+    width: 25.28vw;
+    height: 25.28vw;
+}
+
+div.mobile-shop-info-block-item-2 {
+    position: relative;
+    width: 60.83vw;
+    height: 25.28vw;
+    padding: 7.08vw 0 0 3.89vw;
+}
+
+h1.mobile-shop-info-block-item-title {
+    width: 50.83vw;
+    font-weight: 600;
+    font-size: 3.61vw;
+    text-align: left;
+    color: hsl(0, 0%, 20%);
+}
+
+h1.mobile-shop-info-block-item-content {
+    margin-top: 2.36vw;
+    width: 50.83vw;
+    font-weight: normal;
+    font-size: 3.61vw;
+    text-align: left;
+    color: #333;
+}
+
+div.mobile-shop-info-block-2 {
+    width: 100%;
+    height: 14.72vw;
+    display: flex;
+    align-items: center;
+}
+
+div.mobile-shop-info-block-2-item-1 {
+    display: flex;
+    width: 44.4vw;
+    height: 4.9125vw;
+}
+
+div.mobile-shop-info-block-2-item-1-picture {
+    margin-left: 4.17vw;
+    position: relative;
+    width: 4.9125vw;
+    height: 4.9125vw;
+}
+
+img.mobile-shop-info-block-2-item-1-image {
+    position: absolute;
+    width: 4.9125vw;
+    height: 4.9125vw;
+}
+
+h1.mobile-shop-info-block-2-item-1-text {
+    margin-left: 2.97vw;
+    font-weight: normal;
+    font-size: 3.61vw;
+    text-align: left;
+}
+
+div.mobile-shop-info-block-3-item-1 {
+    display: flex;
+    width: 44.4vw;
+    height: auto;
+}
+
+div.mobile-shop-info-block-3-item-1-block {
+    width: 100%;
+    text-align: right;
+    margin-right: 4.17vw;
+}
+
+button.mobile-shop-info-block-2-item-1-button {
+    padding: 2.82vw 5.65vw;
+    font-size: 3.61vw;
+    background-color: hsl(165, 100%, 40%);
+    border-radius: 0.55vw;
+    color: white;
+    cursor: pointer;
+}
+
+button.mobile-shop-info-block-2-item-1-button:hover {
+    background-color: hsl(165, 93%, 35%);
+}
+
+h1.mobile-shop-info-block-3-item-1-text {
+    margin-left: 4.17vw;
+    font-weight: normal;
+    font-size: 5.14vw;
+    text-align: right;
+    color: hsl(0, 0%, 20%);
+}
+
+button.p-b-n-b {
+    margin:4.17vw 0 0 5.56vw;
+    width: 88.89vw;
+    height: 17.22vw;
+    font-weight: normal;
+    font-size: 3.61vw;
+    color: #69f;
+    border: 0.14vw solid hsl(70, 19%, 94%);
+    cursor: pointer;
+}
+
+button.p-b-n-b:hover {
+    color: #69f;
+    background-color: hsl(70, 19%, 94%);
+}
+
+/*  */
+
+h1.characteristic {
+    font-size: 4.7vw;
+    font-weight: 600;
+    padding-left: 5.6vw;
+    margin-bottom: 8.3vw;
+}
+
+div.flex {
+    display: flex;
+    height: auto;
+    margin: 0 0 9.5vw 5.5vw;
+}
+
+div.b-1-pic {
+    position: relative;
+    width: 14.3vw;
+    height: 14.3vw;
+}
+
+img.b1-img {
+    position: absolute;
+    width: 14.3vw;
+    height: 14.3vw;
+    border-radius: 2.6vw;
+}
+
+h1.b1-t1 {
+    font-size: 3.6vw;
+    font-weight: 600;
+    margin: 1.6vw 0 0 3.19vw;
+    font-weight: 600;
+}
+
+h1.b1-t2 {
+    font-size: 3.6vw;
+    font-weight: 300;
+    margin: 1.6vw 0 0 3.19vw;
+    width: 57.08vw;
+}
+
+a.show-p-b {
+    margin-left:5.56vw;
+    z-index:3;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height:10vw;
+    border-radius: 100%;
+    border: 0.28vw solid #f1f2ec;
+    background-color:white;
+    cursor: pointer;
+}
+
+a.show-p-b:hover {
+    border: 0.28vw solid #00CC99;
+}
+
+div.show-p-b-p {
+    position: relative;
+    width: 2vw;
+    height: 3.3vw;
+}
+img.show-p-b-i {
+    position: absolute;
+    width: 2vw;
+    height: 3.3vw;
+}
+
+div.show-product {
+    width:100vw;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+div.show-product-2 {
+    margin:0 auto;
+    width:81.1vw;
+    height: 81.1vw;
+}
+
+div.show-p-p {
+    position: relative;
+    width:81.1vw;
+    height: 81.1vw;
+}
+
+img.show-p-i {
+    position: absolute;
+    width:81.1vw;
+    height: 81.1vw;
+    object-fit: cover;
+}
+
+div.show-p-i-b {
+    width:100%;
+}
+
+h1.show-p-i-b-h {
+    font-weight: 600;
+    font-size: 5.56vw;
+    line-height: 8.3vw;
+    text-align: left;
+    margin: 6.94vw 0 0 5.56vw;
+}
+
+p.show-p-i-b-p {
+    font-weight: normal;
+    font-size: 3.61vw;
+    line-height: 6.6vw;
+    text-align: left;
+    margin: 6.94vw 0 0 5.56vw;
+}
+
+div.show-p-i-b-f {
+    margin: 6.94vw 0 12.08vw 5.56vw;
+    display: flex;
+}
+
+button.show-button {
+    padding: 2.92vw 6.53vw;
+    background-color: #00CC99;
+    border-radius: 0.56vw;
+    font-size: 3.61vw;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+button.show-button:hover {
+    background-color: #01b185;
+}
+
+div.show-f-p {
+    position: relative;
+    width: 5.92vw;
+    height: 5.14vw;
+    margin-right: 5vw;
+}
+
+img.show-f-i {
+    position: absolute;
+    width: 5.92vw;
+    height: 5.14vw;
+}
+
+button.show-favourite {
+    margin-left: 2.056vw;
+    display: flex;
+    align-items: center;
+    font-size: 3.61vw;
+    color: hsl(12, 91%, 57%);
+    cursor: pointer;
+    border-radius: 0.56vw;
+    padding-right: 2.57vw;
+}
+
+button.show-favourite:hover {
+    background-color: hsl(0, 0%, 99%);
+}
+
+h1.c-b-t {
+    font-weight: 600;
+    font-size: 4.72vw;
+    text-align: left;
+    color: #333;
+    margin: 0 0 8.3vw 5.56vw;
+}
+
+h1.m-p-1 {
+    font-weight: 600;
+    font-size: 4.72vw;
+    text-align: left;
+    color: #333;
+    margin: 8.3vw 0 0 5.56vw;
 }

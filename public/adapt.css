@@ -23,13 +23,17 @@
 a {
     display: block;
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 button {
     background-color: transparent;
     border: 0 none;
     font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    overflow-y: overlay;
 }
 
 body {
@@ -58,7 +62,7 @@ div.main-block-2 {
 div.m-g-1 {
     padding: 2.1875vw 0 0 2.8125vw;
     display: grid;
-    height:4.22vw;
+    height: 4.22vw;
     grid-template-columns: 20.9375vw 52.1875vw 21.25vw;
     padding-bottom: 2.1875vw;
 }
@@ -86,7 +90,7 @@ div.m-f-b {
 }
 
 div.m-f-b-1 {
-    border-left: 0,078125vw solid hsl(0, 0%, 81%);
+    border-left: 0, 078125vw solid hsl(0, 0%, 81%);
     height: 1.171875vw;
 }
 
@@ -197,7 +201,7 @@ a.menu-s-b {
     padding: 1.171875vw;
     cursor: pointer;
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 a.menu-s-b:hover {
@@ -265,7 +269,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border:0.078125vw solid hsl(70, 19%, 94%);
+    border: 0.078125vw solid hsl(70, 19%, 94%);
 }
 
 div.panel-s-b:hover {
@@ -291,7 +295,7 @@ div.panel-s-b-t {
 }
 
 h1.panel-s-b-t-1 {
-    width:6.71875vw;
+    width: 6.71875vw;
     font-size: 1.015625vw;
     line-height: 1.5625vw;
     text-align: center;
@@ -311,9 +315,17 @@ div.m {
 }
 
 h1.m-p {
-    margin: 0 0 1.3671875vw 6.25vw;
-    font-size: 1.71875vw;
+    text-align: center;
     font-weight: 600;
+    font-size: 1.875vw;
+    color: hsl(0, 0%, 20%);
+}
+h1.m-p-content {
+    margin-top:0.78125vw;
+    font-weight: normal;
+    font-size: 1.02vw;
+    text-align: center;
+    color: hsl(0, 0%, 20%);
 }
 
 h1.m-p-1 {
@@ -337,7 +349,7 @@ a.m-p-b {
     border: 0.078125vw solid hsl(70, 19%, 94%);
     cursor: pointer;
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 a.m-p-b:hover {
@@ -431,20 +443,32 @@ div.maybe-panel-block {
     margin-right: auto;
 }
 
-h1.maybe {
-    font-size: 1.71875vw;
-    font-weight: 600;
-    margin-left: 7.65625vw;
-}
-
 div.maybe-flex {
     display: flex;
+}
+
+div.maybe-flex-picture {
+    position: relative;
+    width: 11.875vw;
+    height: 11.875vw;
+    margin:0.625vw;
+}
+
+img.maybe-flex-image {
+    position: absolute;
+    width: 11.875vw;
+    height: 11.875vw;
+    object-fit: cover;
+}
+
+div.maybe-flex-container {
+    width: 13.67vw;
 }
 
 div.maybe-g-p {
     display: grid;
     grid-template-columns: repeat(auto-fit, 29.140625vw);
-    margin: 1.171875vw 0 0 6.484375vw;
+    margin: 2.34375vw 0 0 6.484375vw;
 }
 
 div.maybe-g-p-b {
@@ -461,12 +485,6 @@ div.maybe-g-p-b1 {
 
 div.maybe-g-p-b1:hover {
     border: 0.078125vw solid hsl(165, 100%, 40%);
-}
-
-img.image {
-    width: 11.875vw;
-    height: 11.875vw;
-    margin: 0.625vw;
 }
 
 div.flex {
@@ -535,7 +553,7 @@ div.show-product-3 {
 }
 
 a.show-p-b {
-    margin-left:2.8125vw;
+    margin-left: 2.8125vw;
     z-index: 3;
     position: fixed;
     width: 3.90625vw;
@@ -609,6 +627,7 @@ button.show-button {
     font-weight: normal;
     cursor: pointer;
 }
+
 button.show-button:hover {
     background-color: #01b185;
 }
@@ -666,7 +685,6 @@ div.b-m {
 
 div.i {
     display: flex;
-    background-color: hsl(0, 0%, 100%);
 }
 
 div.i-m {
@@ -687,19 +705,18 @@ img.i-m-i {
     height: 6.796875vw;
 }
 
-/* баг я хз почему но если мы уберем это свойство то пизда всему*/
-div.b-t-p {
-    margin: 0;
-}
-
-div.b-t {
+/* div.b-t-p {
     width: 26.953125vw;
-    height: 26.953125vw;
     background-color: hsl(0, 0%, 100%);
+} */
+
+div.z-c-pb, div.p {
+    display: flex;
+    flex-direction: column;
 }
 
-div.z-c-p {
-    padding-top: 1.5625vw;
+div.z-c-pb {
+    margin-top: 1.5625vw;
 }
 
 h1.z-c {
@@ -707,11 +724,8 @@ h1.z-c {
     font-weight: 600;
 }
 
-div.p {
-    margin-top: 0.9375vw;
-}
-
 p.p-t {
+    margin-top: 0.9375vw;
     font-size: 1.015625vw;
     font-weight: normal;
 }
@@ -745,8 +759,6 @@ h1.t-t {
     font-weight: normal;
 }
 
-/* я знаю ты сейчас недоволен, но нервы дороже! */
-/* это отступ между закрыто/открыто */
 div.t-p2 {
     margin-top: 0.390625vw;
 }
@@ -781,6 +793,7 @@ button.p-r-b {
     border-radius: 0.3125vw;
     cursor: pointer;
 }
+
 button.p-r-b:hover {
     background-color: #01b185;
 }
@@ -813,6 +826,7 @@ h1.characteristic {
     margin-left: 6.25vw;
     padding-bottom: 2.34375vw;
 }
+
 
 div.flex {
     display: flex;
@@ -847,4 +861,80 @@ h1.b1-t2 {
     margin: 0.46875vw 0 0 0.9375vw;
     font-weight: 300;
     width: 16.484375vw;
+}
+
+/*  */
+
+div.b-f-h {
+    margin-top:2.34vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 97.265625vw;
+    height: 38.125vw;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.171875vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.o-b-f {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 38.125vw;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.171875vw 0 0 1.171875vw;
+}
+
+h1.f-o-f {
+    font-size: 11.796875vw;
+    font-weight: 700;
+}
+
+div.t-b-t {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 38.125vw;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 1.171875vw 1.171875vw 0;
+}
+
+h1.t-n-h {
+    font-size: 2.65625vw;
+    font-weight: 700;
+    color: hsl(60, 3%, 22%);
+}
+
+div.n-a-w-p {
+    margin-top: 1.09375vw;
+}
+
+h1.n-a-w {
+    font-size: 1.71875vw;
+    font-weight: 600;
+    color: hsl(0, 0%, 77%);
+}
+
+div.btn-p {
+    margin-top: 3.515625vw;
+}
+
+button.btn {
+    width: 24.84375vw;
+    height: 5.3125vw;
+    border-radius: 3.90625vw;
+    background-color: hsl(0, 0%, 97%);
+    border: 0.078125vw solid transparent;
+    font-size: 2.03125vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:  hsl(165, 100%, 40%);
+    color:white;
 }

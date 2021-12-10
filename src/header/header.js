@@ -45,6 +45,7 @@ const Header = () => {
               <Route path={GetHistoryLocation+"/basket"} element={<div/>}/>
               <Route path={GetHistoryLocation+"/favourite"} element={<div/>}/>
               <Route path={GetHistoryLocation+"/user"} element={<div/>}/>
+              <Route path={GetHistoryLocation+"/*"} element={<div/>}/>
               {/* <Route path="*" element={<div>Not found</div>} /> */}
             </Routes>
           </div>
