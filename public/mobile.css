@@ -1057,9 +1057,14 @@ button.button-minus {
     font-size: 6.66vw;
     font-weight: normal;
     color: hsl(0, 0%, 72%);
+    cursor: pointer;
+}
+button.button-minus:hover {
+    background-color: hsl(0, 0%, 97%);
 }
 
 div.one-block {
+    margin:0 3vw;
     width: auto;
     height: 13.75vw;
     background-color: hsl(0, 0%, 100%);
@@ -1089,18 +1094,16 @@ h1.price {
 
 div.grid {
     display: grid;
-    grid-template-columns: 44.4vw 44.4vw;
+    grid-template-columns: 50% 50%;
     height:14.58vw;
 }
 
 div.place-favorite {
-    width: 43.6vw;
-    padding-left: 4.16vw;
+    width: 100%;
 }
 
 div.del-from-favorite {
-    width: 43.6vw;
-    margin-left: 6.25vw;
+    width: 100%;
 }
 
 div.place-order {
@@ -1134,17 +1137,21 @@ div.order-block {
 }
 
 div.price-place-im-tired {
-    margin: 8.6vw 0 0 26.25vw;
+    display: flex;
+    align-items: center;
+    margin-left:auto;
+    width:auto;
+    
 }
 
 h1.money {
-    font-size: 6vw;
+    font-size: 6.66vw;
     font-weight: 600;
 }
 
 button.pay-for-it {
     background-color: hsl(166, 75%, 48%);
-    width: 88.3vw;
+    width: 88.88vw;
     height: 16.38vw;
     border-radius: 6px;
     border: none;
@@ -1159,6 +1166,8 @@ button.pay-for-it:hover {
 }
 
 button.favorite {
+    width:100%;
+    height:14.58vw;
     font-size: 3.6vw;
     font-weight: normal;
     color: hsl(165, 100%, 40%);
@@ -1167,11 +1176,21 @@ button.favorite {
     cursor: pointer;
 }
 
+button.favorite:hover {
+    background-color: hsl(0, 0%, 97%);
+}
+
 button.unfavorite {
+    width:100%;
+    height:14.58vw;
     font-size: 3.6vw;
     font-weight: normal;
     color: hsl(12, 91%, 57%);
     background-color: hsl(0, 0%, 100%);
     border: none;
     cursor: pointer;
+}
+
+button.unfavorite:hover {
+    background-color: hsl(0, 0%, 97%);
 }

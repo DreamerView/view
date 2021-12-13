@@ -1,13 +1,15 @@
 import BasketMobile from "./mobile";
 import { useState } from "react";
-import GetHistoryLocation from "../../locate";
 
 const MobileBasketInfo = () => {
+
     const [baskets] = useState([
-        {id:1,image:GetHistoryLocation+'/images/fur.jpg',production:'ГлаксоСмитКляйн',title:'Фурацилин Авексима шипучие таблетки',uid:'48943504',number:'1',price:'150,55 ₸'},
-        {id:2,image:GetHistoryLocation+'/images/fur.jpg',production:'ГлаксоСмитКляйн',title:'Фурацилин Авексима шипучие таблетки',uid:'48943504',number:'1',price:'150,55 ₸'},
-        {id:3,image:GetHistoryLocation+'/images/fur.jpg',production:'ГлаксоСмитКляйн',title:'Фурацилин Авексима шипучие таблетки',uid:'48943504',number:'1',price:'150,55 ₸'}
+        {id:0,image:'/images/fur.jpg',production:'ГлаксоСмитКляйн',title:'Фурацилин Авексима шипучие таблетки',uid:'2281337',number:1,price:150.55},
+        {id:1,image:'/images/fur.jpg',production:'ГлаксоСмитКляйн',title:'Фурацилин Авексима шипучие таблетки',uid:'2281337',number:1,price:150.55},
+        {id:2,image:'/images/fur.jpg',production:'ГлаксоСмитКляйн',title:'Фурацилин Авексима шипучие таблетки',uid:'2281337',number:1,price:150.55}
     ]);
+    localStorage.setItem('price-database',JSON.stringify(baskets));
+    console.log(JSON.parse(localStorage.getItem('price-database')));
     return(
         <div className="main-block-your-basket">
             <h1 className="m-p">Ваша корзина</h1>

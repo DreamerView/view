@@ -1,12 +1,27 @@
+import { useState } from "react";
+import GetHistoryLocation from "../../locate";
 
 const BasketMobile = (info) => {
+    const [pr,setPr] = useState(info.item.price);
+    const [sum,setSum] = useState(info.item.number);
+    const PlusSum = async() => {
+      setSum(sum+1);
+      setPr(((sum+1)*info.item.price).toFixed(2));
+      localStorage.setItem('price-total',((sum+1)*info.item.price).toFixed(2));
+    };
+    const MinusSum = () => {
+      if(sum <= 1) return 0;
+      else {
+        setSum(sum-1);setPr((pr-info.item.price).toFixed(2));
+      }
+    };
     return(
           <div className="main-of-main">
             <div className="block-one-img-and-glakso">
               <div className="img-and-glakso">
                 <div className="img-and-place">
                   <div className="relative-and-absolute">
-                    <img className="img-size" src={info.item.image} alt="Panakea images" loading="lazy" />
+                    <img className="img-size" src={GetHistoryLocation+info.item.image} alt="Panakea images" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -26,15 +41,15 @@ const BasketMobile = (info) => {
               <div className="we">
                 <div className="place-scary-turn-off">
                   <div className="scary-turn-off">
-                    <button className="button-minus">-</button>
+                    <button type="button" onClick={MinusSum} className="button-minus">-</button>
                     <div className="one-block">
-                      <h1 className="one">{info.item.number}</h1>
+                      <h1 className="one">{sum}</h1>
                     </div>
-                    <button className="button-minus">+</button>
+                    <button type="button" onClick={PlusSum} className="button-minus">+</button>
                   </div>
                 </div>
                 <div className="place-price">
-                  <h1 className="price">{info.item.price}</h1>
+                  <h1 className="price">{pr} ₸</h1>
                 </div>
               </div>
               <div className="grid">
