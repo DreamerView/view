@@ -41,7 +41,6 @@ body {
     width: 100%;
     font-family: 'Segoe UI', sans-serif;
     background-color: hsl(0, 0%, 97%);
-    overflow-x: hidden;
     padding-bottom: 30.1vw;
 }
 
@@ -796,9 +795,11 @@ h1.b1-t2 {
 }
 
 a.show-p-b {
-    margin-left: 5.56vw;
     z-index: 3;
-    position: fixed;
+    margin-left: 5.56vw;
+    position: sticky;
+    position: -webkit-sticky;
+    top:30px;
     display: flex;
     justify-content: center;
     align-items: center;
