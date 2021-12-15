@@ -269,7 +269,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 0.078125vw solid hsl(70, 19%, 94%);
+    border: 0.078125vw solid hsl(0, 0%, 93%);
 }
 
 div.panel-s-b:hover {
@@ -347,7 +347,7 @@ a.m-p-b {
     height: 24.0625vw;
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.78125vw;
-    border: 0.078125vw solid hsl(70, 19%, 94%);
+    border: 0.078125vw solid hsl(0, 0%, 93%);
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -681,7 +681,7 @@ div.b-m {
     width: 46.484375vw;
     height: 10.9375vw;
     background-color: hsl(0, 0%, 100%);
-    border: 0.078125vw solid hsl(70, 19%, 94%);
+    border: 0.078125vw solid hsl(0, 0%, 93%);
 }
 
 div.i {
@@ -803,7 +803,7 @@ button.p-r-b:hover {
 button.p-b-n-b {
     width: 46.640625vw;
     height: 4.6875vw;
-    border: 0.078125vw solid hsl(70, 19%, 94%);
+    border: 0.078125vw solid hsl(0, 0%, 93%);
     color: hsl(220, 100%, 70%);
     font-size: 1.171875vw;
     font-weight: normal;
@@ -972,7 +972,7 @@ div.grid-backet {
 }
 
 div.backet-p {
-    border: 0.078vw solid hsl(70, 19%, 94%);
+    border: 0.078vw solid hsl(0, 0%, 93%);
     display: flex;
     margin-top: 1.17vw;
     border-radius: 0.78vw;
@@ -1031,7 +1031,7 @@ div.quantity {
     width: auto;
     height: 4.37vw;
     display: flex;
-    border: 0.078vw solid hsl(70, 19%, 94%);
+    border: 0.078vw solid hsl(0, 0%, 93%);
     border-radius: 0.78vw;
 }
 

@@ -285,7 +285,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 1px solid hsl(70, 19%, 94%);
+    border: 1px solid hsl(0, 0%, 93%);
 }
 
 div.panel-s-b:hover {
@@ -371,7 +371,7 @@ a.m-p-b {
     height: 308px;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
-    border: 1px solid hsl(70, 19%, 94%);
+    border: 1px solid hsl(0, 0%, 93%);
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -721,7 +721,7 @@ div.b-m {
     width: 595px;
     height: 140px;
     background-color: hsl(0, 0%, 100%);
-    border: 1px solid hsl(70, 19%, 94%);
+    border: 1px solid hsl(0, 0%, 93%);
 }
 
 div.i {
@@ -841,7 +841,7 @@ button.p-r-b:hover {
 button.p-b-n-b {
     width: 597px;
     height: 60px;
-    border: 1px solid hsl(70, 19%, 94%);
+    border: 1px solid hsl(0, 0%, 93%);
     color: hsl(220, 100%, 70%);
     font-size: 15px;
     font-weight: normal;
@@ -1011,7 +1011,7 @@ div.grid-backet {
 }
 
 div.backet-p {
-    border:1px solid #f1f2ec;
+    border:1px solid #eee;
     display: flex;
     margin-top: 15px;
     border-radius: 10px;

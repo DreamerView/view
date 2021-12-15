@@ -380,7 +380,7 @@ a.m-p-b {
     height: 78.83vw;
     background-color: hsl(0, 0%, 100%);
     border-radius: 2.08vw;
-    border: 0.14vw solid hsl(70, 19%, 94%);
+    border: 0.14vw solid hsl(0, 0%, 93%);
     cursor: pointer;
 }
 
@@ -479,7 +479,7 @@ div.maybe-g-p-b {
 
 div.maybe-g-p-b1 {
     background-color: white;
-    border: 0.13vw solid hsl(70, 19%, 94%);
+    border: 0.13vw solid hsl(0, 0%, 93%);
     border-radius: 2.08vw;
     cursor: pointer;
 }
@@ -618,7 +618,7 @@ div.mobile-shop-info {
     height: auto;
     border-radius: 0.56vw;
     background: #fff;
-    border: 0.14vw solid #f1f2ec;
+    border: 0.14vw solid hsl(0, 0%, 93%);
     margin-top: 4.17vw;
 }
 
@@ -744,13 +744,13 @@ button.p-b-n-b {
     font-weight: normal;
     font-size: 3.61vw;
     color: #69f;
-    border: 0.14vw solid hsl(70, 19%, 94%);
+    border: 0.14vw solid hsl(0, 0%, 93%);
     cursor: pointer;
 }
 
 button.p-b-n-b:hover {
     color: #69f;
-    background-color: hsl(70, 19%, 94%);
+    background-color: hsl(0, 0%, 93%);
 }
 
 /*  */
@@ -955,7 +955,7 @@ div.main-of-main {
     width: 88.88vw;
     height: auto;
     border-radius: 0.55vw;
-    border: 0.13vw solid hsl(70, 19%, 94%);
+    border: 0.13vw solid hsl(0, 0%, 93%);
 }
 
 div.block-one-img-and-glakso {
@@ -1045,7 +1045,7 @@ div.scary-turn-off {
     width: auto;
     height: 13.75vw;
     background-color: hsl(0, 0%, 100%);
-    border: 0.27vw solid hsl(70, 19%, 94%);
+    border: 0.27vw solid hsl(0, 0%, 93%);
     border-radius: 0.41vw;
 }
 

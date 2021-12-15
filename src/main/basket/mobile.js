@@ -7,12 +7,12 @@ const BasketMobile = (info) => {
     const PlusSum = async() => {
       setSum(sum+1);
       setPr(((sum+1)*info.item.price).toFixed(2));
-      localStorage.setItem('price-total',((sum+1)*info.item.price).toFixed(2));
     };
     const MinusSum = () => {
       if(sum <= 1) return 0;
       else {
-        setSum(sum-1);setPr((pr-info.item.price).toFixed(2));
+        setSum(sum-1);
+        setPr((pr-info.item.price).toFixed(2));
       }
     };
     return(
