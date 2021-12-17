@@ -577,7 +577,7 @@ div.show-product-3 {
 @media screen and (min-width: 1440px) {
     a.show-p-b {
         z-index: 3;
-        position: fixed;
+        position: absolute;
         width: 50px;
         height: 50px;
         border-radius: 100%;
@@ -589,14 +589,7 @@ div.show-product-3 {
         cursor: pointer;
     }
 
-    a.show-p-b:hover {
-        border: 2px solid hsl(165, 100%, 40%);
-    }
-}
-
-@media screen and (max-width: 1439px) {
-    a.show-p-b {
-        margin-left: 36px;
+    a.show-p-b-fixed {
         z-index: 3;
         position: fixed;
         width: 50px;
@@ -608,6 +601,52 @@ div.show-product-3 {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        top:40px;
+    }
+
+    a.show-p-b-fixed:hover {
+        border: 2px solid hsl(165, 100%, 40%);
+    }
+
+    a.show-p-b:hover {
+        border: 2px solid hsl(165, 100%, 40%);
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    a.show-p-b {
+        margin-left: 36px;
+        z-index: 3;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: white;
+        border: 2px solid #F1F2EC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    a.show-p-b-fixed {
+        margin-left: 20px;
+        z-index: 3;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: white;
+        border: 2px solid #F1F2EC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        top:40px;
+    }
+
+    a.show-p-b-fixed:hover {
+        border: 2px solid hsl(165, 100%, 40%);
     }
 
     a.show-p-b:hover {

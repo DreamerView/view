@@ -7,23 +7,42 @@ import { useEffect,useState } from 'react';
 
 const Show = (props) => {
     // const {id} = useParams();
+    const [look, setLook] = useState("");
     const db = getFirestore();
-    const [title,setTitle] =  useState('Загрузка данных');
-    const [content,setContent] = useState('Пожалуйста подождите');
-    const [price,setPrice] = useState('загружаем');
-    const [image,setImage] = useState('/images/first-aid-alt.svg')
+    const [status,setStatus] =  useState({
+      title:'Загрузка',
+      content:'Пожалуйста подождите',
+      price:'загружаем',
+      image:'/images/first-aid-alt.svg'
+    });
     useEffect(()=>{
+      let check = true;
       const db = getFirestore();
       getDoc(doc(db,'list','1fXhVDolCicMKjr2TFh7')).then((docSnap)=>{
         if(docSnap.exists()) {
-          let s = docSnap.data();
-          setTitle(s.title);
-          setContent(s.content);
-          setPrice(s.price);
-          setImage(s.image);
+          const s = docSnap.data();
+          if(check) setStatus({title:s.title,content:s.content,price:s.price,image:s.image});
         }
         else console.log("error. Don't exist!");
       });
+      return () => {
+        check=false;
+      };
+    },[]);
+    useEffect(()=>{
+      const toggleVisible = () => {
+        const scrolled = window.pageYOffset;
+        if (scrolled > 200){
+          setLook("-fixed");
+        } 
+        else {
+          setLook("");
+        }
+      };
+      window.addEventListener('scroll', toggleVisible);
+      return () => {
+        window.removeEventListener('scroll', toggleVisible);
+      };
     },[]);
     const Maybe = async() =>{
       try {
@@ -38,10 +57,9 @@ const Show = (props) => {
       }
       // window.scroll({top:400,behavior:"smooth"});
     };
-    
     return(
         <>
-        <Link className="show-p-b" to={GetHistoryLocation+"/"}>
+        <Link className={`show-p-b${look}`} to={GetHistoryLocation+"/"}>
           <div className="show-p-b-p">
             <img className="show-p-b-i" src={`${GetHistoryLocation}/images/left.svg`} alt="left" />
           </div>
@@ -49,19 +67,19 @@ const Show = (props) => {
         <div className="show-product">
           <div className="show-product-2">
             <div className="show-p-p">
-              <img src={GetHistoryLocation+image} alt="" loading="lazy" className="show-p-i" />
+              <img src={GetHistoryLocation+status.image} alt="" loading="lazy" className="show-p-i" />
             </div>
           </div>
           <div className="show-product-3">
             <div className="show-p-i-b">
               <h1 className="show-p-i-b-h">
-                {title}
+                {status.title}
               </h1>
               <p className="show-p-i-b-p">
-                {content}
+                {status.content}
               </p>
               <p className="show-p-i-b-p">
-                Средняя цена в аптеках города <b>{price} ₸</b>
+                Средняя цена в аптеках города <b>{status.price} ₸</b>
               </p>
               <div className="show-p-i-b-f">
                 <button onClick={Maybe} className="show-button">

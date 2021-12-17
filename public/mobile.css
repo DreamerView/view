@@ -28,7 +28,7 @@ a {
 }
 
 html {
-    overflow-y: scroll;
+    overflow-y:overlay;
 }
 
 button {
@@ -42,6 +42,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: hsl(0, 0%, 97%);
     padding-bottom: 30.1vw;
+    overflow-x: hidden;
 }
 
 header.main-block-1 {
@@ -796,15 +797,30 @@ h1.b1-t2 {
 
 a.show-p-b {
     z-index: 3;
-    margin-left: 5.56vw;
-    position: sticky;
+    margin: 50vw 0 0 5.56vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 100%;
+    border: 0.28vw solid #f1f2ec;
+    background-color: white;
+    cursor: pointer;
+}
+
+a.show-p-b-fixed {
+    z-index: 3;
+    margin-left: 2.56vw;
+    position: fixed;
     position: -webkit-sticky;
     top:30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
-    height: 10vw;
+    width: 12vw;
+    height: 12vw;
     border-radius: 100%;
     border: 0.28vw solid #f1f2ec;
     background-color: white;
@@ -815,16 +831,20 @@ a.show-p-b:hover {
     border: 0.28vw solid #00CC99;
 }
 
+a.show-p-b-fixed:hover {
+    border: 0.28vw solid #00CC99;
+}
+
 div.show-p-b-p {
     position: relative;
-    width: 2vw;
-    height: 3.3vw;
+    width: 4vw;
+    height: 5.3vw;
 }
 
 img.show-p-b-i {
     position: absolute;
-    width: 2vw;
-    height: 3.3vw;
+    width: 4vw;
+    height: 5.3vw;
 }
 
 div.show-product {

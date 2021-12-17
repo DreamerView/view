@@ -556,6 +556,21 @@ div.show-product-3 {
 a.show-p-b {
     margin-left: 2.8125vw;
     z-index: 3;
+    position: absolute;
+    width: 3.90625vw;
+    height: 3.90625vw;
+    border-radius: 100%;
+    background-color: white;
+    border: 0.15625vw solid #F1F2EC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+a.show-p-b-fixed {
+    margin-left: 1.56vw;
+    z-index: 3;
     position: fixed;
     width: 3.90625vw;
     height: 3.90625vw;
@@ -566,6 +581,11 @@ a.show-p-b {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    top:3.125vw;
+}
+
+a.show-p-b-fixed:hover {
+    border: 0.15625vw solid hsl(165, 100%, 40%);
 }
 
 a.show-p-b:hover {
