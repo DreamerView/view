@@ -1,4 +1,4 @@
-// import { useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import GetHistoryLocation from '../../locate';
 import { getFirestore,collection, addDoc,doc, getDoc } from "firebase/firestore";
@@ -7,9 +7,9 @@ import { useEffect,useState } from 'react';
 import ShowLoader from './show-loader';
 
 
-const Show = (props) => {
-    // const {id} = useParams();
-    const [lazyblock,setLazyBlock] = useState(false);
+const Show = () => {
+    const {id} = useParams();
+    const [lazyblock,setLazyBlock] = useState(true);
     const [look, setLook] = useState("");
     const db = getFirestore();
     const [status,setStatus] =  useState({
@@ -19,14 +19,15 @@ const Show = (props) => {
       image:'/images/first-aid-alt.svg'
     });
     useEffect(()=>{
+      console.log(id);
       let check = true;
       const db = getFirestore();
-      getDoc(doc(db,'list','1fXhVDolCicMKjr2TFh7')).then((docSnap)=>{
+      getDoc(doc(db,'list',id)).then((docSnap)=>{
         if(docSnap.exists()) {
           const s = docSnap.data();
           if(check) { 
             setStatus({title:s.title,content:s.content,price:s.price,image:s.image});
-            setLazyBlock(true);
+            setLazyBlock(false);
           }
         }
         else console.log("error. Don't exist!");
@@ -34,7 +35,7 @@ const Show = (props) => {
       return () => {
         check=false;
       };
-    },[]);
+    },[id],);
     useEffect(()=>{
       const toggleVisible = () => {
         const scrolled = window.pageYOffset;
@@ -65,7 +66,7 @@ const Show = (props) => {
     };
     return(
         <>
-        {!lazyblock?<ShowLoader />:
+        {lazyblock?<ShowLoader />:
         <div>
         <Link className={`show-p-b${look}`} to={GetHistoryLocation+"/"}>
           <div className="show-p-b-p">
@@ -87,7 +88,7 @@ const Show = (props) => {
                 {status.content}
               </p>
               <p className="show-p-i-b-p">
-                Средняя цена в аптеках города <b>{status.price} ₸</b>
+                Средняя цена в аптеках города <b>{status.price} ₸{id}</b>
               </p>
               <div className="show-p-i-b-f">
                 <button onClick={Maybe} className="show-button">

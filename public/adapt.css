@@ -581,7 +581,7 @@ a.show-p-b-fixed {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    top:3.125vw;
+    top: 3.125vw;
 }
 
 a.show-p-b-fixed:hover {
@@ -1192,4 +1192,127 @@ button.pay {
 
 button.pay:hover {
     background-color: hsl(165, 99%, 35%);
+}
+
+/*  */
+
+div.skeleton {
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(0, 0%, 70%);
+    }
+
+    100% {
+        background-color: hsl(0, 0%, 88%);
+    }
+}
+
+div.b1-img {
+    position: absolute;
+    width: 4.22vw;
+    height: 4.22vw;
+    border-radius: 1.48vw;
+}
+
+div.b1-t1 {
+    width: 17.65vw;
+    height: 1.17vw;
+    border-radius: 1.875vw;
+    margin: 0.7vw 0 0 0.9vw;
+}
+
+div.b1-t2 {
+    width: 15.625vw;
+    height: 1.17vw;
+    border-radius: 1.875vw;
+    margin: 0.78125vw 0 0 0.9375vw;
+}
+
+div.show-p-i-b-h-loader {
+    width: 23.125vw;
+    height: 2.1vw;
+    border-radius: 1.05vw;
+}
+
+img.show-button-loader {
+    width: auto;
+    height: 0.625vw;
+}
+
+div.show-p-i-b-p-loader-1 {
+    margin-top: 2.1vw;
+    width: 30.39vw;
+    height: 1.17vw;
+    border-radius: 0.59vw;
+}
+
+div.show-p-i-b-p-loader-2 {
+    margin-top: 0.9375vw;
+    width: 27.5vw;
+    height: 1.17vw;
+    border-radius: 0.59vw;
+}
+
+div.show-p-i-b-p-loader-3 {
+    margin-top: 2.58vw;
+    width: 24.14vw;
+    height: 1.17vw;
+    border-radius: 0.59vw;
+}
+
+div.i-m-p {
+    margin: 1.5625vw;
+    position: relative;
+    width: 6.8vw;
+    height: 6.8vw;
+}
+
+div.i-m-i {
+    position: absolute;
+    width: 6.8vw;
+    height: 6.8vw;
+}
+
+div.z-c {
+    width: 13.36vw;
+    height: 1.17vw;
+    border-radius: 1.875vw;
+}
+
+div.p-t {
+    margin-top: 1.17vw;
+    width: 17.66vw;
+    height: 1.17vw;
+    border-radius: 1.875vw;
+}
+
+div.i-g-p {
+    border-radius: 100%;
+    width: 1.33vw;
+    height: 1.33vw;
+}
+
+div.t-t {
+    width: 10.08vw;
+    height: 1.33vw;
+    border-radius: 1.875vw;
+}
+
+div.h {
+    width: 8.05vw;
+    height: 1.48vw;
+    border-radius: 0.78vw;
+    margin: 1.56vw 1.56vw 0 0;
+    float: right;
+}
+
+button.p-b-n-b {
+    width: 46.6vw;
+    height: 4.68vw;
+    border: 0.08vw solid hsl(70, 19%, 94%);
+    cursor: pointer;
 }

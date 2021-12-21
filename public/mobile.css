@@ -797,7 +797,7 @@ h1.b1-t2 {
 
 a.show-p-b {
     z-index: 3;
-    margin: 50vw 0 0 5.56vw;
+    margin-left: 5.56vw;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -1213,4 +1213,173 @@ button.unfavorite {
 
 button.unfavorite:hover {
     background-color: hsl(0, 0%, 97%);
+}
+
+/*  */
+
+div.skeleton {
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(0, 0%, 70%);
+    }
+
+    100% {
+        background-color: hsl(0, 0%, 88%);
+    }
+}
+
+div.b1-img {
+    position: absolute;
+    width: 14.3vw;
+    height: 14.3vw;
+    border-radius: 2.64vw;
+}
+
+div.b1-t1 {
+    width: 56.53vw;
+    height: 3.61vw;
+    border-radius: 1.8vw;
+    margin: 2.64vw 0 0 3.05vw;
+}
+
+div.b1-t2 {
+    width: 50.42vw;
+    height: 3.61vw;
+    border-radius: 1.8vw;
+    margin: 3.05vw 0 0 3.05vw;
+}
+
+div.show-p-i-b-h-loader {
+    width: 69.4vw;
+    height: 5.5vw;
+    border-radius: 2.5vw;
+    margin: 6.94vw 0 0 5.56vw;
+}
+
+img.show-button-loader {
+    width: auto;
+    height: 2.61vw;
+}
+
+div.show-p-i-b-p-loader-1 {
+    width: 87.08vw;
+    height: 3.6vw;
+    border-radius: 1.8vw;
+    margin: 8.19vw 0 0 5.56vw;
+}
+
+div.show-p-i-b-p-loader-2 {
+    width: 69.4vw;
+    height: 3.6vw;
+    border-radius: 1.8vw;
+    margin: 3.05vw 0 0 5.56vw;
+}
+
+div.show-p-i-b-p-loader-3 {
+    margin: 7.64vw 0 0 5.56vw;
+    width: 62.36vw;
+    height: 3.61vw;
+    border-radius: 1.8vw;
+}
+
+div.i-m-p {
+    margin: 1.5625vw;
+    position: relative;
+    width: 6.8vw;
+    height: 6.8vw;
+}
+
+div.i-m-i {
+    position: absolute;
+    width: 6.8vw;
+    height: 6.8vw;
+}
+
+div.z-c {
+    width: 13.36vw;
+    height: 1.17vw;
+    border-radius: 1.875vw;
+}
+
+div.p-t {
+    margin-top: 1.17vw;
+    width: 17.66vw;
+    height: 1.17vw;
+    border-radius: 1.875vw;
+}
+
+div.i-g-p {
+    border-radius: 100%;
+    width: 1.33vw;
+    height: 1.33vw;
+}
+
+div.t-t {
+    width: 10.08vw;
+    height: 1.33vw;
+    border-radius: 1.875vw;
+}
+
+div.h {
+    width: 8.05vw;
+    height: 1.48vw;
+    border-radius: 0.78vw;
+    margin: 1.56vw 1.56vw 0 0;
+    float: right;
+}
+
+button.p-b-n-b {
+    width: 46.6vw;
+    height: 4.68vw;
+    border: 0.08vw solid hsl(70, 19%, 94%);
+    cursor: pointer;
+}
+
+div.mobile-shop-info-block-item-i-1-loader {
+    width: 25.28vw;
+    height: 25.28vw;
+}
+
+div.mobile-shop-info-block-item-title-loader {
+    width: 43.75vw;
+    height: 3.61vw;
+    border-radius: 1.8vw;
+}
+
+div.mobile-shop-info-block-item-content-1-loader {
+    width: 50.83vw;
+    height: 3.61vw;
+    border-radius: 1.8vw;
+    margin-top: 4.4vw;
+}
+
+div.mobile-shop-info-block-item-content-2-loader {
+    width: 37.92vw;
+    height: 3.61vw;
+    border-radius: 1.8vw;
+    margin-top: 1.6vw;
+}
+
+div.mobile-shop-info-block-2-item-1-image-loader {
+    width: 4.86vw;
+    height: 4.86vw;
+    border-radius: 100%;
+}
+
+div.mobile-shop-info-block-2-item-1-text-loader {
+    margin: 0.69vw 0 0 2.97vw;
+    width: 27.5vw;
+    height: 3.61vw;
+    border-radius: 13px;
+}
+
+div.mobile-shop-info-block-3-item-1-text-loader {
+    margin-left: 4.17vw;
+    width: 29.44vw;
+    height: 5vw;
+    border-radius: 2.5vw;
 }
