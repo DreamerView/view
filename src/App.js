@@ -1,5 +1,5 @@
 import Header from './header/header';
-import Main from './main/main';
+import Main from './main/main.js';
 
 const App = () => {
   return (

@@ -1,6 +1,7 @@
 import ShowShop from "./show-shop";
 import Product from "./product";
 import ItemList1 from "../item-list1";
+import ShowShopLoader from "./show-shop-loader";
 
 const ShowInfo = () => {
     return(
@@ -15,6 +16,7 @@ const ShowInfo = () => {
                 <div className="c-b">
                 <h1 className="c-b-t">Можете купить у</h1>
                 <ShowShop id="maybe" />
+                <ShowShopLoader />
                 <button className="p-b-n-b">
                     Посмотреть еще варианты (14)
                 </button>

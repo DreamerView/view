@@ -3,7 +3,6 @@ import Show from './show/show';
 import {Routes, Route} from 'react-router-dom';
 import MenuList from './menu/menu-list';
 import Panel from './panel/panel';
-import Location from '../locate';
 import GetHistoryLocation from '../locate';
 const Header = () => {
   return (
@@ -14,7 +13,7 @@ const Header = () => {
               <div id="first">
                 <div className="m-f-1">
                   <div className="m-f-i-1">
-                    <img src={Location+"/images/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"} loading="lazy" alt="logo" className="m-p-i-1" />
+                    <img src={GetHistoryLocation+"/images/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"} loading="lazy" alt="logo" className="m-p-i-1" />
                   </div>
                   <div className="m-f-b">
                     <div className="m-f-b-1" />

@@ -4,9 +4,12 @@ import GetHistoryLocation from '../../locate';
 import { getFirestore,collection, addDoc,doc, getDoc } from "firebase/firestore";
 import  '../../data';
 import { useEffect,useState } from 'react';
+import ShowLoader from './show-loader';
+
 
 const Show = (props) => {
     // const {id} = useParams();
+    const [lazyblock,setLazyBlock] = useState(false);
     const [look, setLook] = useState("");
     const db = getFirestore();
     const [status,setStatus] =  useState({
@@ -21,7 +24,10 @@ const Show = (props) => {
       getDoc(doc(db,'list','1fXhVDolCicMKjr2TFh7')).then((docSnap)=>{
         if(docSnap.exists()) {
           const s = docSnap.data();
-          if(check) setStatus({title:s.title,content:s.content,price:s.price,image:s.image});
+          if(check) { 
+            setStatus({title:s.title,content:s.content,price:s.price,image:s.image});
+            setLazyBlock(true);
+          }
         }
         else console.log("error. Don't exist!");
       });
@@ -59,6 +65,8 @@ const Show = (props) => {
     };
     return(
         <>
+        {!lazyblock?<ShowLoader />:
+        <div>
         <Link className={`show-p-b${look}`} to={GetHistoryLocation+"/"}>
           <div className="show-p-b-p">
             <img className="show-p-b-i" src={`${GetHistoryLocation}/images/left.svg`} alt="left" />
@@ -94,6 +102,7 @@ const Show = (props) => {
             </div>
           </div>
         </div>
+      </div>}
       </>
     );
 };
