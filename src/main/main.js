@@ -5,6 +5,7 @@ import ShowInfo from './blocks/show/show';
 import GetHistoryLocation from '../locate';
 import NotFoundPage from './blocks/notfound';
 import Basket from './basket/basket';
+import LoginForm from './login/login.js';
 
 const Main = () => {
     return(
@@ -14,7 +15,7 @@ const Main = () => {
               <Route path={GetHistoryLocation+"/foryou"} element={<div/>}/>
               <Route path={GetHistoryLocation+"/basket"} element={<Basket/>}/>
               <Route path={GetHistoryLocation+"/favourite"} element={<div/>}/>
-              <Route path={GetHistoryLocation+"/user"} element={<div/>}/>
+              <Route path={GetHistoryLocation+"/user"} element={<LoginForm/>}/>
               <Route path={GetHistoryLocation+"/products/:id"} element={<ShowInfo/>}/>
               <Route path={GetHistoryLocation+"/*"} element={<NotFoundPage/>}/>
             </Routes>
