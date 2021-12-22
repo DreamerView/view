@@ -1,12 +1,3 @@
-div.connect-panel {
-    margin-left:auto;
-    margin-right: auto;
-    width: 1244px;
-    height: 623px;
-    border-radius: 15px;
-    background-color: hsl(0, 0%, 100%);
-}
-
 div.join-text-place {
     text-align: center;
 }
@@ -18,7 +9,7 @@ h1.join-text {
 }
 
 div.main-four-blocks-place {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 div.main-four-blocks {
@@ -136,8 +127,9 @@ div.place-google-apple-facebook {
 button.google {
     width: 358px;
     height: 61px;
+    border-radius: 5px;
     background-color:hsl(0, 0%, 100%);
-    border: 1px solid hsl(0, 0%, 20%);
+    border: 1px solid hsl(72, 15%, 87%);
     cursor: pointer;
 }
 

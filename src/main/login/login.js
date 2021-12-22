@@ -1,5 +1,4 @@
 import GetHistoryLocation from '../../locate';
-import './login.css';
 
 const LoginForm = () => {
     return(
@@ -40,7 +39,7 @@ const LoginForm = () => {
               <div className="place-img-in-button">
                 <img className="img-in-button" src={`${GetHistoryLocation}/login-images/Google__G__Logo.svg.png`} alt="Google" /> 
               </div>
-              <h1 className="text-google">Войти через Google</h1>
+              Войти через Google
             </button>
           </div>
           <div className="place-google-apple-facebook">
@@ -48,7 +47,7 @@ const LoginForm = () => {
               <div className="place-img-in-button">
                 <img className="img-in-button" src={`${GetHistoryLocation}/login-images/Apple_logo_black.svg.png`} alt="Apple" /> 
               </div>
-              <h1 className="text-google">Войти через Apple</h1>
+              Войти через Apple
             </button>
           </div>
           <div className="place-google-apple-facebook">
@@ -56,7 +55,7 @@ const LoginForm = () => {
               <div className="place-img-in-button">
                 <img className="img-in-button" src={`${GetHistoryLocation}/login-images/facebook_logo_icon_147291.png`} alt="Facebook" /> 
               </div>
-              <h1 className="text-google">Войти через Facebook</h1>
+              Войти через Facebook
             </button>
           </div>
         </div>

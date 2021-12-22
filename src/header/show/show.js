@@ -7,10 +7,10 @@ import ShowLoader from './show-loader';
 
 
 const Show = () => {
-    const {id} = useParams();
-    const [lazyblock,setLazyBlock] = useState(true);
+    let {id} = useParams();
+    const [lazyblock,setLazyBlock] = useState('');
     const [look, setLook] = useState("");
-    const db = getFirestore();
+    
     const [status,setStatus] =  useState({
       title:'Загрузка',
       content:'Пожалуйста подождите',
@@ -18,7 +18,7 @@ const Show = () => {
       image:'/images/first-aid-alt.svg'
     });
     useEffect(()=>{
-      console.log(id);
+      setLazyBlock(true);
       let check = true;
       const db = getFirestore();
       getDoc(doc(db,'list',id)).then((docSnap)=>{
@@ -29,12 +29,33 @@ const Show = () => {
             setLazyBlock(false);
           }
         }
-        else console.log("error. Don't exist!");
+        else {
+          if(check) { 
+            setStatus({title:"404",content:"Ничего не найдено",price:"0",image:"/images/first-aid-alt.svg"});
+            setLazyBlock(false);
+          }
+        };
       });
       return () => {
         check=false;
       };
-    },[id],);
+    },[id]);
+    useEffect(()=>{
+      const Test = async()=> {
+        let db = getFirestore();
+        try {
+          const docRef = await addDoc(collection(db, "list"), {
+            title: "Panakea",
+            content: "Panakea App"
+  
+          });
+          console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+          console.error("Error adding document: ", e);
+        }
+      }
+      console.log(Test);
+    },[])
     useEffect(()=>{
       const toggleVisible = () => {
         const scrolled = window.pageYOffset;
@@ -50,18 +71,9 @@ const Show = () => {
         window.removeEventListener('scroll', toggleVisible);
       };
     },[]);
-    const Maybe = async() =>{
-      try {
-        const docRef = await addDoc(collection(db, "list"), {
-          title: "Panakea",
-          content: "Panakea App"
-
-        });
-        console.log("Document written with ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-      // window.scroll({top:400,behavior:"smooth"});
+    
+    const Maybe = () =>{
+      window.scroll({top:400,behavior:"smooth"});
     };
     return(
         <>
@@ -87,7 +99,7 @@ const Show = () => {
                 {status.content}
               </p>
               <p className="show-p-i-b-p">
-                Средняя цена в аптеках города <b>{status.price} ₸{id}</b>
+                Средняя цена в аптеках города <b>{status.price} ₸</b>
               </p>
               <div className="show-p-i-b-f">
                 <button onClick={Maybe} className="show-button">

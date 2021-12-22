@@ -4,9 +4,11 @@ import GetHistoryLocation from "../../../locate";
 import { getFirestore,doc, getDoc } from "firebase/firestore";
 import  '../../../data';
 import ProductInfoLoader from "./product-info-loader";
+import { useParams } from "react-router-dom";
 
 const Product = () => {
-    const [lazyblock,setLazyBlock] = useState(false);
+    const {id} = useParams();
+    const [lazyblock,setLazyBlock] = useState('');
     const [ProductItem,setProductItem] = useState([
         {id:1,images:GetHistoryLocation+'/images/factory.svg',title:'Производитель',content:"Загружаем данные. Пожалуйста подождите."},
         {id:2,images:GetHistoryLocation+'/images/security.svg',title:'Фармакотерапевтическая группа',content:"Загружаем данные. Пожалуйста подождите."},
@@ -14,9 +16,10 @@ const Product = () => {
         {id:4,images:GetHistoryLocation+'/images/lekform.svg',title:'Лекарственная форма:',content:"Загружаем данные. Пожалуйста подождите."}
     ]);
     useEffect(()=>{
+        setLazyBlock(false);
         let check = true;
         const db = getFirestore();
-        getDoc(doc(db,'list','1fXhVDolCicMKjr2TFh7')).then((docSnap)=>{
+        getDoc(doc(db,'list',id)).then((docSnap)=>{
           if(docSnap.exists()) {
             const s = docSnap.data();
             if(check) { 
@@ -34,7 +37,7 @@ const Product = () => {
         return () => {
           check=false;
         };
-      },[]);
+      },[id]);
     return(
         <div>
         

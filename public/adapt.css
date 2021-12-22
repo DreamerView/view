@@ -1316,3 +1316,204 @@ button.p-b-n-b {
     border: 0.08vw solid hsl(70, 19%, 94%);
     cursor: pointer;
 }
+
+/* Login */
+
+div.join-text-place {
+    text-align: center;
+}
+
+h1.join-text {
+    font-size: 1.95vw;
+    font-weight: 600;
+    color: hsl(0, 0%, 0%);
+}
+
+div.main-four-blocks-place {
+    margin-top: 4.68vw;
+}
+
+div.main-four-blocks {
+    width: 97vw;
+    height: 39vw;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.17vw;
+}
+
+div.place-three-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66.56vw;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.first-block-in {
+    width: 32.4vw;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+}
+
+h1.electron-addres {
+    font-size: 0.93vw;
+    font-weight: 700;
+    color: hsl(0, 0%, 20%);
+}
+
+div.place-input-in {
+    margin-top: 0.468vw;
+}
+
+input.none-border {
+    width: 27.8vw;
+    height: 3.1vw;
+    border: none;
+    color: hsl(0, 0%, 20%);
+    font-size: 1.25vw;
+    font-weight: 300;
+    background-color: hsl(0, 0%, 100%);
+    border-bottom: 0.117vw solid hsl(0, 0%, 92%);
+    margin-bottom: 1.64vw;
+}
+
+input.none-border:focus {
+    border-bottom: 0.117vw solid hsl(165, 100%, 40%);
+    outline: none;
+}
+
+input.none-border::placeholder {
+    color: hsl(0, 0%, 62%);
+    font-size: 1.25vw;
+    font-weight: 300;
+}
+
+div.place-button-in {
+    padding-top: 1.09vw;
+}
+
+button.button-join-in {
+    width: 27.8vw;
+    height: 3.8vw;
+    background-color: hsl(165, 100%, 40%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 0.39vw;
+    font-size: 1vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.button-join-in:hover {
+    background-color: hsl(165, 99%, 35%);
+}
+
+/* */
+div.second-block-in {
+    width: 5.78vw;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.vertical-stick {
+    margin-left: 0.468vw;
+    width: 0.156vw;
+    height: 6.95vw;
+    border: none;
+    border-radius: 0.39vw;
+    background-color: hsl(0, 0%, 96%);
+}
+
+div.place-or {
+    margin: 1.48vw 0 1.48vw 0;
+}
+
+h1.or {
+    font-size: 0.93vw;
+    font-weight: 600;
+}
+
+/* */
+div.third-block-in {
+    width: 28.3vw;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.place-google-apple-facebook {
+    margin-top: 0.93vw;
+}
+
+button.google {
+    width: 27.96vw;
+    height: 4.76vw;
+    border-radius: 0.39vw;
+    background-color: hsl(0, 0%, 100%);
+    border: 0.078vw solid hsl(72, 15%, 87%);
+    cursor: pointer;
+    font-size: 1.17vw;
+    font-weight: 600;
+    color: hsl(0, 0%, 20%);
+}
+div.google-flex {
+    display: flex;
+}
+
+button.google:hover {
+    background-color: hsl(0, 0%, 92%);
+    transition: 10ms;
+}
+
+div.place-img-in-button {
+    margin-left: 1.87vw;
+    float: left;
+}
+
+img.img-in-button {
+    width: auto;
+    height: 1.7vw;
+}
+
+
+/* */
+
+div.four-block-in {
+    width: 66.5vw;
+    height: 10.39vw;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.place-registration {
+    text-align: center;
+    padding-top: 3.59vw;
+}
+
+h1.regis-text {
+    font-size: 1.09vw;
+    font-weight: normal;
+}
+
+button.regis-green {
+    font-size: 1.1vw;
+    color: hsl(165, 99%, 29%);
+    border: none;
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+div.place-secure-captcha {
+    margin-top: 2.5vw;
+}
+
+h1.secure-captcha {
+    font-size: 1.09vw;
+    font-weight: 600;
+    color: hsl(0, 0%, 60%);
+}
+
+h1.secure-privacy {
+    font-size: 1vw;
+    font-weight: normal;
+    color: hsl(0, 0%, 60%);
+}

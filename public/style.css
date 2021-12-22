@@ -285,7 +285,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 1px solid hsl(0, 0%, 93%);
+    border: 1px solid hsl(72, 15%, 87%);
 }
 
 div.panel-s-b:hover {
@@ -371,7 +371,7 @@ a.m-p-b {
     height: 308px;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
-    border: 1px solid hsl(0, 0%, 93%);
+    border: 1px solid hsl(72, 15%, 87%);
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -482,7 +482,7 @@ div.maybe-g-p-b {
 div.maybe-g-p-b1 {
     width: 343px;
     height: 168px;
-    border: 1px solid #F1F2EC;
+    border: 1px solid hsl(72, 15%, 87%);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -807,7 +807,7 @@ div.b-m {
     width: 595px;
     height: 140px;
     background-color: hsl(0, 0%, 100%);
-    border: 1px solid hsl(0, 0%, 93%);
+    border: 1px solid hsl(72, 15%, 87%);
 }
 
 div.i {
@@ -927,7 +927,7 @@ button.p-r-b:hover {
 button.p-b-n-b {
     width: 597px;
     height: 60px;
-    border: 1px solid hsl(0, 0%, 93%);
+    border: 1px solid hsl(72, 15%, 87%);
     color: hsl(220, 100%, 70%);
     font-size: 15px;
     font-weight: normal;
@@ -1369,9 +1369,199 @@ div.h {
     float: right;
 }
 
-button.p-b-n-b {
-    width: 597px;
-    height: 60px;
-    border: 1px solid hsl(70, 19%, 94%);
+/* Login */
+
+div.join-text-place {
+    text-align: center;
+}
+
+h1.join-text {
+    font-size: 25px;
+    font-weight: 600;
+    color:hsl(0, 0%, 0%);
+}
+
+div.main-four-blocks-place {
+    margin-top: 60px;
+}
+
+div.main-four-blocks {
+    width: 1244px;
+    height: 500px;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 15px;
+}
+
+div.place-three-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 852px;
+    height: 367px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.first-block-in {
+    width: 415px;
+    height: 232px;
+    background-color:hsl(0, 0%, 100%);
+}
+
+h1.electron-addres {
+    font-size: 12px;
+    font-weight: 700;
+    color:	hsl(0, 0%, 20%);
+}
+
+div.place-input-in {
+    margin-top: 6px;
+}
+
+input.none-border {
+    width: 356px;
+    height: 40px;
+    border: none;
+    color:		hsl(0, 0%, 20%);
+    font-size: 16px;
+    font-weight: 300;
+    background-color:hsl(0, 0%, 100%);
+    border-bottom: 1.5px solid hsl(0, 0%, 92%);
+    margin-bottom:21px;
+}
+
+input.none-border:focus {
+    border-bottom: 1.5px solid hsl(165, 100%, 40%);
+    outline: none;
+}
+
+input.none-border::placeholder {
+    color: hsl(0, 0%, 62%);
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+div.place-button-in {
+    padding-top: 14px;
+}
+
+button.button-join-in {
+    width: 356px;
+    height: 49px;
+    background-color:hsl(165, 100%, 40%);
+    color:hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
+}
+
+button.button-join-in:hover {
+    background-color:hsl(165, 99%, 35%);
+}
+
+/*  */
+div.second-block-in {
+    width: 74px;
+    height: 232px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.vertical-stick {
+    margin-left: 6px;
+    width: 2px;
+    height: 89px;
+    border:none;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 96%);
+}
+
+div.place-or {
+    margin: 19px 0 19px 0;
+}
+
+h1.or {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*  */
+div.third-block-in {
+    width: 363px;
+    height: 232px;
+    background-color:hsl(0, 0%, 100%);
+}
+
+div.place-google-apple-facebook {
+    margin-top: 12px;
+}
+
+button.google {
+    width: 358px;
+    height: 61px;
+    border-radius: 5px;
+    background-color:hsl(0, 0%, 100%);
+    border: 1px solid hsl(72, 15%, 87%);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color:	hsl(0, 0%, 20%);
+}
+
+button.google:hover {
+    background-color: hsl(0, 0%, 92%);
+    transition: 10ms;
+}
+
+div.place-img-in-button{
+    margin-left: 24px;
+    float: left;
+}
+
+img.img-in-button {
+    width: auto;
+    height: 22px;
+}
+
+
+/*  */
+
+div.four-block-in {
+    width: 852px;
+    height: 133px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+div.place-registration {
+    text-align: center;
+    padding-top: 46px;
+}
+
+h1.regis-text {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+button.regis-green {
+    color: hsl(165, 99%, 29%);
+    border: none;
+    background-color:hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+div.place-secure-captcha {
+    margin-top: 32px;
+}
+
+h1.secure-captcha  {
+    font-size: 14px;
+    font-weight:600;
+    color: hsl(0, 0%, 60%);
+}
+
+h1.secure-privacy  {
+    font-size: 13px;
+    font-weight:normal;
+    color: hsl(0, 0%, 60%);
 }
