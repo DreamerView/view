@@ -1,11 +1,10 @@
 import ShowShopInfo from "./show-shop-info";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import GetHistoryLocation from "../../../locate";
 import { useMediaQuery } from "react-responsive";
 import MobileShopInfo from "./mobileshopinfo";
 import ShowShopLoader from "./show-shop-loader";
 import MobileShopLoader from "./mobileshoploader";
-import { useEffect } from "react/cjs/react.development";
 
 const ShowShop = () => {
     const num = ['1','2','3'];
