@@ -1,5 +1,4 @@
-import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
 import GetHistoryLocation from '../../locate';
 import { getFirestore,collection, addDoc,doc, getDoc } from "firebase/firestore";
 import  '../../data';
