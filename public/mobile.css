@@ -144,7 +144,7 @@ input.m-s-1 {
     color: black;
     font-weight: normal;
     font-size: 3.89vw;
-    font-weight: 300;
+    font-weight: normal;
     color: #98999b;
 }
 
@@ -153,16 +153,19 @@ input.m-s-1::placeholder {
     font-weight: normal;
 }
 
+
 input.m-s-1:not(:placeholder-shown) {
-    background: url("images/search.svg") 6.69vw 4.66vw no-repeat;
+    background: url("images/search-active.svg") 6.69vw 4.66vw no-repeat;
     background-size: 4.46vw auto;
     width: 68.47vw;
-    height: 3.65vw;
-    padding: 4.86vw 4.86vw 4.86vw 15.16vw;
+    height: 14.17vw;
+    padding: 0 7.3vw 0 18.47vw;
+    border-radius: 4.17vw 4.17vw 0 0;
     background-color: white;
-    border: 0.5vw solid hsl(12, 91%, 57%);
+    border: 0.2vw solid hsl(12, 91%, 57%);
     outline: none;
     color: black;
+    font-weight: normal;
 }
 
 input.m-s-1:focus {
@@ -176,6 +179,7 @@ input.m-s-1:focus {
     border: 0.2vw solid hsl(0, 0%, 93%);
     outline: none;
     color: black;
+    font-weight: normal;
 }
 
 
