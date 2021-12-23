@@ -6,7 +6,7 @@ const Search = () => {
     const focus = useRef();
     const [check,setCheck] = useState('');
     useEffect(()=>{
-        setCheck(true);
+        setCheck(false);
         const CheckEvent = ()=> {
             setCheck(true);
         };
