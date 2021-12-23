@@ -4,6 +4,8 @@ import {Routes, Route} from 'react-router-dom';
 import MenuList from './menu/menu-list';
 import Panel from './panel/panel';
 import GetHistoryLocation from '../locate';
+import Search from './search/search.jsx';
+
 const Header = () => {
   return (
     <header className="main-block-1">
@@ -24,9 +26,7 @@ const Header = () => {
                 </div>
               </div>
               <div id="second">
-                <div className="m-s">
-                  <input type="text" placeholder="Какой препарат мы будем искать?" className="m-s-1" />
-                </div>
+                <Search/>
               </div>
               <div id="third">
                 <div className="m-p-i">

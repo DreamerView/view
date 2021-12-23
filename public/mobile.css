@@ -67,13 +67,14 @@ div.main-block-2 {
 
 div.m-g-1 {
     flex: 1;
-    padding: 8.33vw 5.6vw 8.33vw 5.6vw;
+    padding: 8.33vw 2.78vw 8.33vw 2.78vw;
     height: auto;
     display: grid;
-    grid-template-columns: 44.4vw 44.4vw;
+    grid-template-columns: 47.2vw 47.2vw;
 }
 
 div#first {
+    padding-left:2.78vw;
     order: 1;
 }
 
@@ -83,6 +84,7 @@ div#second {
 }
 
 div#third {
+    padding-right:2.78vw;
     order: 2;
 }
 
@@ -125,22 +127,23 @@ h1.m-f-t-1 {
 
 div.m-s {
     position: relative;
-    width: 88.9vw;
+    width: 94.4vw;
     height: 14.17vw;
 }
 
 input.m-s-1 {
-    position: absolute;
-    background: url("images/search.svg") 7.19vw 5.06vw no-repeat;
+    background: url("images/search-active.svg") 6.69vw 4.66vw no-repeat;
     background-size: 4.46vw auto;
-    font-family: 'Segoe UI', sans-serif;
-    padding: 4.86vw 4.86vw 4.86vw 15.56vw;
     width: 68.47vw;
-    height: 4.45vw;
-    background-color: hsl(0, 0%, 97%);
-    border: 0 none;
+    height: 14.17vw;
+    padding: 0 7.3vw 0 18.47vw;
     border-radius: 4.17vw;
-    font-size: 3.33vw;
+    background-color: white;
+    border: 0.2vw solid hsl(0, 0%, 93%);
+    outline: none;
+    color: black;
+    font-weight: normal;
+    font-size: 3.89vw;
     font-weight: 300;
     color: #98999b;
 }
@@ -166,13 +169,13 @@ input.m-s-1:focus {
     background: url("images/search-active.svg") 6.69vw 4.66vw no-repeat;
     background-size: 4.46vw auto;
     width: 68.47vw;
-    height: 3.65vw;
-    padding: 4.86vw 4.86vw 4.86vw 15.16vw;
+    height: 14.17vw;
+    padding: 0 7.3vw 0 18.47vw;
+    border-radius: 4.17vw 4.17vw 0 0;
     background-color: white;
-    border: 0.5vw solid hsl(165, 100%, 40%);
+    border: 0.2vw solid hsl(0, 0%, 93%);
     outline: none;
     color: black;
-    font-weight: normal;
 }
 
 
@@ -1594,4 +1597,73 @@ button.regis-green {
     background-color: hsl(0, 0%, 100%);
     cursor: pointer;
     font-size: 3.88vw;
+}
+
+/* Search */
+
+div.block-search {
+    position: absolute;
+    display: block;
+    width: 94.4vw;
+    height: auto;
+    background-color: white;
+    border-radius: 0 0 4.166vw 4.166vw;
+    border: 0.138vw solid #EDEDED;
+    z-index: 50;
+
+}
+
+div.flex-search {
+    display: flex;
+    cursor: pointer;
+}
+
+div.flex-search:hover {
+    background-color: #F8F8F8;
+}
+
+div.block-picture-drugs {
+    width: 22.47vw;
+    height: 15.97vw;
+    border-radius: 0 0 0 2.08vw;
+}
+
+div.place-drugs-picture {
+    padding: 2.91vw 3.75vw;
+}
+
+div.picture-drugs-absolute {
+    position: relative;
+    width: 10.42vw;
+    height: 10.42vw;
+}
+
+img.picture-drugs-relative {
+    position: absolute;
+    width: 10.42vw;
+    height: 10.42vw;
+    border-radius: 2.08vw;
+}
+
+div.block-drugs-text-in {
+    width: 100%;
+    height: 15.97vw;
+}
+
+div.place-name-drugs-in {
+    padding-top: 2.64vw;
+}
+
+h1.name-drugs-in {
+    font-size: 3.89vw;
+    font-weight: normal;
+}
+
+div.place-middle-price-in {
+    margin-top: 1.39vw;
+}
+
+h1.middle-price-in {
+    font-size: 3.05vw;
+    font-weight: normal;
 }

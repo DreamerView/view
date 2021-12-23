@@ -105,20 +105,23 @@ h1.m-f-t-1 {
 
 div.m-s {
     position: relative;
+    width: 47.34vw;
+    height: 4.14vw;
 }
 
 input.m-s-1 {
     position: absolute;
-    background: url("images/search.svg") 2.3046875vw 1.5078125vw no-repeat;
+    background: url("images/search-active.svg") 2.14vw 1.35vw no-repeat;
     background-size: 1.335vw 1.328125vw;
-    font-family: 'Segoe UI', sans-serif;
-    padding: 1.40625vw 0 1.40625vw 4.84375vw;
-    width: 47.34375vw;
-    height: 1.40625vw;
-    background-color: hsl(0, 0%, 97%);
-    border: 0 none;
-    border-radius: 1.171875vw;
-    font-size: 1.015625vw;
+    width: 45.94vw;
+    height: 1.25vw;
+    padding: 1.4vw 0 1.4vw 5.9375vw;
+    background-color: white;
+    border: 0.078vw solid hsl(0, 0%, 93%);
+    border-radius: 1.17vw;
+    outline: none;
+    color: black;
+    font-size: 1.01vw;
     font-weight: 400;
 }
 
@@ -1516,4 +1519,74 @@ h1.secure-privacy {
     font-size: 1vw;
     font-weight: normal;
     color: hsl(0, 0%, 60%);
+}
+
+/* Search */
+
+div.block-search {
+    position: absolute;
+    display: block;
+    width: 51.87vw;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 1.17vw 1.17vw;
+    border: 0.078vw solid hsl(0, 0%, 93%);
+    z-index: 50;
+
+}
+
+div.flex-search {
+    display: flex;
+    cursor: pointer;
+}
+
+div.flex-search:hover {
+    background-color: hsl(0, 0%, 97%);
+}
+
+div.block-picture-drugs {
+    width: 6vw;
+    height: 5.46vw;
+    border-radius: 0 0 0 1.17vw;
+}
+
+div.place-drugs-picture {
+    padding: 0.93vw;
+}
+
+div.picture-drugs-absolute {
+    position: relative;
+    width: 3.9vw;
+    height: 3.9vw;
+}
+
+img.picture-drugs-relative {
+    position: absolute;
+    width: 3.9vw;
+    height: 3.9vw;
+    border-radius: 1.17vw;
+}
+
+div.block-drugs-text-in {
+    width: 46vw;
+    height: 5.46vw;
+    border-radius: 0 0 1.17vw 0;
+}
+
+div.place-name-drugs-in {
+    padding-top: 1.17vw;
+}
+
+h1.name-drugs-in {
+    font-size: 1.09vw;
+    font-weight: normal;
+}
+
+div.place-middle-price-in {
+    margin-top: 0.468vw;
+}
+
+h1.middle-price-in {
+    font-size: 0.93vw;
+    font-weight: normal;
 }

@@ -121,20 +121,22 @@ h1.m-f-t-1 {
 }
 
 div.m-s {
+    width: 606px;
+    height: 53px;
     position: relative;
 }
 
 input.m-s-1 {
     position: absolute;
-    background: url("images/search.svg") 29.5px 19.3px no-repeat;
-    background-size: 17.09px 17px;
-    font-family: 'Segoe UI', sans-serif;
-    padding: 18px 0 18px 62px;
-    width: 606px;
-    height: 18px;
-    background-color: hsl(0, 0%, 97%);
-    border: 0 none;
+    background: url("images/search-active.svg") 27.5px 17.3px no-repeat;
+    width: 588px;
+    height: 16px;
+    padding: 18px 0 18px 76px;
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 93%);
     border-radius: 15px;
+    outline: none;
+    color: black;
     font-size: 13px;
     font-weight: 400;
 }
@@ -146,11 +148,12 @@ input.m-s-1::placeholder {
 
 input.m-s-1:focus {
     background: url("images/search-active.svg") 27.5px 17.3px no-repeat;
-    width: 602px;
-    height: 14px;
-    padding: 18px 0 18px 60px;
+    width: 588px;
+    height: 16px;
+    padding: 18px 0 18px 76px;
     background-color: white;
-    border: 2px solid hsl(165, 100%, 40%);
+    border: 1px solid hsl(0, 0%, 93%);
+    border-radius: 15px 15px 0px 0px;
     outline: none;
     color: black;
 }
@@ -1564,4 +1567,74 @@ h1.secure-privacy  {
     font-size: 13px;
     font-weight:normal;
     color: hsl(0, 0%, 60%);
+}
+
+/* Search */
+
+div.block-search {
+    position: absolute;
+    display: block;
+    width: 664px;
+    height: auto;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid #EDEDED;
+    z-index:50;
+
+}
+
+div.flex-search {
+    display: flex;
+    cursor: pointer;
+}
+
+div.flex-search:hover {
+    background-color: #F8F8F8;
+}
+
+div.block-picture-drugs {
+    width: 77px;
+    height: 70px;
+    border-radius: 0 0 0 15px;
+}
+
+div.place-drugs-picture {
+    padding: 13px;
+}
+
+div.picture-drugs-absolute {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+img.picture-drugs-relative {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+div.block-drugs-text-in {
+    width: 591px;
+    height: 70px;
+    border-radius: 0 0 15px 0;
+}
+
+div.place-name-drugs-in {
+    padding-top: 15px;
+}
+
+h1.name-drugs-in {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+div.place-middle-price-in {
+    margin-top: 6px;
+}
+
+h1.middle-price-in {
+    font-size: 12px;
+    font-weight: normal;
 }
