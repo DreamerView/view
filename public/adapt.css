@@ -131,15 +131,18 @@ input.m-s-1::placeholder {
 }
 
 input.m-s-1:focus {
-    background: url("images/search-active.svg") 2.1046875vw 1.3078125vw no-repeat;
+    background: url("images/search-active.svg") 2.14vw 1.35vw no-repeat;
     background-size: 1.335vw 1.328125vw;
-    width: 47.03125vw;
-    height: 1.09375vw;
-    padding: 1.40625vw 0 1.40625vw 4.6875vw;
-    background-color: hsl(0, 0%, 100%);
-    border: 0.15625vw solid hsl(165, 100%, 40%);
+    width: 45.94vw;
+    height: 1.25vw;
+    padding: 1.4vw 0 1.4vw 5.9375vw;
+    background-color: white;
+    border: 0.078vw solid hsl(0, 0%, 93%);
+    border-radius: 1.17vw 1.17vw 0 0;
     outline: none;
     color: black;
+    font-size: 1.01vw;
+    font-weight: 400;
 }
 
 div.m-p-i {
