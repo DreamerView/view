@@ -1462,6 +1462,7 @@ button.google {
     font-weight: 600;
     color: hsl(0, 0%, 20%);
 }
+
 div.google-flex {
     display: flex;
 }
@@ -1538,6 +1539,15 @@ div.block-search {
 
 }
 
+a.flex-search {
+    display: flex;
+    cursor: pointer;
+}
+
+a.flex-search:hover {
+    background-color: hsl(0, 0%, 97%);
+}
+
 div.flex-search {
     display: flex;
     cursor: pointer;
@@ -1592,4 +1602,45 @@ div.place-middle-price-in {
 h1.middle-price-in {
     font-size: 0.93vw;
     font-weight: normal;
+}
+
+div.find-for-request-block {
+    width: 100%;
+    height: 3.1vw;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 1.17vw 1.17vw;
+    cursor: pointer;
+}
+
+div.find-for-request-place-text {
+    text-align: center;
+    padding-top: 0.78vw;
+}
+
+h1.find-for-request-text {
+    font-size: 1.09vw;
+    font-weight: normal;
+}
+
+div.find-for-request-block:hover {
+    background-color: hsl(0, 0%, 97%);
+}
+
+div.picture-drugs-block {
+    width: 3.9vw;
+    height: 3.9vw;
+    border-radius: 1.17vw;
+}
+div.name-drugs-in-block {
+    width: 13.59vw;
+    height: 1.4vw;
+    border-radius: 0.78vw;
+}
+
+
+div.middle-price-in-block {
+    margin-top: 0.546vw;
+    width: 17vw;
+    height: 1.4vw;
+    border-radius: 0.78vw;
 }

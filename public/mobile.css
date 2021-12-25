@@ -28,7 +28,7 @@ a {
 }
 
 html {
-    overflow-y:overlay;
+    overflow-y: overlay;
 }
 
 button {
@@ -74,7 +74,7 @@ div.m-g-1 {
 }
 
 div#first {
-    padding-left:2.78vw;
+    padding-left: 2.78vw;
     order: 1;
 }
 
@@ -84,7 +84,7 @@ div#second {
 }
 
 div#third {
-    padding-right:2.78vw;
+    padding-right: 2.78vw;
     order: 2;
 }
 
@@ -150,21 +150,6 @@ input.m-s-1 {
 
 input.m-s-1::placeholder {
     color: hsl(220, 1%, 60%);
-    font-weight: normal;
-}
-
-
-input.m-s-1:not(:placeholder-shown) {
-    background: url("images/search-active.svg") 6.69vw 4.66vw no-repeat;
-    background-size: 4.46vw auto;
-    width: 68.47vw;
-    height: 14.17vw;
-    padding: 0 7.3vw 0 18.47vw;
-    border-radius: 4.17vw 4.17vw 0 0;
-    background-color: white;
-    border: 0.2vw solid hsl(12, 91%, 57%);
-    outline: none;
-    color: black;
     font-weight: normal;
 }
 
@@ -821,7 +806,7 @@ a.show-p-b-fixed {
     z-index: 300;
     margin-left: 2.56vw;
     position: fixed;
-    top:8.17vw;
+    top: 8.17vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -965,16 +950,16 @@ h1.m-p-1 {
 /* Basket */
 
 div.main-block-your-basket {
-    margin-top:4.17vw;
+    margin-top: 4.17vw;
     width: 100vw;
     height: auto;
     background-color: hsl(0, 0%, 100%);
     border-radius: 4.16vw;
-    padding:8.33vw 0;
+    padding: 8.33vw 0;
 }
 
 div.your-text-block-place {
-    padding:4.17vw 0 0 5.55vw;
+    padding: 4.17vw 0 0 5.55vw;
 }
 
 div.main-of-main {
@@ -1056,7 +1041,7 @@ div.w {
 }
 
 div.we {
-    display:flex;
+    display: flex;
     width: 100%;
     height: 20.27vw;
     background-color: hsl(0, 0%, 100%);
@@ -1086,12 +1071,13 @@ button.button-minus {
     color: hsl(0, 0%, 72%);
     cursor: pointer;
 }
+
 button.button-minus:hover {
     background-color: hsl(0, 0%, 97%);
 }
 
 div.one-block {
-    margin:0 3vw;
+    margin: 0 3vw;
     width: auto;
     height: 13.75vw;
     background-color: hsl(0, 0%, 100%);
@@ -1122,7 +1108,7 @@ h1.price {
 div.grid {
     display: grid;
     grid-template-columns: 50% 50%;
-    height:14.58vw;
+    height: 14.58vw;
 }
 
 div.place-favorite {
@@ -1166,9 +1152,9 @@ div.order-block {
 div.price-place-im-tired {
     display: flex;
     align-items: center;
-    margin-left:auto;
-    width:auto;
-    
+    margin-left: auto;
+    width: auto;
+
 }
 
 h1.money {
@@ -1193,8 +1179,8 @@ button.pay-for-it:hover {
 }
 
 button.favorite {
-    width:100%;
-    height:14.58vw;
+    width: 100%;
+    height: 14.58vw;
     font-size: 3.6vw;
     font-weight: normal;
     color: hsl(165, 100%, 40%);
@@ -1208,8 +1194,8 @@ button.favorite:hover {
 }
 
 button.unfavorite {
-    width:100%;
-    height:14.58vw;
+    width: 100%;
+    height: 14.58vw;
     font-size: 3.6vw;
     font-weight: normal;
     color: hsl(12, 91%, 57%);
@@ -1449,7 +1435,7 @@ input.none-border {
     padding-bottom: 2.78vw;
     background-color: hsl(0, 0%, 100%);
     border-bottom: 0.208vw solid hsl(0, 0%, 92%);
-    margin:5.55vw 0 8.33vw 0;
+    margin: 5.55vw 0 8.33vw 0;
 }
 
 input.none-border:focus {
@@ -1617,6 +1603,15 @@ div.block-search {
 
 }
 
+a.flex-search {
+    display: flex;
+    cursor: pointer;
+}
+
+a.flex-search:hover {
+    background-color: #F8F8F8;
+}
+
 div.flex-search {
     display: flex;
     cursor: pointer;
@@ -1670,4 +1665,50 @@ div.place-middle-price-in {
 h1.middle-price-in {
     font-size: 3.05vw;
     font-weight: normal;
+}
+
+div.find-for-request-block {
+    width: 100%;
+    height: 10.4vw;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 4.16vw 4.16vw;
+    cursor: pointer;
+}
+
+div.find-for-request-place-text {
+    text-align: center;
+    padding-top: 2.77vw;
+}
+
+h1.find-for-request-text {
+    font-size: 3.6vw;
+    font-weight: normal;
+}
+
+div.find-for-request-block:hover {
+    background-color: hsl(0, 0%, 97%);
+}
+
+div.picture-drugs-block {
+    width: 10.97vw;
+    height: 10.97vw;
+    border-radius: 2.08vw;
+    background-color: grey;
+}
+
+
+div.name-drugs-in-block {
+    margin-top:0.5vw;
+    width: 43.75vw;
+    height: 4.44vw;
+    background-color: grey;
+    border-radius: 2.08vw;
+}
+
+
+div.middle-price-in-block {
+    width: 54vw;
+    height: 4.44vw;
+    background-color: grey;
+    border-radius: 2.08vw;
 }

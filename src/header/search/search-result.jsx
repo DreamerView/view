@@ -1,91 +1,15 @@
-import GetHistoryLocation from "../../locate";
+import SearchItem from "./search-item";
 
-const SearchResult = () => {
+const SearchResult = (result) => {
+    // console.log(result.item);
     return(<div className="block-search">
-    <div className="flex-search">
-      <div className="block-picture-drugs">
-        <div className="place-drugs-picture">
-          <div className="picture-drugs-absolute">
-            <img className="picture-drugs-relative" src={`${GetHistoryLocation}/list-images/otrivin.jpg`} alt="" />
-          </div>
+      {result.item.map((items)=>
+        (<SearchItem result={items} key={items.id} />)
+      )}
+    <div className="find-for-request-block">
+        <div className="find-for-request-place-text">
+          <h1 className="find-for-request-text">Найти еще по запросу <b>{result.result?result.result:"..."}</b></h1>
         </div>
-      </div>
-      <div className="block-drugs-text-in">
-        <div className="place-name-drugs-in">
-          <h1 className="name-drugs-in">Отривин ментол/эвкалипт</h1>
-        </div>
-        <div className="place-middle-price-in">
-          <h1 className="middle-price-in">Средняя цена в аптеках города <b>5000 ₸</b></h1>
-        </div>
-      </div>
-    </div>
-    <div className="flex-search">
-      <div className="block-picture-drugs">
-        <div className="place-drugs-picture">
-          <div className="picture-drugs-absolute">
-            <img className="picture-drugs-relative" src={`${GetHistoryLocation}/list-images/otrivin.jpg`} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="block-drugs-text-in">
-        <div className="place-name-drugs-in">
-          <h1 className="name-drugs-in">Отривин ментол/эвкалипт</h1>
-        </div>
-        <div className="place-middle-price-in">
-          <h1 className="middle-price-in">Средняя цена в аптеках города <b>5000 ₸</b></h1>
-        </div>
-      </div>
-    </div>
-    <div className="flex-search">
-      <div className="block-picture-drugs">
-        <div className="place-drugs-picture">
-          <div className="picture-drugs-absolute">
-            <img className="picture-drugs-relative" src={`${GetHistoryLocation}/list-images/otrivin.jpg`} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="block-drugs-text-in">
-        <div className="place-name-drugs-in">
-          <h1 className="name-drugs-in">Отривин ментол/эвкалипт</h1>
-        </div>
-        <div className="place-middle-price-in">
-          <h1 className="middle-price-in">Средняя цена в аптеках города <b>5000 ₸</b></h1>
-        </div>
-      </div>
-    </div>
-    <div className="flex-search">
-      <div className="block-picture-drugs">
-        <div className="place-drugs-picture">
-          <div className="picture-drugs-absolute">
-            <img className="picture-drugs-relative" src={`${GetHistoryLocation}/list-images/otrivin.jpg`} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="block-drugs-text-in">
-        <div className="place-name-drugs-in">
-          <h1 className="name-drugs-in">Отривин ментол/эвкалипт</h1>
-        </div>
-        <div className="place-middle-price-in">
-          <h1 className="middle-price-in">Средняя цена в аптеках города <b>5000 ₸</b></h1>
-        </div>
-      </div>
-    </div>
-    <div className="flex-search">
-      <div className="block-picture-drugs">
-        <div className="place-drugs-picture">
-          <div className="picture-drugs-absolute">
-            <img className="picture-drugs-relative" src={`${GetHistoryLocation}/list-images/otrivin.jpg`} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="block-drugs-text-in">
-        <div className="place-name-drugs-in">
-          <h1 className="name-drugs-in">Отривин ментол/эвкалипт</h1>
-        </div>
-        <div className="place-middle-price-in">
-          <h1 className="middle-price-in">Средняя цена в аптеках города <b>5000 ₸</b></h1>
-        </div>
-      </div>
     </div>
   </div>
   );
