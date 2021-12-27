@@ -789,7 +789,7 @@ h1.b1-t2 {
 
 a.show-p-b {
     z-index: 3;
-    margin-left: 5.56vw;
+    margin-left: 2.56vw;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -959,12 +959,12 @@ div.main-block-your-basket {
 }
 
 div.your-text-block-place {
-    padding: 4.17vw 0 0 5.55vw;
+    padding: 4.17vw 0 0 2.56vw;
 }
 
 div.main-of-main {
     margin-top: 4.16vw;
-    width: 88.88vw;
+    width: 94vw;
     height: auto;
     border-radius: 0.55vw;
     border: 0.13vw solid hsl(0, 0%, 93%);
@@ -972,14 +972,14 @@ div.main-of-main {
 
 div.block-one-img-and-glakso {
     display: flex;
-    width: 88.88vw;
+    width: 100%;
     height: 36.9vw;
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.55vw;
 }
 
 div.img-and-glakso {
-    width: 31.9vw;
+    width: 37.9vw;
     height: 36.9vw;
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.55vw;
@@ -993,6 +993,7 @@ div.relative-and-absolute {
     position: absolute;
     width: 25.27vw;
     height: 25.27vw;
+    margin: 0 3vw;
 }
 
 img.img-size {
@@ -1034,7 +1035,7 @@ h1.id-text {
 }
 
 div.w {
-    width: 88.88vw;
+    width: 100%;
     height: auto;
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.55vw;
@@ -1106,6 +1107,7 @@ h1.price {
 }
 
 div.grid {
+    width:100%;
     display: grid;
     grid-template-columns: 50% 50%;
     height: 14.58vw;
@@ -1137,7 +1139,7 @@ h1.two-items {
 
 div.size-block {
     display: flex;
-    width: 88.88vw;
+    width: 94vw;
     height: 26.5vw;
     background-color: hsl(0, 0%, 100%);
     margin-top: 0.13vw;
@@ -1164,7 +1166,7 @@ h1.money {
 
 button.pay-for-it {
     background-color: hsl(166, 75%, 48%);
-    width: 88.88vw;
+    width: 94vw;
     height: 16.38vw;
     border-radius: 6px;
     border: none;

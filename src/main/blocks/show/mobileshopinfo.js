@@ -1,6 +1,8 @@
 import GetHistoryLocation from "../../../locate";
+import { useParams } from "react-router-dom";
 
 const MobileShopInfo = (info) => {
+    const {id} = useParams();
     return(
         <div className="mobile-shop-info">
             <div className="mobile-shop-info-block-1">
@@ -34,7 +36,7 @@ const MobileShopInfo = (info) => {
                 </div>
                 <div className="mobile-shop-info-block-3-item-1">
                     <div className="mobile-shop-info-block-3-item-1-block">
-                        <button className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>
+                        <button onClick={()=>{info.create({id:Date.now(),key:id,item:1,from:info.item.title})}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>
                     </div>
                 </div>
             </div>
