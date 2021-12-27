@@ -8,6 +8,7 @@ const MobileBasketInfo = () => {
           <h1 className="m-p-content">У вас в корзине {localStorage.getItem('basket-info')? JSON.parse(localStorage.getItem("basket-info")).length:"0"} товара</h1>
         <div className="your-text-block-place">
             {localStorage.getItem('basket-info')?s.map(basket=><BasketMobile item={basket} key={basket.id}/>):""}
+          {localStorage.getItem('basket-info')?<div>
           <div className="size-block">
               <div className="order-block">
                 <div className="place-order">
@@ -20,6 +21,7 @@ const MobileBasketInfo = () => {
               </div>
             </div>
             <button className="pay-for-it">Оплатить</button>
+          </div>:""}
         </div>
       </div>
     );

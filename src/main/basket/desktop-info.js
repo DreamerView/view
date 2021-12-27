@@ -8,9 +8,9 @@ const DesktopBasketInfo = () => {
         <h1 className="u-backet">Ваша корзина</h1>
         <h1 className="product-b">У вас в корзине {localStorage.getItem('basket-info')? JSON.parse(localStorage.getItem("basket-info")).length:"0"} товара</h1>
         <div className="grid-backet">
-            {s.map(basket=><DesktopBasket item={basket} key={basket.id}/>)}
+            {localStorage.getItem('basket-info')?s.map(basket=><DesktopBasket item={basket} key={basket.id}/>):""}
         </div>
-        <div className="payment">
+        {localStorage.getItem('basket-info')?<div className="payment">
             <div className="payment-block">
                 <div className="payment-flex">
                 <div className="price-payment-0">
@@ -23,7 +23,7 @@ const DesktopBasketInfo = () => {
                 </div>
                 <button className="pay">Оплатить</button>
             </div>
-        </div>
+        </div>:""}
       </div>
     </div>
     );
