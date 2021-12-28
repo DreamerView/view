@@ -66,7 +66,7 @@ const DesktopBasket = (info)=> {
         <div className="priceb">
           <h1 className="price-backet">{pr} ₸</h1>
           <button className="add">Добавить в избранное</button>
-          <button className="delete">Удалить из корзины</button>
+          <button onClick={()=>{info.remove(info.item)}} className="delete">Удалить из корзины</button>
         </div>
       </div>
     );

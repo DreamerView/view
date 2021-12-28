@@ -85,7 +85,7 @@ const BasketMobile = (info) => {
                   <button className="favorite">Добавить в избранное</button>
                 </div>
                 <div className="del-from-favorite">
-                  <button className="unfavorite">Удалить из корзины</button>
+                  <button onClick={()=>{info.remove(info.item)}} className="unfavorite">Удалить из корзины</button>
                 </div>
               </div>
             </div>

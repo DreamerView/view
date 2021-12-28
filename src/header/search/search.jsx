@@ -19,7 +19,7 @@ const Search = () => {
         const CheckRemove = ()=> {
             setTimeout(()=>{
                 setCheck(false);
-            },250)
+            },250);
         };
         focus.current.addEventListener('focus',CheckEvent);
         focus.current.addEventListener('blur',CheckRemove);

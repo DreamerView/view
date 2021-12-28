@@ -3,6 +3,34 @@
     padding: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --font-color:hsl(216, 9%, 89%);
+        --font-color-c:hsl(213, 4%, 58%);
+        --border:hsl(0, 0%, 29%);
+        --background:hsl(240, 2%, 10%);
+        --background-back:hsl(0, 0%, 4%);
+        --background-hover:hsl(240, 1%, 14%);
+        --background-green:hsl(240, 1%, 14%);
+        --skeleton-start:hsl(240, 1%, 14%);
+        --skeleton-end:hsl(240, 1%, 34%);
+    }
+}
+  
+@media (prefers-color-scheme: light) {
+    :root {
+        --font-color:hsl(0, 0%, 20%);
+        --font-color-c:hsl(220, 1%, 60%) ;
+        --border:hsl(72, 15%, 87%);
+        --background:hsl(0, 0%, 100%);
+        --background-back:hsl(0, 0%, 97%);
+        --background-hover:hsl(0, 0%, 99%);
+        --background-green:hsl(120, 100%, 97%);
+        --skeleton-start:hsl(0, 0%, 70%);
+        --skeleton-end:hsl(0, 0%, 88%);
+    }
+}
+
 ::-webkit-scrollbar {
     width: 0.18125vw;
 }
@@ -12,7 +40,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 81%);
+    background: var(--border);
     border-radius: 0.18125vw;
     ;
 }
@@ -24,7 +52,7 @@
 a {
     display: block;
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
 }
 
 html {
@@ -40,15 +68,19 @@ button {
 body {
     width: 100%;
     font-family: 'Segoe UI', sans-serif;
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-back);
     padding-bottom: 30.1vw;
     overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    color: var(--font-color);
 }
 
 header.main-block-1 {
     width: 100vw;
     height: auto;
-    background-color: white;
+    background-color: var(--background);
     border-radius: 0 0 4.17vw 4.17vw;
 }
 
@@ -112,7 +144,7 @@ div.m-f-b {
 }
 
 div.m-f-b-1 {
-    border-left: 0.14vw solid hsl(0, 0%, 81%);
+    border-left: 0.14vw solid var(--border);
     height: 6.23vw;
 }
 
@@ -138,10 +170,10 @@ input.m-s-1 {
     height: 14.17vw;
     padding: 0 7.3vw 0 18.47vw;
     border-radius: 4.17vw;
-    background-color: white;
-    border: 0.2vw solid hsl(0, 0%, 93%);
+    background-color: var(--background);
+    border: 0.2vw solid var(--border);
     outline: none;
-    color: black;
+    color: var(--font-color);
     font-weight: normal;
     font-size: 3.89vw;
     font-weight: normal;
@@ -160,10 +192,10 @@ input.m-s-1:focus {
     height: 14.17vw;
     padding: 0 7.3vw 0 18.47vw;
     border-radius: 4.17vw 4.17vw 0 0;
-    background-color: white;
-    border: 0.2vw solid hsl(0, 0%, 93%);
+    background-color: var(--background);
+    border: 0.2vw solid var(--border);
     outline: none;
-    color: black;
+    color: var(--font-color);
     font-weight: normal;
 }
 
@@ -191,7 +223,7 @@ div.m-p-i-b-v {
 
 div.m-p-i-b-v:hover {
     border-radius: 20%;
-    background-color: hsl(0, 0%, 99%);
+    background-color: var(--background-hover);
 }
 
 div.m-p-i-b-v-i {
@@ -223,7 +255,7 @@ div.menu-select {
     height: 14.2vw;
     display: flex;
     justify-content: center;
-    background: white;
+    background: var(--background);
     bottom: 0;
     border-radius: 4.17vw 4.17vw 0 0;
 }
@@ -233,7 +265,7 @@ a.menu-s-b {
     width: 20vw;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
 }
 
 a.menu-s-b-active {
@@ -267,6 +299,7 @@ div.menu-s-b-i-t {
 }
 
 h1.menu-s-b-i-t-1-active {
+    color:hsl(165, 100%, 40%);
     font-size: 2.78vw;
     font-weight: normal;
 }
@@ -297,7 +330,7 @@ div.panel-s-b {
 }
 
 div.panel-s-b:hover {
-    background-color: hsl(0, 0%, 99%);
+    background-color: var(--background-hover);
 }
 
 div.panel-s-b-i {
@@ -332,7 +365,7 @@ div.m {
     width: 100vw;
     height: auto;
     border-radius: 4.2vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.m-block {
@@ -344,7 +377,7 @@ h1.m-p {
     font-weight: 600;
     font-size: 5.56vw;
     text-align: center;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 h1.m-p-content {
@@ -352,7 +385,7 @@ h1.m-p-content {
     font-weight: normal;
     font-size: 3.05vw;
     text-align: center;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 div.b {
@@ -370,9 +403,9 @@ a.m-p-b {
     text-decoration: none;
     width: 47.2vw;
     height: 78.83vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 2.08vw;
-    border: 0.14vw solid hsl(0, 0%, 93%);
+    border: 0.14vw solid var(--border);
     cursor: pointer;
 }
 
@@ -427,7 +460,7 @@ h1.l-p {
 }
 
 div.p-p {
-    background-color: hsl(120, 100%, 97%);
+    background-color: var(--background-green);
     display: flex;
     align-items: center;
     width: 9.6vw;
@@ -454,9 +487,9 @@ img.p {
 div.maybe-panel {
     margin-top: 4.2vw;
     width: 100vw;
-    background-color: white;
+    background-color: var(--background);
     height: auto;
-    border-radius: 1.38vw;
+    border-radius: 4.2vw;
     padding: 8.3vw 0;
 }
 
@@ -470,8 +503,8 @@ div.maybe-g-p-b {
 }
 
 div.maybe-g-p-b1 {
-    background-color: white;
-    border: 0.13vw solid hsl(0, 0%, 93%);
+    background-color: var(--background);
+    border: 0.13vw solid var(--border);
     border-radius: 2.08vw;
     cursor: pointer;
 }
@@ -525,7 +558,7 @@ h1.b-t3 {
 }
 
 div.b-p-p {
-    background-color: hsl(120, 100%, 97%);
+    background-color: var(--background-green);
     display: flex;
     align-items: center;
     width: 11.39vw;
@@ -545,13 +578,13 @@ div.b-f-h {
     width: 100vw;
     height: 100vw;
     border-radius: 4.17vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.o-b-f {
     width: 45vw;
     height: 30.5vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     margin: 0 auto;
 }
 
@@ -591,7 +624,7 @@ button.btn {
     padding: 4vw 6vw;
     font-size: 3.61vw;
     font-weight: 600;
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-back);
     border: none;
     margin-top: 4.08vw;
     cursor: pointer;
@@ -600,7 +633,7 @@ button.btn {
 
 button.btn:hover {
     background-color: hsl(165, 100%, 40%);
-    color: white;
+    color: var(--background);
 }
 
 div.mobile-shop-info {
@@ -609,8 +642,8 @@ div.mobile-shop-info {
     width: 88.89vw;
     height: auto;
     border-radius: 0.56vw;
-    background: #fff;
-    border: 0.14vw solid hsl(0, 0%, 93%);
+    background: var(--background);
+    border: 0.14vw solid var(--border);
     margin-top: 4.17vw;
 }
 
@@ -623,8 +656,8 @@ div.mobile-shop-info-block-item-1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 28.056vw;
-    height: 28.056vw;
+    width: 34.056vw;
+    height: 33.056vw;
 }
 
 div.mobile-shop-info-block-item-p-1 {
@@ -641,9 +674,9 @@ img.mobile-shop-info-block-item-i-1 {
 
 div.mobile-shop-info-block-item-2 {
     position: relative;
-    width: 60.83vw;
+    width: 54.83vw;
     height: 25.28vw;
-    padding: 7.08vw 0 0 3.89vw;
+    padding-top: 7.08vw;
 }
 
 h1.mobile-shop-info-block-item-title {
@@ -651,7 +684,7 @@ h1.mobile-shop-info-block-item-title {
     font-weight: 600;
     font-size: 3.61vw;
     text-align: left;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 h1.mobile-shop-info-block-item-content {
@@ -660,7 +693,7 @@ h1.mobile-shop-info-block-item-content {
     font-weight: normal;
     font-size: 3.61vw;
     text-align: left;
-    color: #333;
+    color: var(--font-color);
 }
 
 div.mobile-shop-info-block-2 {
@@ -713,7 +746,7 @@ button.mobile-shop-info-block-2-item-1-button {
     font-size: 3.61vw;
     background-color: hsl(165, 100%, 40%);
     border-radius: 0.55vw;
-    color: white;
+    color: var(--background);
     cursor: pointer;
 }
 
@@ -726,7 +759,7 @@ h1.mobile-shop-info-block-3-item-1-text {
     font-weight: normal;
     font-size: 5.14vw;
     text-align: right;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 button.p-b-n-b {
@@ -736,13 +769,13 @@ button.p-b-n-b {
     font-weight: normal;
     font-size: 3.61vw;
     color: #69f;
-    border: 0.14vw solid hsl(0, 0%, 93%);
+    border: 0.14vw solid var(--border);
     cursor: pointer;
 }
 
 button.p-b-n-b:hover {
     color: #69f;
-    background-color: hsl(0, 0%, 93%);
+    background-color: var(--border);
 }
 
 /*  */
@@ -797,8 +830,7 @@ a.show-p-b {
     width: 12vw;
     height: 12vw;
     border-radius: 100%;
-    border: 0.28vw solid #f1f2ec;
-    background-color: white;
+    background-color: var(--background-hover);
     cursor: pointer;
 }
 
@@ -813,17 +845,16 @@ a.show-p-b-fixed {
     width: 12vw;
     height: 12vw;
     border-radius: 100%;
-    border: 0.28vw solid #f1f2ec;
-    background-color: white;
+    background-color: var(--background-hover);
     cursor: pointer;
 }
 
 a.show-p-b:hover {
-    border: 0.28vw solid #00CC99;
+    background-color: var(--background-back);
 }
 
 a.show-p-b-fixed:hover {
-    border: 0.28vw solid #00CC99;
+    background-color: var(--background-back);
 }
 
 div.show-p-b-p {
@@ -894,7 +925,7 @@ button.show-button {
     background-color: #00CC99;
     border-radius: 0.56vw;
     font-size: 3.61vw;
-    color: white;
+    color: var(--background);
     font-weight: normal;
     cursor: pointer;
 }
@@ -928,14 +959,14 @@ button.show-favourite {
 }
 
 button.show-favourite:hover {
-    background-color: hsl(0, 0%, 99%);
+    background-color: var(--background-hover);
 }
 
 h1.c-b-t {
     font-weight: 600;
     font-size: 4.72vw;
     text-align: left;
-    color: #333;
+    color: var(--font-color);
     margin: 0 0 8.3vw 5.56vw;
 }
 
@@ -943,7 +974,7 @@ h1.m-p-1 {
     font-weight: 600;
     font-size: 4.72vw;
     text-align: left;
-    color: #333;
+    color: var(--font-color);
     margin: 8.3vw 0 0 5.56vw;
 }
 
@@ -953,7 +984,7 @@ div.main-block-your-basket {
     margin-top: 4.17vw;
     width: 100vw;
     height: auto;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 4.16vw;
     padding: 8.33vw 0;
 }
@@ -967,21 +998,21 @@ div.main-of-main {
     width: 94vw;
     height: auto;
     border-radius: 0.55vw;
-    border: 0.13vw solid hsl(0, 0%, 93%);
+    border: 0.13vw solid var(--border);
 }
 
 div.block-one-img-and-glakso {
     display: flex;
     width: 100%;
     height: 36.9vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 0.55vw;
 }
 
 div.img-and-glakso {
     width: 37.9vw;
     height: 36.9vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 0.55vw;
 }
 
@@ -1025,19 +1056,19 @@ h1.furak-text {
 div.leader-text {
     width: 56.94vw;
     height: 36.9vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 h1.id-text {
     font-size: 3.6vw;
     font-weight: normal;
-    color: hsl(0, 0%, 73%);
+    color: var(--font-color-c);
 }
 
 div.w {
     width: 100%;
     height: auto;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 0.55vw;
 }
 
@@ -1045,7 +1076,7 @@ div.we {
     display: flex;
     width: 100%;
     height: 20.27vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.place-scary-turn-off {
@@ -1057,31 +1088,31 @@ div.scary-turn-off {
     display: flex;
     width: auto;
     height: 13.75vw;
-    background-color: hsl(0, 0%, 100%);
-    border: 0.27vw solid hsl(0, 0%, 93%);
+    background-color: var(--background);
+    border: 0.27vw solid var(--border);
     border-radius: 0.41vw;
 }
 
 button.button-minus {
     width: 11.25vw;
     height: 13.75vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border: none;
     font-size: 6.66vw;
     font-weight: normal;
-    color: hsl(0, 0%, 72%);
+    color: var(--font-color-c);
     cursor: pointer;
 }
 
 button.button-minus:hover {
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-hover);
 }
 
 div.one-block {
     margin: 0 3vw;
     width: auto;
     height: 13.75vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 
@@ -1103,7 +1134,7 @@ div.place-price {
 h1.price {
     font-size: 5.1vw;
     font-weight: normal;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 div.grid {
@@ -1126,7 +1157,7 @@ div.place-order {
 }
 
 h1.order-name {
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
     font-size: 4.4vw;
     font-weight: 600;
 }
@@ -1134,21 +1165,21 @@ h1.order-name {
 h1.two-items {
     font-size: 3.47vw;
     font-weight: normal;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 div.size-block {
     display: flex;
     width: 94vw;
     height: 26.5vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     margin-top: 0.13vw;
 }
 
 div.order-block {
     width: 37.7vw;
     height: 26.5vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.price-place-im-tired {
@@ -1170,7 +1201,7 @@ button.pay-for-it {
     height: 16.38vw;
     border-radius: 6px;
     border: none;
-    color: hsl(0, 0%, 100%);
+    color: var(--background);
     font-size: 3.8vw;
     font-weight: 600;
     cursor: pointer;
@@ -1186,13 +1217,13 @@ button.favorite {
     font-size: 3.6vw;
     font-weight: normal;
     color: hsl(165, 100%, 40%);
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border: none;
     cursor: pointer;
 }
 
 button.favorite:hover {
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-back);
 }
 
 button.unfavorite {
@@ -1201,13 +1232,13 @@ button.unfavorite {
     font-size: 3.6vw;
     font-weight: normal;
     color: hsl(12, 91%, 57%);
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border: none;
     cursor: pointer;
 }
 
 button.unfavorite:hover {
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-back);
 }
 
 /*  */
@@ -1219,11 +1250,11 @@ div.skeleton {
 
 @keyframes skeleton-loading {
     0% {
-        background-color: hsl(0, 0%, 70%);
+        background-color: var(--skeleton-start);
     }
 
     100% {
-        background-color: hsl(0, 0%, 88%);
+        background-color: var(--skeleton-end);
     }
 }
 
@@ -1389,7 +1420,7 @@ div.join-text-place {
 h1.join-text {
     font-size: 5.5vw;
     font-weight: 600;
-    color: hsl(0, 0%, 0%);
+    color: var(--font-color);
 }
 
 div.main-four-blocks-place {
@@ -1400,27 +1431,27 @@ div.main-four-blocks-place {
 div.main-four-blocks {
     width: 100vw;
     height: 229.86vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 2.08vw;
 }
 
 div.place-three-blocks {
     width: auto;
     height: auto;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.first-block-in {
     width: 57.63889vw;
     height: auto;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     margin-left: 5.5vw;
 }
 
 h1.electron-addres {
     font-size: 4.16vw;
     font-weight: 700;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 div.place-input-in {
@@ -1431,11 +1462,11 @@ input.none-border {
     width: 88.88vw;
     height: 5.55vw;
     border: none;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
     font-size: 4.72vw;
     font-weight: 300;
     padding-bottom: 2.78vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-bottom: 0.208vw solid hsl(0, 0%, 92%);
     margin: 5.55vw 0 8.33vw 0;
 }
@@ -1461,7 +1492,7 @@ button.button-join-in {
     width: 88.88vw;
     height: 16.38vw;
     background-color: hsl(165, 100%, 40%);
-    color: hsl(0, 0%, 100%);
+    color: var(--background);
     border: none;
     border-radius: 0.69vw;
     font-size: 3.88vw;
@@ -1477,7 +1508,7 @@ div.second-block-in {
     display: flex;
     width: 100vw;
     height: auto;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     margin-left: 5.5vw;
 }
 
@@ -1488,7 +1519,7 @@ div.vertical-stick {
     height: 0.833vw;
     border: none;
     border-radius: 0.694vw;
-    background-color: hsl(0, 0%, 96%);
+    background-color: var(--border);
 }
 
 div.place-or {
@@ -1506,7 +1537,7 @@ div.third-block-in {
     margin-top: 11.1vw;
     width: 100vw;
     height: auto;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     margin-left: 5.5vw;
 }
 
@@ -1518,16 +1549,16 @@ button.google {
     width: 88.88vw;
     height: 15vw;
     border-radius: 0.694vw;
-    background-color: hsl(0, 0%, 100%);
-    border: 0.208vw solid hsl(72, 15%, 87%);
+    background-color: var(--background);
+    border: 0.208vw solid var(--border);
     cursor: pointer;
     font-size: 3.611vw;
     font-weight: 600;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 button.google:hover {
-    background-color: hsl(0, 0%, 92%);
+    background-color: var(--background-hover);
     transition: 10ms;
 }
 
@@ -1547,7 +1578,7 @@ div.four-block-in {
     padding: 8.3vw 0;
     width: 100vw;
     height: auto;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.place-registration {
@@ -1562,7 +1593,7 @@ h1.regis-text {
 button.regis-green {
     color: hsl(165, 99%, 29%);
     border: none;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     cursor: pointer;
 }
 
@@ -1573,20 +1604,20 @@ div.place-secure-captcha {
 h1.secure-captcha {
     font-size: 3.88vw;
     font-weight: 600;
-    color: hsl(0, 0%, 60%);
+    color: var(--font-color-c);
 }
 
 h1.secure-privacy {
     margin-top: 2.7vw;
     font-size: 3.88vw;
     font-weight: normal;
-    color: hsl(0, 0%, 60%);
+    color: var(--font-color-c);
 }
 
 button.regis-green {
     color: hsl(165, 99%, 29%);
     border: none;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     cursor: pointer;
     font-size: 3.88vw;
 }
@@ -1598,9 +1629,9 @@ div.block-search {
     display: block;
     width: 94.4vw;
     height: auto;
-    background-color: white;
+    background-color: var(--background);
     border-radius: 0 0 4.166vw 4.166vw;
-    border: 0.138vw solid #EDEDED;
+    border: 0.138vw solid var(--border);
     z-index: 50;
 
 }
@@ -1611,7 +1642,7 @@ a.flex-search {
 }
 
 a.flex-search:hover {
-    background-color: #F8F8F8;
+    background-color: var(--background-hover);
 }
 
 div.flex-search {
@@ -1620,7 +1651,7 @@ div.flex-search {
 }
 
 div.flex-search:hover {
-    background-color: #F8F8F8;
+    background-color: var(--background-hover);
 }
 
 div.block-picture-drugs {
@@ -1672,7 +1703,7 @@ h1.middle-price-in {
 div.find-for-request-block {
     width: 100%;
     height: 10.4vw;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 0 0 4.16vw 4.16vw;
     cursor: pointer;
 }
@@ -1688,7 +1719,7 @@ h1.find-for-request-text {
 }
 
 div.find-for-request-block:hover {
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-hover);
 }
 
 div.picture-drugs-block {

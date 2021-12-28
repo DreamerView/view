@@ -3,6 +3,38 @@
     padding: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --font-color:hsl(216, 9%, 89%);
+        --font-color-c:hsl(213, 4%, 58%);
+        --border:hsl(0, 0%, 29%);
+        --background:hsl(240, 2%, 10%);
+        --background-back:hsl(0, 0%, 4%);
+        --background-hover:hsl(240, 1%, 14%);
+        --background-green:hsl(240, 1%, 14%);
+        --skeleton-start:hsl(240, 1%, 14%);
+        --skeleton-end:hsl(240, 1%, 34%);
+    }
+}
+  
+@media (prefers-color-scheme: light) {
+    :root {
+        --font-color:hsl(0, 0%, 20%);
+        --font-color-c:hsl(220, 1%, 60%) ;
+        --border:hsl(72, 15%, 87%);
+        --background:hsl(0, 0%, 100%);
+        --background-back:hsl(0, 0%, 97%);
+        --background-hover:hsl(0, 0%, 99%);
+        --background-green:hsl(120, 100%, 97%);
+        --skeleton-start:hsl(0, 0%, 70%);
+        --skeleton-end:hsl(0, 0%, 88%);
+    }
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    color: var(--font-color);   
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -35,7 +67,7 @@
 a {
     display: block;
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
 }
 
 html {
@@ -52,14 +84,14 @@ body {
     position: relative;
     width: 100%;
     font-family: 'Segoe UI', sans-serif;
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-back);
     overflow-x: hidden;
 }
 
 header.main-block-1 {
     width: 100%;
     height: auto;
-    background-color: white;
+    background-color: var(--background);
     border-radius: 0 0 15px 15px;
 }
 
@@ -92,7 +124,7 @@ div.m-f-1 {
 
 div.m-f-i-1 {
     position: relative;
-    width: auto;
+    width: 17.5px;
     height: 22px;
 }
 
@@ -107,7 +139,7 @@ div.m-f-b {
 }
 
 div.m-f-b-1 {
-    border-left: 1px solid hsl(0, 0%, 81%);
+    border-left: 1px solid var(--border);
     height: 15px;
 }
 
@@ -133,17 +165,17 @@ input.m-s-1 {
     width: 588px;
     height: 16px;
     padding: 18px 0 18px 76px;
-    background-color: white;
-    border: 1px solid hsl(0, 0%, 93%);
+    background-color: var(--background);
+    border: 1px solid var(--border);
     border-radius: 15px;
     outline: none;
-    color: black;
+    color: var(--font-color);
     font-size: 13px;
     font-weight: 400;
 }
 
 input.m-s-1::placeholder {
-    color: hsl(220, 1%, 60%);
+    color: var(--font-color-c);
     font-weight: normal;
 }
 
@@ -153,11 +185,11 @@ input.m-s-1:focus {
     width: 588px;
     height: 16px;
     padding: 18px 0 18px 76px;
-    background-color: white;
-    border: 1px solid hsl(0, 0%, 93%);
+    background-color: var(--background);
+    border: 1px solid var(--border);
     border-radius: 15px 15px 0px 0px;
     outline: none;
-    color: black;
+    color: var(--font-color);
 }
 
 div.m-p-i {
@@ -183,7 +215,7 @@ div.m-p-i-b-v {
 
 div.m-p-i-b-v:hover {
     border-radius: 20%;
-    background-color: hsl(0, 0%, 99%);
+    background-color: var(--background-hover);
 }
 
 div.m-p-i-b-v-i {
@@ -222,21 +254,20 @@ a.menu-s-b {
     padding: 15px;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
 }
 
 a.menu-s-b:hover {
-    background-color: hsl(0, 0%, 99%);
+    background-color: var(--background-hover);
 }
 
 a.menu-s-b-active {
     width: auto;
     margin: 0 14.6px;
-    background-color: hsl(120, 100%, 97%);
+    background-color: var(--background-green);
     border-radius: 24px;
     padding: 15px;
     cursor: pointer;
-    color: #0c9;
     text-decoration: none;
 }
 
@@ -263,6 +294,7 @@ div.menu-s-b-i-t {
 }
 
 h1.menu-s-b-i-t-1-active {
+    color:hsl(165, 100%, 40%);
     font-size: 13px;
     font-weight: normal;
 }
@@ -290,11 +322,11 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 1px solid hsl(72, 15%, 87%);
+    border: 1px solid var(--border);
 }
 
 div.panel-s-b:hover {
-    background-color: hsl(0, 0%, 99%);
+    background-color: var(--background-hover);
 }
 
 div.panel-s-b-i {
@@ -326,7 +358,7 @@ h1.panel-s-b-t-1 {
 div.m {
     width: calc(100% - 36px);
     height: auto;
-    background-color: white;
+    background-color: var(--background);
     border-radius: 15px;
     margin-top: 30px;
     margin-left: auto;
@@ -346,7 +378,7 @@ h1.m-p {
     text-align: center;
     font-weight: 600;
     font-size: 24px;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 h1.m-p-content {
@@ -354,7 +386,7 @@ h1.m-p-content {
     font-weight: normal;
     font-size: 13px;
     text-align: center;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 h1.m-p-1 {
@@ -374,12 +406,12 @@ a.m-p-b {
     display: block;
     width: 197px;
     height: 308px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 10px;
-    border: 1px solid hsl(72, 15%, 87%);
+    border: 1px solid var(--border);
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -396,6 +428,7 @@ div.m-t-p {
 }
 
 h1.m-t {
+    height:38px;
     font-size: 13px;
     font-weight: normal;
 }
@@ -420,7 +453,7 @@ div.l-t-p {
 h1.l-t {
     font-size: 9px;
     font-weight: 300;
-    color: hsl(0, 0%, 68%);
+    color: var(--font-color-c);
 }
 
 div.m-l-p {
@@ -436,7 +469,7 @@ h1.l-p {
 }
 
 div.p-p {
-    background-color: hsl(120, 100%, 97%);
+    background-color: var(--background-green);
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -462,7 +495,7 @@ img.p {
 div.maybe-panel {
     width: 100%;
     height: auto;
-    background-color: white;
+    background-color: var(--background);
     border-radius: 15px;
     margin-top: 30px;
     padding: 60px 0 45px 0;
@@ -487,7 +520,7 @@ div.maybe-g-p-b {
 div.maybe-g-p-b1 {
     width: 343px;
     height: 168px;
-    border: 1px solid hsl(72, 15%, 87%);
+    border: 1px solid var(--border);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -529,7 +562,7 @@ h1.b-t2 {
     font-size: 9px;
     margin: 9px 0 0 13px;
     font-weight: 300;
-    color: #AEAEAE;
+    color: var(--font-color-c);
 }
 
 h1.b-t3 {
@@ -543,7 +576,7 @@ div.b-i-p {
 }
 
 div.b-p-p {
-    background-color: hsl(120, 100%, 97%);
+    background-color: var(--background-green);
     display: flex;
     align-items: center;
     width: 40px;
@@ -586,8 +619,7 @@ div.show-product-3 {
         width: 50px;
         height: 50px;
         border-radius: 100%;
-        background-color: white;
-        border: 2px solid #F1F2EC;
+        background-color: var(--background-hover);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -600,21 +632,19 @@ div.show-product-3 {
         width: 50px;
         height: 50px;
         border-radius: 100%;
-        background-color: white;
-        border: 2px solid #F1F2EC;
+        background-color: var(--background-hover);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         top: 40px;
     }
-
-    a.show-p-b-fixed:hover {
-        border: 2px solid hsl(165, 100%, 40%);
-    }
-
     a.show-p-b:hover {
-        border: 2px solid hsl(165, 100%, 40%);
+        background-color: var(--background-back);
+    }
+    
+    a.show-p-b-fixed:hover {
+        background-color: var(--background-back);
     }
 }
 
@@ -626,8 +656,7 @@ div.show-product-3 {
         width: 50px;
         height: 50px;
         border-radius: 100%;
-        background-color: white;
-        border: 2px solid #F1F2EC;
+        background-color: var(--background-hover);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -641,21 +670,19 @@ div.show-product-3 {
         width: 50px;
         height: 50px;
         border-radius: 100%;
-        background-color: white;
-        border: 2px solid #F1F2EC;
+        background-color: var(--background-hover);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         top: 40px;
     }
-
-    a.show-p-b-fixed:hover {
-        border: 2px solid hsl(165, 100%, 40%);
-    }
-
     a.show-p-b:hover {
-        border: 2px solid hsl(165, 100%, 40%);
+        background-color: var(--background-back);
+    }
+    
+    a.show-p-b-fixed:hover {
+        background-color: var(--background-back);
     }
 }
 
@@ -720,11 +747,11 @@ div.skeleton {
 
 @keyframes skeleton-loading {
     0% {
-        background-color: hsl(0, 0%, 70%);
+        background-color: var(--skeleton-start);
     }
 
     100% {
-        background-color: hsl(0, 0%, 88%);
+        background-color: var(--skeleton-end);
     }
 }
 
@@ -759,7 +786,7 @@ button.show-button {
     background-color: #00CC99;
     border-radius: 4px;
     font-size: 15px;
-    color: white;
+    color: var(--background);
     font-weight: normal;
     cursor: pointer;
 }
@@ -793,7 +820,7 @@ button.show-favourite {
 }
 
 button.show-favourite:hover {
-    background-color: hsl(0, 0%, 99%);
+    background-color: var(--background-hover);
 }
 
 /*  */
@@ -811,13 +838,13 @@ h1.c-b-t {
 div.b-m {
     width: 595px;
     height: 140px;
-    background-color: hsl(0, 0%, 100%);
-    border: 1px solid hsl(72, 15%, 87%);
+    background-color: var(--background);
+    border: 1px solid var(--border);
 }
 
 div.i {
     display: flex;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.i-m {
@@ -841,7 +868,7 @@ img.i-m-i {
 /* баг я хз почему но если мы уберем это свойство то пизда всему*/
 div.b-t-p {
     width: 345px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.z-c-pb {
@@ -866,7 +893,7 @@ div.t-p {
 div.t-p-b {
     width: 342px;
     height: 20px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.i-g {
@@ -897,7 +924,7 @@ div.t-p2 {
 div.p-r {
     width: 123px;
     height: 77px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.h-p {
@@ -920,7 +947,7 @@ button.p-r-b {
     background-color: #00CC99;
     font-size: 15px;
     font-weight: normal;
-    color: white;
+    color: var(--background);
     border-radius: 4px;
     cursor: pointer;
 }
@@ -932,7 +959,7 @@ button.p-r-b:hover {
 button.p-b-n-b {
     width: 597px;
     height: 60px;
-    border: 1px solid hsl(72, 15%, 87%);
+    border: 1px solid var(--border);
     color: hsl(220, 100%, 70%);
     font-size: 15px;
     font-weight: normal;
@@ -947,7 +974,7 @@ div.m-i-1-b {
 
 div.m-i-1-b>div {
     width: 100%;
-    /* border: 1px solid black; */
+    /* border: 1px solid var(--font-color); */
 }
 
 /*  */
@@ -1001,7 +1028,7 @@ div.b-f-h {
     max-width: 1440px;
     width: 1245px;
     height: 488px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -1010,7 +1037,7 @@ div.b-f-h {
 div.o-b-f {
     width: auto;
     height: 488px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 15px 0 0 15px;
     display: flex;
     align-items: center;
@@ -1029,7 +1056,7 @@ div.t-b-t {
     justify-content: center;
     width: auto;
     height: 488px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 0 15px 15px 0;
 }
 
@@ -1057,7 +1084,7 @@ button.btn {
     width: 318px;
     height: 68px;
     border-radius: 50px;
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-back);
     border: 1px solid transparent;
     font-size: 26px;
     font-weight: 700;
@@ -1066,7 +1093,7 @@ button.btn {
 
 .btn:hover {
     background-color: hsl(165, 100%, 40%);
-    color: white;
+    color: var(--background);
 }
 
 /* Desktop Basket */
@@ -1077,7 +1104,7 @@ div.b-backet {
     margin-left: auto;
     width: 1244px;
     height: auto;
-    background-color: white;
+    background-color: var(--background);
     border-radius: 15px;
 }
 
@@ -1102,7 +1129,7 @@ div.grid-backet {
 }
 
 div.backet-p {
-    border: 1px solid #eee;
+    border: 1px solid var(--border);
     display: flex;
     margin-top: 15px;
     border-radius: 10px;
@@ -1146,7 +1173,7 @@ h1.id-b-t3 {
     font-size: 16px;
     font-weight: normal;
     margin: 12px 0 0 31px;
-    color: #BBBBBB;
+    color: var(--font-color-c);
 }
 
 div.quantity-block {
@@ -1161,21 +1188,24 @@ div.quantity {
     width: auto;
     height: 56px;
     display: flex;
-    border: 1px solid #F1F2EC;
-    border-radius: 10px;
+    border: 1px solid var(--border);
 }
 
 
 button.but {
-    width: 33.3px;
+    width: auto;
     height: 56px;
     border: none;
     font-size: 28px;
     font-weight: normal;
-    color: #B7B7B7;
-    background-color: white;
+    color: var(--font-color-c);
+    background-color: var(--background);
     cursor: pointer;
     padding: 0 12px;
+}
+
+button.but:hover {
+    background-color: var(--background-hover);
 }
 
 div.but-quantity-block {
@@ -1185,6 +1215,7 @@ div.but-quantity-block {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin:0 15px;
 }
 
 h1.but-quantity {
@@ -1193,15 +1224,19 @@ h1.but-quantity {
 }
 
 button.but-p {
-    width: 33.3px;
+    width: auto;
     height: 56px;
     border: none;
     font-size: 28px;
     font-weight: normal;
-    color: #B7B7B7;
-    background-color: white;
+    color: var(--font-color-c);
+    background-color: var(--background);
     padding: 0 12px;
     cursor: pointer;
+}
+
+button.but-p:hover {
+    background-color: var(--background-hover);
 }
 
 div.priceb {
@@ -1215,7 +1250,7 @@ h1.price-backet {
     margin-top: 40px;
     font-size: 22px;
     font-weight: normal;
-    color: #656565;
+    color: var(--font-color);
     text-align: right;
     margin-right: 46px;
 }
@@ -1228,7 +1263,6 @@ button.add {
     color: #00CC99;
     text-align: right;
     cursor: pointer;
-    text-decoration: underline;
     margin-right: 46px;
 }
 
@@ -1240,7 +1274,6 @@ button.delete {
     color: #F5532C;
     text-align: right;
     cursor: pointer;
-    text-decoration: underline;
     margin-right: 46px;
 }
 
@@ -1269,7 +1302,7 @@ h1.result {
 h1.quantity-payment {
     font-size: 14px;
     font-weight: normal;
-    color: #656565;
+    color: var(--font-color);
 }
 
 div.price-payment-0 {
@@ -1383,7 +1416,7 @@ div.join-text-place {
 h1.join-text {
     font-size: 25px;
     font-weight: 600;
-    color: hsl(0, 0%, 0%);
+    color: var(--font-color);
 }
 
 div.main-four-blocks-place {
@@ -1393,7 +1426,7 @@ div.main-four-blocks-place {
 div.main-four-blocks {
     width: 1244px;
     height: 500px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 15px;
 }
 
@@ -1404,19 +1437,19 @@ div.place-three-blocks {
     margin-right: auto;
     width: 852px;
     height: 367px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.first-block-in {
     width: 415px;
     height: 232px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 h1.electron-addres {
     font-size: 12px;
     font-weight: 700;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 div.place-input-in {
@@ -1427,11 +1460,11 @@ input.none-border {
     width: 356px;
     height: 40px;
     border: none;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
     font-size: 16px;
     font-weight: 300;
-    background-color: hsl(0, 0%, 100%);
-    border-bottom: 1.5px solid hsl(0, 0%, 92%);
+    background-color: var(--background);
+    border-bottom: 1.5px solid var(--border);
     margin-bottom: 21px;
 }
 
@@ -1441,7 +1474,7 @@ input.none-border:focus {
 }
 
 input.none-border::placeholder {
-    color: hsl(0, 0%, 62%);
+    color: var(--font-color-c);
     font-size: 16px;
     font-weight: 300;
 }
@@ -1454,7 +1487,7 @@ button.button-join-in {
     width: 356px;
     height: 49px;
     background-color: hsl(165, 100%, 40%);
-    color: hsl(0, 0%, 100%);
+    color: var(--background);
     border: none;
     border-radius: 5px;
     font-size: 13px;
@@ -1470,7 +1503,7 @@ button.button-join-in:hover {
 div.second-block-in {
     width: 74px;
     height: 232px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.vertical-stick {
@@ -1479,7 +1512,7 @@ div.vertical-stick {
     height: 89px;
     border: none;
     border-radius: 5px;
-    background-color: hsl(0, 0%, 96%);
+    background-color: var(--border);
 }
 
 div.place-or {
@@ -1495,7 +1528,7 @@ h1.or {
 div.third-block-in {
     width: 363px;
     height: 232px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.place-google-apple-facebook {
@@ -1506,16 +1539,16 @@ button.google {
     width: 358px;
     height: 61px;
     border-radius: 5px;
-    background-color: hsl(0, 0%, 100%);
-    border: 1px solid hsl(72, 15%, 87%);
+    background-color: var(--background);
+    border: 1px solid var(--border);
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
-    color: hsl(0, 0%, 20%);
+    color: var(--font-color);
 }
 
 button.google:hover {
-    background-color: hsl(0, 0%, 92%);
+    background-color: var(--border);
     transition: 10ms;
 }
 
@@ -1535,7 +1568,7 @@ img.img-in-button {
 div.four-block-in {
     width: 852px;
     height: 133px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
 }
 
 div.place-registration {
@@ -1551,7 +1584,7 @@ h1.regis-text {
 button.regis-green {
     color: hsl(165, 99%, 29%);
     border: none;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     cursor: pointer;
 }
 
@@ -1562,13 +1595,13 @@ div.place-secure-captcha {
 h1.secure-captcha {
     font-size: 14px;
     font-weight: 600;
-    color: hsl(0, 0%, 60%);
+    color: var(--font-color-c);
 }
 
 h1.secure-privacy {
     font-size: 13px;
     font-weight: normal;
-    color: hsl(0, 0%, 60%);
+    color: var(--font-color-c);
 }
 
 /* Search */
@@ -1578,9 +1611,9 @@ div.block-search {
     display: block;
     width: 664px;
     height: auto;
-    background-color: white;
+    background-color: var(--background);
     border-radius: 0 0 15px 15px;
-    border: 1px solid #EDEDED;
+    border: 1px solid var(--border);
     z-index: 50;
 
 }
@@ -1590,7 +1623,7 @@ a.flex-search {
 }
 
 a.flex-search:hover {
-    background-color: #F8F8F8;
+    background-color: var(--background-hover);
 }
 
 
@@ -1600,7 +1633,7 @@ div.flex-search {
 }
 
 div.flex-search:hover {
-    background-color: #F8F8F8;
+    background-color: var(--background-hover);
 }
 
 div.block-picture-drugs {
@@ -1653,7 +1686,7 @@ h1.middle-price-in {
 div.find-for-request-block {
     width: 100%;
     height: 40px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     border-radius: 0 0 15px 15px;
     cursor: pointer;
 }
@@ -1669,7 +1702,7 @@ h1.find-for-request-text {
 }
 
 div.find-for-request-block:hover {
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--background-hover);
 }
 
 div.picture-drugs-block {
