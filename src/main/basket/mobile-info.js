@@ -2,8 +2,14 @@ import BasketMobile from "./mobile";
 import { useState,useEffect } from "react";
 
 const MobileBasketInfo = () => {
-    const [show,setShow] = useState(JSON.parse(localStorage.getItem('basket-info')));
-    const [num,setNum] = useState(JSON.parse(localStorage.getItem('basket-info')).length);
+    let l,n;
+    if(localStorage.getItem('basket-info')) {
+      l=JSON.parse(localStorage.getItem('basket-info'));
+      n=JSON.parse(localStorage.getItem('basket-info')).length;
+    }
+    else {l=[];n=0};
+    const [show,setShow] = useState(l);
+    const [num,setNum] = useState(n);
     const RemoveBasket = (basket) => {
       setShow(show.filter(p=>p.id !==basket.id));
       setNum(num-1);
