@@ -1,0 +1,76 @@
+import GetHistoryLocation from '../../../../locate';
+import { useState,useEffect } from 'react';
+
+import { getFirestore,doc, getDoc } from "firebase/firestore";
+import { useParams,Link } from 'react-router-dom';
+
+const AddConfirm = (close)=> {
+    const {id} = useParams();
+    const [productitem,setProductItem] = useState('');
+    useEffect(()=>{
+      // setLazyBlock(false);
+      let check = true;
+      const db = getFirestore();
+      getDoc(doc(db,'list',id)).then((docSnap)=>{
+        if(docSnap.exists()) {
+          const s = docSnap.data();
+          if(check) { 
+              setProductItem(
+                  {title:s.title,price:s.price,image:s.image}
+              );
+              // setLazyBlock(true);
+          }
+        }
+        else console.log("error. Don't exist!");
+      });
+      return () => {
+        check=false;
+      };
+    },[id]);
+    const ScrollToTop = () =>{
+        window.scrollTo({
+          top:0,
+          behavior: 'smooth'
+        });
+      };
+    return(
+        <div className="mobile-main-confirm-fixed">
+            <div className="mobile-main-confirm">
+                <div className="mobile-main-confirm-close">
+                    <div className="mobile-main-confirm-close-picture">
+                        <img onClick={()=>{close.close(false)}} className="mobile-main-confirm-close-image" src={`${GetHistoryLocation}/images/close.svg`} alt="Close"/>
+                    </div>
+                </div>
+                <h1 className="mobile-main-confirm-main-text">Товар добавлен в корзину</h1>
+                <div className="mobile-main-confirm-flex">
+                    <div className="mobile-main-confirm-flex-1">
+                        <img className='mobile-main-confirm-flex-1-images' src={`${GetHistoryLocation+productitem.image}`} alt="info-images" />
+                    </div>
+                    <div className="mobile-main-confirm-flex-2">
+                        <div className="mobile-main-confirm-flex-2-block">
+                            <h1 className="mobile-main-confirm-flex-2-main-text">{productitem.title}</h1>
+                            <div className="mobile-main-confirm-flex-2-block-flex">
+                                <h1 className="mobile-main-confirm-flex-2-block-flex-price">{productitem.price} ₸</h1>
+                                <div className="mobile-main-confirm-flex-2-block-flex-block">
+                                    <h1 className="mobile-main-confirm-flex-2-block-flex-block-text">Продавец:</h1>
+                                    <a className="mobile-main-confirm-flex-2-block-flex-block-nav" href="s">{close.atr.from}</a>
+                                </div>
+                            </div>
+                            <p className="mobile-main-confirm-flex-2-main-content">В корзине 1 товар на сумму 100 ₸</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="mobile-main-confirm-action">
+                    <Link onClick={ScrollToTop} to={`${GetHistoryLocation}/basket`} className="mobile-main-confirm-action-b">
+                        Перейти в корзину
+                    </Link>
+                    <button onClick={()=>{close.close(false)}} className="mobile-main-confirm-action-c">
+                        Продолжить покупки
+                    </button>
+                </div>
+            </div>
+        </div>
+    )
+};
+
+export default AddConfirm;

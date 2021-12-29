@@ -1745,3 +1745,130 @@ div.middle-price-in-block {
     background-color: grey;
     border-radius: 2.08vw;
 }
+/* PopUp */
+div.mobile-main-confirm-fixed {
+    position: fixed;
+    top:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgb(0,0,0,75%);
+    z-index:9999;
+}
+div.mobile-main-confirm {
+    position: absolute;
+    bottom:0;
+    width:100vw;
+    height:auto;
+    background-color: var(--background);
+    border-radius: 4.17vw 4.17vw 0 0;
+    padding-bottom:6.94vw;
+}
+div.mobile-main-confirm-close {
+    width:100%;
+    height:auto;
+    padding:6.01vw 0 4.01vw 0;
+}
+div.mobile-main-confirm-close-picture {
+    position: relative;
+    width: 4.3vw;
+    height: 4.3vw;
+    margin-left:auto;
+    margin-right:4.49vw;
+}
+img.mobile-main-confirm-close-image {
+    position: absolute;
+    width: 4.3vw;
+    height: 4.3vw;
+    cursor: pointer;
+}
+h1.mobile-main-confirm-main-text {
+    text-align: center;
+    font-size: 4.17vw;
+    font-weight: 600;
+    line-height: 5.56vw;
+}
+div.mobile-main-confirm-flex {
+    margin: 5.5vw 4.4vw 0 4.4vw;
+    display: flex;
+}
+div.mobile-main-confirm-flex-1 {
+    position: relative;
+    width:27.08vw;
+    height:27.08vw;
+}
+img.mobile-main-confirm-flex-1-images {
+    position: absolute;
+    width:27.08vw;
+    height:27.08vw;
+}
+div.mobile-main-confirm-flex-2 {
+    position: relative;
+    width:64.03vw;
+    height:27.08vw;
+    /* background-color: blue; */
+}
+div.mobile-main-confirm-flex-2-block {
+    padding-top: 1.38vw;
+    margin-left: 4.58vw;
+}
+h1.mobile-main-confirm-flex-2-main-text {
+    font-size:4.17vw;
+    font-weight: 600;
+}
+div.mobile-main-confirm-flex-2-block-flex {
+    margin-top:3.47vw;
+    display: flex;
+    height:auto;
+}
+h1.mobile-main-confirm-flex-2-block-flex-price {
+    font-size:5.5vw;
+    font-weight: 600;
+}
+div.mobile-main-confirm-flex-2-block-flex-block {
+    display: flex;
+    align-items: center;
+    height:7.36vw;
+    margin-left:4.58vw;
+}
+h1.mobile-main-confirm-flex-2-block-flex-block-text {
+    font-size: 3.61vw;
+    font-weight: normal;
+}
+a.mobile-main-confirm-flex-2-block-flex-block-nav {
+    font-size: 3.61vw;
+    font-weight: normal;
+    text-decoration: none;
+    margin-left:1vw;
+    color:#00CC99;
+}
+p.mobile-main-confirm-flex-2-main-content {
+    margin-top:3.47vw;
+    font-size: 3.3vw;
+    font-weight: normal;
+}
+div.mobile-main-confirm-action {
+    display: flex;
+    width:91.1vw;
+    height:auto;
+    margin: 8.3vw 0 0 4.4vw;
+}
+a.mobile-main-confirm-action-b {
+    width:50%;
+    height:8.53vw;
+    font-size:3.47vw;
+    font-weight: 600;
+    color:var(--background);
+    border-radius: 5.83vw;
+    background-color: #00CC99;
+    cursor: pointer;
+    text-align: center;
+    padding-top:3vw;
+}
+button.mobile-main-confirm-action-c {
+    width:50%;
+    height:11.53vw;
+    font-size:3.47vw;
+    font-weight: 600;
+    color: #00CC99;
+    cursor: pointer;
+}

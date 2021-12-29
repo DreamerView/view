@@ -5,11 +5,14 @@ import { useMediaQuery } from "react-responsive";
 import MobileShopInfo from "./mobileshopinfo";
 import ShowShopLoader from "./show-shop-loader";
 import MobileShopLoader from "./mobileshoploader";
+import CheckConfirm from "./confirm/сheck-confirm";
 
 const ShowShop = () => {
     const num = ['1','2','3'];
     const [lazyblock,setLazyBlock] = useState(true);
     const [local,setLocal] = useState("");
+    const [popup,setPopup] = useState(false);
+    const [info,setInfo] = useState('');
     const isMobile = useMediaQuery({ query: `(max-width: 480px)` });
     const [shows] = useState([
         {id:1,images:GetHistoryLocation+'/images/placeholder.jpg',title:'ЗдравСити - Дифарм',adress:'г.Москва,Черняховского, д.5, корп. 1',time:'Пн-Вс 9:00-21:00',icon:GetHistoryLocation+'/images/open.svg',status:'Аптека открыт',price:'155.55 ₸'},
@@ -30,6 +33,11 @@ const ShowShop = () => {
         if(localStorage.getItem('basket-info')) s=JSON.parse(localStorage.getItem('basket-info'));
         else s="";
         setLocal([...s,info]);
+        setInfo(info);
+        setPopup(true);
+    }
+    const closePopup = (info) => {
+        setPopup(info);
     }
     useEffect(()=>{
         if(local==="") return 0;
@@ -40,6 +48,7 @@ const ShowShop = () => {
         {(lazyblock)?num.map((nums)=>(isMobile)?<MobileShopLoader key={nums}/>:<ShowShopLoader key={nums}/>):shows.map(show=>
             (isMobile)?<MobileShopInfo create={createLocal} item={show} key={show.id}/>:<ShowShopInfo create={createLocal} item={show} key={show.id} />
         )}
+        {popup?<CheckConfirm item={info} close={closePopup}/>:""}
         </div>
     );
 };
