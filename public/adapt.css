@@ -1851,7 +1851,7 @@ a.basket-button-join {
     border-radius: 1.4vw;
     border: none;
     cursor: pointer;
-    font-size:1.25vw;
+    font-size: 1.25vw;
     text-align: center;
     padding-top: 0.5vw;
 }
@@ -1877,4 +1877,34 @@ button.continue-buying {
 button.continue-buying:hover {
     color: #05AB81;
     transition: all 0.5s ease;
+}
+
+div.basket-otriv-text-loader {
+    width: 20.3vw;
+    height: 1.87vw;
+    border-radius: 0.937vw;
+}
+
+div.price-basket-loader {
+    width: 4.37vw;
+    height: 2.5vw;
+    border-radius: 1.25vw;
+}
+
+div.company-name-loader {
+    width: 12.1vw;
+    height: 1.48vw;
+    border-radius: 0.78vw;
+}
+
+div.company-names-loader {
+    width: 17vwx;
+    height: 1.48vw;
+    border-radius: 0.78vw;
+}
+
+div.continue-buying-loader {
+    width: 10.78vw;
+    height: 1.48vw;
+    border-radius: 0.78vw;
 }

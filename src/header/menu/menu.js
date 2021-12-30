@@ -5,6 +5,7 @@ const Menu = (props) => {
     let a = (url === props.item.active) ? "-active" : '';
     return(
       <Link className={`menu-s-b${a}`} to={props.item.active}>
+        {props.item.accept?<div className="menu-s-b-notification"><h1 className='menu-s-b-notification-text'>{props.item.accept}</h1></div>:""}
                 <div className="menu-s-b-i">
                   <div className="menu-s-b-i-i">
                     <img src={`${props.item.images}${a}.svg`} alt="icon" loading="lazy" className="menu-s-b-i-p" />

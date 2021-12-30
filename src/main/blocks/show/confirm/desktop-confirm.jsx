@@ -7,8 +7,9 @@ import { useParams,Link } from 'react-router-dom';
 const DesktopConfirm = (close) => {
     const {id} = useParams();
     const [productitem,setProductItem] = useState('');
+    const [lazy,setLazyBlock] = useState('');
     useEffect(()=>{
-      // setLazyBlock(false);
+      setLazyBlock(false);
       let check = true;
       const db = getFirestore();
       getDoc(doc(db,'list',id)).then((docSnap)=>{
@@ -18,7 +19,7 @@ const DesktopConfirm = (close) => {
               setProductItem(
                   {title:s.title,price:s.price,image:s.image}
               );
-              // setLazyBlock(true);
+              setLazyBlock(true);
           }
         }
         else console.log("error. Don't exist!");
@@ -53,26 +54,26 @@ const DesktopConfirm = (close) => {
   <div className="place-block-text">
     <div className="block-basket-width">
       <div className="block-basket-img">
-        <img src={`${GetHistoryLocation+productitem.image}`} alt="drug" className="drug-img-basket" />
+        <img src={lazy?`${GetHistoryLocation+productitem.image}`:`${GetHistoryLocation}/images/first-aid-alt.svg`} alt="drug" className="drug-img-basket" />
       </div>
       <div className="block-basket-characteristic">
-        <h1 className="basket-otriv-text">{productitem.title}</h1>
+        {lazy?<h1 className="basket-otriv-text">{productitem.title}</h1>:<div className="skeleton basket-otriv-text-loader"/>}
         <div className="block-price-company-place">
           <div className="block-price-company">
-            <h1 className="price-basket">{productitem.price}</h1>
+            {lazy?<h1 className="price-basket">{productitem.price} ₸</h1>:<div className="skeleton price-basket-loader"/>}
             <div className="place-company-name">
-              <h1 className="company-name">Продовец:</h1> <a href="s" className="company-name-green">{close.atr.from}</a>
+              {lazy?<><h1 className="company-name">Продавец:</h1> <a href="s" className="company-name-green">{close.atr.from}</a></>:<div className="skeleton company-name-loader"/>}
             </div>
           </div>
         </div>
         <div className="some-items-place">
-          <h1 className="company-name">В корзине 1 товар на сумму 100 ₸</h1>
+          {lazy?<h1 className="company-name">В корзине {localStorage.getItem('basket-info')? JSON.parse(localStorage.getItem("basket-info")).length:"0"} товар на сумму 100 ₸</h1>:<div className='skeleton company-names-loader'/>}
         </div>
         <div className="place-button-block-basket">
           <div className="button-block-basket">
-            <Link onClick={ScrollToTop} to={`${GetHistoryLocation}/basket`} className="basket-button-join">Перейти в корзину</Link>
+            {lazy?<Link onClick={ScrollToTop} to={`${GetHistoryLocation}/basket`} className="basket-button-join">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${GetHistoryLocation}`} className="basket-button-join"><img src={GetHistoryLocation+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
             <div className="place-continue-buying">
-              <button onClick={()=>{close.close(false)}} className="continue-buying">Продолжить покупки</button>
+              {lazy?<button onClick={()=>{close.close(false)}} className="continue-buying">Продолжить покупки</button>:<div className="skeleton continue-buying-loader"/>}
             </div>
           </div>
         </div>

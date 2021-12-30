@@ -1855,14 +1855,15 @@ div.button-block-basket {
 a.basket-button-join {
     display:block;
     width: 182px;
-    height: 30px;
+    height: auto;
     background-color: #00CC99;
     color: var(--background);
     border-radius: 18px;
     border: none;
     cursor: pointer;
     text-align: center;
-    padding-top:6px;
+    padding:9px 0 8px 0;
+    font-size:14px;
 }
 
 a.basket-button-join:hover {
@@ -1886,4 +1887,48 @@ button.continue-buying {
 button.continue-buying:hover {
     color: #05AB81;
     transition: all 0.5s ease;
+}
+
+div.basket-otriv-text-loader {
+    width:260px;
+    height:24px;
+    border-radius:12px;
+}
+div.price-basket-loader {
+    width:56px;
+    height:32px;
+    border-radius:16px;
+}
+div.company-name-loader {
+    width: 155px;
+    height: 19px;
+    border-radius: 10px;
+}
+div.company-names-loader {
+    width: 219px;
+    height: 19px;
+    border-radius: 10px;
+}
+div.continue-buying-loader {
+    width:138px;
+    height:19px;
+    border-radius:10px;
+}
+
+div.menu-s-b-notification {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:18px;
+    height:18px;
+    background-color: #F5532C;
+    border-radius: 100%;
+    z-index:1;
+    margin-left:13px;
+    margin-top:-10px;
+}
+h1.menu-s-b-notification-text {
+    font-size:10px;
+    font-weight: normal;
 }

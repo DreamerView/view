@@ -1761,19 +1761,19 @@ div.mobile-main-confirm {
     height:auto;
     background-color: var(--background);
     border-radius: 4.17vw 4.17vw 0 0;
-    padding-bottom:6.94vw;
+    padding-bottom:8.3vw;
 }
 div.mobile-main-confirm-close {
     width:100%;
     height:auto;
-    padding:6.01vw 0 4.01vw 0;
+    padding:7.07vw 0 3.5vw 0;
 }
 div.mobile-main-confirm-close-picture {
     position: relative;
     width: 4.3vw;
     height: 4.3vw;
     margin-left:auto;
-    margin-right:4.49vw;
+    margin-right:6.99vw;
 }
 img.mobile-main-confirm-close-image {
     position: absolute;
@@ -1788,7 +1788,7 @@ h1.mobile-main-confirm-main-text {
     line-height: 5.56vw;
 }
 div.mobile-main-confirm-flex {
-    margin: 5.5vw 4.4vw 0 4.4vw;
+    margin: 8.3vw 4.4vw 0 4.4vw;
     display: flex;
 }
 div.mobile-main-confirm-flex-1 {
@@ -1804,8 +1804,7 @@ img.mobile-main-confirm-flex-1-images {
 div.mobile-main-confirm-flex-2 {
     position: relative;
     width:64.03vw;
-    height:27.08vw;
-    /* background-color: blue; */
+    height:auto;
 }
 div.mobile-main-confirm-flex-2-block {
     padding-top: 1.38vw;
@@ -1818,6 +1817,7 @@ h1.mobile-main-confirm-flex-2-main-text {
 div.mobile-main-confirm-flex-2-block-flex {
     margin-top:3.47vw;
     display: flex;
+    flex-direction: column;
     height:auto;
 }
 h1.mobile-main-confirm-flex-2-block-flex-price {
@@ -1825,10 +1825,10 @@ h1.mobile-main-confirm-flex-2-block-flex-price {
     font-weight: 600;
 }
 div.mobile-main-confirm-flex-2-block-flex-block {
+    margin-top:3.47vw;
     display: flex;
     align-items: center;
     height:7.36vw;
-    margin-left:4.58vw;
 }
 h1.mobile-main-confirm-flex-2-block-flex-block-text {
     font-size: 3.61vw;
@@ -1854,7 +1854,7 @@ div.mobile-main-confirm-action {
 }
 a.mobile-main-confirm-action-b {
     width:50%;
-    height:8.53vw;
+    height:auto;
     font-size:3.47vw;
     font-weight: 600;
     color:var(--background);
@@ -1862,13 +1862,42 @@ a.mobile-main-confirm-action-b {
     background-color: #00CC99;
     cursor: pointer;
     text-align: center;
-    padding-top:3vw;
+    padding:3.47vw 0;
 }
 button.mobile-main-confirm-action-c {
     width:50%;
-    height:11.53vw;
+    height:auto;
     font-size:3.47vw;
     font-weight: 600;
     color: #00CC99;
     cursor: pointer;
+    padding:3.47vw 0;
+}
+
+div.mobile-main-confirm-flex-2-main-text-loader {
+    width:50.42vw;
+    height:5.5vw;
+    border-radius: 2.78vw;
+}
+div.mobile-main-confirm-flex-2-block-flex-price-loader {
+    width:30.83vw;
+    height:7.36vw;
+    border-radius: 3.75vw;
+}
+div.mobile-main-confirm-flex-2-block-flex-block-text-loader {
+    width:53.05vw;
+    height:4.86vw;
+    border-radius: 2.5vw;
+}
+div.mobile-main-confirm-flex-2-main-content-loader {
+    margin-top:3.47vw;
+    width:53.05vw;
+    height:4.86vw;
+    border-radius: 2.5vw;
+}
+div.mobile-main-confirm-action-c-loader {
+    width:34.3vw;
+    height:4.58vw;
+    border-radius: 2.36vw;
+    margin: 3.47vw 0 0 5.69vw;
 }
