@@ -7,39 +7,33 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --font-color: hsl(216, 9%, 89%);
-        --font-color-c: hsl(213, 4%, 58%);
-        --border: hsl(0, 0%, 29%);
-        --background: hsl(240, 2%, 10%);
-        --background-back: hsl(0, 0%, 4%);
-        --background-hover: hsl(240, 1%, 14%);
-        --background-green: hsl(240, 1%, 14%);
-        --skeleton-start: hsl(240, 1%, 14%);
-        --skeleton-end: hsl(240, 1%, 34%);
+        --font-color:hsl(216, 9%, 89%);
+        --font-color-c:hsl(213, 4%, 58%);
+        --border:hsl(0, 0%, 29%);
+        --background:hsl(240, 2%, 10%);
+        --background-back:hsl(0, 0%, 4%);
+        --background-hover:hsl(240, 1%, 14%);
+        --background-green:hsl(240, 1%, 14%);
+        --skeleton-start:hsl(240, 1%, 14%);
+        --skeleton-end:hsl(240, 1%, 34%);
     }
 }
-
+  
 @media (prefers-color-scheme: light) {
     :root {
-        --font-color: hsl(0, 0%, 20%);
-        --font-color-c: hsl(220, 1%, 60%);
-        --border: hsl(72, 15%, 87%);
-        --background: hsl(0, 0%, 100%);
-        --background-back: hsl(0, 0%, 97%);
-        --background-hover: hsl(0, 0%, 99%);
-        --background-green: hsl(120, 100%, 97%);
-        --skeleton-start: hsl(0, 0%, 70%);
-        --skeleton-end: hsl(0, 0%, 88%);
+        --font-color:hsl(0, 0%, 20%);
+        --font-color-c:hsl(220, 1%, 60%) ;
+        --border:hsl(72, 15%, 87%);
+        --background:hsl(0, 0%, 100%);
+        --background-back:hsl(0, 0%, 97%);
+        --background-hover:hsl(0, 0%, 99%);
+        --background-green:hsl(120, 100%, 97%);
+        --skeleton-start:hsl(0, 0%, 70%);
+        --skeleton-end:hsl(0, 0%, 88%);
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1,h2,h3,h4,h5,h6,p {
     color: var(--font-color);
 }
 
@@ -729,11 +723,11 @@ div.skeleton {
 
 @keyframes skeleton-loading {
     0% {
-        background-color: hsl(0, 0%, 70%);
+        background-color: var(--skeleton-start);
     }
 
     100% {
-        background-color: hsl(0, 0%, 88%);
+        background-color: var(--skeleton-end);
     }
 }
 
@@ -1158,7 +1152,7 @@ h1.id-b-t3 {
 }
 
 div.quantity-block {
-    width: 11.2vw;
+    width: 11.25vw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -1167,23 +1161,26 @@ div.quantity-block {
 
 div.quantity {
     width: auto;
-    height: 4.37vw;
+    height: 4.375vw;
     display: flex;
-    border: 0.0781vw solid var(--border);
-    border-radius: 0.78vw;
+    border: 0.078vw solid var(--border);
 }
 
 
 button.but {
-    width: 2.6vw;
-    height: 4.37vw;
+    width: auto;
+    height: 4.375vw;
     border: none;
-    font-size: 2.18vw;
+    font-size: 2.1875vw;
     font-weight: normal;
     color: var(--font-color-c);
     background-color: var(--background);
     cursor: pointer;
-    padding: 0 0.937vw;
+    padding: 0 0.9375vw;
+}
+
+button.but:hover {
+    background-color: var(--background-hover);
 }
 
 div.but-quantity-block {
@@ -1193,6 +1190,7 @@ div.but-quantity-block {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin:0 1.17vw;
 }
 
 h1.but-quantity {
@@ -1201,17 +1199,20 @@ h1.but-quantity {
 }
 
 button.but-p {
-    width: 2.6vw;
-    height: 4.37vw;
+    width: auto;
+    height: 4.375vw;
     border: none;
-    font-size: 2.18vw;
+    font-size: 2.1875vw;
     font-weight: normal;
     color: var(--font-color-c);
     background-color: var(--background);
-    padding: 0 0.937vw;
+    padding: 0 0.9375vw;
     cursor: pointer;
 }
 
+button.but-p:hover {
+    background-color: var(--background-hover);
+}
 div.priceb {
     width: 18.28vw;
     height: 4.37vw;
@@ -1907,4 +1908,22 @@ div.continue-buying-loader {
     width: 10.78vw;
     height: 1.48vw;
     border-radius: 0.78vw;
+}
+
+div.menu-s-b-notification {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:1.4vw;
+    height:1.4vw;
+    background-color: #F5532C;
+    border-radius: 100%;
+    z-index:1;
+    margin-left:1.02vw;
+    margin-top:-0.78vw;
+}
+h1.menu-s-b-notification-text {
+    font-size:0.78vw;
+    font-weight: normal;
 }

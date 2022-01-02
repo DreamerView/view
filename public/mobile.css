@@ -1901,3 +1901,20 @@ div.mobile-main-confirm-action-c-loader {
     border-radius: 2.36vw;
     margin: 3.47vw 0 0 5.69vw;
 }
+div.menu-s-b-notification {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:5vw;
+    height:5vw;
+    background-color: #F5532C;
+    border-radius: 100%;
+    z-index:1;
+    margin-left:10.02vw;
+    margin-top:-1.78vw;
+}
+h1.menu-s-b-notification-text {
+    font-size:2.78vw;
+    font-weight: normal;
+}

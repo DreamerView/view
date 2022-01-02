@@ -1,7 +1,9 @@
 import BasketMobile from "./mobile";
 import { useState,useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 const MobileBasketInfo = () => {
+    const dispatch = useDispatch()
     let l,n;
     if(localStorage.getItem('basket-info')) {
       l=JSON.parse(localStorage.getItem('basket-info'));
@@ -13,6 +15,7 @@ const MobileBasketInfo = () => {
     const RemoveBasket = (basket) => {
       setShow(show.filter(p=>p.id !==basket.id));
       setNum(num-1);
+      dispatch({type:"Minus_Local",payload:1});
     };
     useEffect(() => {
       localStorage.setItem('basket-info',JSON.stringify(show));

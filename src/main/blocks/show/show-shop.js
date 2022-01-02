@@ -6,8 +6,10 @@ import MobileShopInfo from "./mobileshopinfo";
 import ShowShopLoader from "./show-shop-loader";
 import MobileShopLoader from "./mobileshoploader";
 import CheckConfirm from "./confirm/сheck-confirm";
+import { useDispatch } from "react-redux";
 
 const ShowShop = () => {
+    const dispatch = useDispatch();
     const num = ['1','2','3'];
     const [lazyblock,setLazyBlock] = useState(true);
     const [local,setLocal] = useState("");
@@ -35,6 +37,7 @@ const ShowShop = () => {
         setLocal([...s,info]);
         setInfo(info);
         setPopup(true);
+        dispatch({type:"Add_Local",payload:1});
     }
     const closePopup = (info) => {
         setPopup(info);
