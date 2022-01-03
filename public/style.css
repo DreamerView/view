@@ -65,7 +65,7 @@ html {
 button,input {
     background-color: transparent;
     border: 0 none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -75,7 +75,7 @@ button,input {
 body {
     position: relative;
     width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: var(--background-back);
     overflow-x: hidden;
 }
