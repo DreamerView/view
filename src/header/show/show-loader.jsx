@@ -29,9 +29,9 @@ const ShowLoader = () => {
                 
               </div>
               <div className="show-p-i-b-f">
-                <button  className="show-button">
+                <a href="/s" className="show-button">
                   <img src={GetHistoryLocation+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" />
-                </button>
+                </a>
                 <button type="button" className="show-favourite">
                   <div className="show-f-p">
                     <img className="show-f-i" src={`${GetHistoryLocation}/images/heart-red.svg`} alt="" />

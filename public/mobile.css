@@ -927,7 +927,9 @@ div.show-p-i-b-f {
     display: flex;
 }
 
-button.show-button {
+a.show-button {
+    display: block;
+    text-decoration: none;
     padding: 2.92vw 6.53vw;
     background-color: #00CC99;
     border-radius: 0.56vw;
@@ -937,7 +939,7 @@ button.show-button {
     cursor: pointer;
 }
 
-button.show-button:hover {
+a.show-button:hover {
     background-color: #01b185;
 }
 
@@ -1627,11 +1629,11 @@ button.regis-green {
 div.block-search {
     position: absolute;
     display: block;
-    width: 94.4vw;
+    width: 94.3vw;
     height: auto;
     background-color: var(--background);
     border-radius: 0 0 4.166vw 4.166vw;
-    border: 0.138vw solid var(--border);
+    border: 0.2vw solid var(--border);
     z-index: 50;
 
 }
@@ -1766,20 +1768,21 @@ div.mobile-main-confirm {
 div.mobile-main-confirm-close {
     width:100%;
     height:auto;
-    padding:7.07vw 0 3.5vw 0;
 }
 div.mobile-main-confirm-close-picture {
     position: relative;
-    width: 4.3vw;
-    height: 4.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20.3vw;
+    height: 15.3vw;
     margin-left:auto;
-    margin-right:6.99vw;
+    cursor: pointer;
 }
 img.mobile-main-confirm-close-image {
     position: absolute;
     width: 4.3vw;
     height: 4.3vw;
-    cursor: pointer;
 }
 h1.mobile-main-confirm-main-text {
     text-align: center;

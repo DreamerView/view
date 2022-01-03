@@ -13,7 +13,7 @@ const ShowInfo = () => {
             </div>
             <div>
                 <div className="c-b">
-                <h1 className="c-b-t">Можете купить у</h1>
+                <h1 className="c-b-t" id="lets">Можете купить у</h1>
                 <ShowShop id="maybe" />
                 <button className="p-b-n-b">
                     Посмотреть еще варианты (14)

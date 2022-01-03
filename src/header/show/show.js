@@ -4,6 +4,7 @@ import { getFirestore,collection, addDoc,doc, getDoc } from "firebase/firestore"
 import  '../../data';
 import { useEffect,useState } from 'react';
 import ShowLoader from './show-loader';
+import { Link as Link1} from 'react-scroll';
 
 
 const Show = () => {
@@ -71,15 +72,11 @@ const Show = () => {
         window.removeEventListener('scroll', toggleVisible);
       };
     },[]);
-    
-    const Maybe = () =>{
-      window.scroll({top:400,behavior:"smooth"});
-    };
     return(
         <>
         {lazyblock?<ShowLoader />:
         <div>
-        <Link className={`show-p-b${look}`} to={GetHistoryLocation+"/"}>
+        <Link onClick={()=>{window.scrollTo({top: 0})}} className={`show-p-b${look}`} to={GetHistoryLocation+"/"}>
           <div className="show-p-b-p">
             <img className="show-p-b-i" src={`${GetHistoryLocation}/images/left.svg`} alt="left" />
           </div>
@@ -102,9 +99,9 @@ const Show = () => {
                 Средняя цена в аптеках города <b>{status.price} ₸</b>
               </p>
               <div className="show-p-i-b-f">
-                <button onClick={Maybe} className="show-button">
+                <Link1 to="lets" smooth={true} duration={1500} offset={-75} className="show-button">
                   Купить
-                </button>
+                </Link1>
                 <button type="button" className="show-favourite">
                   <div className="show-f-p">
                     <img className="show-f-i" src={`${GetHistoryLocation}/images/heart-red.svg`} alt="" />

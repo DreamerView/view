@@ -32,8 +32,7 @@ const AddConfirm = (close)=> {
     },[id]);
     const ScrollToTop = () =>{
         window.scrollTo({
-          top:0,
-          behavior: 'smooth'
+          top:0
         });
       };
       let word;
@@ -45,8 +44,8 @@ const AddConfirm = (close)=> {
         <div className="mobile-main-confirm-fixed">
             <div className="mobile-main-confirm">
                 <div className="mobile-main-confirm-close">
-                    <div className="mobile-main-confirm-close-picture">
-                        <img onClick={()=>{close.close(false)}} className="mobile-main-confirm-close-image" src={`${GetHistoryLocation}/images/close.svg`} alt="Close"/>
+                    <div onClick={()=>{close.close(false)}} className="mobile-main-confirm-close-picture">
+                        <img className="mobile-main-confirm-close-image" src={`${GetHistoryLocation}/images/close.svg`} alt="Close"/>
                     </div>
                 </div>
                 <h1 className="mobile-main-confirm-main-text">Товар добавлен в корзину</h1>

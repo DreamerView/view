@@ -2,16 +2,12 @@ import { Link } from "react-router-dom";
 import GetHistoryLocation from "../../locate";
 
 const Item1 = (products)=> {
-  const ScrollToTop = () =>{
-    window.scrollTo({
-      top:0,
-      behavior: 'smooth'
-    });
-  };
-
+    const ScrollToTop = () => {
+      window.scrollTo({top:0})
+    }
     return(
         <div className="m-d-b">
-              <Link onClick={ScrollToTop}  className="m-p-b" to={`${GetHistoryLocation}/products/${products.item.id}`}>
+              <Link onClick={ScrollToTop} className="m-p-b" to={`${GetHistoryLocation}/products/${products.item.id}`}>
                 <div className="m-i-1-1">
                   <img loading="lazy" src={products.item.image} alt="Panakea 1" className="m-i" />
                 </div>
