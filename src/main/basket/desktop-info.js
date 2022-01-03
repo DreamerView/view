@@ -1,9 +1,11 @@
 import DesktopBasket from "./desktop";
 import { useState,useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 
 const DesktopBasketInfo = () => {
     const dispatch = useDispatch();
+    const item = useSelector(state => state.item);
+    const local = useSelector(state=> state.cash);
     let l,n;
     if(localStorage.getItem('basket-info')) {
       l=JSON.parse(localStorage.getItem('basket-info'));
@@ -20,11 +22,16 @@ const DesktopBasketInfo = () => {
       useEffect(() => {
         localStorage.setItem('basket-info',JSON.stringify(show));
       }, [show]);
+      let word;
+      switch(local) {
+        case 1: word='товар';break;
+        default: word='товара';break;
+      }
     return(
         <div className="m">
         <div className="b-backet">
         <h1 className="u-backet">Ваша корзина</h1>
-        <h1 className="product-b">У вас в корзине {localStorage.getItem('basket-info')? num:"0"} товара</h1>
+        <h1 className="product-b">У вас в корзине {local} товара</h1>
         <div className="grid-backet">
             {localStorage.getItem('basket-info')?show.map(basket=><DesktopBasket remove={RemoveBasket} item={basket} key={basket.id}/>):""}
         </div>
@@ -33,10 +40,10 @@ const DesktopBasketInfo = () => {
                 <div className="payment-flex">
                 <div className="price-payment-0">
                 <h1 className="result">Итог заказа</h1>
-                <h1 className="quantity-payment">{localStorage.getItem('basket-info')? JSON.parse(localStorage.getItem("basket-info")).length:"0"} товара</h1>
+                <h1 className="quantity-payment">{local} {word}</h1>
                 </div>
                 <div className="price-payment-1">
-                <h1 className="price-payment">150,55 ₸</h1>
+                <h1 className="price-payment">{item} ₸</h1>
                 </div>
                 </div>
                 <button className="pay">Оплатить</button>

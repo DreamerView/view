@@ -24,7 +24,6 @@ const ShowInfo = () => {
             {/* Аналоги */}
             <h1 className="m-p-1">Аналоги</h1>
             <ItemList1/>
-            {/* <AddConfirm/> */}
         </div>
     </div>
     )

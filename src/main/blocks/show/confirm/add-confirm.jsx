@@ -3,11 +3,13 @@ import { useState,useEffect } from 'react';
 
 import { getFirestore,doc, getDoc } from "firebase/firestore";
 import { useParams,Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const AddConfirm = (close)=> {
     const {id} = useParams();
     const [productitem,setProductItem] = useState('');
     const [lazy,setLazyBlock] = useState(false);
+    const local = useSelector(state=>state.cash);
     useEffect(()=>{
       setLazyBlock(false);
       let check = true;
@@ -34,6 +36,11 @@ const AddConfirm = (close)=> {
           behavior: 'smooth'
         });
       };
+      let word;
+      switch(local) {
+        case 1: word='товар';break;
+        default: word='товара';break;
+      }
     return(
         <div className="mobile-main-confirm-fixed">
             <div className="mobile-main-confirm">
@@ -56,7 +63,7 @@ const AddConfirm = (close)=> {
                                     {lazy?<><h1 className="mobile-main-confirm-flex-2-block-flex-block-text">Продавец:</h1><a className="mobile-main-confirm-flex-2-block-flex-block-nav" href="s">{close.atr.from}</a></>:<div className="skeleton mobile-main-confirm-flex-2-block-flex-block-text-loader"/>}
                                 </div>
                             </div>
-                            {lazy?<p className="mobile-main-confirm-flex-2-main-content">В корзине 1 товар на сумму 100 ₸</p>:<div className="skeleton mobile-main-confirm-flex-2-main-content-loader"/>}
+                            {lazy?<p className="mobile-main-confirm-flex-2-main-content">У вас в корзине {local} {word}</p>:<div className="skeleton mobile-main-confirm-flex-2-main-content-loader"/>}
                         </div>
                     </div>
                 </div>

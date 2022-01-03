@@ -1,6 +1,7 @@
 import GetHistoryLocation from "../../locate";
 import {useState,useEffect} from 'react';
 import { getFirestore,doc, onSnapshot } from "firebase/firestore";
+import { useDispatch } from "react-redux";
 
 
 const DesktopBasket = (info)=> {
@@ -8,6 +9,10 @@ const DesktopBasket = (info)=> {
   const [pr,setPr] = useState("");
   const [sum,setSum] = useState(info.item.item);
   const id = info.item.key;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({type:"LetProduct",put:0});
+  }, [dispatch]);
   useEffect(()=>{
     // setLazyBlock(true);
     let check = true;
@@ -17,7 +22,8 @@ const DesktopBasket = (info)=> {
         const s = docSnap.data();
         if(check) { 
           setStatus({title:s.title,content:s.content,price:s.price,image:s.image,id:s.id});
-          setPr((s.price*1).toFixed(2));
+          setPr((s.price*1).toFixed(0));
+          dispatch({type:"PutProduct",put:s.price});
           // setLazyBlock(false);
         }
       }
@@ -32,18 +38,24 @@ const DesktopBasket = (info)=> {
     return () => {
       check=false;
     };
-  },[id]);
-  const PlusSum = async() => {
+  },[id,dispatch]);
+  const PlusSum = () => {
     setSum(sum+1);
-    setPr(((sum+1)*status.price).toFixed(2));
+    setPr(((sum+1)*status.price).toFixed(0));
+    dispatch({type:"AddProduct",put:status.price});
   };
   const MinusSum = () => {
     if(sum <= 1) return 0;
     else {
       setSum(sum-1);
-      setPr((pr-status.price).toFixed(2));
+      setPr((pr-status.price).toFixed(0));
+      dispatch({type:"GetProduct",put:status.price});
     }
   };
+  const RemoveItem = () => {
+    info.remove(info.item);
+    dispatch({type:"GetProduct",put:pr});
+  }
     return(
         <div className="backet-p">
         <div className="img-basket-picture">
@@ -66,7 +78,7 @@ const DesktopBasket = (info)=> {
         <div className="priceb">
           <h1 className="price-backet">{pr} ₸</h1>
           <button className="add">Добавить в избранное</button>
-          <button onClick={()=>{info.remove(info.item)}} className="delete">Удалить из корзины</button>
+          <button onClick={RemoveItem} className="delete">Удалить из корзины</button>
         </div>
       </div>
     );

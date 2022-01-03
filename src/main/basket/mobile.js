@@ -1,12 +1,17 @@
 import { useState,useEffect } from "react";
 import GetHistoryLocation from "../../locate";
 import { getFirestore,doc, onSnapshot } from "firebase/firestore";
+import { useDispatch } from "react-redux";
 
 const BasketMobile = (info) => {
   const [status,setStatus] = useState('');
   const [sum,setSum] = useState(info.item.item);
   const [pr,setPr] = useState("");
   const id = info.item.key;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({type:"LetProduct",put:0});
+  }, [dispatch]);
   useEffect(()=>{
     // setLazyBlock(true);
     let check = true;
@@ -16,7 +21,8 @@ const BasketMobile = (info) => {
         const s = docSnap.data();
         if(check) { 
           setStatus({title:s.title,content:s.content,price:s.price,image:s.image,id:s.id});
-          setPr((s.price*1).toFixed(2));
+          setPr((s.price*1).toFixed(0));
+          dispatch({type:"PutProduct",put:s.price});
           // setLazyBlock(false);
         }
       }
@@ -31,18 +37,24 @@ const BasketMobile = (info) => {
     return () => {
       check=false;
     };
-  },[id]);
+  },[id,dispatch]);
     const PlusSum = async() => {
       setSum(sum+1);
-      setPr(((sum+1)*status.price).toFixed(2));
+      setPr(((sum+1)*status.price).toFixed(0));
+      dispatch({type:"AddProduct",put:status.price});
     };
     const MinusSum = () => {
       if(sum <= 1) return 0;
       else {
         setSum(sum-1);
-        setPr((pr-status.price).toFixed(2));
+        setPr((pr-status.price).toFixed(0));
+        dispatch({type:"GetProduct",put:status.price});
       }
     };
+    const RemoveItem = () => {
+      info.remove(info.item);
+      dispatch({type:"GetProduct",put:pr});
+    }
     return(
           <div className="main-of-main">
             <div className="block-one-img-and-glakso">
@@ -85,7 +97,7 @@ const BasketMobile = (info) => {
                   <button className="favorite">Добавить в избранное</button>
                 </div>
                 <div className="del-from-favorite">
-                  <button onClick={()=>{info.remove(info.item)}} className="unfavorite">Удалить из корзины</button>
+                  <button onClick={RemoveItem} className="unfavorite">Удалить из корзины</button>
                 </div>
               </div>
             </div>

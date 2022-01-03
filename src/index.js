@@ -7,12 +7,16 @@ import { Provider } from 'react-redux';
 
 let local = localStorage.getItem('basket-info') ? JSON.parse(localStorage.getItem('basket-info')).length : 0; 
 
-const defaultState = {cash:local};
+const defaultState = {cash:local,item:0};
 
 const reducer = (state=defaultState,action) => {
   switch(action.type) {
     case "Add_Local": return {...state,cash:state.cash+action.payload};
     case "Minus_Local": return {...state,cash:state.cash-action.payload};
+    case "AddProduct": return {...state,item:state.item+action.put};
+    case "GetProduct": return {...state,item:state.item-action.put};
+    case "PutProduct": return {...state,item:state.item+action.put};
+    case "LetProduct": return {...state,item:action.put};
     default: return state;
   }
 };

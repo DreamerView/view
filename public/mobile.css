@@ -59,16 +59,21 @@ html {
     overflow-y: overlay;
 }
 
-button {
+button,input {
     background-color: transparent;
     border: 0 none;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-radius: none;
 }
 
 body {
     width: 100%;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-back);
+    color:var(--font-color);
     padding-bottom: 30.1vw;
     overflow-x: hidden;
 }
@@ -639,9 +644,9 @@ button.btn:hover {
 div.mobile-shop-info {
     margin-left: auto;
     margin-right: auto;
-    width: 88.89vw;
+    width: 96.89vw;
     height: auto;
-    border-radius: 0.56vw;
+    border-radius: 2.08vw;
     background: var(--background);
     border: 0.14vw solid var(--border);
     margin-top: 4.17vw;
@@ -705,12 +710,13 @@ div.mobile-shop-info-block-2 {
 
 div.mobile-shop-info-block-2-item-1 {
     display: flex;
-    width: 44.4vw;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
     height: 4.9125vw;
 }
 
 div.mobile-shop-info-block-2-item-1-picture {
-    margin-left: 4.17vw;
     position: relative;
     width: 4.9125vw;
     height: 4.9125vw;
@@ -731,7 +737,7 @@ h1.mobile-shop-info-block-2-item-1-text {
 
 div.mobile-shop-info-block-3-item-1 {
     display: flex;
-    width: 44.4vw;
+    width: 50%;
     height: auto;
 }
 
@@ -763,14 +769,15 @@ h1.mobile-shop-info-block-3-item-1-text {
 }
 
 button.p-b-n-b {
-    margin: 4.17vw 0 0 5.56vw;
-    width: 88.89vw;
+    margin: 4.17vw 0 0 1.56vw;
+    width: 96.89vw;
     height: 17.22vw;
     font-weight: normal;
     font-size: 3.61vw;
     color: #69f;
     border: 0.14vw solid var(--border);
     cursor: pointer;
+    border-radius: 2.08vw;
 }
 
 button.p-b-n-b:hover {
@@ -817,7 +824,7 @@ h1.b1-t2 {
     font-size: 3.6vw;
     font-weight: 300;
     margin: 1.6vw 0 0 3.19vw;
-    width: 57.08vw;
+    width: 75vw;
 }
 
 a.show-p-b {
@@ -1358,13 +1365,6 @@ div.h {
     float: right;
 }
 
-button.p-b-n-b {
-    width: 46.6vw;
-    height: 4.68vw;
-    border: 0.08vw solid hsl(70, 19%, 94%);
-    cursor: pointer;
-}
-
 div.mobile-shop-info-block-item-i-1-loader {
     width: 25.28vw;
     height: 25.28vw;
@@ -1464,7 +1464,7 @@ input.none-border {
     border: none;
     color: var(--font-color);
     font-size: 4.72vw;
-    font-weight: 300;
+    font-weight: normal;
     padding-bottom: 2.78vw;
     background-color: var(--background);
     border-bottom: 0.208vw solid hsl(0, 0%, 92%);
@@ -1473,7 +1473,7 @@ input.none-border {
 
 input.none-border:focus {
     font-size: 4.72vw;
-    font-weight: 300;
+    font-weight: normal;
     border-bottom: 0.208vw solid hsl(165, 100%, 40%);
     outline: none;
 }

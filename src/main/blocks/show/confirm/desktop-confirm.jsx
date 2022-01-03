@@ -3,11 +3,13 @@ import { useState,useEffect } from 'react';
 
 import { getFirestore,doc, getDoc } from "firebase/firestore";
 import { useParams,Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const DesktopConfirm = (close) => {
     const {id} = useParams();
     const [productitem,setProductItem] = useState('');
     const [lazy,setLazyBlock] = useState('');
+    const local = useSelector(state=>state.cash);
     useEffect(()=>{
       setLazyBlock(false);
       let check = true;
@@ -34,6 +36,11 @@ const DesktopConfirm = (close) => {
         behavior: 'smooth'
       });
     };
+    let word;
+      switch(local) {
+        case 1: word='товар';break;
+        default: word='товара';break;
+      }
     return(
         <div className='basket-float-window-fixed'>
         <div className="basket-float-window">
@@ -67,7 +74,7 @@ const DesktopConfirm = (close) => {
           </div>
         </div>
         <div className="some-items-place">
-          {lazy?<h1 className="company-name">В корзине {localStorage.getItem('basket-info')? JSON.parse(localStorage.getItem("basket-info")).length:"0"} товар на сумму 100 ₸</h1>:<div className='skeleton company-names-loader'/>}
+          {lazy?<h1 className="company-name">У вас в корзине {local} {word}</h1>:<div className='skeleton company-names-loader'/>}
         </div>
         <div className="place-button-block-basket">
           <div className="button-block-basket">

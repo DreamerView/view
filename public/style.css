@@ -62,16 +62,20 @@ html {
     overflow-y: overlay;
 }
 
-button {
+button,input {
     background-color: transparent;
     border: 0 none;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-radius: none;
 }
 
 body {
     position: relative;
     width: 100%;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-back);
     overflow-x: hidden;
 }
@@ -1005,7 +1009,7 @@ h1.b1-t2 {
     font-weight: 120;
     margin: 6px 0 0 12px;
     font-weight: 300;
-    width: 211px;
+    width: 250px;
 }
 
 /*  */
