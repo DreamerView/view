@@ -99,7 +99,7 @@ const Show = () => {
                 Средняя цена в аптеках города <b>{status.price} ₸</b>
               </p>
               <div className="show-p-i-b-f">
-                <Link1 to="lets" smooth={true} duration={1500} offset={-75} className="show-button">
+                <Link1 to="lets" smooth={true} duration={1000} offset={-75} className="show-button">
                   Купить
                 </Link1>
                 <button type="button" className="show-favourite">

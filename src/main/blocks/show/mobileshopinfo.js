@@ -36,7 +36,7 @@ const MobileShopInfo = (info) => {
                 </div>
                 <div className="mobile-shop-info-block-3-item-1">
                     <div className="mobile-shop-info-block-3-item-1-block">
-                        <button onClick={()=>{info.create({id:Date.now(),key:id,item:1,from:info.item.title})}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>
+                        <button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1})}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>
                     </div>
                 </div>
             </div>

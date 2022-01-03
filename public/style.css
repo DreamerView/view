@@ -1735,8 +1735,9 @@ div.basket-float-window {
     transform: translate(-50%, -50%);
     margin-left: auto;
     margin-right: auto;
-    width: 842px;
-    height: 305px;
+    width: 700px;
+    height: auto;
+    padding-bottom: 30px;
     border-radius: 22px;
     background-color: var(--background);
 }
@@ -1747,12 +1748,13 @@ div.place-block-text {
 
 div.block-text-basket {
     display: flex;
-    width: 774px;
-    height: 99px;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 div.place-text-basket {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 h1.text-basket-name {
@@ -1762,32 +1764,37 @@ h1.text-basket-name {
 }
 
 div.place-close-basket-block {
-    margin-left: 451px;
+    margin-left: auto;
 }
 
 div.close-basket-block {
-    width: auto;
-    height: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
 }
-
 div.close-place {
-    margin-top: 22px;
+    position: relative;
+    width: 16px;
+    height: 16px;
 }
 
 img.close-img {
+    position: absolute;
     width: 16px;
     height: auto;
-    cursor: pointer;
 }
 
 div.block-basket-width {
     display: flex;
-    width: 541px;
+    width: auto;
     height: 174px;
 }
 
 div.block-basket-img {
-    width: 183px;
+    width: 157px;
     height: auto;
 }
 
@@ -1797,6 +1804,7 @@ img.drug-img-basket {
 }
 
 div.block-basket-characteristic {
+    margin-left:50px;
     width: 358px;
     height: auto;
 }
@@ -1810,13 +1818,13 @@ h1.basket-otriv-text {
 }
 
 div.block-price-company-place {
-    margin-top: 16px;
+    margin-top: 15px;
 }
 
 div.block-price-company {
     display: flex;
     width: 358px;
-    height: 25px;
+    height: auto;
 }
 
 h1.price-basket {
@@ -1845,17 +1853,17 @@ a.company-name-green {
 }
 
 div.some-items-place {
-    margin-top: 21px;
+    margin-top: 15px;
 }
 
 div.place-button-block-basket {
-    margin-top: 23px;
+    margin-top: 20px;
 }
 
 div.button-block-basket {
     display: flex;
     width: 358px;
-    height: 39px;
+    height: auto;
 }
 
 a.basket-button-join {
@@ -1868,7 +1876,7 @@ a.basket-button-join {
     border: none;
     cursor: pointer;
     text-align: center;
-    padding:9px 0 8px 0;
+    padding:10px 0;
     font-size:14px;
 }
 
@@ -1878,10 +1886,13 @@ a.basket-button-join:hover {
 }
 
 div.place-continue-buying {
-    margin: 8px 0 0 24px;
+    position: relative;
+    width:154px;
+    margin: 10px 0 0 24px;
 }
 
 button.continue-buying {
+    position: absolute;
     color: #00CC99;
     border: none;
     background-color: var(--background);

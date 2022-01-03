@@ -1727,9 +1727,10 @@ div.basket-float-window {
     transform: translate(-50%, -50%);
     margin-left: auto;
     margin-right: auto;
-    width: 65.78vw;
-    height: 23.82vw;
+    width: 54.68vw;
+    height: auto;
     border-radius: 1.7vw;
+    padding-bottom: 2.34vw;
     background-color: var(--background);
 }
 
@@ -1739,12 +1740,13 @@ div.place-block-text {
 
 div.block-text-basket {
     display: flex;
-    width: 60.46vw;
-    height: 7.73vw;
+    width: auto;
+    height: auto;
+    margin-bottom: 0.78vw;
 }
 
 div.place-text-basket {
-    margin-top: 2.73vw;
+    margin-top: 2.34vw;
 }
 
 h1.text-basket-name {
@@ -1754,32 +1756,38 @@ h1.text-basket-name {
 }
 
 div.place-close-basket-block {
-    margin-left: 35.2vw;
+    margin-left: auto;
 }
 
 div.close-basket-block {
-    width: auto;
-    height: 7.73vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.03vw;
+    height: 7.03vw;
+    cursor: pointer;
 }
 
 div.close-place {
-    margin-top: 1.7vw;
+    position: relative;
+    width: 1.25vw;
+    height: 1.25vw;
 }
 
 img.close-img {
+    position: absolute;
     width: 1.25vw;
     height: auto;
-    cursor: pointer;
 }
 
 div.block-basket-width {
     display: flex;
-    width: 42.26vw;
+    width: auto;
     height: 13.59vw;
 }
 
 div.block-basket-img {
-    width: 14.29vw;
+    width: 12.26vw;
     height: auto;
 }
 
@@ -1789,6 +1797,7 @@ img.drug-img-basket {
 }
 
 div.block-basket-characteristic {
+    margin-left:3.9vw;
     width: 27.96vw;
     height: auto;
 }
@@ -1802,13 +1811,13 @@ h1.basket-otriv-text {
 }
 
 div.block-price-company-place {
-    margin-top: 1.25vw;
+    margin-top: 1.17vw;
 }
 
 div.block-price-company {
     display: flex;
     width: 27.96vw;
-    height: 1.95vw;
+    height: auto;
 }
 
 h1.price-basket {
@@ -1837,31 +1846,31 @@ a.company-name-green {
 }
 
 div.some-items-place {
-    margin-top: 1.64vw;
+    margin-top: 1.17vw;
 }
 
 div.place-button-block-basket {
-    margin-top: 1.78vw;
+    margin-top: 1.56vw;
 }
 
 div.button-block-basket {
     display: flex;
     width: 27.96vw;
-    height: 3vw;
+    height: auto;
 }
 
 a.basket-button-join {
     display: block;
     width: 14.2vw;
-    height: 2.3vw;
+    height: auto;
     background-color: #00CC99;
     color: var(--background);
     border-radius: 1.4vw;
     border: none;
     cursor: pointer;
-    font-size: 1.25vw;
+    font-size:1.09vw;
     text-align: center;
-    padding-top: 0.5vw;
+    padding:0.78vw 0;
 }
 
 a.basket-button-join:hover {
@@ -1870,10 +1879,13 @@ a.basket-button-join:hover {
 }
 
 div.place-continue-buying {
-    margin: 0.625vw 0 0 1.87vw;
+    position: relative;
+    width:12vw;
+    margin: 0.78vw 0 0 1.87vw;
 }
 
 button.continue-buying {
+    position: absolute;
     color: #00CC99;
     border: none;
     background-color: var(--background);
