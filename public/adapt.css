@@ -16,20 +16,32 @@
         --background-green:hsl(240, 1%, 14%);
         --skeleton-start:hsl(240, 1%, 14%);
         --skeleton-end:hsl(240, 1%, 34%);
+        --popup-background:rgb(0,0,0,50%);
+        --green: hsl(165, 99%, 35%);
+        --green-hover:hsl(165, 100%, 25%);
+        --exist:hsl(195, 100%, 40%);
+        --exist-hover:	hsl(204, 75%, 46%);
+        --red:hsl(12, 91%, 57%);
     }
 }
   
 @media (prefers-color-scheme: light) {
     :root {
-        --font-color:hsl(0, 0%, 20%);
-        --font-color-c:hsl(220, 1%, 60%) ;
-        --border:hsl(72, 15%, 87%);
+        --font-color:hsl(0, 0%, 0%);
+        --font-color-c:hsl(212, 11%, 55%) ;
+        --border:hsl(210, 3%, 85%);
         --background:hsl(0, 0%, 100%);
-        --background-back:hsl(0, 0%, 97%);
-        --background-hover:hsl(0, 0%, 99%);
+        --background-back:hsl(216, 14%, 93%);
+        --background-hover:hsl(0, 0%, 98%);
         --background-green:hsl(120, 100%, 97%);
         --skeleton-start:hsl(0, 0%, 70%);
         --skeleton-end:hsl(0, 0%, 88%);
+        --popup-background:rgb(0,0,0,25%);
+        --green:hsl(165, 99%, 35%);
+        --green-hover:hsl(165, 100%, 25%);
+        --exist:hsl(195, 100%, 40%);
+        --exist-hover:hsl(204, 75%, 46%);
+        --red:hsl(12, 91%, 57%);
     }
 }
 
@@ -291,7 +303,7 @@ div.menu-s-b-i-t {
 }
 
 h1.menu-s-b-i-t-1-active {
-    color: hsl(165, 100%, 40%);
+    color: var(--green);
     font-size: 1vw;
     font-weight: normal;
 }
@@ -352,11 +364,11 @@ h1.panel-s-b-t-1 {
 }
 
 div.m {
-    width: calc(100% - 2.8vw);
+    width: calc(100% - 1.17vw);
     height: auto;
     background-color: var(--background);
     border-radius: 1.17vw;
-    margin-top: 2.34vw;
+    margin-top: 1.17vw;
     margin-left: auto;
     margin-right: auto;
     padding: 4.68vw 0;
@@ -412,7 +424,7 @@ a.m-p-b {
 }
 
 a.m-p-b:hover {
-    border: 0.0781vw solid hsl(165, 100%, 40%);
+    border: 0.0781vw solid var(--green);
 }
 
 div.m-d-b {
@@ -493,7 +505,7 @@ div.maybe-panel {
     height: auto;
     background-color: var(--background);
     border-radius: 1.17vw;
-    margin-top: 2.34vw;
+    margin-top: 1.17vw;
     padding: 4.68vw 0 3.5vw 0;
 }
 
@@ -522,7 +534,7 @@ div.maybe-g-p-b1 {
 }
 
 div.maybe-g-p-b1:hover {
-    border: 0.0781vw solid hsl(165, 100%, 40%);
+    border: 0.0781vw solid var(--green);
 }
 
 div.maybe-flex {
@@ -767,7 +779,7 @@ a.show-button {
     display: block;
     text-decoration: none;
     padding: 0.82vw 1.74vw;
-    background-color: #00CC99;
+    background-color: var(--green);
     border-radius: 0.312vw;
     font-size: 1.17vw;
     color: var(--background);
@@ -776,7 +788,7 @@ a.show-button {
 }
 
 a.show-button:hover {
-    background-color: #01b185;
+    background-color: var(--green-hover);
 }
 
 div.show-f-p {
@@ -797,7 +809,7 @@ button.show-favourite {
     display: flex;
     align-items: center;
     font-size: 1.17vw;
-    color: hsl(12, 91%, 57%);
+    color: var(--red);
     cursor: pointer;
     border-radius: 0.312vw;
     padding-right: 0.78vw;
@@ -852,7 +864,7 @@ img.i-m-i {
 
 /* баг я хз почему но если мы уберем это свойство то пизда всему*/
 div.b-t-p {
-    width: 26.95vw;
+    width: 23.4vw;
     background-color: var(--background);
 }
 
@@ -907,7 +919,7 @@ div.t-p2 {
 }
 
 div.p-r {
-    width: 9.6vw;
+    width: 13.125vw;
     height: 6vw;
     background-color: var(--background);
 }
@@ -929,7 +941,7 @@ button.p-r-b {
     width: auto;
     height: auto;
     padding: 0.898vw 1.75vw;
-    background-color: #00CC99;
+    background-color: var(--green);
     font-size: 1.17vw;
     font-weight: normal;
     color: var(--background);
@@ -938,17 +950,41 @@ button.p-r-b {
 }
 
 button.p-r-b:hover {
-    background-color: #01b185;
+    background-color: var(--green-hover);
+}
+
+a.p-r-b {
+    display: block;
+    text-decoration: none;
+    margin: 2.34vw 1.56vw 0 0;
+    float: right;
+    width: auto;
+    height: auto;
+    padding: 0.898vw 1.75vw;
+    background-color: var(--exist);
+    font-size: 1.17vw;
+    font-weight: normal;
+    color: var(--background);
+    border-radius: 0.312vw;
+    cursor: pointer;
+}
+
+a.p-r-b:hover {
+    background-color: var(--exist-hover);
 }
 
 button.p-b-n-b {
     width: 46.64vw;
     height: 4.68vw;
     border: 0.0781vw solid var(--border);
-    color: hsl(220, 100%, 70%);
+    color: var(--exist);
     font-size: 1.17vw;
     font-weight: normal;
     cursor: pointer;
+}
+button.p-b-n-b:hover {
+    background-color: var(--background-hover);
+    color: var(--exist-hover);
 }
 
 div.m-i-1-b {
@@ -999,7 +1035,7 @@ h1.b1-t2 {
     font-size: 1.09vw;
     margin: 0.468vw 0 0 0.937vw;
     font-weight: 300;
-    width: 19.53vw;
+    width: 23.4vw;
 }
 
 /* */
@@ -1045,7 +1081,7 @@ div.t-b-t {
 h1.t-n-h {
     font-size: 2.65vw;
     font-weight: 700;
-    color: hsl(60, 3%, 22%);
+    color: var(--font-color);
 }
 
 div.n-a-w-p {
@@ -1055,7 +1091,7 @@ div.n-a-w-p {
 h1.n-a-w {
     font-size: 1.7vw;
     font-weight: 600;
-    color: hsl(0, 0%, 77%);
+    color: var(--font-color-c);
 }
 
 div.btn-p {
@@ -1074,7 +1110,7 @@ button.btn {
 }
 
 .btn:hover {
-    background-color: hsl(165, 100%, 40%);
+    background-color: var(--green);
     color: var(--background);
 }
 
@@ -1141,7 +1177,7 @@ h1.id-b-t1 {
     font-size: 1.25vw;
     font-weight: 600;
     margin-left: 2.42vw;
-    color: #1FD5AC;
+    color: var(--green);
 }
 
 h1.id-b-t2 {
@@ -1241,7 +1277,7 @@ button.add {
     margin-top: 0.625vw;
     font-size: 1.17vw;
     font-weight: normal;
-    color: #00CC99;
+    color: var(--green);
     text-align: right;
     cursor: pointer;
     margin-right: 3.59vw;
@@ -1252,7 +1288,7 @@ button.delete {
     margin-top: 0.546vw;
     font-size: 1.17vw;
     font-weight: normal;
-    color: #F5532C;
+    color: var(--red);
     text-align: right;
     cursor: pointer;
     margin-right: 3.59vw;
@@ -1309,13 +1345,13 @@ button.pay {
     margin-top: 2.5vw;
     border-radius: 0.78vw;
     border: none;
-    background-color: #1FD5AC;
-    color: #FFFFFF;
+    background-color: var(--green);
+    color: var(--background);
     cursor: pointer;
 }
 
 button.pay:hover {
-    background-color: #01b185;
+    background-color: var(--green-hover);
 }
 
 /* */
@@ -1444,21 +1480,21 @@ input.none-border {
     border: none;
     color: var(--font-color);
     font-size: 1.25vw;
-    font-weight: 300;
+    font-weight: normal;
     background-color: var(--background);
-    border-bottom: 0.117vw solid var(--border);
+    border-bottom: 0.03vw solid var(--border);
     margin-bottom: 1.64vw;
 }
 
 input.none-border:focus {
-    border-bottom: 0.117vw solid hsl(165, 100%, 40%);
+    border-bottom: 0.03vw solid var(--green);
     outline: none;
 }
 
 input.none-border::placeholder {
     color: var(--font-color-c);
     font-size: 1.25vw;
-    font-weight: 300;
+    font-weight: normal;
 }
 
 div.place-button-in {
@@ -1468,7 +1504,7 @@ div.place-button-in {
 button.button-join-in {
     width: 27.8vw;
     height: 3.82vw;
-    background-color: hsl(165, 100%, 40%);
+    background-color: var(--green);
     color: var(--background);
     border: none;
     border-radius: 0.39vw;
@@ -1478,7 +1514,7 @@ button.button-join-in {
 }
 
 button.button-join-in:hover {
-    background-color: hsl(165, 99%, 35%);
+    background-color: var(--green-hover);
 }
 
 /* */
@@ -1490,7 +1526,7 @@ div.second-block-in {
 
 div.vertical-stick {
     margin-left: 0.468vw;
-    width: 0.156vw;
+    width: 0.038vw;
     height: 6.95vw;
     border: none;
     border-radius: 0.39vw;
@@ -1522,7 +1558,7 @@ button.google {
     height: 4.76vw;
     border-radius: 0.39vw;
     background-color: var(--background);
-    border: 0.0781vw solid var(--border);
+    border: 0.03vw solid var(--border);
     cursor: pointer;
     font-size: 1.17vw;
     font-weight: 600;
@@ -1564,7 +1600,7 @@ h1.regis-text {
 }
 
 button.regis-green {
-    color: hsl(165, 99%, 29%);
+    color: var(--green);
     border: none;
     background-color: var(--background);
     cursor: pointer;
@@ -1716,7 +1752,7 @@ div.basket-float-window-fixed {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, 75%);
+    background-color: var(--popup-background);
     z-index: 100;
 }
 
@@ -1841,7 +1877,7 @@ a.company-name-green {
     text-decoration: none;
     font-size: 1.09vw;
     font-weight: normal;
-    color: #00CC99;
+    color: var(--green);
     margin-left: 0.39vw;
 }
 
@@ -1863,7 +1899,7 @@ a.basket-button-join {
     display: block;
     width: 14.2vw;
     height: auto;
-    background-color: #00CC99;
+    background-color: var(--green);
     color: var(--background);
     border-radius: 1.4vw;
     border: none;
@@ -1874,7 +1910,7 @@ a.basket-button-join {
 }
 
 a.basket-button-join:hover {
-    background-color: #05AB81;
+    background-color: var(--background-green);
     transition: all 0.5s ease;
 }
 
@@ -1886,7 +1922,7 @@ div.place-continue-buying {
 
 button.continue-buying {
     position: absolute;
-    color: #00CC99;
+    color: var(--green);
     border: none;
     background-color: var(--background);
     font-size: 1.09vw;
@@ -1895,7 +1931,7 @@ button.continue-buying {
 }
 
 button.continue-buying:hover {
-    color: #05AB81;
+    color: var(--background-green);
     transition: all 0.5s ease;
 }
 
@@ -1936,7 +1972,7 @@ div.menu-s-b-notification {
     justify-content: center;
     width:1.4vw;
     height:1.4vw;
-    background-color: #F5532C;
+    background-color: var(--red);
     border-radius: 100%;
     z-index:1;
     margin-left:1.02vw;
@@ -1945,4 +1981,5 @@ div.menu-s-b-notification {
 h1.menu-s-b-notification-text {
     font-size:0.78vw;
     font-weight: normal;
+    color:white;
 }

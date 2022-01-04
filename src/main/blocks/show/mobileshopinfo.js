@@ -1,8 +1,11 @@
 import GetHistoryLocation from "../../../locate";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 
 const MobileShopInfo = (info) => {
     const {id} = useParams();
+    let s;
+    if(localStorage.getItem('basket-info')) s = JSON.parse(localStorage.getItem('basket-info')).find(s=>s.from===info.item.title && s.key===id);
+    else s="";
     return(
         <div className="mobile-shop-info">
             <div className="mobile-shop-info-block-1">
@@ -36,7 +39,7 @@ const MobileShopInfo = (info) => {
                 </div>
                 <div className="mobile-shop-info-block-3-item-1">
                     <div className="mobile-shop-info-block-3-item-1-block">
-                        <button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1})}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>
+                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={GetHistoryLocation+"/basket"} className="mobile-shop-info-block-2-item-1-button">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1})}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>}
                     </div>
                 </div>
             </div>

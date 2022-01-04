@@ -14,20 +14,32 @@
         --background-green:hsl(240, 1%, 14%);
         --skeleton-start:hsl(240, 1%, 14%);
         --skeleton-end:hsl(240, 1%, 34%);
+        --popup-background:rgb(0,0,0,50%);
+        --green: hsl(165, 99%, 35%);
+        --green-hover:hsl(165, 100%, 25%);
+        --exist:hsl(195, 100%, 40%);
+        --exist-hover:	hsl(204, 75%, 46%);
+        --red:hsl(12, 91%, 57%);
     }
 }
   
 @media (prefers-color-scheme: light) {
     :root {
-        --font-color:hsl(0, 0%, 20%);
-        --font-color-c:hsl(220, 1%, 60%) ;
-        --border:hsl(72, 15%, 87%);
+        --font-color:hsl(0, 0%, 0%);
+        --font-color-c:hsl(212, 11%, 55%) ;
+        --border:hsl(210, 3%, 85%);
         --background:hsl(0, 0%, 100%);
-        --background-back:hsl(0, 0%, 97%);
-        --background-hover:hsl(0, 0%, 99%);
+        --background-back:hsl(216, 14%, 93%);
+        --background-hover:hsl(0, 0%, 98%);
         --background-green:hsl(120, 100%, 97%);
         --skeleton-start:hsl(0, 0%, 70%);
         --skeleton-end:hsl(0, 0%, 88%);
+        --popup-background:rgb(0,0,0,25%);
+        --green:hsl(165, 99%, 35%);
+        --green-hover:hsl(165, 100%, 25%);
+        --exist:hsl(195, 100%, 40%);
+        --exist-hover:hsl(204, 75%, 46%);
+        --red:hsl(12, 91%, 57%);
     }
 }
 
@@ -286,7 +298,7 @@ div.menu-s-b-i-t {
 }
 
 h1.menu-s-b-i-t-1-active {
-    color:hsl(165, 100%, 40%);
+    color:var(--green);
     font-size: 13px;
     font-weight: normal;
 }
@@ -348,11 +360,11 @@ h1.panel-s-b-t-1 {
 }
 
 div.m {
-    width: calc(100% - 36px);
+    width: calc(100% - 15px);
     height: auto;
     background-color: var(--background);
     border-radius: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     padding: 60px 0;
@@ -408,7 +420,7 @@ a.m-p-b {
 }
 
 a.m-p-b:hover {
-    border: 1px solid hsl(165, 100%, 40%);
+    border: 1px solid var(--green);
 }
 
 div.m-d-b {
@@ -489,7 +501,7 @@ div.maybe-panel {
     height: auto;
     background-color: var(--background);
     border-radius: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
     padding: 60px 0 45px 0;
 }
 
@@ -518,7 +530,7 @@ div.maybe-g-p-b1 {
 }
 
 div.maybe-g-p-b1:hover {
-    border: 1px solid hsl(165, 100%, 40%);
+    border: 1px solid var(--green);
 }
 
 div.maybe-flex {
@@ -777,7 +789,7 @@ a.show-button {
     display: block;
     text-decoration: none;
     padding: 10.5px 22.8px;
-    background-color: #00CC99;
+    background-color: var(--green);
     border-radius: 4px;
     font-size: 15px;
     color: var(--background);
@@ -786,7 +798,7 @@ a.show-button {
 }
 
 a.show-button:hover {
-    background-color: #01b185;
+    background-color: var(--green-hover);
 }
 
 div.show-f-p {
@@ -807,7 +819,7 @@ button.show-favourite {
     display: flex;
     align-items: center;
     font-size: 15px;
-    color: hsl(12, 91%, 57%);
+    color: var(--red);
     cursor: pointer;
     border-radius: 4px;
     padding-right: 10px;
@@ -859,9 +871,9 @@ img.i-m-i {
     height: 87px;
 }
 
-/* баг я хз почему но если мы уберем это свойство то пизда всему*/
+
 div.b-t-p {
-    width: 345px;
+    width: 300px;
     background-color: var(--background);
 }
 
@@ -908,15 +920,12 @@ h1.t-t {
     font-size: 13px;
     font-weight: normal;
 }
-
-/* я знаю ты сейчас недоволен, но нервы дороже! */
-/* это отступ между закрыто/открыто */
 div.t-p2 {
     margin-top: 5px;
 }
 
 div.p-r {
-    width: 123px;
+    width: 168px;
     height: 77px;
     background-color: var(--background);
 }
@@ -938,7 +947,7 @@ button.p-r-b {
     width: auto;
     height: auto;
     padding: 11.5px 22.4px;
-    background-color: #00CC99;
+    background-color: var(--green);
     font-size: 15px;
     font-weight: normal;
     color: var(--background);
@@ -947,17 +956,42 @@ button.p-r-b {
 }
 
 button.p-r-b:hover {
-    background-color: #01b185;
+    background-color: var(--green-hover);
 }
+
+a.p-r-b {
+    display: block;
+    text-decoration: none;
+    margin: 30px 20px 0 0;
+    float: right;
+    width: auto;
+    height: auto;
+    padding: 11.5px 22.4px;
+    background-color: var(--exist);
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--background);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a.p-r-b:hover {
+    background-color: var(--exist-hover);
+}
+
 
 button.p-b-n-b {
     width: 597px;
     height: 60px;
     border: 1px solid var(--border);
-    color: hsl(220, 100%, 70%);
+    color: var(--exist);
     font-size: 15px;
     font-weight: normal;
     cursor: pointer;
+}
+button.p-b-n-b:hover {
+    background-color: var(--background-hover);
+    color: var(--exist-hover);
 }
 
 div.m-i-1-b {
@@ -1008,10 +1042,9 @@ h1.b1-t1 {
 
 h1.b1-t2 {
     font-size: 14px;
-    font-weight: 120;
     margin: 6px 0 0 12px;
     font-weight: 300;
-    width: 250px;
+    width: 300px;
 }
 
 /*  */
@@ -1057,7 +1090,7 @@ div.t-b-t {
 h1.t-n-h {
     font-size: 34px;
     font-weight: 700;
-    color: hsl(60, 3%, 22%);
+    color: var(--font-color);
 }
 
 div.n-a-w-p {
@@ -1067,7 +1100,7 @@ div.n-a-w-p {
 h1.n-a-w {
     font-size: 22px;
     font-weight: 600;
-    color: hsl(0, 0%, 77%);
+    color: var(--font-color-c);
 }
 
 div.btn-p {
@@ -1086,7 +1119,7 @@ button.btn {
 }
 
 .btn:hover {
-    background-color: hsl(165, 100%, 40%);
+    background-color: var(--green);
     color: var(--background);
 }
 
@@ -1153,7 +1186,7 @@ h1.id-b-t1 {
     font-size: 16px;
     font-weight: 600;
     margin-left: 31px;
-    color: #1FD5AC;
+    color: var(--green);
 }
 
 h1.id-b-t2 {
@@ -1254,7 +1287,7 @@ button.add {
     margin-top: 8px;
     font-size: 15px;
     font-weight: normal;
-    color: #00CC99;
+    color: var(--green);
     text-align: right;
     cursor: pointer;
     margin-right: 46px;
@@ -1265,7 +1298,7 @@ button.delete {
     margin-top: 7px;
     font-size: 15px;
     font-weight: normal;
-    color: #F5532C;
+    color: var(--red);
     text-align: right;
     cursor: pointer;
     margin-right: 46px;
@@ -1321,13 +1354,13 @@ button.pay {
     margin-top: 32px;
     border-radius: 10px;
     border: none;
-    background-color: #1FD5AC;
-    color: #FFFFFF;
+    background-color: var(--green);
+    color: var(--background);
     cursor: pointer;
 }
 
 button.pay:hover {
-    background-color: #01b185;
+    background-color: var(--green-hover);
 }
 
 /*  */
@@ -1456,21 +1489,21 @@ input.none-border {
     border: none;
     color: var(--font-color);
     font-size: 16px;
-    font-weight: 300;
+    font-weight: normal;
     background-color: var(--background);
-    border-bottom: 1.5px solid var(--border);
+    border-bottom: 1px solid var(--border);
     margin-bottom: 21px;
 }
 
 input.none-border:focus {
-    border-bottom: 1.5px solid hsl(165, 100%, 40%);
+    border-bottom: 1px solid var(--green);
     outline: none;
 }
 
 input.none-border::placeholder {
     color: var(--font-color-c);
     font-size: 16px;
-    font-weight: 300;
+    font-weight: normal;
 }
 
 div.place-button-in {
@@ -1480,7 +1513,7 @@ div.place-button-in {
 button.button-join-in {
     width: 356px;
     height: 49px;
-    background-color: hsl(165, 100%, 40%);
+    background-color: var(--green);
     color: var(--background);
     border: none;
     border-radius: 5px;
@@ -1490,7 +1523,7 @@ button.button-join-in {
 }
 
 button.button-join-in:hover {
-    background-color: hsl(165, 99%, 35%);
+    background-color: var(--green-hover);
 }
 
 /*  */
@@ -1502,7 +1535,7 @@ div.second-block-in {
 
 div.vertical-stick {
     margin-left: 6px;
-    width: 2px;
+    width: 1px;
     height: 89px;
     border: none;
     border-radius: 5px;
@@ -1576,7 +1609,7 @@ h1.regis-text {
 }
 
 button.regis-green {
-    color: hsl(165, 99%, 29%);
+    color: var(--green);
     border: none;
     background-color: var(--background);
     cursor: pointer;
@@ -1725,7 +1758,7 @@ div.basket-float-window-fixed {
     height:100%;
     top:0;
     left:0;
-    background-color: rgb(0,0,0,75%);
+    background-color: var(--popup-background);
     z-index:100;
 }
 div.basket-float-window {
@@ -1848,7 +1881,7 @@ a.company-name-green {
     text-decoration: none;
     font-size: 14px;
     font-weight: normal;
-    color: #00CC99;
+    color: var(--green);
     margin-left:5px;
 }
 
@@ -1870,7 +1903,7 @@ a.basket-button-join {
     display:block;
     width: 182px;
     height: auto;
-    background-color: #00CC99;
+    background-color: var(--green);
     color: var(--background);
     border-radius: 18px;
     border: none;
@@ -1881,7 +1914,7 @@ a.basket-button-join {
 }
 
 a.basket-button-join:hover {
-    background-color: #05AB81;
+    background-color: var(--green-hover);
     transition: all 0.5s ease;
 }
 
@@ -1893,7 +1926,7 @@ div.place-continue-buying {
 
 button.continue-buying {
     position: absolute;
-    color: #00CC99;
+    color: var(--green);
     border: none;
     background-color: var(--background);
     font-size: 14px;
@@ -1902,7 +1935,7 @@ button.continue-buying {
 }
 
 button.continue-buying:hover {
-    color: #05AB81;
+    color: var(--green-hover);
     transition: all 0.5s ease;
 }
 
@@ -1939,7 +1972,7 @@ div.menu-s-b-notification {
     justify-content: center;
     width:18px;
     height:18px;
-    background-color: #F5532C;
+    background-color:var(--red);
     border-radius: 100%;
     z-index:1;
     margin-left:13px;
@@ -1948,4 +1981,5 @@ div.menu-s-b-notification {
 h1.menu-s-b-notification-text {
     font-size:10px;
     font-weight: normal;
+    color:white;
 }
