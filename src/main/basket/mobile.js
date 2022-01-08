@@ -5,13 +5,14 @@ import { useDispatch } from "react-redux";
 
 const BasketMobile = (info) => {
   const [status,setStatus] = useState('');
+  const [pr,setPr] = useState(0);
   const [sum,setSum] = useState(info.item.item);
-  const [pr,setPr] = useState("");
   const id = info.item.key;
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch({type:"LetProduct",put:0});
   }, [dispatch]);
+ 
   useEffect(()=>{
     // setLazyBlock(true);
     let check = true;
@@ -29,7 +30,8 @@ const BasketMobile = (info) => {
       else {
         if(check) { 
           setStatus({title:"404",content:"Ничего не найдено",price:"0",image:"/images/first-aid-alt.svg"});
-          setPr("NaN");
+          dispatch({type:"PutProduct",put:100});
+          setPr(100);
           // setLazyBlock(false);
         }
       };
@@ -38,22 +40,29 @@ const BasketMobile = (info) => {
       check=false;
     };
   },[id,dispatch]);
-    const PlusSum = async() => {
-      setSum(sum+1);
-      setPr(((sum+1)*status.price).toFixed(0));
-      dispatch({type:"AddProduct",put:status.price});
-    };
-    const MinusSum = () => {
-      if(sum <= 1) return 0;
-      else {
-        setSum(sum-1);
-        setPr((pr-status.price).toFixed(0));
-        dispatch({type:"GetProduct",put:status.price});
+  // const cost = status.price;
+  const cost = 100;
+  const PlusSum = () => {
+    setSum(sum+1);
+    setPr(((sum+1)*cost).toFixed(0));
+    dispatch({type:"AddProduct",put:cost});
+  };
+  const MinusSum = () => {
+    if(sum <= 1) return 0;
+    else {
+      setSum(sum-1);
+      setPr((pr-cost).toFixed(0));
+      dispatch({type:"GetProduct",put:cost});
+    }
+  };
+  const RemoveItem = () => {
+    info.remove(info.item);
+    dispatch({type:"GetProduct",put:pr});
+  }
+  const maxLengthCheck = (object) => {
+    if (object.target.value.length > object.target.maxLength) {
+     object.target.value = object.target.value.slice(0, object.target.maxLength)
       }
-    };
-    const RemoveItem = () => {
-      info.remove(info.item);
-      dispatch({type:"GetProduct",put:pr});
     }
     return(
           <div className="main-of-main">
@@ -83,9 +92,9 @@ const BasketMobile = (info) => {
                   <div className="scary-turn-off">
                     <button type="button" onClick={MinusSum} className="button-minus">-</button>
                     <div className="one-block">
-                      <h1 className="one">{sum}</h1>
+                    <input onInput={maxLengthCheck} maxLength="3" type="number" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:"LetProduct",put:e.target.value*cost});}} value={Number(sum).toString()} className="but-quantity" />
                     </div>
-                    <button type="button" onClick={PlusSum} className="button-minus">+</button>
+                    <button type="button" onClick={PlusSum} className="button-plus">+</button>
                   </div>
                 </div>
                 <div className="place-price">

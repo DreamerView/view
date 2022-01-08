@@ -17,11 +17,13 @@
         --skeleton-start:hsl(240, 1%, 14%);
         --skeleton-end:hsl(240, 1%, 34%);
         --popup-background:rgb(0,0,0,50%);
-        --green: hsl(165, 99%, 35%);
+        --green: #20C29E;
         --green-hover:hsl(165, 100%, 25%);
         --exist:hsl(195, 100%, 40%);
         --exist-hover:	hsl(204, 75%, 46%);
         --red:hsl(12, 91%, 57%);
+        --scroll:hsl(0, 0%, 33%);
+        --scroll-hover:hsl(0, 0%, 81%);
     }
 }
   
@@ -42,6 +44,8 @@
         --exist:hsl(195, 100%, 40%);
         --exist-hover:hsl(204, 75%, 46%);
         --red:hsl(12, 91%, 57%);
+        --scroll:hsl(0, 0%, 81%);
+        --scroll-hover:hsl(0, 0%, 33%);
     }
 }
 
@@ -58,12 +62,12 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 81%);
+    background: var(--scroll);
     border-radius: 1.17vw;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: hsl(0, 0%, 33%);
+    background: var(--scroll-hover);
 }
 
 a {
@@ -74,6 +78,15 @@ a {
 
 html {
     overflow-y: overlay;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }
 
 button,input {
@@ -415,7 +428,7 @@ a.m-p-b {
     width: 15.3vw;
     height: 24vw;
     background-color: var(--background);
-    border-radius: 0.78vw;
+    border-radius: 1.17vw;
     border: 0.0781vw solid var(--border);
     cursor: pointer;
     text-decoration: none;
@@ -529,7 +542,7 @@ div.maybe-g-p-b1 {
     width: 26.8vw;
     height: 13vw;
     border: 0.0781vw solid var(--border);
-    border-radius: 0.78vw;
+    border-radius: 1.17vw;
     cursor: pointer;
 }
 
@@ -561,26 +574,31 @@ div.maybe-flex-container {
 
 h1.b-t1 {
     font-size: 1vw;
-    height: 38px;
-    margin: 0.78vw 0 0 1vw;
+    height: 2.97vw;
+    margin: 2.34vw 0 0 1vw;
     font-weight: normal;
 }
 
 h1.b-t2 {
     font-size: 0.7vw;
-    margin: 0.7vw 0 0 1vw;
+    margin: 0.78vw 0 0 1vw;
     font-weight: 300;
     color: var(--font-color-c);
 }
 
+div.maybe-f-b {
+    display: flex;
+}
+
 h1.b-t3 {
+    width: 7.4vw;
     font-size: 1vw;
     margin: 0.78vw 0 0 1vw;
     font-weight: 600;
 }
 
 div.b-i-p {
-    margin: 0.7vw 0 0 1vw;
+    margin: 1.95vw 0 0 1vw;
 }
 
 div.b-p-p {
@@ -1150,7 +1168,7 @@ div.backet-p {
     border: 0.0781vw solid var(--border);
     display: flex;
     margin-top: 1.17vw;
-    border-radius: 0.78vw;
+    border-radius: 1.17vw;
 }
 
 div.img-basket-picture {
@@ -1207,54 +1225,64 @@ div.quantity {
     height: 4.375vw;
     display: flex;
     border: 0.078vw solid var(--border);
+    border-radius: 1.17vw;
 }
 
 
 button.but {
-    width: auto;
-    height: 4.375vw;
+    width: 3.125vw;
+    height: auto;
     border: none;
     font-size: 2.1875vw;
     font-weight: normal;
     color: var(--font-color-c);
-    background-color: var(--background);
     cursor: pointer;
-    padding: 0 0.9375vw;
 }
 
 button.but:hover {
     background-color: var(--background-hover);
+    border-radius: 1.17vw 0 0 1.17vw;
 }
 
 div.but-quantity-block {
-    width: 100%;
+    width: auto;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:0 1.17vw;
+    margin:0 0.39vw;
 }
 
-h1.but-quantity {
+input.but-quantity {
+    width: 3.125vw;
     font-size: 1.25vw;
     font-weight: normal;
+    color:var(--font-color);
+    border:0 none;
+    outline: none;
+    text-align: center;
+}
+
+input.but-quantity::placeholder {
+    font-size: 1.25vw;
+    font-weight: normal;
+    color:var(--font-color);
 }
 
 button.but-p {
-    width: auto;
-    height: 4.375vw;
+    width: 3.125vw;
+    height: auto;
     border: none;
     font-size: 2.1875vw;
     font-weight: normal;
     color: var(--font-color-c);
-    background-color: var(--background);
-    padding: 0 0.9375vw;
     cursor: pointer;
 }
 
 button.but-p:hover {
     background-color: var(--background-hover);
+    border-radius: 0 1.17vw 1.17vw 0;
 }
 div.priceb {
     width: 18.28vw;

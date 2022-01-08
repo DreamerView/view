@@ -15,7 +15,7 @@ const Header = () => {
               <div id="first">
                 <div className="m-f-1">
                   <div className="m-f-i-1">
-                    <img src={GetHistoryLocation+"/images/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"} loading="lazy" alt="logo" className="m-p-i-1" />
+                    <img src={GetHistoryLocation+"/login-images/Google__G__Logo.svg.png"} loading="lazy" alt="logo" className="m-p-i-1" />
                   </div>
                   <div className="m-f-b">
                     <div className="m-f-b-1" />

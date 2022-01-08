@@ -15,11 +15,13 @@
         --skeleton-start:hsl(240, 1%, 14%);
         --skeleton-end:hsl(240, 1%, 34%);
         --popup-background:rgb(0,0,0,50%);
-        --green: hsl(165, 99%, 35%);
+        --green: #20C29E;
         --green-hover:hsl(165, 100%, 25%);
         --exist:hsl(195, 100%, 40%);
         --exist-hover:	hsl(204, 75%, 46%);
         --red:hsl(12, 91%, 57%);
+        --scroll:hsl(0, 0%, 33%);
+        --scroll-hover:hsl(0, 0%, 81%);
     }
 }
   
@@ -40,6 +42,8 @@
         --exist:hsl(195, 100%, 40%);
         --exist-hover:hsl(204, 75%, 46%);
         --red:hsl(12, 91%, 57%);
+        --scroll:hsl(0, 0%, 81%);
+        --scroll-hover:hsl(0, 0%, 33%);
     }
 }
 
@@ -52,13 +56,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: var(--scroll);
     border-radius: 0.18125vw;
     ;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: hsl(0, 0%, 33%);
+    background: var(--scroll-hover);
 }
 
 a {
@@ -69,6 +73,15 @@ a {
 
 html {
     overflow-y: overlay;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }
 
 button,input {
@@ -146,14 +159,14 @@ div.m-f-1 {
 
 div.m-f-i-1 {
     position: relative;
-    width: 8.94vw;
-    height: 8.94vw;
+    width: 8.8vw;
+    height: 8.8vw;
 }
 
 img.m-p-i-1 {
     position: absolute;
-    width: 8.94vw;
-    height: 8.94vw;
+    width: 8.8vw;
+    height: 8.8vw;
 }
 
 div.m-f-b {
@@ -256,7 +269,7 @@ img.m-p-i-b-v-p {
 }
 
 div.m-p-i-b-v-t {
-    margin-top: 1.6vw;
+    margin-top: 1.5vw;
 }
 
 h1.m-p-i-b-v-t-1 {
@@ -557,8 +570,7 @@ h1.b-t1 {
     line-height: 5.56vw;
     height: 10.14vw;
     font-weight: normal;
-    margin-top: 1.79vw;
-    margin-left: 3.3vw;
+    margin: 8.3vw 0 0 3.3vw;
 }
 
 h1.b-t2 {
@@ -568,10 +580,19 @@ h1.b-t2 {
     color: var(--font-color-c);
 }
 
+div.maybe-f-b {
+    display: flex;
+}
+
 h1.b-t3 {
     font-size: 3.6vw;
     font-weight: 600;
     margin: 2.92vw 0 0 3.3vw;
+    width: 27vw;
+}
+
+div.b-i-p {
+    margin: 4.17vw 0 0 3.05vw;
 }
 
 div.b-p-p {
@@ -582,7 +603,6 @@ div.b-p-p {
     height: 11.39vw;
     border-radius: 100%;
     justify-content: center;
-    margin: 2.36vw 0 0 3.05vw;
 }
 
 /*  */
@@ -1033,34 +1053,28 @@ div.main-of-main {
     margin-top: 4.16vw;
     width: 94vw;
     height: auto;
-    border-radius: 0.55vw;
     border: 0.13vw solid var(--border);
+    border-radius: 4.16vw;
 }
 
 div.block-one-img-and-glakso {
     display: flex;
     width: 100%;
-    height: 36.9vw;
-    background-color: var(--background);
+    height: auto;
     border-radius: 0.55vw;
 }
 
 div.img-and-glakso {
-    width: 37.9vw;
-    height: 36.9vw;
-    background-color: var(--background);
+    width: 37.7vw;
+    height: 37.7vw;
     border-radius: 0.55vw;
-}
-
-div.img-and-place {
-    padding: 1.38vw 0 0 1.38vw;
 }
 
 div.relative-and-absolute {
     position: absolute;
     width: 25.27vw;
     height: 25.27vw;
-    margin: 0 3vw;
+    margin: 4.16vw 0 0 4.16vw;
 }
 
 img.img-size {
@@ -1070,7 +1084,7 @@ img.img-size {
 }
 
 div.place-glakso {
-    padding-top: 7.08vw;
+    padding-top: 4.16vw;
 }
 
 h1.glakso-text-green {
@@ -1080,7 +1094,7 @@ h1.glakso-text-green {
 }
 
 div.place-furak {
-    margin-top: 2.36vw;
+    margin-top: 2.78vw;
 }
 
 h1.furak-text {
@@ -1092,7 +1106,6 @@ h1.furak-text {
 div.leader-text {
     width: 56.94vw;
     height: 36.9vw;
-    background-color: var(--background);
 }
 
 h1.id-text {
@@ -1104,15 +1117,13 @@ h1.id-text {
 div.w {
     width: 100%;
     height: auto;
-    background-color: var(--background);
     border-radius: 0.55vw;
 }
 
 div.we {
     display: flex;
     width: 100%;
-    height: 20.27vw;
-    background-color: var(--background);
+    height: auto;
 }
 
 div.place-scary-turn-off {
@@ -1126,13 +1137,12 @@ div.scary-turn-off {
     height: 13.75vw;
     background-color: var(--background);
     border: 0.27vw solid var(--border);
-    border-radius: 0.41vw;
+    border-radius: 4.17vw;
 }
 
 button.button-minus {
     width: 11.25vw;
     height: 13.75vw;
-    background-color: var(--background);
     border: none;
     font-size: 6.66vw;
     font-weight: normal;
@@ -1142,6 +1152,22 @@ button.button-minus {
 
 button.button-minus:hover {
     background-color: var(--background-hover);
+    border-radius: 4.17vw 0 0 4.17vw;
+}
+
+button.button-plus {
+    width: 11.25vw;
+    height: 13.75vw;
+    border: none;
+    font-size: 6.66vw;
+    font-weight: normal;
+    color: var(--font-color-c);
+    cursor: pointer;
+}
+
+button.button-plus:hover {
+    background-color: var(--background-hover);
+    border-radius: 0 4.17vw 4.17vw 0;
 }
 
 div.one-block {
@@ -1155,7 +1181,23 @@ div.one-block {
 h1.one {
     font-size: 3.75vw;
     font-weight: normal;
+}
+
+input.but-quantity {
     padding-top: 4.3vw;
+    width: 6.125vw;
+    font-size: 3.75vw;
+    font-weight: normal;
+    color:var(--font-color);
+    border:0 none;
+    outline: none;
+    text-align: center;
+}
+
+input.but-quantity::placeholder {
+    font-size: 3.75vw;
+    font-weight: normal;
+    color:var(--font-color);
 }
 
 div.place-price {
@@ -1174,10 +1216,11 @@ h1.price {
 }
 
 div.grid {
+    margin-top:8.3vw;
     width:100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 14.58vw;
+    height: auto;
 }
 
 div.place-favorite {
@@ -1189,7 +1232,7 @@ div.del-from-favorite {
 }
 
 div.place-order {
-    padding-top: 8.6vw;
+    padding-top: 8.3vw;
 }
 
 h1.order-name {
@@ -1206,10 +1249,10 @@ h1.two-items {
 
 div.size-block {
     display: flex;
-    width: 94vw;
+    width: 89vw;
     height: 26.5vw;
     background-color: var(--background);
-    margin-top: 0.13vw;
+    margin: 0.13vw 2.78vw 0 2.78vw;
 }
 
 div.order-block {
@@ -1223,7 +1266,6 @@ div.price-place-im-tired {
     align-items: center;
     margin-left: auto;
     width: auto;
-
 }
 
 h1.money {
@@ -1233,7 +1275,7 @@ h1.money {
 
 button.pay-for-it {
     background-color: var(--green);
-    width: 94vw;
+    width: 89vw;
     height: 16.38vw;
     border-radius: 6px;
     border: none;
@@ -1241,6 +1283,7 @@ button.pay-for-it {
     font-size: 3.8vw;
     font-weight: 600;
     cursor: pointer;
+    margin-left: 2.78vw;
 }
 
 button.pay-for-it:hover {
@@ -1249,32 +1292,32 @@ button.pay-for-it:hover {
 
 button.favorite {
     width: 100%;
-    height: 14.58vw;
+    height: 13.19vw;
     font-size: 3.6vw;
     font-weight: normal;
     color: var(--green);
-    background-color: var(--background);
     border: none;
     cursor: pointer;
 }
 
 button.favorite:hover {
-    background-color: var(--background-back);
+    background-color: var(--background-hover);
+    border-radius: 0 0 0 4.17vw;
 }
 
 button.unfavorite {
     width: 100%;
-    height: 14.58vw;
+    height: 13.19vw;
     font-size: 3.6vw;
     font-weight: normal;
     color: var(--red);
-    background-color: var(--background);
     border: none;
     cursor: pointer;
 }
 
 button.unfavorite:hover {
-    background-color: var(--background-back);
+    background-color: var(--background-hover);
+    border-radius: 0 0 4.17vw 0;
 }
 
 /*  */
