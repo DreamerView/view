@@ -29,7 +29,7 @@
     :root {
         --font-color:hsl(0, 0%, 0%);
         --font-color-c:hsl(212, 11%, 55%) ;
-        --border:hsl(210, 3%, 85%);
+        --border:hsl(0, 0%, 87%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -1141,7 +1141,7 @@ div.scary-turn-off {
 }
 
 button.button-minus {
-    width: 11.25vw;
+    width: 12.75vw;
     height: 13.75vw;
     border: none;
     font-size: 6.66vw;
@@ -1156,7 +1156,7 @@ button.button-minus:hover {
 }
 
 button.button-plus {
-    width: 11.25vw;
+    width: 12.75vw;
     height: 13.75vw;
     border: none;
     font-size: 6.66vw;
@@ -1171,16 +1171,10 @@ button.button-plus:hover {
 }
 
 div.one-block {
-    margin: 0 3vw;
+    margin: 0 1.5vw;
     width: auto;
     height: 13.75vw;
     background-color: var(--background);
-}
-
-
-h1.one {
-    font-size: 3.75vw;
-    font-weight: normal;
 }
 
 input.but-quantity {

@@ -29,7 +29,7 @@
     :root {
         --font-color:hsl(0, 0%, 0%);
         --font-color-c:hsl(212, 11%, 55%) ;
-        --border:hsl(210, 3%, 85%);
+        --border:hsl(0, 0%, 87%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -177,17 +177,17 @@ div.m-s {
 
 input.m-s-1 {
     position: absolute;
-    background: url("images/search-active.svg") 27.5px 17.3px no-repeat;
+    background: url("images/search-active.svg") 27.5px 20px no-repeat;
     background-size: 17px 17px;
     width: 588px;
-    height: 16px;
+    height: auto;
     padding: 18px 0 18px 76px;
     background-color: var(--background);
     border: 1px solid var(--border);
     border-radius: 15px;
     outline: none;
     color: var(--font-color);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -197,10 +197,10 @@ input.m-s-1::placeholder {
 }
 
 input.m-s-1:focus {
-    background: url("images/search-active.svg") 27.5px 17.3px no-repeat;
+    background: url("images/search-active.svg") 27.5px 20px no-repeat;
     background-size: 17px 17px;
     width: 588px;
-    height: 16px;
+    height: auto;
     padding: 18px 0 18px 76px;
     background-color: var(--background);
     border: 1px solid var(--border);
@@ -1238,7 +1238,7 @@ div.quantity {
 
 
 button.but {
-    width: 40px;
+    width: 42.5px;
     height: auto;
     border: none;
     font-size: 28px;
@@ -1259,7 +1259,7 @@ div.but-quantity-block {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:0 5px;
+    margin:0 2.5px;
 }
 
 input.but-quantity {
@@ -1279,7 +1279,7 @@ input.but-quantity::placeholder {
 }
 
 button.but-p {
-    width: 40px;
+    width: 42.5px;
     height: auto;
     border: none;
     font-size: 28px;
@@ -1295,13 +1295,13 @@ button.but-p:hover {
 
 div.priceb {
     width: 234px;
-    height: 56px;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 h1.price-backet {
-    margin-top: 40px;
     font-size: 22px;
     font-weight: normal;
     color: var(--font-color);
@@ -1311,7 +1311,7 @@ h1.price-backet {
 
 button.add {
     width: auto;
-    margin-top: 8px;
+    margin-top: 10px;
     font-size: 15px;
     font-weight: normal;
     color: var(--green);
@@ -1322,7 +1322,7 @@ button.add {
 
 button.delete {
     width: auto;
-    margin-top: 7px;
+    margin-top: 10px;
     font-size: 15px;
     font-weight: normal;
     color: var(--red);

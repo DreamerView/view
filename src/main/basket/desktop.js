@@ -1,5 +1,5 @@
 import GetHistoryLocation from "../../locate";
-import {useState,useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 import { getFirestore,doc, onSnapshot } from "firebase/firestore";
 import { useDispatch } from "react-redux";
 
@@ -44,6 +44,7 @@ const DesktopBasket = (info)=> {
   // const cost = status.price;
   const cost = 100;
   const PlusSum = () => {
+    if(sum >= 100) return 0;
     setSum(sum+1);
     setPr(((sum+1)*cost).toFixed(0));
     dispatch({type:"AddProduct",put:cost});
@@ -59,12 +60,12 @@ const DesktopBasket = (info)=> {
   const RemoveItem = () => {
     info.remove(info.item);
     dispatch({type:"GetProduct",put:pr});
-  }
+  };
   const maxLengthCheck = (object) => {
     if (object.target.value.length > object.target.maxLength) {
      object.target.value = object.target.value.slice(0, object.target.maxLength)
       }
-    }
+    };
     return(
         <div className="backet-p">
         <div className="img-basket-picture">
@@ -79,7 +80,7 @@ const DesktopBasket = (info)=> {
             <div className="quantity">
                 <button onClick={MinusSum} className="but">-</button>
                 <div className="but-quantity-block">
-                    <input  onInput={maxLengthCheck} maxLength="3" type="number" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:"LetProduct",put:e.target.value*cost});}} value={Number(sum).toString()} className="but-quantity" />
+                    <input onInput={maxLengthCheck} maxLength="2" type="number" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});}} value={Number(sum).toString()} className="but-quantity" />
                 </div>
                 <button onClick={PlusSum} className="but-p">+</button>
             </div>
@@ -93,4 +94,4 @@ const DesktopBasket = (info)=> {
     );
 };
 
-export default DesktopBasket;
+export default React.memo(DesktopBasket);

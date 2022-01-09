@@ -1,7 +1,9 @@
 import GetHistoryLocation from "../../locate";
 import { Link } from "react-router-dom";
+import React from 'react';
 
 const SearchItem = (item) => {
+  console.log('check');
     return(
         <Link to={`${GetHistoryLocation}/products/${item.result.id}`} className="flex-search">
       <div className="block-picture-drugs">
@@ -23,4 +25,4 @@ const SearchItem = (item) => {
     );
 };
 
-export default SearchItem;
+export default React.memo(SearchItem);

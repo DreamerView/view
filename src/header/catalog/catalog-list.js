@@ -1,3 +1,5 @@
+import React from 'react';
+
 const CatalogList = (info) =>{
     return(
         <div className="panel-s-b">
@@ -11,4 +13,4 @@ const CatalogList = (info) =>{
     );
 };
 
-export default CatalogList;
+export default React.memo(CatalogList);

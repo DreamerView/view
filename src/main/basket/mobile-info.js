@@ -45,7 +45,7 @@ const MobileBasketInfo = () => {
                 <h1 className="money">{price} ₸</h1>
               </div>
             </div>
-            <button className="pay-for-it">Оплатить</button>
+            <button className="pay-for-it">Продолжить</button>
           </div>:""}
         </div>
       </div>

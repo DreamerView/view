@@ -1,3 +1,5 @@
+import React from 'react';
+
 const PanelList = (info) =>{
     return(
         <div className="m-p-i-b-v">
@@ -11,4 +13,4 @@ const PanelList = (info) =>{
     );
 };
 
-export default PanelList;
+export default React.memo(PanelList);

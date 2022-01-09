@@ -12,6 +12,7 @@ const DesktopBasketInfo = () => {
       n=JSON.parse(localStorage.getItem('basket-info')).length;
     }
     else {l=[];n=0};
+
     const [show,setShow] = useState(l);
     const [num,setNum] = useState(n);
     const RemoveBasket = (basket) => {
@@ -46,7 +47,7 @@ const DesktopBasketInfo = () => {
                 <h1 className="price-payment">{item} ₸</h1>
                 </div>
                 </div>
-                <button className="pay">Оплатить</button>
+                <button className="pay">Продолжить</button>
             </div>
         </div>:""}
       </div>

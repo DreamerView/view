@@ -31,7 +31,7 @@
     :root {
         --font-color:hsl(0, 0%, 0%);
         --font-color-c:hsl(212, 11%, 55%) ;
-        --border:hsl(210, 3%, 85%);
+        --border:hsl(0, 0%, 87%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -181,17 +181,17 @@ div.m-s {
 
 input.m-s-1 {
     position: absolute;
-    background: url("images/search-active.svg") 2.14vw 1.32vw no-repeat;
+    background: url("images/search-active.svg") 2.14vw 1.56vw no-repeat;
     background-size: 1.32vw 1.32vw;
     width: 45.9vw;
-    height: 1.25vw;
+    height: auto;
     padding: 1.4vw 0 1.4vw 5.9vw;
     background-color: var(--background);
     border: 0.0781vw solid var(--border);
     border-radius: 1.17vw;
     outline: none;
     color: var(--font-color);
-    font-size: 1vw;
+    font-size: 1.09vw;
     font-weight: 400;
 }
 
@@ -201,10 +201,10 @@ input.m-s-1::placeholder {
 }
 
 input.m-s-1:focus {
-    background: url("images/search-active.svg") 2.14vw 1.32vw no-repeat;
+    background: url("images/search-active.svg") 2.14vw 1.56vw no-repeat;
     background-size: 1.32vw 1.32vw;
     width: 45.9vw;
-    height: 1.25vw;
+    height: auto;
     padding: 1.4vw 0 1.4vw 5.9vw;
     background-color: var(--background);
     border: 0.0781vw solid var(--border);
@@ -1230,7 +1230,7 @@ div.quantity {
 
 
 button.but {
-    width: 3.125vw;
+    width: 3.3vw;
     height: auto;
     border: none;
     font-size: 2.1875vw;
@@ -1251,7 +1251,7 @@ div.but-quantity-block {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:0 0.39vw;
+    margin:0 0.195vw;
 }
 
 input.but-quantity {
@@ -1271,7 +1271,7 @@ input.but-quantity::placeholder {
 }
 
 button.but-p {
-    width: 3.125vw;
+    width: 3.3vw;
     height: auto;
     border: none;
     font-size: 2.1875vw;
@@ -1286,13 +1286,13 @@ button.but-p:hover {
 }
 div.priceb {
     width: 18.28vw;
-    height: 4.37vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 h1.price-backet {
-    margin-top: 3.1vw;
     font-size: 1.7vw;
     font-weight: normal;
     color: var(--font-color);
@@ -1302,7 +1302,7 @@ h1.price-backet {
 
 button.add {
     width: auto;
-    margin-top: 0.625vw;
+    margin-top: 0.78vw;
     font-size: 1.17vw;
     font-weight: normal;
     color: var(--green);
@@ -1313,7 +1313,7 @@ button.add {
 
 button.delete {
     width: auto;
-    margin-top: 0.546vw;
+    margin-top: 0.78vw;
     font-size: 1.17vw;
     font-weight: normal;
     color: var(--red);

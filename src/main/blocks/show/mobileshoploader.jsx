@@ -1,3 +1,4 @@
+import React from 'react';
 import GetHistoryLocation from "../../../locate";
 
 const MobileShopLoader = ()=> {
@@ -45,4 +46,4 @@ const MobileShopLoader = ()=> {
     );
 };
 
-export default MobileShopLoader;
+export default React.memo(MobileShopLoader);

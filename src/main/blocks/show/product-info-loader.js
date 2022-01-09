@@ -1,3 +1,5 @@
+import React from 'react';
+
 const ProductInfoLoader = () => {
     return(
         <div>
@@ -41,4 +43,4 @@ const ProductInfoLoader = () => {
     );
 };
 
-export default ProductInfoLoader;
+export default React.memo(ProductInfoLoader);

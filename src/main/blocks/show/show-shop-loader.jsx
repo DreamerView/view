@@ -1,3 +1,4 @@
+import React from 'react';
 import GetHistoryLocation from "../../../locate";
 
 const ShowShopLoader = () => {
@@ -46,4 +47,4 @@ const ShowShopLoader = () => {
     );
 };
 
-export default ShowShopLoader;
+export default React.memo(ShowShopLoader);

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const ProductInfo = (info) => {
     return(
         <div className="flex">
@@ -12,4 +14,4 @@ const ProductInfo = (info) => {
     );
 };
 
-export default ProductInfo;
+export default React.memo(ProductInfo);

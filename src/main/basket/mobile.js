@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import React,{ useState,useEffect } from "react";
 import GetHistoryLocation from "../../locate";
 import { getFirestore,doc, onSnapshot } from "firebase/firestore";
 import { useDispatch } from "react-redux";
@@ -43,6 +43,7 @@ const BasketMobile = (info) => {
   // const cost = status.price;
   const cost = 100;
   const PlusSum = () => {
+    if(sum >= 100) return 0;
     setSum(sum+1);
     setPr(((sum+1)*cost).toFixed(0));
     dispatch({type:"AddProduct",put:cost});
@@ -58,12 +59,12 @@ const BasketMobile = (info) => {
   const RemoveItem = () => {
     info.remove(info.item);
     dispatch({type:"GetProduct",put:pr});
-  }
+  };
   const maxLengthCheck = (object) => {
     if (object.target.value.length > object.target.maxLength) {
      object.target.value = object.target.value.slice(0, object.target.maxLength)
       }
-    }
+    };
     return(
           <div className="main-of-main">
             <div className="block-one-img-and-glakso">
@@ -92,7 +93,7 @@ const BasketMobile = (info) => {
                   <div className="scary-turn-off">
                     <button type="button" onClick={MinusSum} className="button-minus">-</button>
                     <div className="one-block">
-                    <input onInput={maxLengthCheck} maxLength="3" type="number" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:"LetProduct",put:e.target.value*cost});}} value={Number(sum).toString()} className="but-quantity" />
+                    <input onInput={maxLengthCheck} maxLength="2" type="number" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});}} value={Number(sum).toString()} className="but-quantity" />
                     </div>
                     <button type="button" onClick={PlusSum} className="button-plus">+</button>
                   </div>
@@ -114,4 +115,4 @@ const BasketMobile = (info) => {
     );
 };
 
-export default BasketMobile;
+export default React.memo(BasketMobile);
