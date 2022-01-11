@@ -1,12 +1,14 @@
-import {memo} from 'react';
+import {memo,useState,useEffect} from 'react';
 import GetHistoryLocation from "../../../locate";
 import { useParams,Link } from "react-router-dom";
 
 const MobileShopInfo = (info) => {
     const {id} = useParams();
-    let s;
-    if(localStorage.getItem('basket-info')) s = JSON.parse(localStorage.getItem('basket-info')).find(s=>s.from===info.item.title && s.key===id);
-    else s="";
+    const [s,setS] = useState('');
+    useEffect(()=>{
+        if(localStorage.getItem('basket-info')) setS(JSON.parse(localStorage.getItem('basket-info')).find(s=>s.from===info.item.title && s.key===id));
+        else setS('');
+    },[info.item.title,id]);
     return(
         <div className="mobile-shop-info">
             <div className="mobile-shop-info-block-1">
@@ -40,7 +42,7 @@ const MobileShopInfo = (info) => {
                 </div>
                 <div className="mobile-shop-info-block-3-item-1">
                     <div className="mobile-shop-info-block-3-item-1-block">
-                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={GetHistoryLocation+"/basket"} className="mobile-shop-info-block-2-item-1-button">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1})}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>}
+                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={GetHistoryLocation+"/basket"} className="mobile-shop-info-block-2-item-1-button">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1});setS('yes');}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>}
                     </div>
                 </div>
             </div>

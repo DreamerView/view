@@ -94,7 +94,7 @@ const DesktopBasket = (info)=> {
             <div className="quantity">
                 <button onClick={MinusSum} className="but">-</button>
                 <div className="but-quantity-block">
-                    <input onBlur={CheckValue} onInput={maxLengthCheck} maxLength="2" type="tel" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});dispatch({type:'GetTotalItem',send:sum});dispatch({type:'AddTotalItem',send:(e.target.value*1)});}} value={Number(sum).toString()} className="but-quantity" />
+                    <input onBlur={CheckValue} pattern="[1-9]{2}" onInput={maxLengthCheck} maxLength="2" type="tel" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});dispatch({type:'GetTotalItem',send:sum});dispatch({type:'AddTotalItem',send:(e.target.value*1)});}} value={Number(sum).toString()} className="but-quantity" />
                 </div>
                 <button onClick={PlusSum} className="but-p">+</button>
             </div>
