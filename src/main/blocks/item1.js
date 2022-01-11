@@ -1,4 +1,4 @@
-import React from 'react';
+import {memo} from 'react';
 import { Link } from "react-router-dom";
 import GetHistoryLocation from "../../locate";
 
@@ -31,4 +31,4 @@ const Item1 = (products)=> {
     );
 };
 
-export default React.memo(Item1);
+export default memo(Item1);

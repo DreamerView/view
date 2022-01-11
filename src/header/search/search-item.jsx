@@ -1,6 +1,6 @@
 import GetHistoryLocation from "../../locate";
 import { Link } from "react-router-dom";
-import React from 'react';
+import { memo } from 'react';
 
 const SearchItem = (item) => {
   console.log('check');
@@ -25,4 +25,4 @@ const SearchItem = (item) => {
     );
 };
 
-export default React.memo(SearchItem);
+export default memo(SearchItem);

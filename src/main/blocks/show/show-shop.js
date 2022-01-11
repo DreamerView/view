@@ -1,5 +1,5 @@
 import ShowShopInfo from "./show-shop-info";
-import { useState,useEffect } from "react";
+import { useState,useEffect,useCallback } from "react";
 import GetHistoryLocation from "../../../locate";
 import { useMediaQuery } from "react-responsive";
 import MobileShopInfo from "./mobileshopinfo";
@@ -30,7 +30,7 @@ const ShowShop = () => {
             s=false;
         }
     },[]);
-    const createLocal = (info) => {
+    const createLocal = useCallback((info)=>{
         let s;
         if(localStorage.getItem('basket-info')) s=JSON.parse(localStorage.getItem('basket-info'));
         else s="";
@@ -38,10 +38,10 @@ const ShowShop = () => {
         setInfo(info);
         setPopup(true);
         dispatch({type:"Add_Local",payload:1});
-    }
-    const closePopup = (info) => {
+    },[dispatch]);
+    const closePopup = useCallback((info) => {
         setPopup(info);
-    }
+    },[]);
     useEffect(()=>{
         if(local==="") return 0;
         else localStorage.setItem('basket-info',JSON.stringify(local));

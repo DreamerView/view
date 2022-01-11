@@ -1,4 +1,4 @@
-import React from 'react';
+import {memo} from 'react';
 import GetHistoryLocation from "../../../locate";
 import { useParams,Link } from "react-router-dom";
 
@@ -48,4 +48,4 @@ const MobileShopInfo = (info) => {
     );
 };
 
-export default React.memo(MobileShopInfo);
+export default memo(MobileShopInfo);

@@ -1,4 +1,4 @@
-import React from 'react';
+import {memo} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
 const Menu = (props) => {
@@ -22,4 +22,4 @@ const Menu = (props) => {
     );
 }
 
-export default React.memo(Menu);
+export default memo(Menu);

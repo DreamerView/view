@@ -1,12 +1,14 @@
-import React from 'react';
+import {memo,useEffect,useState} from 'react';
 import GetHistoryLocation from "../../../locate";
 import { useParams,Link } from "react-router-dom";
 
 const ShowShopInfo = (info) => {
     const {id} = useParams();
-    let s;
-    if(localStorage.getItem('basket-info')) s = JSON.parse(localStorage.getItem('basket-info')).find(s=>s.from===info.item.title && s.key===id);
-    else s="";
+    const [s,setS] = useState('');
+    useEffect(()=>{
+        if(localStorage.getItem('basket-info')) setS(JSON.parse(localStorage.getItem('basket-info')).find(s=>s.from===info.item.title && s.key===id));
+        else setS('');
+    },[info.item.title,id]);
     return(
                     <div className="b-m">
                     <div className="i">
@@ -45,11 +47,11 @@ const ShowShopInfo = (info) => {
                         </div>
                         <div className="p-r">
                         <h1 className="h">{info.item.price}</h1>
-                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={GetHistoryLocation+'/basket'} className="p-r-b">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,item:1,from:info.item.title})}} type="button" className="p-r-b">Выбрать</button>}
+                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={GetHistoryLocation+'/basket'} className="p-r-b">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,item:1,from:info.item.title});setS('yes')}} type="button" className="p-r-b">Выбрать</button>}
                         </div>
                     </div>
                     </div>
     );
 };
 
-export default React.memo(ShowShopInfo);
+export default memo(ShowShopInfo);

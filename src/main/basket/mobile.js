@@ -1,4 +1,4 @@
-import React,{ useState,useEffect } from "react";
+import { useState,useEffect,memo } from "react";
 import GetHistoryLocation from "../../locate";
 import { getFirestore,doc, onSnapshot } from "firebase/firestore";
 import { useDispatch } from "react-redux";
@@ -11,6 +11,7 @@ const BasketMobile = (info) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch({type:"LetProduct",put:0});
+    dispatch({type:"LetTotalItem",send:0});
   }, [dispatch]);
  
   useEffect(()=>{
@@ -24,6 +25,7 @@ const BasketMobile = (info) => {
           setStatus({title:s.title,content:s.content,price:s.price,image:s.image,id:s.id});
           setPr((s.price*1).toFixed(0));
           dispatch({type:"PutProduct",put:s.price});
+          dispatch({type:"AddTotalItem",send:1});
           // setLazyBlock(false);
         }
       }
@@ -31,6 +33,7 @@ const BasketMobile = (info) => {
         if(check) { 
           setStatus({title:"404",content:"Ничего не найдено",price:"0",image:"/images/first-aid-alt.svg"});
           dispatch({type:"PutProduct",put:100});
+          dispatch({type:"AddTotalItem",send:1});
           setPr(100);
           // setLazyBlock(false);
         }
@@ -47,6 +50,7 @@ const BasketMobile = (info) => {
     setSum(sum+1);
     setPr(((sum+1)*cost).toFixed(0));
     dispatch({type:"AddProduct",put:cost});
+    dispatch({type:"AddTotalItem",send:1});
   };
   const MinusSum = () => {
     if(sum <= 1) return 0;
@@ -54,17 +58,27 @@ const BasketMobile = (info) => {
       setSum(sum-1);
       setPr((pr-cost).toFixed(0));
       dispatch({type:"GetProduct",put:cost});
+      dispatch({type:"GetTotalItem",send:1});
     }
   };
   const RemoveItem = () => {
     info.remove(info.item);
     dispatch({type:"GetProduct",put:pr});
+    dispatch({type:"GetTotalItem",send:sum});
   };
   const maxLengthCheck = (object) => {
     if (object.target.value.length > object.target.maxLength) {
      object.target.value = object.target.value.slice(0, object.target.maxLength)
-      }
-    };
+    }
+  };
+  const CheckValue = (object) => {
+    if(object.target.value.length===0 || object.target.value.slice(0, object.target.maxLength)==='0') {
+      setSum(1);
+      setPr(cost);
+      dispatch({type:'AddProduct',put:cost});
+      dispatch({type:'AddTotalItem',send:1});
+    }
+  }
     return(
           <div className="main-of-main">
             <div className="block-one-img-and-glakso">
@@ -93,7 +107,7 @@ const BasketMobile = (info) => {
                   <div className="scary-turn-off">
                     <button type="button" onClick={MinusSum} className="button-minus">-</button>
                     <div className="one-block">
-                    <input onInput={maxLengthCheck} maxLength="2" type="number" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});}} value={Number(sum).toString()} className="but-quantity" />
+                      <input onBlur={CheckValue} onInput={maxLengthCheck} maxLength="2" type="tel" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});dispatch({type:'GetTotalItem',send:sum});dispatch({type:'AddTotalItem',send:(e.target.value*1)});}} value={Number(sum).toString()} className="but-quantity" />
                     </div>
                     <button type="button" onClick={PlusSum} className="button-plus">+</button>
                   </div>
@@ -115,4 +129,4 @@ const BasketMobile = (info) => {
     );
 };
 
-export default React.memo(BasketMobile);
+export default memo(BasketMobile);

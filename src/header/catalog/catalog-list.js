@@ -1,4 +1,4 @@
-import React from 'react';
+import {memo} from 'react';
 
 const CatalogList = (info) =>{
     return(
@@ -13,4 +13,4 @@ const CatalogList = (info) =>{
     );
 };
 
-export default React.memo(CatalogList);
+export default memo(CatalogList);

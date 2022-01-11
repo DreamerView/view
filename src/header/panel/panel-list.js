@@ -1,4 +1,4 @@
-import React from 'react';
+import {memo} from 'react';
 
 const PanelList = (info) =>{
     return(
@@ -13,4 +13,4 @@ const PanelList = (info) =>{
     );
 };
 
-export default React.memo(PanelList);
+export default memo(PanelList);

@@ -1,5 +1,5 @@
 import ProductInfo from "./product-info";
-import { useState,useEffect } from "react";
+import { useState,useMemo } from "react";
 import GetHistoryLocation from "../../../locate";
 import { getFirestore,doc, getDoc } from "firebase/firestore";
 import  '../../../data';
@@ -15,7 +15,7 @@ const Product = () => {
         {id:3,images:GetHistoryLocation+'/images/forads.svg',title:'Действующее вещество:',content:"Загружаем данные. Пожалуйста подождите."},
         {id:4,images:GetHistoryLocation+'/images/lekform.svg',title:'Лекарственная форма:',content:"Загружаем данные. Пожалуйста подождите."}
     ]);
-    useEffect(()=>{
+    useMemo(()=>{
         setLazyBlock(false);
         let check = true;
         const db = getFirestore();
@@ -34,6 +34,7 @@ const Product = () => {
           }
           else console.log("error. Don't exist!");
         });
+        console.log('updated');
         return () => {
           check=false;
         };

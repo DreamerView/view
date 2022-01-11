@@ -1,4 +1,4 @@
-import React from 'react';
+import {memo} from 'react';
 import GetHistoryLocation from "../../locate";
 
 const Item2 = (info) => {
@@ -29,4 +29,4 @@ const Item2 = (info) => {
     );
 };
 
-export default React.memo(Item2);
+export default memo(Item2);
