@@ -8,6 +8,7 @@ const DesktopBasket = (info)=> {
   const [status,setStatus] = useState('');
   const [pr,setPr] = useState(0);
   const [sum,setSum] = useState(info.item.item);
+  const [animation,setAnimation] = useState('');
   const id = info.item.key;
   const dispatch = useDispatch();
   useEffect(() => {
@@ -63,9 +64,12 @@ const DesktopBasket = (info)=> {
     }
   };
   const RemoveItem = () => {
-    info.remove(info.item);
-    dispatch({type:"GetProduct",put:pr});
-    dispatch({type:"GetTotalItem",send:sum});
+    setTimeout(()=>{
+      info.remove(info.item);
+      dispatch({type:"GetProduct",put:pr});
+      dispatch({type:"GetTotalItem",send:sum});
+    },200)
+    setAnimation('animation');
   };
   const maxLengthCheck = (object) => {
     if (object.target.value.length > object.target.maxLength) {
@@ -85,7 +89,7 @@ const DesktopBasket = (info)=> {
     }
   }
   return(
-        <div className="backet-p">
+        <div className={`backet-p ${animation}`}>
         <div className="img-basket-picture">
             <img className="img-backet" src={GetHistoryLocation+status.image} alt="Panakea 2" />
         </div>

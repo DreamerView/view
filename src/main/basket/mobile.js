@@ -7,6 +7,7 @@ const BasketMobile = (info) => {
   const [status,setStatus] = useState('');
   const [pr,setPr] = useState(0);
   const [sum,setSum] = useState(info.item.item);
+  const [animation,setAnimation] = useState('');
   const id = info.item.key;
   const dispatch = useDispatch();
   useEffect(() => {
@@ -62,9 +63,12 @@ const BasketMobile = (info) => {
     }
   };
   const RemoveItem = () => {
-    info.remove(info.item);
-    dispatch({type:"GetProduct",put:pr});
-    dispatch({type:"GetTotalItem",send:sum});
+    setTimeout(()=>{
+      info.remove(info.item);
+      dispatch({type:"GetProduct",put:pr});
+      dispatch({type:"GetTotalItem",send:sum});
+    },200)
+    setAnimation('animation');
   };
   const maxLengthCheck = (object) => {
     if (object.target.value.length > object.target.maxLength) {
@@ -84,7 +88,7 @@ const BasketMobile = (info) => {
     }
   }
     return(
-          <div className="main-of-main">
+          <div className={`main-of-main ${animation}`}>
             <div className="block-one-img-and-glakso">
               <div className="img-and-glakso">
                 <div className="img-and-place">

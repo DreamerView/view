@@ -1829,7 +1829,7 @@ div.mobile-main-confirm {
     border-radius: 4.17vw 4.17vw 0 0;
     padding-bottom:8.3vw;
     animation-name: popup;
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -2001,4 +2001,23 @@ h1.menu-s-b-notification-text {
     font-size:2.78vw;
     font-weight: normal;
     color:white;
+}
+
+.animation {
+    animation-name: anim;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim {
+    from {
+      -webkit-transform:scale(1);
+      opacity: 0.5;
+    }
+    to {
+      -webkit-transform:scale(0);
+      opacity: 1;
+    }
 }

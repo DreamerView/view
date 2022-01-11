@@ -1171,6 +1171,25 @@ div.backet-p {
     border-radius: 1.17vw;
 }
 
+.animation {
+    animation-name: anim;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim {
+    from {
+      -webkit-transform:scale(1);
+      opacity: 0.5;
+    }
+    to {
+      -webkit-transform:scale(0);
+      opacity: 1;
+    }
+}
+
 div.img-basket-picture {
     margin: 0.625vw 0 0.625vw 0.625vw;
     position: relative;
@@ -1797,7 +1816,7 @@ div.basket-float-window {
     padding-bottom: 2.34vw;
     background-color: var(--background);
     animation-name: popup;
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -1805,7 +1824,7 @@ div.basket-float-window {
 
 @keyframes popup {
     from {
-      -webkit-transform: translate(-50%, -50%) scale(0.8);
+      -webkit-transform: translate(-50%, -50%) scale(0.9);
       opacity: 0.5;
     }
     to {
