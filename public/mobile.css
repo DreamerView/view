@@ -678,6 +678,7 @@ div.mobile-shop-info {
     margin-right: auto;
     width: 96.89vw;
     height: auto;
+    -webkit-border-radius:2.08vw;
     border-radius: 2.08vw;
     border: 0.14vw solid var(--border);
     margin-top: 4.17vw;

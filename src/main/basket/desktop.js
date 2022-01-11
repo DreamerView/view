@@ -71,6 +71,10 @@ const DesktopBasket = (info)=> {
     if (object.target.value.length > object.target.maxLength) {
      object.target.value = object.target.value.slice(0, object.target.maxLength)
     }
+    const s = isNaN(object.target.value)
+    if(s === true) {
+      object.target.value = sum;
+    }
   };
   const CheckValue = (object) => {
     if(object.target.value.length===0 || object.target.value.slice(0, object.target.maxLength)==='0') {
@@ -94,7 +98,7 @@ const DesktopBasket = (info)=> {
             <div className="quantity">
                 <button onClick={MinusSum} className="but">-</button>
                 <div className="but-quantity-block">
-                    <input onBlur={CheckValue} pattern="[1-9]{2}" onInput={maxLengthCheck} maxLength="2" type="tel" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});dispatch({type:'GetTotalItem',send:sum});dispatch({type:'AddTotalItem',send:(e.target.value*1)});}} value={Number(sum).toString()} className="but-quantity" />
+                    <input onBlur={CheckValue} pattern='[0-9]{2}' onInput={maxLengthCheck} maxLength="2" type="tel" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});dispatch({type:'GetTotalItem',send:sum});dispatch({type:'AddTotalItem',send:(e.target.value*1)});}} value={Number(sum).toString()} className="but-quantity" />
                 </div>
                 <button onClick={PlusSum} className="but-p">+</button>
             </div>
