@@ -1796,6 +1796,22 @@ div.basket-float-window {
     border-radius: 1.7vw;
     padding-bottom: 2.34vw;
     background-color: var(--background);
+    animation-name: popup;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popup {
+    from {
+      -webkit-transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.5;
+    }
+    to {
+      -webkit-transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
 }
 
 div.place-block-text {

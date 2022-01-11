@@ -50,8 +50,8 @@ const DesktopConfirm = (close) => {
         <h1 className="text-basket-name">Товар добавлен в корзину</h1>
       </div>
       <div className="place-close-basket-block">
-        <div className="close-basket-block">
-          <div onClick={()=>{close.close(false)}} className="close-place">
+        <div onClick={()=>{close.close(false)}} className="close-basket-block">
+          <div className="close-place">
             <img src={`${GetHistoryLocation}/images/close.svg`} alt="close" className="close-img" />
           </div>
         </div>

@@ -1828,7 +1828,23 @@ div.mobile-main-confirm {
     background-color: var(--background);
     border-radius: 4.17vw 4.17vw 0 0;
     padding-bottom:8.3vw;
+    animation-name: popup;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+@keyframes popup {
+    from {
+      -webkit-transform: scale(0.95);
+      opacity: 0.5;
+    }
+    to {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+  }
 div.mobile-main-confirm-close {
     width:100%;
     height:auto;
