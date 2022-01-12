@@ -373,7 +373,7 @@ h1.panel-s-b-t-1 {
 }
 
 div.m {
-    width: calc(100% - 15px);
+    width: calc(100% - 10px);
     height: auto;
     background-color: var(--background);
     border-radius: 15px;
@@ -384,7 +384,7 @@ div.m {
 }
 
 div.m-block {
-    max-width: 1440px;
+    max-width: 1280px;
     min-width: 1263px;
     width: 100%;
     margin-left: auto;
@@ -413,10 +413,11 @@ h1.m-p-1 {
 }
 
 div.b {
-    margin-top: 30px;
+    margin-top: 60px;
     display: grid;
-    margin-left: 67.5px;
-    grid-template-columns: repeat(auto-fit, 222px);
+    grid-template-columns: repeat(auto-fill, 197px);
+    grid-gap:43px;
+    justify-content: center;
 }
 
 a.m-p-b {
@@ -436,9 +437,6 @@ a.m-p-b:hover {
     border: 1px solid var(--green);
 }
 
-div.m-d-b {
-    margin: 12.5px;
-}
 
 div.m-t-p {
     margin: 3px 12px 0 12px;

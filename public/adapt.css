@@ -377,7 +377,7 @@ h1.panel-s-b-t-1 {
 }
 
 div.m {
-    width: calc(100% - 1.17vw);
+    width: calc(100% - 0.78vw);
     height: auto;
     background-color: var(--background);
     border-radius: 1.17vw;
@@ -388,8 +388,6 @@ div.m {
 }
 
 div.m-block {
-    max-width: 112.5vw;
-    min-width: 98.67vw;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -417,10 +415,11 @@ h1.m-p-1 {
 }
 
 div.b {
-    margin-top: 2.34vw;
+    margin-top: 4.69vw;
     display: grid;
-    margin-left: 5.3vw;
-    grid-template-columns: repeat(auto-fit, 17.3vw);
+    grid-template-columns: repeat(auto-fill, 15.3vw);
+    grid-gap:3.3vw;
+    justify-content: center;
 }
 
 a.m-p-b {
@@ -438,10 +437,6 @@ a.m-p-b {
 
 a.m-p-b:hover {
     border: 0.0781vw solid var(--green);
-}
-
-div.m-d-b {
-    margin: 0.967vw;
 }
 
 div.m-t-p {
