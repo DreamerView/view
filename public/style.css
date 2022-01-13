@@ -1815,6 +1815,9 @@ div.basket-float-window-fixed-back {
     top:0;
     left:0;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    touch-action: none;
+    -ms-touch-action: none;
 }
 div.basket-float-window {
     position: fixed;
