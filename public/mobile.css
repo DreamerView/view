@@ -1839,7 +1839,7 @@ div.mobile-main-confirm {
     height:auto;
     background-color: var(--background);
     border-radius: 4.17vw 4.17vw 0 0;
-    padding-bottom:8.3vw;
+    padding-bottom:10.1vw;
     animation-name: popup;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
