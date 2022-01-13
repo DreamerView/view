@@ -41,8 +41,12 @@ const DesktopConfirm = (close) => {
         case 1: word='товар';break;
         default: word='товара';break;
       }
+      useEffect(()=>{
+        document.getElementsByTagName('html')[0].style.cssText= "overflow-y:hidden;";
+      },[]);
     return(
-        <div className='basket-float-window-fixed'>
+        <div className='basket-float-window-fixed' onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}}>
+        <div className='basket-float-window-fixed-back'></div>
         <div className="basket-float-window">
   <div className="place-block-text">
     <div className="block-text-basket">

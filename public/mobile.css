@@ -1817,8 +1817,15 @@ div.mobile-main-confirm-fixed {
     top:0;
     width:100vw;
     height:100vh;
+    z-index:9999;
+}
+div.mobile-main-confirm-fixed-back {
+    top:0;
+    width:100vw;
+    height:100vh;
     background-color: var(--popup-background);
     z-index:9999;
+    backdrop-filter: blur(1.1vw);
 }
 div.mobile-main-confirm {
     position: absolute;
@@ -1837,11 +1844,11 @@ div.mobile-main-confirm {
 
 @keyframes popup {
     from {
-      -webkit-transform: scale(0.95);
+      -webkit-transform: translate(0,5%);
       opacity: 0.5;
     }
     to {
-      -webkit-transform: scale(1);
+      -webkit-transform: translate(0,0);
       opacity: 1;
     }
   }

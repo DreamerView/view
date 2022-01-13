@@ -525,8 +525,10 @@ div.maybe-panel-block {
 
 div.maybe-g-p {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 29.1vw);
-    margin: 2.34vw 0 0 6.48vw;
+    grid-template-columns: repeat(auto-fit, 26.8vw);
+    margin-top: 2.34vw;
+    grid-column-gap:4.76vw;
+    justify-content: center;
 }
 
 div.maybe-g-p-b {
@@ -1798,6 +1800,15 @@ div.basket-float-window-fixed {
     z-index: 100;
 }
 
+div.basket-float-window-fixed-back {
+    width:100%;
+    height:100%;
+    background-color: var(--popup-background);
+    top:0;
+    left:0;
+    backdrop-filter: blur(0.3125vw);
+}
+
 div.basket-float-window {
     position: fixed;
     top: 50%;
@@ -1805,7 +1816,7 @@ div.basket-float-window {
     transform: translate(-50%, -50%);
     margin-left: auto;
     margin-right: auto;
-    width: 54.68vw;
+    width: 54.69vw;
     height: auto;
     border-radius: 1.7vw;
     padding-bottom: 2.34vw;
@@ -1819,7 +1830,7 @@ div.basket-float-window {
 
 @keyframes popup {
     from {
-      -webkit-transform: translate(-50%, -50%) scale(0.9);
+      -webkit-transform: translate(-50%, -50%) scale(0.95);
       opacity: 0.5;
     }
     to {

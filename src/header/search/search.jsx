@@ -3,6 +3,7 @@ import { useEffect,useRef,useState } from "react";
 import  '../../data';
 import { getFirestore,collection,onSnapshot,query,orderBy,startAt,endAt,limit} from "firebase/firestore";
 import SearchLoader from "./search-loader";
+import { useSelector } from "react-redux";
 
 
 const Search = () => {
@@ -11,6 +12,7 @@ const Search = () => {
     const [send,setSend] = useState([{}]);
     const [inputChange,setInputChange] = useState('');
     const [lazyblock,setLazyBlock] = useState('');
+    const search = useSelector(state => state.search)
     useEffect(()=>{
         setCheck(false);
         const CheckEvent = ()=> {
@@ -24,6 +26,9 @@ const Search = () => {
         focus.current.addEventListener('focus',CheckEvent);
         focus.current.addEventListener('blur',CheckRemove);
     },[]);
+    useEffect(()=>{
+        focus.current.value = search;
+    },[search])
     useEffect(()=>{
         setLazyBlock(false);
         let status = true;

@@ -1,11 +1,13 @@
 import GetHistoryLocation from "../../locate";
 import { Link } from "react-router-dom";
 import { memo } from 'react';
+import { useDispatch } from "react-redux";
 
 const SearchItem = (item) => {
+  const dispatch = useDispatch();
   console.log('check');
     return(
-        <Link to={`${GetHistoryLocation}/products/${item.result.id}`} className="flex-search">
+        <Link onClick={()=>{dispatch({type:'SetSearch',set:item.result.title})}} to={`${GetHistoryLocation}/products/${item.result.id}`} className="flex-search">
       <div className="block-picture-drugs">
         <div className="place-drugs-picture">
           <div className="picture-drugs-absolute">

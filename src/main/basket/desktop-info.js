@@ -46,7 +46,7 @@ const DesktopBasketInfo = () => {
                 <div className="payment-flex">
                 <div className="price-payment-0">
                 <h1 className="result">Итог заказа</h1>
-                <h1 className="quantity-payment">{local} {word} ({total})</h1>
+                <h1 className="quantity-payment">{local} {word} - {total} шт.</h1>
                 </div>
                 <div className="price-payment-1">
                 <h1 className="price-payment">{item} ₸</h1>

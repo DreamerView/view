@@ -44,7 +44,7 @@ const MobileBasketInfo = () => {
               <div className="order-block">
                 <div className="place-order">
                   <h1 className="order-name">Итог заказа</h1>
-                  <h1 className="two-items">{local} {word} ({total})</h1>
+                  <h1 className="two-items">{local} {word} - {total} шт.</h1>
                 </div>
               </div>
               <div className="price-place-im-tired">

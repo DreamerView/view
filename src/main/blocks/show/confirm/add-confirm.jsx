@@ -40,8 +40,12 @@ const AddConfirm = (close)=> {
         case 1: word='товар';break;
         default: word='товара';break;
       }
+      useEffect(()=>{
+        document.getElementsByTagName('html')[0].style.cssText= "overflow-y:hidden;";
+      },[]);
     return(
-        <div className="mobile-main-confirm-fixed">
+        <div className="mobile-main-confirm-fixed" onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}}>
+            <div className="mobile-main-confirm-fixed-back"></div>
             <div className="mobile-main-confirm">
                 <div className="mobile-main-confirm-close">
                     <div onClick={()=>{close.close(false)}} className="mobile-main-confirm-close-picture">

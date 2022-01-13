@@ -25,7 +25,7 @@ const ShowShop = () => {
         let s = true;
         setTimeout(()=>{
             if(s) setLazyBlock(false);
-        },3000);
+        },1000);
         return ()=>{
             s=false;
         }
