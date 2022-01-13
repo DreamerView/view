@@ -95,12 +95,14 @@ button,input {
 }
 
 body {
+    position: relative;
     width: 100%;
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--background-back);
     color:var(--font-color);
     padding-bottom: 30.1vw;
     overflow-x: hidden;
+    overflow:hidden;
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -1826,6 +1828,9 @@ div.mobile-main-confirm-fixed-back {
     background-color: var(--popup-background);
     z-index:9999;
     backdrop-filter: blur(1.1vw);
+    -webkit-backdrop-filter:blur(1.1vw);
+    touch-action: none;
+    -ms-touch-action: none;
 }
 div.mobile-main-confirm {
     position: absolute;
