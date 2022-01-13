@@ -449,6 +449,31 @@ h1.m-t {
     font-weight: normal;
 }
 
+div.m-t-loader {
+    width: 11.875vw;
+    height:1.17vw;
+    border-radius: 0.7vw;
+}
+
+div.m-t-1-loader {
+    margin-top:0.78vw;
+    width: 8.67vw;
+    height:1.17vw;
+    border-radius: 0.7vw;
+}
+
+div.l-t-loader {
+    width:10.3vw;
+    height:0.86vw;
+    border-radius: 0.7vw;
+}
+
+div.l-p-loader {
+    width:5.94vw;
+    height:1.33vw;
+    border-radius: 0.7vw;
+}
+
 div.m-i-1-1 {
     padding: 0.859vw;
     position: relative;

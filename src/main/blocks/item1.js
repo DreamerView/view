@@ -10,14 +10,14 @@ const Item1 = (products)=> {
         <div className="m-d-b">
               <Link onClick={ScrollToTop} className="m-p-b" to={`${GetHistoryLocation}/products/${products.item.id}`}>
                 <div className="m-i-1-1">
-                  <img loading="lazy" src={GetHistoryLocation + products.item.image} alt="Panakea 1" className="m-i" />
+                  <img loading="lazy" src={products.item.image?GetHistoryLocation + products.item.image:GetHistoryLocation+"/images/first-aid-alt.svg"} alt="Panakea 1" className="m-i" />
                 </div>
                 <div className="m-t-p">
-                  <h1 className="m-t">{products.item.title}</h1>
+                  {products.item.title?<h1 className="m-t">{products.item.title}</h1>:<><div className="skeleton m-t-loader"/><div className="skeleton m-t-1-loader"/></>}
                   <div className="l-t-p">
-                    <h1 className="l-t">{products.item.content.substring(0, 30)}</h1>
+                    {products.item.content?<h1 className="l-t">{products.item.content.substring(0, 30)}</h1>:<div className="skeleton l-t-loader"/>}
                     <div className="m-l-p">
-                      <h1 className="l-p">{products.item.price} ₸</h1>
+                      {products.item.price?<h1 className="l-p">{products.item.price} ₸</h1>:<div className="skeleton l-p-loader"/>}
                       <div className="p-p">
                         <div className="i-p-1">
                           <img loading="lazy" src={GetHistoryLocation+"/images/shopping-basket-add.svg"} alt="Panakea 1" className="p" />

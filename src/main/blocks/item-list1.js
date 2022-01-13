@@ -3,7 +3,7 @@ import Item1 from "./item1";
 import { getFirestore, collection, onSnapshot } from "firebase/firestore";
 
 const ItemList1 = () => {
-    const [posts,setPosts] = useState([]);
+    const [posts,setPosts] = useState([{id:1},{id:2},{id:3},{id:4},{id:5}]);
     useEffect(()=> {
         const db = getFirestore();
         onSnapshot(collection(db, "list"),(result) => {
