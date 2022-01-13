@@ -45,8 +45,8 @@ const DesktopBasket = (info)=> {
       check=false;
     };
   },[id,dispatch]);
-  // const cost = status.price;
-  const cost = 100;
+  const cost = status.price;
+  // const cost = 100;
   const PlusSum = () => {
     if(sum >= 100) return 0;
     setSum(sum+1);
