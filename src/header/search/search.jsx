@@ -19,11 +19,13 @@ const Search = () => {
         const CheckEvent = ()=> {
             setCheck(true);
             dispatch({type:'SetHeader',set:false});
+            document.getElementsByTagName('html')[0].style.cssText= "overflow-y:hidden;";
         };
         const CheckRemove = ()=> {
             setTimeout(()=>{
                 setCheck(false);
                 dispatch({type:'SetHeader',set:true});
+                document.getElementsByTagName('html')[0].style.cssText= "";
             },250);
         };
         focus.current.addEventListener('focus',CheckEvent);
