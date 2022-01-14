@@ -6,15 +6,17 @@ import Panel from './panel/panel';
 import GetHistoryLocation from '../locate';
 import Search from './search/search.jsx';
 import { useSelector } from 'react-redux';
+import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
   const header = useSelector(state=>state.header);
+  const mobile = useMediaQuery({ query: `(max-width: 480px)` });
   return (
     <header className="main-block-1">
         <div className="main-block-2">
           <div className="m-1">
             <div className="m-g-1">
-              {!header?<div id="first">
+              {!header&&mobile?'':<div id="first">
                 <div className="m-f-1">
                   <div className="m-f-i-1">
                     <img src={GetHistoryLocation+"/login-images/Google__G__Logo.svg.png"} loading="lazy" alt="logo" className="m-p-i-1" />
@@ -26,15 +28,15 @@ const Header = () => {
                     <h1 className="m-f-t-1">Аптека</h1>
                   </div>
                 </div>
-              </div>:''}
+              </div>}
               <div id="second">
                 <Search/>
               </div>
-              {!header?<div id="third">
+              {!header&&mobile?'':<div id="third">
                 <div className="m-p-i">
                     <Panel/>        
                 </div>
-              </div>:''}
+              </div>}
             </div>
             {/*  Меню  */}
             <MenuList/>

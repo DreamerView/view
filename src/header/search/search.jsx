@@ -18,12 +18,12 @@ const Search = () => {
         setCheck(false);
         const CheckEvent = ()=> {
             setCheck(true);
-            dispatch({type:'SetHeader',set:true});
+            dispatch({type:'SetHeader',set:false});
         };
         const CheckRemove = ()=> {
             setTimeout(()=>{
                 setCheck(false);
-                dispatch({type:'SetHeader',set:false});
+                dispatch({type:'SetHeader',set:true});
             },250);
         };
         focus.current.addEventListener('focus',CheckEvent);
