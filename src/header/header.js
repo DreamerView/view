@@ -5,14 +5,16 @@ import MenuList from './menu/menu-list';
 import Panel from './panel/panel';
 import GetHistoryLocation from '../locate';
 import Search from './search/search.jsx';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const header = useSelector(state=>state.header);
   return (
     <header className="main-block-1">
         <div className="main-block-2">
           <div className="m-1">
             <div className="m-g-1">
-              <div id="first">
+              {!header?<div id="first">
                 <div className="m-f-1">
                   <div className="m-f-i-1">
                     <img src={GetHistoryLocation+"/login-images/Google__G__Logo.svg.png"} loading="lazy" alt="logo" className="m-p-i-1" />
@@ -24,15 +26,15 @@ const Header = () => {
                     <h1 className="m-f-t-1">Аптека</h1>
                   </div>
                 </div>
-              </div>
+              </div>:''}
               <div id="second">
                 <Search/>
               </div>
-              <div id="third">
+              {!header?<div id="third">
                 <div className="m-p-i">
                     <Panel/>        
                 </div>
-              </div>
+              </div>:''}
             </div>
             {/*  Меню  */}
             <MenuList/>

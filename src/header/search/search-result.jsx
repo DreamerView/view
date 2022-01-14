@@ -1,7 +1,6 @@
 import SearchItem from "./search-item";
 
 const SearchResult = (result) => {
-    // console.log(result.item);
     return(<div className="block-search">
       {result.item.map((items)=>
         (<SearchItem result={items} key={items.id} />)

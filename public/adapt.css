@@ -8,19 +8,19 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --font-color:hsl(216, 9%, 89%);
-        --font-color-c:hsl(213, 4%, 58%);
-        --border:hsl(0, 0%, 29%);
+        --font-color-c:hsl(225, 4%, 58%);
+        --border:0.078vw solid hsl(0, 0%, 29%);
         --background:hsl(240, 2%, 10%);
         --background-back:hsl(0, 0%, 4%);
         --background-hover:hsl(240, 1%, 14%);
         --background-green:hsl(240, 1%, 14%);
         --skeleton-start:hsl(240, 1%, 14%);
         --skeleton-end:hsl(240, 1%, 34%);
-        --popup-background:rgb(0,0,0,50%);
+        --popup-background:rgb(0,0,0,25%);
         --green: #20C29E;
         --green-hover:hsl(165, 100%, 25%);
-        --exist:hsl(195, 100%, 40%);
-        --exist-hover:	hsl(204, 75%, 46%);
+        --exist:hsl(209, 100%, 55%);
+        --exist-hover:hsl(215, 88%, 38%);
         --red:hsl(12, 91%, 57%);
         --scroll:hsl(0, 0%, 33%);
         --scroll-hover:hsl(0, 0%, 81%);
@@ -30,8 +30,8 @@
 @media (prefers-color-scheme: light) {
     :root {
         --font-color:hsl(0, 0%, 0%);
-        --font-color-c:hsl(212, 11%, 55%) ;
-        --border:hsl(0, 0%, 87%);
+        --font-color-c:hsl(225, 4%, 58%);
+        --border:0.078vw solid hsl(0, 0%, 87%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -41,8 +41,8 @@
         --popup-background:rgb(0,0,0,25%);
         --green:hsl(165, 99%, 35%);
         --green-hover:hsl(165, 100%, 25%);
-        --exist:hsl(195, 100%, 40%);
-        --exist-hover:hsl(204, 75%, 46%);
+        --exist:hsl(209, 100%, 55%);
+        --exist-hover:hsl(215, 88%, 38%);
         --red:hsl(12, 91%, 57%);
         --scroll:hsl(0, 0%, 81%);
         --scroll-hover:hsl(0, 0%, 33%);
@@ -160,7 +160,7 @@ div.m-f-b {
 }
 
 div.m-f-b-1 {
-    border-left: 0.0781vw solid var(--border);
+    border-left: var(--border);
     height: 1.17vw;
 }
 
@@ -173,21 +173,36 @@ h1.m-f-t-1 {
     font-weight: 300;
 }
 
+div.m-s-fixed {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: var(--popup-background);
+    z-index:100;
+    backdrop-filter: blur(0.3125vw);
+    -webkit-backdrop-filter:blur(0.3125vw);
+    touch-action: none;
+    -ms-touch-action: none;
+}
+
 div.m-s {
     width: 47.3vw;
-    height: 4.1vw;
+    height: 4.375vw;
     position: relative;
+    z-index:101;
 }
 
 input.m-s-1 {
     position: absolute;
     background: url("images/search-active.svg") 2.14vw 1.56vw no-repeat;
     background-size: 1.32vw 1.32vw;
+    background-color: var(--background);
     width: 45.9vw;
     height: auto;
     padding: 1.4vw 0 1.4vw 5.9vw;
-    background-color: var(--background);
-    border: 0.0781vw solid var(--border);
+    border: var(--border);
     border-radius: 1.17vw;
     outline: none;
     color: var(--font-color);
@@ -203,11 +218,11 @@ input.m-s-1::placeholder {
 input.m-s-1:focus {
     background: url("images/search-active.svg") 2.14vw 1.56vw no-repeat;
     background-size: 1.32vw 1.32vw;
+    background-color: var(--background);
     width: 45.9vw;
     height: auto;
     padding: 1.4vw 0 1.4vw 5.9vw;
-    background-color: var(--background);
-    border: 0.0781vw solid var(--border);
+    border: var(--border);
     border-radius: 1.17vw 1.17vw 0 0;
     outline: none;
     color: var(--font-color);
@@ -261,8 +276,7 @@ h1.m-p-i-b-v-t-1 {
 }
 
 div.menu-select {
-    padding-bottom:
-        2.18vw;
+    padding-bottom:1.875vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -335,7 +349,7 @@ div.panel-select {
 }
 
 div.panel-s-b {
-    margin: 0.78vw;
+    margin: 1.09vw;
     width: 9vw;
     height: 10.2vw;
     border-radius: 1.17vw;
@@ -343,7 +357,7 @@ div.panel-s-b {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 0.0781vw solid var(--border);
+    border:  var(--border);
 }
 
 div.panel-s-b:hover {
@@ -428,7 +442,7 @@ a.m-p-b {
     height: 24vw;
     background-color: var(--background);
     border-radius: 1.17vw;
-    border: 0.0781vw solid var(--border);
+    border: var(--border);
     cursor: pointer;
     text-decoration: none;
     color: var(--font-color);
@@ -563,7 +577,7 @@ div.maybe-g-p-b {
 div.maybe-g-p-b1 {
     width: 26.8vw;
     height: 13vw;
-    border: 0.0781vw solid var(--border);
+    border: var(--border);
     border-radius: 1.17vw;
     cursor: pointer;
 }
@@ -875,7 +889,7 @@ div.b-m {
     width: 46.48vw;
     height: 10.93vw;
     background-color: var(--background);
-    border: 0.0781vw solid var(--border);
+    border:var(--border);
 }
 
 div.i {
@@ -1016,7 +1030,7 @@ a.p-r-b:hover {
 button.p-b-n-b {
     width: 46.64vw;
     height: 4.68vw;
-    border: 0.0781vw solid var(--border);
+    border: var(--border);
     color: var(--exist);
     font-size: 1.17vw;
     font-weight: normal;
@@ -1187,7 +1201,7 @@ div.grid-backet {
 }
 
 div.backet-p {
-    border: 0.0781vw solid var(--border);
+    border: var(--border);
     display: flex;
     margin-top: 1.17vw;
     border-radius: 1.17vw;
@@ -1265,7 +1279,7 @@ div.quantity {
     width: auto;
     height: 4.375vw;
     display: flex;
-    border: 0.078vw solid var(--border);
+    border: var(--border);
     border-radius: 1.17vw;
 }
 
@@ -1551,7 +1565,7 @@ input.none-border {
     font-size: 1.25vw;
     font-weight: normal;
     background-color: var(--background);
-    border-bottom: 0.03vw solid var(--border);
+    border-bottom:var(--border);
     margin-bottom: 1.64vw;
 }
 
@@ -1597,9 +1611,8 @@ div.vertical-stick {
     margin-left: 0.468vw;
     width: 0.038vw;
     height: 6.95vw;
-    border: none;
     border-radius: 0.39vw;
-    background-color: var(--border);
+    border-left: var(--border);
 }
 
 div.place-or {
@@ -1627,7 +1640,7 @@ button.google {
     height: 4.76vw;
     border-radius: 0.39vw;
     background-color: var(--background);
-    border: 0.03vw solid var(--border);
+    border: var(--border);
     cursor: pointer;
     font-size: 1.17vw;
     font-weight: 600;
@@ -1701,9 +1714,8 @@ div.block-search {
     height: auto;
     background-color: var(--background);
     border-radius: 0 0 1.17vw 1.17vw;
-    border: 0.0781vw solid var(--border);
-    z-index: 50;
-
+    border: var(--border);
+    z-index: 101;
 }
 
 a.flex-search {

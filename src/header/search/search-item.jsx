@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 
 const SearchItem = (item) => {
   const dispatch = useDispatch();
-  console.log('check');
     return(
         <Link onClick={()=>{dispatch({type:'SetSearch',set:item.result.title})}} to={`${GetHistoryLocation}/products/${item.result.id}`} className="flex-search">
       <div className="block-picture-drugs">

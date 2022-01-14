@@ -7,18 +7,18 @@
     :root {
         --font-color:hsl(216, 9%, 89%);
         --font-color-c:hsl(213, 4%, 58%);
-        --border:hsl(0, 0%, 29%);
+        --border:0.2vw solid hsl(0, 0%, 29%);
         --background:hsl(240, 2%, 10%);
         --background-back:hsl(0, 0%, 4%);
         --background-hover:hsl(240, 1%, 14%);
         --background-green:hsl(240, 1%, 14%);
         --skeleton-start:hsl(240, 1%, 14%);
         --skeleton-end:hsl(240, 1%, 34%);
-        --popup-background:rgb(0,0,0,50%);
+        --popup-background:rgb(0,0,0,25%);
         --green: #20C29E;
         --green-hover:hsl(165, 100%, 25%);
-        --exist:hsl(195, 100%, 40%);
-        --exist-hover:	hsl(204, 75%, 46%);
+        --exist:hsl(209, 100%, 55%);
+        --exist-hover:hsl(215, 88%, 38%);
         --red:hsl(12, 91%, 57%);
         --scroll:hsl(0, 0%, 33%);
         --scroll-hover:hsl(0, 0%, 81%);
@@ -28,8 +28,8 @@
 @media (prefers-color-scheme: light) {
     :root {
         --font-color:hsl(0, 0%, 0%);
-        --font-color-c:hsl(212, 11%, 55%) ;
-        --border:hsl(0, 0%, 87%);
+        --font-color-c:hsl(225, 4%, 58%);
+        --border:0.2vw solid hsl(0, 0%, 87%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -39,8 +39,8 @@
         --popup-background:rgb(0,0,0,25%);
         --green:hsl(165, 99%, 35%);
         --green-hover:hsl(165, 100%, 25%);
-        --exist:hsl(195, 100%, 40%);
-        --exist-hover:hsl(204, 75%, 46%);
+        --exist:hsl(209, 100%, 55%);
+        --exist-hover:hsl(215, 88%, 38%);
         --red:hsl(12, 91%, 57%);
         --scroll:hsl(0, 0%, 81%);
         --scroll-hover:hsl(0, 0%, 33%);
@@ -84,7 +84,7 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 
-button,input {
+button,input,input:focus {
     background-color: transparent;
     border: 0 none;
     font-family: 'Segoe UI', sans-serif;
@@ -92,6 +92,7 @@ button,input {
     -moz-border-radius: 0;
     border-radius: 0;
     border-radius: none;
+    outline: none;
 }
 
 body {
@@ -176,7 +177,7 @@ div.m-f-b {
 }
 
 div.m-f-b-1 {
-    border-left: 0.14vw solid var(--border);
+    border-left: var(--border);
     height: 6.23vw;
 }
 
@@ -189,21 +190,36 @@ h1.m-f-t-1 {
     font-weight: 300;
 }
 
+div.m-s-fixed {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: var(--popup-background);
+    z-index:100;
+    backdrop-filter: blur(1.1vw);
+    -webkit-backdrop-filter:blur(1.1vw);
+    touch-action: none;
+    -ms-touch-action: none;
+}
+
 div.m-s {
     position: relative;
     width: 94.4vw;
     height: 14.17vw;
+    z-index:101;
 }
 
 input.m-s-1 {
-    background: url("images/search-active.svg") 6.69vw 4.66vw no-repeat;
+    background: url("images/search-active.svg") 6.69vw 5.3vw no-repeat;
     background-size: 4.46vw auto;
-    width: 68.47vw;
-    height: 14.17vw;
-    padding: 0 7.3vw 0 18.47vw;
-    border-radius: 4.17vw;
     background-color: var(--background);
-    border: 0.2vw solid var(--border);
+    width: 68.47vw;
+    height: auto;
+    padding: 4.86vw 7.3vw 4.86vw 18.47vw;
+    border-radius: 4.17vw;
+    border: var(--border);
     outline: none;
     color: var(--font-color);
     font-weight: normal;
@@ -218,15 +234,14 @@ input.m-s-1::placeholder {
 }
 
 input.m-s-1:focus {
-    background: url("images/search-active.svg") 6.69vw 4.66vw no-repeat;
+    background: url("images/search-active.svg") 6.69vw 5.3vw no-repeat;
     background-size: 4.46vw auto;
-    width: 68.47vw;
-    height: 14.17vw;
-    padding: 0 7.3vw 0 18.47vw;
-    border-radius: 4.17vw 4.17vw 0 0;
     background-color: var(--background);
-    border: 0.2vw solid var(--border);
-    outline: none;
+    width: 68.47vw;
+    height: auto;
+    padding: 4.86vw 7.3vw 4.86vw 18.47vw;
+    border-radius: 4.17vw 4.17vw 0 0;
+    border: var(--border);
     color: var(--font-color);
     font-weight: normal;
 }
@@ -407,15 +422,15 @@ div.m-block {
 
 h1.m-p {
     font-weight: 600;
-    font-size: 5.56vw;
+    font-size: 5.25vw;
     text-align: center;
     color: var(--font-color);
 }
 
 h1.m-p-content {
-    margin-top: 1.39vw;
+    margin-top:2.25vw;
     font-weight: normal;
-    font-size: 3.05vw;
+    font-size: 2.75vw;
     text-align: center;
     color: var(--font-color);
 }
@@ -423,7 +438,7 @@ h1.m-p-content {
 div.b {
     display: grid;
     grid-template-columns: 50vw 50vw;
-    padding: 8.3vw 0 5.75vw 0;
+    padding: 8.3vw 0;
 }
 
 div.m-d-b {
@@ -437,12 +452,12 @@ a.m-p-b {
     height: 78.83vw;
     background-color: var(--background);
     border-radius: 2.08vw;
-    border: 0.14vw solid var(--border);
+    border:var(--border);
     cursor: pointer;
 }
 
 a.m-p-b:hover {
-    border: 0.14vw solid var(--green-hover);
+    border: 0.2vw solid var(--green-hover);
 }
 
 div.m-i-1-1 {
@@ -561,13 +576,13 @@ div.maybe-g-p-b {
 
 div.maybe-g-p-b1 {
     background-color: var(--background);
-    border: 0.13vw solid var(--border);
+    border: var(--border);
     border-radius: 2.08vw;
     cursor: pointer;
 }
 
 div.maybe-g-p-b1:hover {
-    border: 0.13vw solid var(--green-hover);
+    border: 0.2vw solid var(--green-hover);
 }
 
 div.maybe-flex {
@@ -707,7 +722,7 @@ div.mobile-shop-info {
     height: auto;
     -webkit-border-radius:2.08vw;
     border-radius: 2.08vw;
-    border: 0.14vw solid var(--border);
+    border: var(--border);
     margin-top: 4.17vw;
 }
 
@@ -849,7 +864,7 @@ button.p-b-n-b {
     font-weight: normal;
     font-size: 3.61vw;
     color: var(--exist);
-    border: 0.14vw solid var(--border);
+    border: var(--border);
     cursor: pointer;
     border-radius: 2.08vw;
 }
@@ -1080,7 +1095,7 @@ div.main-of-main {
     margin-top: 4.16vw;
     width: 94vw;
     height: auto;
-    border: 0.13vw solid var(--border);
+    border: var(--border);
     border-radius: 4.16vw;
 }
 
@@ -1163,7 +1178,7 @@ div.scary-turn-off {
     width: auto;
     height: 13.75vw;
     background-color: var(--background);
-    border: 0.27vw solid var(--border);
+    border: var(--border);
     border-radius: 4.17vw;
 }
 
@@ -1560,14 +1575,14 @@ input.none-border {
     font-weight: normal;
     padding-bottom: 2.78vw;
     background-color: var(--background);
-    border-bottom: 0.208vw solid var(--border);
+    border-bottom:var(--border);
     margin: 5.55vw 0 8.33vw 0;
 }
 
 input.none-border:focus {
     font-size: 4.72vw;
     font-weight: normal;
-    border-bottom: 0.208vw solid var(--green);
+    border-bottom: var(--green);
     outline: none;
 }
 
@@ -1606,13 +1621,11 @@ div.second-block-in {
 }
 
 div.vertical-stick {
-
     margin-top: 13.88vw;
     width: 34.16vw;
     height: 0.2vw;
-    border: none;
     border-radius: 0.694vw;
-    background-color: var(--border);
+    border-bottom: var(--border);
 }
 
 div.place-or {
@@ -1643,7 +1656,7 @@ button.google {
     height: 15vw;
     border-radius: 0.694vw;
     background-color: var(--background);
-    border: 0.208vw solid var(--border);
+    border: var(--border);
     cursor: pointer;
     font-size: 3.611vw;
     font-weight: 600;
@@ -1724,9 +1737,8 @@ div.block-search {
     height: auto;
     background-color: var(--background);
     border-radius: 0 0 4.166vw 4.166vw;
-    border: 0.2vw solid var(--border);
-    z-index: 50;
-
+    border: var(--border);
+    z-index: 101;
 }
 
 a.flex-search {
