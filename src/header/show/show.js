@@ -75,7 +75,7 @@ const Show = () => {
         <>
         {lazyblock?<ShowLoader />:
         <div>
-        <Link onClick={()=>{window.scrollTo({top: 0})}} className={`show-p-b${look}`} to={process.env.PUBLIC_URL+"/"}>
+        <Link onClick={()=>{window.scrollTo({top: 0})}} className={`show-p-b${look}`} to={"/"}>
           <div className="show-p-b-p">
             <img className="show-p-b-i" src={`${process.env.PUBLIC_URL}/images/left.svg`} alt="left" />
           </div>

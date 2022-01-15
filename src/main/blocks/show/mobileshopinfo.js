@@ -41,7 +41,7 @@ const MobileShopInfo = (info) => {
                 </div>
                 <div className="mobile-shop-info-block-3-item-1">
                     <div className="mobile-shop-info-block-3-item-1-block">
-                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={process.env.PUBLIC_URL+"/basket"} className="mobile-shop-info-block-2-item-1-button">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1});setS('yes');}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>}
+                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={"/basket"} className="mobile-shop-info-block-2-item-1-button">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1});setS('yes');}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>}
                     </div>
                 </div>
             </div>

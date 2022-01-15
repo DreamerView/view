@@ -46,7 +46,7 @@ const ShowShopInfo = (info) => {
                         </div>
                         <div className="p-r">
                         <h1 className="h">{info.item.price}</h1>
-                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={process.env.PUBLIC_URL+'/basket'} className="p-r-b">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,item:1,from:info.item.title});setS('yes');}} type="button" className="p-r-b">Выбрать</button>}
+                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={'/basket'} className="p-r-b">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,item:1,from:info.item.title});setS('yes');}} type="button" className="p-r-b">Выбрать</button>}
                         </div>
                     </div>
                     </div>

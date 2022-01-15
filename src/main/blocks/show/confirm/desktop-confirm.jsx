@@ -43,8 +43,8 @@ const DesktopConfirm = (close) => {
         document.getElementsByTagName('html')[0].style.cssText= "overflow-y:hidden;";
       },[]);
     return(
-        <div className='basket-float-window-fixed' onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}}>
-        <div className='basket-float-window-fixed-back'></div>
+        <div className='basket-float-window-fixed'>
+        <div className='basket-float-window-fixed-back' onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}}></div>
         <div className="basket-float-window">
   <div className="place-block-text">
     <div className="block-text-basket">
@@ -80,7 +80,7 @@ const DesktopConfirm = (close) => {
         </div>
         <div className="place-button-block-basket">
           <div className="button-block-basket">
-            {lazy?<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}/basket`} className="basket-button-join">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="basket-button-join"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
+            {lazy?<Link onClick={ScrollToTop} to={`/basket`} className="basket-button-join">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="basket-button-join"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
             <div className="place-continue-buying">
               {lazy?<button onClick={()=>{close.close(false)}} className="continue-buying">Продолжить покупки</button>:<div className="skeleton continue-buying-loader"/>}
             </div>

@@ -42,8 +42,8 @@ const AddConfirm = (close)=> {
         document.getElementsByTagName('html')[0].style.cssText= "overflow-y:hidden;";
       },[]);
     return(
-        <div className="mobile-main-confirm-fixed" onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}}>
-            <div className="mobile-main-confirm-fixed-back"></div>
+        <div className="mobile-main-confirm-fixed">
+            <div className="mobile-main-confirm-fixed-back" onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}}></div>
             <div className="mobile-main-confirm">
                 <div className="mobile-main-confirm-close">
                     <div onClick={()=>{close.close(false)}} className="mobile-main-confirm-close-picture">
@@ -69,7 +69,7 @@ const AddConfirm = (close)=> {
                     </div>
                 </div>
                 <div className="mobile-main-confirm-action">
-                    {lazy?<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}/basket`} className="mobile-main-confirm-action-b">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="mobile-main-confirm-action-b"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
+                    {lazy?<Link onClick={ScrollToTop} to={`/basket`} className="mobile-main-confirm-action-b">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="mobile-main-confirm-action-b"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
                     {lazy?<button onClick={()=>{close.close(false)}} className="mobile-main-confirm-action-c">Продолжить покупки</button>:<div className="skeleton mobile-main-confirm-action-c-loader" />}
                 </div>
             </div>

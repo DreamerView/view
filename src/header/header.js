@@ -41,13 +41,13 @@ const Header = () => {
             <MenuList/>
             {/* Catalog */}
             <Routes>
-              <Route path={process.env.PUBLIC_URL+"/"} element={<Catalog/>}/>
-              <Route path={process.env.PUBLIC_URL+"/products/:id"} element={<Show/>} />
-              <Route path={process.env.PUBLIC_URL+"/foryou"} element={<div/>}/>
-              <Route path={process.env.PUBLIC_URL+"/basket"} element={<div/>}/>
-              <Route path={process.env.PUBLIC_URL+"/favourite"} element={<div/>}/>
-              <Route path={process.env.PUBLIC_URL+"/user"} element={<div/>}/>
-              <Route path={process.env.PUBLIC_URL+"/*"} element={<div/>}/>
+              <Route path={"/"} element={<Catalog/>}/>
+              <Route path={"/products/:id"} element={<Show/>} />
+              <Route path={"/foryou"} element={<div/>}/>
+              <Route path={"/basket"} element={<div/>}/>
+              <Route path={"/favourite"} element={<div/>}/>
+              <Route path={"/user"} element={<div/>}/>
+              <Route path={"/*"} element={<div/>}/>
               {/* <Route path="*" element={<div>Not found</div>} /> */}
             </Routes>
           </div>
