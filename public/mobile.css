@@ -29,7 +29,7 @@
     :root {
         --font-color:hsl(0, 0%, 0%);
         --font-color-c:hsl(225, 4%, 58%);
-        --border:0.2vw solid hsl(0, 0%, 87%);
+        --border:0.2vw solid hsl(210, 17%, 88%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -223,7 +223,7 @@ input.m-s-1 {
     outline: none;
     color: var(--font-color);
     font-weight: normal;
-    font-size: 3.89vw;
+    font-size: 4vw;
     font-weight: normal;
     color: var(--font-color-c);
 }
@@ -335,7 +335,7 @@ div.menu-s-b-i-i {
     height: 5.39vw;
 }
 
-img.menu-s-b-i-p {
+svg.menu-s-b-i-p {
     position: absolute;
     width: 5.39vw;
     height: 5.39vw;
@@ -1533,7 +1533,7 @@ h1.join-text {
 
 div.main-four-blocks-place {
     width: 100%;
-    margin-top: 16.7vw;
+    margin-top: 8.3vw;
 }
 
 div.main-four-blocks {
@@ -1547,12 +1547,15 @@ div.place-three-blocks {
     width: auto;
     height: auto;
     background-color: var(--background);
+    display: flex;
+    flex-direction: column;
 }
 
 div.first-block-in {
-    width: 57.63889vw;
+    width: auto;
     height: auto;
     background-color: var(--background);
+    order:3;
     margin-left: 5.5vw;
 }
 
@@ -1614,14 +1617,17 @@ button.button-join-in:hover {
 
 div.second-block-in {
     display: flex;
-    width: 100vw;
-    height: auto;
+    width: 88.9vw;
+    height:27.5vw;
     background-color: var(--background);
+    order:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 5.5vw;
 }
 
 div.vertical-stick {
-    margin-top: 13.88vw;
     width: 34.16vw;
     height: 0.2vw;
     border-radius: 0.694vw;
@@ -1635,16 +1641,15 @@ div.place-or {
 h1.or {
     font-size: 4.583vw;
     font-weight: 600;
-    margin-top: 11.52vw;
 }
 
 /* */
 div.third-block-in {
-    margin-top: 11.1vw;
     width: 100vw;
     height: auto;
     background-color: var(--background);
     margin-left: 5.5vw;
+    order:1;
 }
 
 div.place-google-apple-facebook {
@@ -1685,6 +1690,7 @@ div.four-block-in {
     width: 100vw;
     height: auto;
     background-color: var(--background);
+    order:4;
 }
 
 div.place-registration {
@@ -1694,13 +1700,6 @@ div.place-registration {
 h1.regis-text {
     font-size: 3.88vw;
     font-weight: normal;
-}
-
-button.regis-green {
-    color: var(--green);
-    border: none;
-    background-color: var(--background);
-    cursor: pointer;
 }
 
 div.place-secure-captcha {
@@ -1725,7 +1724,7 @@ button.regis-green {
     border: none;
     background-color: var(--background);
     cursor: pointer;
-    font-size: 3.88vw;
+    font-size: 2.75vw;
 }
 
 /* Search */

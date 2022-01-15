@@ -70,7 +70,7 @@ const AddConfirm = (close)=> {
                 </div>
                 <div className="mobile-main-confirm-action">
                     {lazy?<Link onClick={ScrollToTop} to={`/basket`} className="mobile-main-confirm-action-b">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="mobile-main-confirm-action-b"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
-                    {lazy?<button onClick={()=>{close.close(false)}} className="mobile-main-confirm-action-c">Продолжить покупки</button>:<div className="skeleton mobile-main-confirm-action-c-loader" />}
+                    {lazy?<button onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}} className="mobile-main-confirm-action-c">Продолжить покупки</button>:<div className="skeleton mobile-main-confirm-action-c-loader" />}
                 </div>
             </div>
         </div>

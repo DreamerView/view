@@ -2,7 +2,8 @@ const LoginForm = () => {
     return(
         <div className="m">
   <div className="join-text-place">
-    <h1 className="join-text">Войти с помощью</h1>
+    <h1 className="m-p">Войти с помощью</h1>
+    <h1 className="m-p-content">У вас нет аккаунта? <button className="regis-green">Зарегистрироваться</button></h1>
   </div>
   <div className="main-four-blocks-place">
       <div className="place-three-blocks">
@@ -27,7 +28,7 @@ const LoginForm = () => {
         <div className="second-block-in">
           <div className="vertical-stick" />
           <div className="place-or">
-            <h1 className="or">OR</h1>
+            <h1 className="or">ИЛИ</h1>
           </div>
           <div className="vertical-stick" />
         </div>
@@ -59,7 +60,6 @@ const LoginForm = () => {
         </div>
         <div className="four-block-in">
           <div className="place-registration">
-            <h1 className="regis-text">У вас нет аккаунта? <button className="regis-green">Зарегистрироваться</button></h1>
             <div className="place-secure-captcha">
               <h1 className="secure-captcha">Secure Login with reCAPTCHA subject to Google</h1>
               <h1 className="secure-privacy">Terms &amp; privacy</h1>
