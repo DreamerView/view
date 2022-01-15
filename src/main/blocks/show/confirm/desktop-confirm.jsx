@@ -54,7 +54,7 @@ const DesktopConfirm = (close) => {
       <div className="place-close-basket-block">
         <div onClick={()=>{close.close(false)}} className="close-basket-block">
           <div className="close-place">
-            <img src={`${process.env.PUBLIC_URL}/images/close.svg`} alt="close" className="close-img" />
+            <img src={`${process.env.URL_STATE}/images/close.svg`} alt="close" className="close-img" />
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@ const DesktopConfirm = (close) => {
   <div className="place-block-text">
     <div className="block-basket-width">
       <div className="block-basket-img">
-        <img src={lazy?`${process.env.PUBLIC_URL+productitem.image}`:`${process.env.PUBLIC_URL}/images/first-aid-alt.svg`} alt="drug" className="drug-img-basket" />
+        <img src={lazy?`${process.env.URL_STATE+productitem.image}`:`${process.env.URL_STATE}/images/first-aid-alt.svg`} alt="drug" className="drug-img-basket" />
       </div>
       <div className="block-basket-characteristic">
         {lazy?<h1 className="basket-otriv-text">{productitem.title}</h1>:<div className="skeleton basket-otriv-text-loader"/>}
@@ -80,7 +80,7 @@ const DesktopConfirm = (close) => {
         </div>
         <div className="place-button-block-basket">
           <div className="button-block-basket">
-            {lazy?<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}/basket`} className="basket-button-join">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="basket-button-join"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
+            {lazy?<Link onClick={ScrollToTop} to={`${process.env.URL_STATE}/basket`} className="basket-button-join">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.URL_STATE}`} className="basket-button-join"><img src={process.env.URL_STATE+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
             <div className="place-continue-buying">
               {lazy?<button onClick={()=>{close.close(false)}} className="continue-buying">Продолжить покупки</button>:<div className="skeleton continue-buying-loader"/>}
             </div>

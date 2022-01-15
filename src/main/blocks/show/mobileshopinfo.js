@@ -24,7 +24,7 @@ const MobileShopInfo = (info) => {
             <div className="mobile-shop-info-block-2">
                 <div className="mobile-shop-info-block-2-item-1">
                     <div className="mobile-shop-info-block-2-item-1-picture">
-                        <img className="mobile-shop-info-block-2-item-1-image" src={process.env.PUBLIC_URL+"/images/clock.svg"} alt="Panakea Show" loading="lazy" />
+                        <img className="mobile-shop-info-block-2-item-1-image" src={process.env.URL_STATE+"/images/clock.svg"} alt="Panakea Show" loading="lazy" />
                     </div>
                     <h1 className="mobile-shop-info-block-2-item-1-text">{info.item.time}</h1>
                 </div>
@@ -41,7 +41,7 @@ const MobileShopInfo = (info) => {
                 </div>
                 <div className="mobile-shop-info-block-3-item-1">
                     <div className="mobile-shop-info-block-3-item-1-block">
-                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={process.env.PUBLIC_URL+"/basket"} className="mobile-shop-info-block-2-item-1-button">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1});setS('yes');}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>}
+                        {s?<Link onClick={()=>{window.scrollTo({top:0})}} to={process.env.URL_STATE+"/basket"} className="mobile-shop-info-block-2-item-1-button">В корзину</Link>:<button onClick={()=>{info.create({id:Date.now(),key:id,from:info.item.title,item:1});setS('yes');}} className="mobile-shop-info-block-2-item-1-button" type="button">Выбрать</button>}
                     </div>
                 </div>
             </div>

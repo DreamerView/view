@@ -75,15 +75,15 @@ const Show = () => {
         <>
         {lazyblock?<ShowLoader />:
         <div>
-        <Link onClick={()=>{window.scrollTo({top: 0})}} className={`show-p-b${look}`} to={process.env.PUBLIC_URL+"/"}>
+        <Link onClick={()=>{window.scrollTo({top: 0})}} className={`show-p-b${look}`} to={process.env.URL_STATE+"/"}>
           <div className="show-p-b-p">
-            <img className="show-p-b-i" src={`${process.env.PUBLIC_URL}/images/left.svg`} alt="left" />
+            <img className="show-p-b-i" src={`${process.env.URL_STATE}/images/left.svg`} alt="left" />
           </div>
         </Link>
         <div className="show-product">
           <div className="show-product-2">
             <div className="show-p-p">
-              <img src={process.env.PUBLIC_URL+status.image} alt="" loading="lazy" className="show-p-i" />
+              <img src={process.env.URL_STATE+status.image} alt="" loading="lazy" className="show-p-i" />
             </div>
           </div>
           <div className="show-product-3">
@@ -103,7 +103,7 @@ const Show = () => {
                 </Link1>
                 <button type="button" className="show-favourite">
                   <div className="show-f-p">
-                    <img className="show-f-i" src={`${process.env.PUBLIC_URL}/images/heart-red.svg`} alt="" />
+                    <img className="show-f-i" src={`${process.env.URL_STATE}/images/heart-red.svg`} alt="" />
                   </div> Добавить избранное
                 </button>
               </div>
