@@ -31,7 +31,7 @@
     :root {
         --font-color:hsl(0, 0%, 0%);
         --font-color-c:hsl(225, 4%, 58%);
-        --border:0.078vw solid hsl(0, 0%, 87%);
+        --border:0.078vw solid hsl(210, 17%, 88%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -319,7 +319,7 @@ div.menu-s-b-i-i {
     height: 1.52vw;
 }
 
-img.menu-s-b-i-p {
+svg.menu-s-b-i-p {
     position: absolute;
     width: 1.52vw;
     height: 1.52vw;
@@ -1542,9 +1542,10 @@ div.place-three-blocks {
 }
 
 div.first-block-in {
-    width: 32.4vw;
+    width: auto;
     height: 18vw;
     background-color: var(--background);
+    order:3;
 }
 
 h1.electron-addres {
@@ -1602,9 +1603,14 @@ button.button-join-in:hover {
 
 /* */
 div.second-block-in {
-    width: 5.78vw;
+    width: 10.4vw;
     height: 18vw;
     background-color: var(--background);
+    order:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 div.vertical-stick {
@@ -1629,6 +1635,7 @@ div.third-block-in {
     width: 28.3vw;
     height: 18vw;
     background-color: var(--background);
+    order:1;
 }
 
 div.place-google-apple-facebook {
@@ -1669,6 +1676,7 @@ div.four-block-in {
     width: 66.56vw;
     height: 10.4vw;
     background-color: var(--background);
+    order:4;
 }
 
 div.place-registration {
@@ -1686,7 +1694,7 @@ button.regis-green {
     border: none;
     background-color: var(--background);
     cursor: pointer;
-    font-size: 1.25vw;
+    font-size: 1vw;
 }
 
 div.place-secure-captcha {

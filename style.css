@@ -29,7 +29,7 @@
     :root {
         --font-color:#161C24;
         --font-color-c:hsl(225, 4%, 58%);
-        --border:1px solid hsl(0, 0%, 87%);
+        --border:1px solid hsl(210, 17%, 88%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);
         --background-hover:hsl(0, 0%, 98%);
@@ -318,7 +318,7 @@ div.menu-s-b-i-i {
     height: 19.37px;
 }
 
-img.menu-s-b-i-p {
+svg.menu-s-b-i-p {
     position: absolute;
     width: 19.37px;
     height: 19.37px;
@@ -1556,9 +1556,10 @@ div.place-three-blocks {
 }
 
 div.first-block-in {
-    width: 415px;
+    width: auto;
     height: 232px;
     background-color: var(--background);
+    order:3;
 }
 
 h1.electron-addres {
@@ -1616,9 +1617,14 @@ button.button-join-in:hover {
 
 /*  */
 div.second-block-in {
-    width: 74px;
+    width: 133px;
     height: 232px;
     background-color: var(--background);
+    order:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 div.vertical-stick {
@@ -1630,7 +1636,7 @@ div.vertical-stick {
 }
 
 div.place-or {
-    margin: 19px 0 19px 0;
+    margin: 19px 0;
 }
 
 h1.or {
@@ -1643,6 +1649,7 @@ div.third-block-in {
     width: 363px;
     height: 232px;
     background-color: var(--background);
+    order:1;
 }
 
 div.place-google-apple-facebook {
@@ -1683,6 +1690,7 @@ div.four-block-in {
     width: 852px;
     height: 133px;
     background-color: var(--background);
+    order:4;
 }
 
 div.place-registration {
