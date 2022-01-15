@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 const SearchItem = (item) => {
   const dispatch = useDispatch();
     return(
-        <Link onClick={()=>{dispatch({type:'SetSearch',set:item.result.title})}} to={`${process.env.PUBLIC_URL}/products/${item.result.id}`} className="flex-search">
+        <Link onClick={()=>{dispatch({type:'SetSearch',set:item.result.title})}} to={`/products/${item.result.id}`} className="flex-search">
       <div className="block-picture-drugs">
         <div className="place-drugs-picture">
           <div className="picture-drugs-absolute">
