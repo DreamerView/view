@@ -39,7 +39,7 @@ const ShowShopLoader = () => {
                         </div>
                         <div className="p-r">
                         <div className="skeleton h"></div>
-                        <button type="button" className="p-r-b"><img src={process.env.URL_STATE+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></button>
+                        <button type="button" className="p-r-b"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></button>
                         </div>
                     </div>
                     </div>

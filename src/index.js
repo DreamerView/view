@@ -9,6 +9,8 @@ let local = localStorage.getItem('basket-info') ? JSON.parse(localStorage.getIte
 
 const defaultState = {cash:local,item:0,total:0,search:'',header:true};
 
+console.log(process.env.PUBLIC_URL);
+
 const reducer = (state=defaultState,action) => {
   switch(action.type) {
     case "Add_Local": return {...state,cash:state.cash+action.payload};
