@@ -42,13 +42,13 @@ const Header = () => {
             <MenuList/>
             {/* Catalog */}
             <Routes>
-              <Route path={GetHistoryLocation+"/"} element={<Catalog/>}/>
-              <Route path={GetHistoryLocation+"/products/:id"} element={<Show/>} />
-              <Route path={GetHistoryLocation+"/foryou"} element={<div/>}/>
-              <Route path={GetHistoryLocation+"/basket"} element={<div/>}/>
-              <Route path={GetHistoryLocation+"/favourite"} element={<div/>}/>
-              <Route path={GetHistoryLocation+"/user"} element={<div/>}/>
-              <Route path={GetHistoryLocation+"/*"} element={<div/>}/>
+              <Route path="/" element={<Catalog/>}/>
+              <Route path="/products/:id" element={<Show/>} />
+              <Route path="/foryou" element={<div/>}/>
+              <Route path="/basket" element={<div/>}/>
+              <Route path="/favourite" element={<div/>}/>
+              <Route path="/user" element={<div/>}/>
+              <Route path="/*" element={<div/>}/>
               {/* <Route path="*" element={<div>Not found</div>} /> */}
             </Routes>
           </div>
