@@ -1,6 +1,4 @@
 import {memo} from 'react';
-import GetHistoryLocation from "../../../locate";
-
 const MobileShopLoader = ()=> {
     return(
         <div className="mobile-shop-info">
@@ -37,7 +35,7 @@ const MobileShopLoader = ()=> {
                 <div className="mobile-shop-info-block-3-item-1">
                     <div className="mobile-shop-info-block-3-item-1-block">
                         <button className="mobile-shop-info-block-2-item-1-button" type="button">
-                        <img src={GetHistoryLocation+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" />
+                        <img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" />
                         </button>
                     </div>
                 </div>

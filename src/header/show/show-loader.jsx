@@ -1,17 +1,15 @@
-import GetHistoryLocation from "../../locate";
-
 const ShowLoader = () => {
     return(
         <div>
-        <a className={`show-p-b`} href={GetHistoryLocation+"/"}>
+        <a className={`show-p-b`} href={process.env.PUBLIC_URL+"/"}>
           <div className="show-p-b-p">
-            <img className="show-p-b-i" src={`${GetHistoryLocation}/images/left.svg`} alt="left" />
+            <img className="show-p-b-i" src={`${process.env.PUBLIC_URL}/images/left.svg`} alt="left" />
           </div>
         </a>
         <div className="show-product">
           <div className="show-product-2">
             <div className="show-p-p">
-              <img src={GetHistoryLocation+"/images/first-aid-alt.svg"} alt="" loading="lazy" className="skeleton show-p-i" />
+              <img src={process.env.PUBLIC_URL+"/images/first-aid-alt.svg"} alt="" loading="lazy" className="skeleton show-p-i" />
             </div>
           </div>
           <div className="show-product-3">
@@ -30,11 +28,11 @@ const ShowLoader = () => {
               </div>
               <div className="show-p-i-b-f">
                 <a href="/s" className="show-button">
-                  <img src={GetHistoryLocation+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" />
+                  <img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" />
                 </a>
                 <button type="button" className="show-favourite">
                   <div className="show-f-p">
-                    <img className="show-f-i" src={`${GetHistoryLocation}/images/heart-red.svg`} alt="" />
+                    <img className="show-f-i" src={`${process.env.PUBLIC_URL}/images/heart-red.svg`} alt="" />
                   </div> Загрузка
                 </button>
               </div>

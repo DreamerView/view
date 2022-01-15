@@ -3,7 +3,6 @@ import Show from './show/show';
 import {Routes, Route} from 'react-router-dom';
 import MenuList from './menu/menu-list';
 import Panel from './panel/panel';
-import GetHistoryLocation from '../locate';
 import Search from './search/search.jsx';
 import { useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
@@ -19,7 +18,7 @@ const Header = () => {
               {!header&&mobile?'':<div id="first">
                 <div className="m-f-1">
                   <div className="m-f-i-1">
-                    <img src={GetHistoryLocation+"/login-images/Google__G__Logo.svg.png"} loading="lazy" alt="logo" className="m-p-i-1" />
+                    <img src={process.env.PUBLIC_URL+"/login-images/Google__G__Logo.svg.png"} loading="lazy" alt="logo" className="m-p-i-1" />
                   </div>
                   <div className="m-f-b">
                     <div className="m-f-b-1" />
@@ -42,13 +41,13 @@ const Header = () => {
             <MenuList/>
             {/* Catalog */}
             <Routes>
-              <Route path="/" element={<Catalog/>}/>
-              <Route path="/products/:id" element={<Show/>} />
-              <Route path="/foryou" element={<div/>}/>
-              <Route path="/basket" element={<div/>}/>
-              <Route path="/favourite" element={<div/>}/>
-              <Route path="/user" element={<div/>}/>
-              <Route path="/*" element={<div/>}/>
+              <Route path={process.env.PUBLIC_URL+"/"} element={<Catalog/>}/>
+              <Route path={process.env.PUBLIC_URL+"/products/:id"} element={<Show/>} />
+              <Route path={process.env.PUBLIC_URL+"/foryou"} element={<div/>}/>
+              <Route path={process.env.PUBLIC_URL+"/basket"} element={<div/>}/>
+              <Route path={process.env.PUBLIC_URL+"/favourite"} element={<div/>}/>
+              <Route path={process.env.PUBLIC_URL+"/user"} element={<div/>}/>
+              <Route path={process.env.PUBLIC_URL+"/*"} element={<div/>}/>
               {/* <Route path="*" element={<div>Not found</div>} /> */}
             </Routes>
           </div>

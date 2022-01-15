@@ -7,7 +7,7 @@ const Item1 = (products)=> {
     }
     return(
         <div className="m-d-b">
-              <Link onClick={ScrollToTop} className="m-p-b" to={`/products/${products.item.id}`}>
+              <Link onClick={ScrollToTop} className="m-p-b" to={`${process.env.PUBLIC_URL}/products/${products.item.id}`}>
                 <div className="m-i-1-1">
                   <img loading="lazy" src={products.item.image?process.env.PUBLIC_URL + products.item.image:process.env.PUBLIC_URL+"/images/first-aid-alt.svg"} alt="Panakea 1" className="m-i" />
                 </div>

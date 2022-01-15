@@ -1,6 +1,5 @@
 import ShowShopInfo from "./show-shop-info";
 import { useState,useEffect,useCallback } from "react";
-import GetHistoryLocation from "../../../locate";
 import { useMediaQuery } from "react-responsive";
 import MobileShopInfo from "./mobileshopinfo";
 import ShowShopLoader from "./show-shop-loader";
@@ -17,9 +16,9 @@ const ShowShop = () => {
     const [info,setInfo] = useState('');
     const isMobile = useMediaQuery({ query: `(max-width: 480px)` });
     const [shows] = useState([
-        {id:1,images:GetHistoryLocation+'/images/placeholder.jpg',title:'ЗдравСити - Дифарм',adress:'г.Москва,Черняховского, д.5, корп. 1',time:'Пн-Вс 9:00-21:00',icon:GetHistoryLocation+'/images/open.svg',status:'Аптека открыт',price:'155.55 ₸'},
-        {id:2,images:GetHistoryLocation+'/images/placeholder.jpg',title:'ЗдравСити',adress:'г.Москва,Черняховского, д.5, корп. 1',time:'Пн-Вс 9:00-21:00',icon:GetHistoryLocation+'/images/open.svg',status:'Аптека открыт',price:'155.55 ₸'},
-        {id:3,images:GetHistoryLocation+'/images/placeholder.jpg',title:'ЗдравСити - Апотека',adress:'г.Москва,Черняховского, д.5, корп. 1',time:'Пн-Вс 9:00-21:00',icon:GetHistoryLocation+'/images/open.svg',status:'Аптека открыт',price:'155.55 ₸'}
+        {id:1,images:process.env.PUBLIC_URL+'/images/placeholder.jpg',title:'ЗдравСити - Дифарм',adress:'г.Москва,Черняховского, д.5, корп. 1',time:'Пн-Вс 9:00-21:00',icon:process.env.PUBLIC_URL+'/images/open.svg',status:'Аптека открыт',price:'155.55 ₸'},
+        {id:2,images:process.env.PUBLIC_URL+'/images/placeholder.jpg',title:'ЗдравСити',adress:'г.Москва,Черняховского, д.5, корп. 1',time:'Пн-Вс 9:00-21:00',icon:process.env.PUBLIC_URL+'/images/open.svg',status:'Аптека открыт',price:'155.55 ₸'},
+        {id:3,images:process.env.PUBLIC_URL+'/images/placeholder.jpg',title:'ЗдравСити - Апотека',adress:'г.Москва,Черняховского, д.5, корп. 1',time:'Пн-Вс 9:00-21:00',icon:process.env.PUBLIC_URL+'/images/open.svg',status:'Аптека открыт',price:'155.55 ₸'}
     ]);
     useEffect(()=>{
         let s = true;

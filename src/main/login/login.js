@@ -1,5 +1,3 @@
-import GetHistoryLocation from '../../locate';
-
 const LoginForm = () => {
     return(
         <div className="m">
@@ -37,7 +35,7 @@ const LoginForm = () => {
           <div className="place-google-apple-facebook">
             <button className="google">
               <div className="place-img-in-button">
-                <img className="img-in-button" src={`${GetHistoryLocation}/login-images/Google__G__Logo.svg.png`} alt="Google" /> 
+                <img className="img-in-button" src={`${process.env.PUBLIC_URL}/login-images/Google__G__Logo.svg.png`} alt="Google" /> 
               </div>
               Войти через Google
             </button>
@@ -45,7 +43,7 @@ const LoginForm = () => {
           <div className="place-google-apple-facebook">
             <button className="google">
               <div className="place-img-in-button">
-                <img className="img-in-button" src={`${GetHistoryLocation}/login-images/Apple_logo_black.svg.png`} alt="Apple" /> 
+                <img className="img-in-button" src={`${process.env.PUBLIC_URL}/login-images/Apple_logo_black.svg.png`} alt="Apple" /> 
               </div>
               Войти через Apple
             </button>
@@ -53,7 +51,7 @@ const LoginForm = () => {
           <div className="place-google-apple-facebook">
             <button className="google">
               <div className="place-img-in-button">
-                <img className="img-in-button" src={`${GetHistoryLocation}/login-images/facebook_logo_icon_147291.png`} alt="Facebook" /> 
+                <img className="img-in-button" src={`${process.env.PUBLIC_URL}/login-images/facebook_logo_icon_147291.png`} alt="Facebook" /> 
               </div>
               Войти через Facebook
             </button>

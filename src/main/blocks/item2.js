@@ -1,5 +1,4 @@
 import {memo} from 'react';
-import GetHistoryLocation from "../../locate";
 
 const Item2 = (info) => {
     return(
@@ -17,7 +16,7 @@ const Item2 = (info) => {
                     <div className="b-i-p">
                       <div className="b-p-p">
                         <div className="i-p-1">
-                          <img loading="lazy" src={GetHistoryLocation+"/images/shopping-basket-add.svg"} alt="Panakea 2" className="p" />
+                          <img loading="lazy" src={process.env.PUBLIC_URL+"/images/shopping-basket-add.svg"} alt="Panakea 2" className="p" />
                         </div>
                       </div>
                     </div>

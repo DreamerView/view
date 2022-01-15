@@ -1,4 +1,3 @@
-import GetHistoryLocation from "../../locate";
 import {useState,useEffect,memo} from 'react';
 import { getFirestore,doc, onSnapshot } from "firebase/firestore";
 import { useDispatch } from "react-redux";
@@ -91,7 +90,7 @@ const DesktopBasket = (info)=> {
   return(
         <div className={`backet-p ${animation}`}>
         <div className="img-basket-picture">
-            <img className="img-backet" src={GetHistoryLocation+status.image} alt="Panakea 2" />
+            <img className="img-backet" src={process.env.PUBLIC_URL+status.image} alt="Panakea 2" />
         </div>
         <div className="id-b">
           <h1 className="id-b-t1">{info.item.from}</h1>

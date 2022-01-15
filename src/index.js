@@ -27,12 +27,11 @@ const reducer = (state=defaultState,action) => {
 };
 
 const store = createStore(reducer);
-console.log(process.env.PUBLIC_URL);
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>

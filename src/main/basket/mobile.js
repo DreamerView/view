@@ -1,5 +1,4 @@
 import { useState,useEffect,memo } from "react";
-import GetHistoryLocation from "../../locate";
 import { getFirestore,doc, onSnapshot } from "firebase/firestore";
 import { useDispatch } from "react-redux";
 
@@ -93,7 +92,7 @@ const BasketMobile = (info) => {
               <div className="img-and-glakso">
                 <div className="img-and-place">
                   <div className="relative-and-absolute">
-                    <img className="img-size" src={GetHistoryLocation+status.image} alt="Panakea images" loading="lazy" />
+                    <img className="img-size" src={process.env.PUBLIC_URL+status.image} alt="Panakea images" loading="lazy" />
                   </div>
                 </div>
               </div>

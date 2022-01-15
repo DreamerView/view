@@ -1,6 +1,4 @@
-import GetHistoryLocation from '../../../../locate';
 import { useState,useEffect } from 'react';
-
 import { getFirestore,doc, getDoc } from "firebase/firestore";
 import { useParams,Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -49,13 +47,13 @@ const AddConfirm = (close)=> {
             <div className="mobile-main-confirm">
                 <div className="mobile-main-confirm-close">
                     <div onClick={()=>{close.close(false)}} className="mobile-main-confirm-close-picture">
-                        <img className="mobile-main-confirm-close-image" src={`${GetHistoryLocation}/images/close.svg`} alt="Close"/>
+                        <img className="mobile-main-confirm-close-image" src={`${process.env.PUBLIC_URL}/images/close.svg`} alt="Close"/>
                     </div>
                 </div>
                 <h1 className="mobile-main-confirm-main-text">Товар добавлен в корзину</h1>
                 <div className="mobile-main-confirm-flex">
                     <div className="mobile-main-confirm-flex-1">
-                        <img className='mobile-main-confirm-flex-1-images' src={lazy?`${GetHistoryLocation+productitem.image}`:`${GetHistoryLocation}/images/first-aid-alt.svg`} alt="info-images" />
+                        <img className='mobile-main-confirm-flex-1-images' src={lazy?`${process.env.PUBLIC_URL+productitem.image}`:`${process.env.PUBLIC_URL}/images/first-aid-alt.svg`} alt="info-images" />
                     </div>
                     <div className="mobile-main-confirm-flex-2">
                         <div className="mobile-main-confirm-flex-2-block">
@@ -71,7 +69,7 @@ const AddConfirm = (close)=> {
                     </div>
                 </div>
                 <div className="mobile-main-confirm-action">
-                    {lazy?<Link onClick={ScrollToTop} to={`${GetHistoryLocation}/basket`} className="mobile-main-confirm-action-b">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${GetHistoryLocation}`} className="mobile-main-confirm-action-b"><img src={GetHistoryLocation+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
+                    {lazy?<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}/basket`} className="mobile-main-confirm-action-b">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="mobile-main-confirm-action-b"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
                     {lazy?<button onClick={()=>{close.close(false)}} className="mobile-main-confirm-action-c">Продолжить покупки</button>:<div className="skeleton mobile-main-confirm-action-c-loader" />}
                 </div>
             </div>
