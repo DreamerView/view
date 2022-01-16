@@ -28,7 +28,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --font-color:#161C24;
-        --font-color-c:hsl(225, 4%, 58%);
+        --font-color-c:rgb(144, 146, 152);
         --border:1px solid hsl(210, 17%, 88%);
         --background:hsl(0, 0%, 100%);
         --background-back:hsl(216, 14%, 93%);

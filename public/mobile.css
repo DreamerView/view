@@ -141,10 +141,10 @@ div.m-g-1 {
 div#first {
     padding-left: 2.78vw;
     order: 1;
+    margin-bottom: 8.3vw;
 }
 
 div#second {
-    margin-top: 8.3vw;
     order: 3;
 }
 
@@ -196,7 +196,7 @@ div.m-s-fixed {
     height:100%;
     top:0;
     left:0;
-    background-color: var(--popup-background);
+    /* background-color: var(--popup-background); */
     z-index:100;
     backdrop-filter: blur(1.1vw);
     -webkit-backdrop-filter:blur(1.1vw);
@@ -207,8 +207,32 @@ div.m-s-fixed {
 div.m-s {
     position: relative;
     width: 94.4vw;
-    height: 14.17vw;
+    height: 16vw;
     z-index:101;
+}
+
+div.m-s-flex {
+    display:flex;
+}
+
+div.m-s-flex-close {
+    width: 16.67vw;
+    height: 16vw;
+    border-radius: 0 4.17vw 4.17vw 0;
+    border-right: var(--border);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    border-left: 0.2vw solid transparent;
+    font-size:3.056vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--font-color-c)
+}
+
+img.m-s-flex-close-i {
+    width: 2.78vw;
+    height: 2.78vw;
 }
 
 input.m-s-1 {
@@ -237,11 +261,14 @@ input.m-s-1:focus {
     background: url("images/search-active.svg") 6.69vw 5.3vw no-repeat;
     background-size: 4.46vw auto;
     background-color: var(--background);
-    width: 68.47vw;
+    width: 52.01vw;
     height: auto;
     padding: 4.86vw 7.3vw 4.86vw 18.47vw;
-    border-radius: 4.17vw 4.17vw 0 0;
-    border: var(--border);
+    border-radius: 4.17vw 0 0 4.17vw;
+    border-left: var(--border);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    border-right: 0.2vw solid transparent;
     color: var(--font-color);
     font-weight: normal;
 }
@@ -1736,8 +1763,8 @@ div.block-search {
     height: auto;
     background-color: var(--background);
     border-radius: 0 0 4.166vw 4.166vw;
-    border: var(--border);
     z-index: 101;
+    margin-top:2.78vw;
 }
 
 a.flex-search {
@@ -1747,6 +1774,7 @@ a.flex-search {
 
 a.flex-search:hover {
     background-color: var(--background-hover);
+    border-radius: 4.17vw;
 }
 
 div.flex-search {
@@ -1759,39 +1787,38 @@ div.flex-search:hover {
 }
 
 div.block-picture-drugs {
-    width: 22.47vw;
-    height: 15.97vw;
+    width: 25vw;
+    height: auto;
     border-radius: 0 0 0 2.08vw;
 }
 
 div.place-drugs-picture {
-    padding: 2.91vw 3.75vw;
+    padding: 2.78vw 5.56vw 2.78vw 2.78vw;
 }
 
 div.picture-drugs-absolute {
     position: relative;
-    width: 10.42vw;
-    height: 10.42vw;
+    width: 16.67vw;
+    height: 16.67vw;
 }
 
 img.picture-drugs-relative {
     position: absolute;
-    width: 10.42vw;
-    height: 10.42vw;
+    width: 16.67vw;
+    height: 16.67vw;
     border-radius: 2.08vw;
 }
 
 div.block-drugs-text-in {
     width: 100%;
-    height: 15.97vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-div.place-name-drugs-in {
-    padding-top: 2.64vw;
-}
 
 h1.name-drugs-in {
-    font-size: 3.89vw;
+    font-size: 4.4vw;
     font-weight: normal;
 }
 
@@ -1800,8 +1827,9 @@ div.place-middle-price-in {
 }
 
 h1.middle-price-in {
-    font-size: 3.05vw;
+    font-size: 3.3vw;
     font-weight: normal;
+    color:var(--font-color-c)
 }
 
 div.find-for-request-block {

@@ -1,0 +1,54 @@
+{
+    "Akmola":{
+        "Kokshetau":{
+            "kz": "Көкшетау",
+            "ru": "Кокшетау",
+            "en": "Kokshetau"
+        },
+        "Stepnogorsk":{
+            "kz": "Степногорск",
+            "ru": "Степногорск",
+            "en": "Stepnogorsk" 
+        },
+        "Atbasar":{
+            "kz": "Атбасар",
+            "ru": "Атбасар",
+            "en": "Atbasar" 
+        },
+        "Makinsk":{
+            "kz": "Макинск",
+            "ru": "Макинск",
+            "en": "Makinsk" 
+        },
+        "Akkol":{
+            "kz": "Ақкөл",
+            "ru": "Акколь",
+            "en": "Akkol" 
+        },
+        "Esil":{
+            "kz": "Есіл",
+            "ru": "Есиль",
+            "en": "Esil" 
+        },
+        "Ereymentau": {
+            "kz": "Ерейментау",
+            "ru": "Ерейментау",
+            "en": "Ereymentau"
+        },
+        "Derzhavinsk": {
+            "kz": "Державин",
+            "ru": "Державинск",
+            "en": "Derzhavinsk"
+        },
+        "Stepnyak": {
+            "kz": "Степняк",
+            "ru": "Степняк",
+            "en": "Stepnyak" 
+        },
+        "Shchuchinsk": {
+            "kz":"Щучинск",
+            "ru":"Щучинск",
+            "en":"Shchuchinsk"
+        }
+    }
+}
