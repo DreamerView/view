@@ -22,6 +22,11 @@ const DesktopBasketInfo = () => {
         setCheck('yes');
         dispatch({type:"Minus_Local",payload:1});
       };
+    const ChangeBasket = (basket) => {
+      let s = JSON.parse(localStorage.getItem('basket-info'));
+      s[basket.id].item = basket.s;
+      localStorage.setItem('basket-info',JSON.stringify(s));
+    };
     useEffect(()=>{
         setShow(store.l);
     },[store.l]);
@@ -39,7 +44,7 @@ const DesktopBasketInfo = () => {
         <h1 className="u-backet">Ваша корзина</h1>
         <h1 className="product-b">У вас в корзине {local} {word}</h1>
         <div className="grid-backet">
-            {localStorage.getItem('basket-info')?show.map(basket=><DesktopBasket remove={RemoveBasket} item={basket} key={basket.id}/>):""}
+            {localStorage.getItem('basket-info')?show.map(basket=><DesktopBasket change={ChangeBasket} remove={RemoveBasket} item={basket} key={basket.id}/>):""}
         </div>
         {local?<div className="payment">
             <div className="payment-block">

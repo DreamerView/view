@@ -23,9 +23,9 @@ const BasketMobile = (info) => {
         const s = docSnap.data();
         if(check) { 
           setStatus({title:s.title,content:s.content,price:s.price,image:s.image,id:s.id});
-          setPr((s.price*1).toFixed(0));
-          dispatch({type:"PutProduct",put:s.price});
-          dispatch({type:"AddTotalItem",send:1});
+          setPr((s.price*info.item.item).toFixed(0));
+          dispatch({type:"PutProduct",put:s.price*info.item.item});
+          dispatch({type:"AddTotalItem",send:info.item.item});
           // setLazyBlock(false);
         }
       }
@@ -42,7 +42,7 @@ const BasketMobile = (info) => {
     return () => {
       check=false;
     };
-  },[id,dispatch]);
+  },[id,dispatch,info.item.item]);
   const cost = status.price;
   // const cost = 100;
   const PlusSum = () => {
@@ -51,6 +51,7 @@ const BasketMobile = (info) => {
     setPr(((sum+1)*cost).toFixed(0));
     dispatch({type:"AddProduct",put:cost});
     dispatch({type:"AddTotalItem",send:1});
+    info.change({s:sum+1,id:info.item.id})
   };
   const MinusSum = () => {
     if(sum <= 1) return 0;
@@ -59,6 +60,7 @@ const BasketMobile = (info) => {
       setPr((pr-cost).toFixed(0));
       dispatch({type:"GetProduct",put:cost});
       dispatch({type:"GetTotalItem",send:1});
+      info.change({s:sum-1,id:info.item.id})
     }
   };
   const RemoveItem = () => {
@@ -84,6 +86,7 @@ const BasketMobile = (info) => {
       setPr(cost);
       dispatch({type:'AddProduct',put:cost});
       dispatch({type:'AddTotalItem',send:1});
+      info.change({s:1,id:info.item.id})
     }
   }
     return(
@@ -114,7 +117,7 @@ const BasketMobile = (info) => {
                   <div className="scary-turn-off">
                     <button type="button" onClick={MinusSum} className="button-minus">-</button>
                     <div className="one-block">
-                      <input onBlur={CheckValue} onInput={maxLengthCheck} maxLength="2" type="tel" pattern='[0-9]{2}' placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});dispatch({type:'GetTotalItem',send:sum});dispatch({type:'AddTotalItem',send:(e.target.value*1)});}} value={Number(sum).toString()} className="but-quantity" />
+                        <input onBlur={CheckValue} pattern='[0-9]{2}' onInput={maxLengthCheck} maxLength="2" type="tel" placeholder={sum} onChange={(e)=>{setPr((e.target.value*cost).toFixed(0));setSum(e.target.value*1);dispatch({type:'GetProduct',put:pr});dispatch({type:'AddProduct',put:e.target.value*cost});dispatch({type:'GetTotalItem',send:sum});dispatch({type:'AddTotalItem',send:(e.target.value*1)});info.change({s:(e.target.value*1),id:info.item.id})}} value={Number(sum).toString()} className="but-quantity" />
                     </div>
                     <button type="button" onClick={PlusSum} className="button-plus">+</button>
                   </div>

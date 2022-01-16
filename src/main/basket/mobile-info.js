@@ -16,6 +16,11 @@ const MobileBasketInfo = () => {
   },[])
   const [show,setShow] = useState(store.l);
   const [num,setNum] = useState(store.n);
+  const ChangeBasket = (basket) => {
+    let s = JSON.parse(localStorage.getItem('basket-info'));
+    s[basket.id].item = basket.s;
+    localStorage.setItem('basket-info',JSON.stringify(s));
+  };
   const RemoveBasket = (basket) => {
       setShow(show.filter(p=>p.id !==basket.id));
       setNum(num-1);
@@ -38,7 +43,7 @@ const MobileBasketInfo = () => {
             <h1 className="m-p">Ваша корзина</h1>
           <h1 className="m-p-content">У вас в корзине {local} товара</h1>
         <div className="your-text-block-place">
-            {localStorage.getItem('basket-info')?show.map(basket=><BasketMobile remove={RemoveBasket} item={basket} key={basket.id}/>):""}
+            {localStorage.getItem('basket-info')?show.map(basket=><BasketMobile change={ChangeBasket} remove={RemoveBasket} item={basket} key={basket.id}/>):""}
           {local?<div>
           <div className="size-block">
               <div className="order-block">

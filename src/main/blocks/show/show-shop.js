@@ -30,10 +30,18 @@ const ShowShop = () => {
         }
     },[]);
     const createLocal = useCallback((info)=>{
-        let s;
+        let s,t,l;
         if(localStorage.getItem('basket-info')) s=JSON.parse(localStorage.getItem('basket-info'));
         else s="";
-        setLocal([...s,info]);
+        if(localStorage.getItem('basket-info')) l=JSON.parse(localStorage.getItem('basket-info')).length;
+        else l=0;
+        t = {};
+        t.id = l;
+        t.key = info.key;
+        t.from = info.from;
+        t.item = info.item;
+        console.log(info);
+        setLocal([...s,t]);
         setInfo(info);
         setPopup(true);
         dispatch({type:"Add_Local",payload:1});
