@@ -188,10 +188,36 @@ div.m-s-fixed {
 }
 
 div.m-s {
-    width: 47.3vw;
+    width: 52.2vw;
     height: 4.375vw;
     position: relative;
     z-index:101;
+}
+
+div.m-s-flex {
+    display: flex;
+}
+
+div.m-s-flex-close {
+    width: 6.9vw;
+    height: 4.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:1.02vw;
+    font-weight: 300;
+    color:var(--font-color-c);
+    background-color: var(--background);
+    border-radius: 0 1.17vw 0 0;
+    border-right: var(--border);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    border-left: 0.078vw solid transparent;
+    cursor: pointer;
+}
+
+div.m-s-flex-close:hover {
+    background-color: var(--background-hover);
 }
 
 input.m-s-1 {
@@ -221,11 +247,14 @@ input.m-s-1-focus {
     background: url("images/search-active.svg") 2.14vw 1.56vw no-repeat;
     background-size: 1.32vw 1.32vw;
     background-color: var(--background);
-    width: 45.9vw;
+    width: 46.2vw;
     height: auto;
     padding: 1.4vw 0 1.4vw 5.9vw;
-    border: var(--border);
-    border-radius: 1.17vw 1.17vw 0 0;
+    border-left: var(--border);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    border-right: 0.078vw solid transparent;
+    border-radius: 1.17vw 0 0 0;
     outline: none;
     color: var(--font-color);
     font-size: 1.09vw;
@@ -1722,7 +1751,7 @@ h1.secure-privacy {
 div.block-search {
     position: absolute;
     display: block;
-    width: 51.87vw;
+    width: 52vw;
     height: auto;
     background-color: var(--background);
     border-radius: 0 0 1.17vw 1.17vw;
