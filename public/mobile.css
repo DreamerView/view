@@ -254,6 +254,7 @@ input.m-s-1 {
 
 input.m-s-1::placeholder {
     color: var(--font-color-c);
+    font-size: 4vw;
     font-weight: normal;
 }
 
@@ -271,6 +272,7 @@ input.m-s-1-focus {
     border-right: 0.2vw solid transparent;
     color: var(--font-color);
     font-weight: normal;
+    font-size:4vw;
 }
 
 
