@@ -257,8 +257,8 @@ input.m-s-1::placeholder {
     font-weight: normal;
 }
 
-input.m-s-1:focus {
-    background: url("images/search-active.svg") 6.69vw 5.3vw no-repeat;
+input.m-s-1-focus {
+    background: url("images/search-active.svg") 6.69vw 6vw no-repeat;
     background-size: 4.46vw auto;
     background-color: var(--background);
     width: 52.01vw;
@@ -1836,7 +1836,7 @@ div.find-for-request-block {
     width: 100%;
     height: 10.4vw;
     background-color: var(--background);
-    border-radius: 0 0 4.16vw 4.16vw;
+    border-radius: 4.16vw;
     cursor: pointer;
 }
 
