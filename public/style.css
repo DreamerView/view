@@ -209,11 +209,12 @@ input.m-s-1 {
 
 input.m-s-1::placeholder {
     color: var(--font-color-c);
-    font-weight: normal;
+    font-weight: 400;
     z-index:101;
+    font-size: 14px;
 }
 
-input.m-s-1:focus {
+input.m-s-1-focus {
     background: url("images/search-active.svg") 27.5px 20px no-repeat;
     background-size: 17px 17px;
     width: 588px;
@@ -225,6 +226,8 @@ input.m-s-1:focus {
     outline: none;
     color: var(--font-color);
     z-index:101;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 div.m-p-i {

@@ -15,13 +15,15 @@ const Search = () => {
     const [lazyblock,setLazyBlock] = useState('');
     const search = useSelector(state => state.search);
     const dispatch = useDispatch();
+    const [f,setF] = useState('');
     useEffect(()=>{
         setCheck(false);
         const CheckEvent = ()=> {
             setCheck(true);
             dispatch({type:'SetHeader',set:false});
             document.getElementsByTagName('html')[0].style.cssText= "overflow-y:hidden;";
-            setBlock('flex')
+            setBlock('flex');
+            setF('-focus');
         };
         const CheckRemove = ()=> {
             setTimeout(()=>{
@@ -29,6 +31,7 @@ const Search = () => {
                 dispatch({type:'SetHeader',set:true});
                 document.getElementsByTagName('html')[0].style.cssText= "";
                 setBlock('none');
+                setF('');
             },250);
         };
         focus.current.addEventListener('focus',CheckEvent);
@@ -74,9 +77,9 @@ const Search = () => {
         {check?<div className="m-s-fixed"/>:''}
         <div className="m-s">
             <div className="m-s-flex">
-                <input ref={focus} spellCheck="false" type="text" placeholder="Какой препарат мы будем искать?" onChange={(e)=>{setInputChange(e.target.value)}} className="m-s-1" />
+                <input ref={focus} spellCheck="false" type="text" placeholder="Какой препарат мы будем искать?" onChange={(e)=>{setInputChange(e.target.value)}} className={"m-s-1"+f} />
                 <div style={{display:block}} className="m-s-flex-close">
-                    Закрыть
+                    <div>Закрыть</div>
                     {/* <img src={process.env.PUBLIC_URL+"/images/close.svg"} alt="" className="m-s-flex-close-i" /> */}
                     </div>
             </div>

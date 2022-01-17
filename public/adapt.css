@@ -213,9 +213,11 @@ input.m-s-1 {
 input.m-s-1::placeholder {
     color: var(--font-color-c);
     font-weight: normal;
+    font-size: 1.09vw;
+    font-weight: 400;
 }
 
-input.m-s-1:focus {
+input.m-s-1-focus {
     background: url("images/search-active.svg") 2.14vw 1.56vw no-repeat;
     background-size: 1.32vw 1.32vw;
     background-color: var(--background);
@@ -226,6 +228,8 @@ input.m-s-1:focus {
     border-radius: 1.17vw 1.17vw 0 0;
     outline: none;
     color: var(--font-color);
+    font-size: 1.09vw;
+    font-weight: 400;
 }
 
 div.m-p-i {
