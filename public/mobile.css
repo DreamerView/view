@@ -1818,7 +1818,7 @@ div.block-drugs-text-in {
 
 
 h1.name-drugs-in {
-    font-size: 4.4vw;
+    font-size: 4.17vw;
     font-weight: normal;
 }
 
@@ -1855,10 +1855,9 @@ div.find-for-request-block:hover {
 }
 
 div.picture-drugs-block {
-    width: 10.97vw;
-    height: 10.97vw;
+    width: 16.67vw;
+    height: 16.67vw;
     border-radius: 2.08vw;
-    background-color: grey;
 }
 
 

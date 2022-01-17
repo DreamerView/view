@@ -4,13 +4,14 @@ import PanelList from "./panel-list";
 const Panel = () => {
     const [city,setCity] = useState('Loading');
     useEffect(()=>{
-        fetch('http://ip-api.com/json')
+        fetch('https://ipapi.co/json/')
         .then(function (response) {
             return response.json();
         })
         .then(function (payload) {
             setCity(payload.city);
-        });
+            // console.log(payload)
+        },"jsonp");
     },[]);
 
     return(
