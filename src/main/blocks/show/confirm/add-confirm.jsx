@@ -32,6 +32,7 @@ const AddConfirm = (close)=> {
         window.scrollTo({
           top:0
         });
+        document.getElementsByTagName('html')[0].style.cssText= "";
       };
       let word;
       switch(local) {
@@ -46,7 +47,7 @@ const AddConfirm = (close)=> {
             <div className="mobile-main-confirm-fixed-back" onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}}></div>
             <div className="mobile-main-confirm">
                 <div className="mobile-main-confirm-close">
-                    <div onClick={()=>{close.close(false)}} className="mobile-main-confirm-close-picture">
+                    <div onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}} className="mobile-main-confirm-close-picture">
                         <img className="mobile-main-confirm-close-image" src={`${process.env.PUBLIC_URL}/images/close.svg`} alt="Close"/>
                     </div>
                 </div>

@@ -33,6 +33,7 @@ const DesktopConfirm = (close) => {
         top:0,
         behavior: 'smooth'
       });
+      document.getElementsByTagName('html')[0].style.cssText= "";
     };
     let word;
       switch(local) {
@@ -82,7 +83,7 @@ const DesktopConfirm = (close) => {
           <div className="button-block-basket">
             {lazy?<Link onClick={ScrollToTop} to={`/basket`} className="basket-button-join">Перейти в корзину</Link>:<Link onClick={ScrollToTop} to={`${process.env.PUBLIC_URL}`} className="basket-button-join"><img src={process.env.PUBLIC_URL+"/images/loader.svg"} alt="" loading="lazy" className="show-button-loader" /></Link>}
             <div className="place-continue-buying">
-              {lazy?<button onClick={()=>{close.close(false)}} className="continue-buying">Продолжить покупки</button>:<div className="skeleton continue-buying-loader"/>}
+              {lazy?<button onClick={()=>{close.close(false);document.getElementsByTagName('html')[0].style.cssText= "";}} className="continue-buying">Продолжить покупки</button>:<div className="skeleton continue-buying-loader"/>}
             </div>
           </div>
         </div>
