@@ -460,8 +460,16 @@ h1.m-p-content {
     margin-top:2.25vw;
     font-weight: normal;
     font-size: 2.75vw;
-    text-align: center;
     color: var(--font-color);
+    display: flex;
+    justify-content: center;
+}
+
+a.m-p-content-url {
+    font-weight: normal;
+    font-size: 2.75vw;
+    color: var(--green);
+    margin-left: 1.39vw;
 }
 
 div.b {
@@ -1549,211 +1557,139 @@ div.mobile-shop-info-block-3-item-1-text-loader {
 
 /* Login */
 
-div.join-text-place {
-    padding-top: 8.33vw;
-    text-align: center;
-}
-
-h1.join-text {
-    font-size: 5.5vw;
-    font-weight: 600;
-    color: var(--font-color);
-}
-
-div.main-four-blocks-place {
-    width: 100%;
-    margin-top: 8.3vw;
-}
-
-div.main-four-blocks {
-    width: 100vw;
-    height: 229.86vw;
-    background-color: var(--background);
-    border-radius: 2.08vw;
-}
-
-div.place-three-blocks {
-    width: auto;
-    height: auto;
-    background-color: var(--background);
+div.login-form {
+    margin-top:13.89vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-div.first-block-in {
-    width: auto;
+div.login-form-content {
+    width: 94.4vw;
     height: auto;
-    background-color: var(--background);
-    order:3;
-    margin-left: 5.5vw;
-}
-
-h1.electron-addres {
-    font-size: 4.16vw;
-    font-weight: 700;
-    color: var(--font-color);
-}
-
-div.place-input-in {
-    margin-top: 0.83vw;
-}
-
-input.none-border {
-    width: 88.88vw;
-    height: 5.55vw;
-    border: none;
-    color: var(--font-color);
-    font-size: 4.72vw;
-    font-weight: normal;
-    padding-bottom: 2.78vw;
-    background-color: var(--background);
-    border-bottom:var(--border);
-    margin: 5.55vw 0 8.33vw 0;
-}
-
-input.none-border:focus {
-    font-size: 4.72vw;
-    font-weight: normal;
-    border-bottom: var(--green);
-    outline: none;
-}
-
-input.none-border::placeholder {
-    color:var(--font-color-c);
-    font-size: 4.72vw;
-    font-weight: 300;
-}
-
-div.place-button-in {
-    padding-top: 1.94vw;
-}
-
-button.button-join-in {
-    width: 88.88vw;
-    height: 16.38vw;
-    background-color: var(--green);
-    color: var(--background);
-    border: none;
-    border-radius: 0.69vw;
-    font-size: 3.88vw;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-button.button-join-in:hover {
-    background-color: var(--green-hover);
-}
-
-div.second-block-in {
     display: flex;
-    width: 88.9vw;
-    height:27.5vw;
-    background-color: var(--background);
-    order:2;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.login-form-select {
+    width: 94.4vw;
+    height: 22.08vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 5.5vw;
 }
 
-div.vertical-stick {
-    width: 34.16vw;
-    height: 0.2vw;
-    border-radius: 0.694vw;
-    border-bottom: var(--border);
-}
-
-div.place-or {
-    margin: 0 5.138vw 0 5.138vw;
-}
-
-h1.or {
-    font-size: 4.583vw;
-    font-weight: 600;
-}
-
-/* */
-div.third-block-in {
-    width: 100vw;
-    height: auto;
-    background-color: var(--background);
-    margin-left: 5.5vw;
-    order:1;
-}
-
-div.place-google-apple-facebook {
-    margin-top: 2.77vw;
-}
-
-button.google {
-    width: 88.88vw;
-    height: 15vw;
-    border-radius: 0.694vw;
-    background-color: var(--background);
-    border: var(--border);
-    cursor: pointer;
-    font-size: 3.611vw;
-    font-weight: 600;
+h1.login-form-select-text {
+    font-size: 4.03vw;
+    font-weight: normal;
     color: var(--font-color);
+    text-transform: uppercase;
+    margin: 0 8.14vw;
 }
 
-button.google:hover {
-    background-color: var(--background-hover);
-    transition: 10ms;
-}
-
-div.place-img-in-button {
-    margin-left: 5.833vw;
-    float: left;
-}
-
-img.img-in-button {
-    width: auto;
-    height: 5.555vw;
-}
-
-/* */
-
-div.four-block-in {
-    padding: 8.3vw 0;
-    width: 100vw;
+div.login-form-select-border {
+    width: 31.9vw;
     height: auto;
-    background-color: var(--background);
-    order:4;
+    border-top:var(--border)
 }
 
-div.place-registration {
+div.login-form-content-part {
+    width: 94.4vw;
+    height:auto;
+}
+
+div.login-form-content-part-1 {
+    width: 94.4vw;
+    height:auto;
+    margin-left:auto;
+    margin-bottom: 8.3vw
+}
+
+input.login-form-content-input {
+    background: url("images/person.svg") 6.69vw 4.3vw no-repeat;
+    background-size: 4.46vw auto;
+    width: 75.93vw;
+    height: auto;
+    border-radius:4.17vw;
+    border:var(--border);
+    color:var(--font-color);
+    padding:4.58vw 0 4.58vw 18.47vw;
+    margin-bottom: 5.5vw;
+    font-size: 4vw;
+    font-weight: normal;
+}
+
+input.login-form-content-input::placeholder {
+    color:var(--font-color-c);
+    font-weight: normal;
+    font-size: 4vw;
+}
+
+button.login-form-content-button {
+    width: 94.4vw;
+    height: 14.17vw;
+    background-color: var(--green);
+    border-radius: 4.17vw;
+    font-size: 4.03vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:var(--background);
+    cursor: pointer;
+    margin-bottom: 5.5vw;
+}
+
+button.login-form-content-button:hover {
+    background-color: var(--green-hover);
+}
+
+a.login-form-content-forget {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 300;
+    font-size:3.89vw;
     text-align: center;
 }
 
-h1.regis-text {
-    font-size: 3.88vw;
-    font-weight: normal;
-}
-
-div.place-secure-captcha {
-    margin-top: 8.88vw;
-}
-
-h1.secure-captcha {
-    font-size: 3.88vw;
-    font-weight: 600;
-    color: var(--font-color-c);
-}
-
-h1.secure-privacy {
-    margin-top: 2.7vw;
-    font-size: 3.88vw;
-    font-weight: normal;
-    color: var(--font-color-c);
-}
-
-button.regis-green {
-    color: var(--green);
-    border: none;
-    background-color: var(--background);
+button.login-form-content-sn {
+    width: 94.4vw;
+    height: 14.17vw;
+    color:var(--font-color);
+    border:var(--border);
+    border-radius: 4.17vw;
     cursor: pointer;
-    font-size: 2.75vw;
+    margin: 2.78vw 0;
+}
+
+button.login-form-content-sn:hover {
+    background-color: var(--background-hover);
+}
+
+div.login-form-content-sn-content {
+    display: flex;
+    width:100%;
+}
+
+div.login-form-content-sn-picture {
+    margin-left:4.3vw;
+    position: relative;
+    width: 6.67vw;
+    height: 6.67vw;
+}
+
+img.login-form-content-sn-image {
+    position:absolute;
+    width: auto;
+    height: 6.67vw;
+}
+
+span.login-form-content-sn-text {
+    margin-top:0.83vw;
+    width: 80%;
+    align-items: center;
+    font-size: 3.89vw;
+    font-weight: 600;
+    color:var(--font-color);
 }
 
 /* Search */

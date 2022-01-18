@@ -451,8 +451,16 @@ h1.m-p-content {
     margin-top: 0.78vw;
     font-weight: normal;
     font-size: 1vw;
-    text-align: center;
     color: var(--font-color);
+    display: flex;
+    justify-content: center;
+}
+
+a.m-p-content-url {
+    font-weight: normal;
+    font-size: 1vw;
+    color: var(--green);
+    margin-left: 0.39vw;
 }
 
 h1.m-p-1 {
@@ -1543,207 +1551,136 @@ div.h {
 
 /* Login */
 
-div.join-text-place {
-    text-align: center;
-}
-
-h1.join-text {
-    font-size: 1.95vw;
-    font-weight: 600;
-    color: var(--font-color);
-}
-
-div.main-four-blocks-place {
-    margin-top: 4.68vw;
-}
-
-div.main-four-blocks {
-    width: 97vw;
-    height: 39vw;
-    background-color: var(--background);
-    border-radius: 1.17vw;
-}
-
-div.place-three-blocks {
+div.login-form {
+    margin-top:4.69vw;
     display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-    width: 66.56vw;
-    height: 28.67vw;
-    background-color: var(--background);
-}
-
-div.first-block-in {
-    width: auto;
-    height: 18vw;
-    background-color: var(--background);
-    order:3;
-}
-
-h1.electron-addres {
-    font-size: 0.937vw;
-    font-weight: 700;
-    color: var(--font-color);
-}
-
-div.place-input-in {
-    margin-top: 0.468vw;
-}
-
-input.none-border {
-    width: 27.8vw;
-    height: 3.1vw;
-    border: none;
-    color: var(--font-color);
-    font-size: 1.25vw;
-    font-weight: normal;
-    background-color: var(--background);
-    border-bottom:var(--border);
-    margin-bottom: 1.64vw;
-}
-
-input.none-border:focus {
-    border-bottom: 0.03vw solid var(--green);
-    outline: none;
-}
-
-input.none-border::placeholder {
-    color: var(--font-color-c);
-    font-size: 1.25vw;
-    font-weight: normal;
-}
-
-div.place-button-in {
-    padding-top: 1.09vw;
-}
-
-button.button-join-in {
-    width: 27.8vw;
-    height: 3.82vw;
-    background-color: var(--green);
-    color: var(--background);
-    border: none;
-    border-radius: 0.39vw;
-    font-size: 1vw;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-button.button-join-in:hover {
-    background-color: var(--green-hover);
-}
-
-/* */
-div.second-block-in {
-    width: 10.4vw;
-    height: 18vw;
-    background-color: var(--background);
-    order:2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-div.vertical-stick {
-    margin-left: 0.468vw;
-    width: 0.038vw;
-    height: 6.95vw;
-    border-radius: 0.39vw;
-    border-left: var(--border);
+div.login-form-content {
+    width: 33.59vw;
+    height: 21.72vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-div.place-or {
-    margin: 1.48vw 0 1.48vw 0;
+div.login-form-select {
+    width: 6.56vw;
+    height: 21.72vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h1.or {
-    font-size: 0.937vw;
-    font-weight: 600;
-}
-
-/* */
-div.third-block-in {
-    width: 28.3vw;
-    height: 18vw;
-    background-color: var(--background);
-    order:1;
-}
-
-div.place-google-apple-facebook {
-    margin-top: 0.937vw;
-}
-
-button.google {
-    width: 27.96vw;
-    height: 4.76vw;
-    border-radius: 0.39vw;
-    background-color: var(--background);
-    border: var(--border);
-    cursor: pointer;
-    font-size: 1.17vw;
-    font-weight: 600;
+h1.login-form-select-text {
+    font-size: 1.25vw;
+    font-weight: normal;
     color: var(--font-color);
+    text-transform: uppercase;
+    margin: 2.23vw 0;
 }
 
-button.google:hover {
-    background-color: var(--border);
-    transition: 10ms;
-}
-
-div.place-img-in-button {
-    margin-left: 1.87vw;
-    float: left;
-}
-
-img.img-in-button {
+div.login-form-select-border {
     width: auto;
-    height: 1.7vw;
+    height: 7.8vw;
+    border-left:var(--border)
 }
 
-
-/* */
-
-div.four-block-in {
-    width: 66.56vw;
-    height: 10.4vw;
-    background-color: var(--background);
-    order:4;
+div.login-form-content-part {
+    width: 27.7vw;
+    height:auto;
 }
 
-div.place-registration {
-    text-align: center;
-    padding-top: 3.59vw;
+div.login-form-content-part-1 {
+    width: 27.7vw;
+    height:auto;
+    margin-left:auto;
 }
 
-h1.regis-text {
-    font-size: 1.09vw;
+input.login-form-content-input {
+    background: url("images/person.svg") 2.1vw 1.56vw no-repeat;
+    background-size: auto 1.33vw;
+    width: 21.8vw;
+    height: 4.22vw;
+    border-radius: 1.17vw;
+    border:var(--border);
+    color:var(--font-color);
+    padding:0 0 0 5.94vw;
+    margin-bottom: 1.4vw;
+    font-size: 1.02vw;
     font-weight: normal;
 }
 
-button.regis-green {
-    color: var(--green);
-    border: none;
-    background-color: var(--background);
-    cursor: pointer;
-    font-size: 1vw;
+input.login-form-content-input::placeholder {
+    color:var(--font-color-c);
+    font-weight: 300;
+    font-size: 1.02vw;
 }
 
-div.place-secure-captcha {
-    margin-top: 2.5vw;
-}
-
-h1.secure-captcha {
-    font-size: 1.09vw;
+button.login-form-content-button {
+    width: 27.7vw;
+    height: 4.22vw;
+    background-color: var(--green);
+    border-radius: 1.17vw;
+    font-size: 1.25vw;
     font-weight: 600;
-    color: var(--font-color-c);
+    text-transform: uppercase;
+    color:var(--background);
+    cursor: pointer;
+    margin-bottom: 1.4vw;
 }
 
-h1.secure-privacy {
-    font-size: 1vw;
-    font-weight: normal;
-    color: var(--font-color-c);
+button.login-form-content-button:hover {
+    background-color: var(--green-hover);
+}
+
+a.login-form-content-forget {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 300;
+    font-size:1.02vw;
+    text-align: center;
+}
+
+button.login-form-content-sn {
+    width: 27.7vw;
+    height: 4.22vw;
+    color:var(--font-color);
+    border:var(--border);
+    border-radius: 1.17vw;
+    cursor: pointer;
+    margin: 0.7vw 0;
+}
+
+button.login-form-content-sn:hover {
+    background-color: var(--background-hover);
+}
+
+div.login-form-content-sn-content {
+    display: flex;
+    width:100%;
+}
+
+div.login-form-content-sn-picture {
+    margin-left:2.34vw;
+    position: relative;
+    width: 1.95vw;
+    height: 1.95vw;
+}
+
+img.login-form-content-sn-image {
+    width: auto;
+    height: 1.95vw;
+}
+
+span.login-form-content-sn-text {
+    margin-top:0.23vw;
+    width: 70%;
+    align-items: center;
+    font-size: 1.02vw;
+    font-weight: 600;
+    color:var(--font-color);
 }
 
 /* Search */
