@@ -27,7 +27,7 @@
   
 @media (prefers-color-scheme: light) {
     :root {
-        --font-color:hsl(0, 0%, 0%);
+        --font-color:hsl(214, 24%, 11%);
         --font-color-c:hsl(225, 4%, 58%);
         --border:0.2vw solid hsl(210, 17%, 88%);
         --background:hsl(0, 0%, 100%);
@@ -36,7 +36,7 @@
         --background-green:hsl(120, 100%, 97%);
         --skeleton-start:hsl(0, 0%, 70%);
         --skeleton-end:hsl(0, 0%, 88%);
-        --popup-background:rgb(0,0,0,25%);
+        --popup-background:rgb(0,0,0,10%);
         --green:hsl(165, 99%, 35%);
         --green-hover:hsl(165, 100%, 25%);
         --exist:hsl(209, 100%, 55%);
@@ -196,7 +196,6 @@ div.m-s-fixed {
     height:100%;
     top:0;
     left:0;
-    /* background-color: var(--popup-background); */
     z-index:100;
     backdrop-filter: blur(1.1vw);
     -webkit-backdrop-filter:blur(1.1vw);
@@ -494,7 +493,7 @@ a.m-p-b {
 }
 
 a.m-p-b:hover {
-    border: 0.2vw solid var(--green-hover);
+    background-color: var(--background-hover);
 }
 
 div.m-i-1-1 {
@@ -1826,8 +1825,8 @@ div.mobile-main-confirm-fixed-back {
     top:0;
     width:100vw;
     height:100vh;
-    background-color: var(--popup-background);
     z-index:9999;
+    background-color: var(--popup-background);
     backdrop-filter: blur(1.1vw);
     -webkit-backdrop-filter:blur(1.1vw);
     touch-action: none;
@@ -1851,7 +1850,7 @@ div.mobile-main-confirm {
 @keyframes popup {
     from {
       -webkit-transform: translate(0,5%);
-      opacity: 0.5;
+      opacity: 0.95;
     }
     to {
       -webkit-transform: translate(0,0);
@@ -2027,10 +2026,33 @@ h1.menu-s-b-notification-text {
 @keyframes anim {
     from {
       -webkit-transform:scale(1);
-      opacity: 0.5;
-    }
-    to {
-      -webkit-transform:scale(0);
       opacity: 1;
     }
+    to {
+      -webkit-transform:scale(0.8);
+      opacity: 0;
+    }
+}
+
+div.lazy-loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 4.2vw;
+    width: 100vw;
+    height: 120vw;
+    border-radius: 4.2vw;
+    background-color: var(--background);
+}
+div.lazy-loading-1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 4.2vw;
+    width: 100vw;
+    height: 120vw;
+    border-radius: 4.2vw;
+    background-color: var(--background);
+}
+img.lazy-loading-img {
+    width: 20vw;
+    height: auto;
 }
