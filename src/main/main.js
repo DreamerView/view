@@ -1,22 +1,23 @@
-import Block1 from './blocks/block-1';
-import Block2 from './blocks/block-2';
+import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import ShowInfo from './blocks/show/show';
-import NotFoundPage from './blocks/notfound';
-import Basket from './basket/basket';
-import LoginForm from './login/login.js';
+const Block1 = React.lazy(()=> import('./blocks/block-1'));
+const Block2 = React.lazy(()=> import('./blocks/block-2'));
+const ShowInfo = React.lazy(()=> import('./blocks/show/show'));
+const Basket = React.lazy(()=> import('./basket/basket'));
+const LoginForm = React.lazy(()=> import('./login/login.js'));
+const NotFoundPage = React.lazy(()=> import('./blocks/notfound'));
 
 const Main = () => {
     return(
         <main>
             <Routes>
-              <Route path={"/"} element={<div><Block1/><Block2/></div>}/>
+              <Route path={"/"} element={<React.Suspense fallback={<div className='lazy-loading'><img loading='lazy' className='lazy-loading-img' src={process.env.PUBLIC_URL+"/images/lazy.svg"} alt="lazy"/></div>}><Block1/><Block2/></React.Suspense>}/>
               <Route path={"/foryou"} element={<div/>}/>
-              <Route path={"/basket"} element={<Basket/>}/>
+              <Route path={"/basket"} element={<React.Suspense fallback={<div className='lazy-loading-1'><img loading='lazy' className='lazy-loading-img' src={process.env.PUBLIC_URL+"/images/lazy.svg"} alt="lazy"/></div>}><Basket/></React.Suspense>}/>
               <Route path={"/favourite"} element={<div/>}/>
-              <Route path={"/user"} element={<LoginForm/>}/>
-              <Route path={"/products/:id"} element={<ShowInfo/>}/>
-              <Route path={"/*"} element={<NotFoundPage/>}/>
+              <Route path={"/user"} element={<React.Suspense fallback={<div className='lazy-loading-1'><img loading='lazy' className='lazy-loading-img' src={process.env.PUBLIC_URL+"/images/lazy.svg"} alt="lazy"/></div>}><LoginForm/></React.Suspense>}/>
+              <Route path={"/products/:id"} element={<React.Suspense fallback={<div className='lazy-loading-1'><img loading='lazy' className='lazy-loading-img' src={process.env.PUBLIC_URL+"/images/lazy.svg"} alt="lazy"/></div>}><ShowInfo/></React.Suspense>}/>
+              <Route path={"/*"} element={<React.Suspense fallback={<div className='lazy-loading-1'><img loading='lazy' className='lazy-loading-img' src={process.env.PUBLIC_URL+"/images/lazy.svg"} alt="lazy"/></div>}><NotFoundPage/></React.Suspense>}/>
             </Routes>
         </main>
     );

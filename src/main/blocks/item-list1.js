@@ -5,12 +5,15 @@ import { getFirestore, collection, onSnapshot } from "firebase/firestore";
 const ItemList1 = () => {
     const [posts,setPosts] = useState([{id:1},{id:2},{id:3},{id:4},{id:5}]);
     useEffect(()=> {
+        let status = true;
         const db = getFirestore();
         onSnapshot(collection(db, "list"),(result) => {
-            setPosts(result.docs.map(doc=>doc.data()));
+            if(status) setPosts(result.docs.map(doc=>doc.data()));
         });
-    },[])
-    // console.log(p);
+        return () => {
+            status = false;
+        }
+    },[]);
     return(
     <div className="b">
         {posts.map(post=>

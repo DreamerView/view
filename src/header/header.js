@@ -1,11 +1,13 @@
-import Catalog from './catalog/catalog';
-import Show from './show/show';
+// import Catalog from './catalog/catalog';
+import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import MenuList from './menu/menu-list';
 import Panel from './panel/panel';
 import Search from './search/search.jsx';
 import { useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
+const Catalog = React.lazy(()=> import('./catalog/catalog'));
+const Show = React.lazy(()=> import('./show/show'));
 
 const Header = () => {
   const header = useSelector(state=>state.header);
@@ -41,8 +43,8 @@ const Header = () => {
             <MenuList/>
             {/* Catalog */}
             <Routes>
-              <Route path={"/"} element={<Catalog/>}/>
-              <Route path={"/products/:id"} element={<Show/>} />
+              <Route path={"/"} element={<React.Suspense fallback={<div>Loading</div>}><Catalog/></React.Suspense>}/>
+              <Route path={"/products/:id"} element={<React.Suspense fallback={<div>Loading</div>}><Show/></React.Suspense>} />
               <Route path={"/foryou"} element={<div/>}/>
               <Route path={"/basket"} element={<div/>}/>
               <Route path={"/favourite"} element={<div/>}/>

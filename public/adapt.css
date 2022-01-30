@@ -29,7 +29,7 @@
   
 @media (prefers-color-scheme: light) {
     :root {
-        --font-color:hsl(0, 0%, 0%);
+        --font-color:hsl(214, 24%, 11%);
         --font-color-c:hsl(225, 4%, 58%);
         --border:0.078vw solid hsl(210, 17%, 88%);
         --background:hsl(0, 0%, 100%);
@@ -38,7 +38,7 @@
         --background-green:hsl(120, 100%, 97%);
         --skeleton-start:hsl(0, 0%, 70%);
         --skeleton-end:hsl(0, 0%, 88%);
-        --popup-background:rgb(0,0,0,25%);
+        --popup-background:rgb(0,0,0,10%);
         --green:hsl(165, 99%, 35%);
         --green-hover:hsl(165, 100%, 25%);
         --exist:hsl(209, 100%, 55%);
@@ -179,8 +179,8 @@ div.m-s-fixed {
     height:100%;
     top:0;
     left:0;
-    background-color: var(--popup-background);
     z-index:100;
+    background-color: var(--popup-background);
     backdrop-filter: blur(0.3125vw);
     -webkit-backdrop-filter:blur(0.3125vw);
     touch-action: none;
@@ -1259,11 +1259,11 @@ div.backet-p {
 @keyframes anim {
     from {
       -webkit-transform:scale(1);
-      opacity: 0.5;
+      opacity: 1;
     }
     to {
-      -webkit-transform:scale(0);
-      opacity: 1;
+      -webkit-transform:scale(0.8);
+      opacity: 0;
     }
 }
 
@@ -1849,13 +1849,13 @@ div.basket-float-window {
 @keyframes popup {
     from {
       -webkit-transform: translate(-50%, -50%) scale(0.95);
-      opacity: 0.5;
+      opacity: 0;
     }
     to {
       -webkit-transform: translate(-50%, -50%) scale(1);
       opacity: 1;
     }
-}
+  }
 
 div.place-block-text {
     margin-left: 3.1vw;
@@ -2069,4 +2069,31 @@ h1.menu-s-b-notification-text {
     font-size:0.78vw;
     font-weight: normal;
     color:white;
+}
+div.lazy-loading {
+    width: calc(100% - 0.78vw);
+    height: auto;
+    background-color: var(--background);
+    border-radius: 1.17vw;
+    margin-top: 1.17vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4.69vw 0;
+    display: flex;
+    justify-content: center;
+}
+div.lazy-loading-1 {
+    width: calc(100% - 0.78vw);
+    height: 42.73vw;
+    background-color: var(--background);
+    border-radius: 1.17vw;
+    margin-top: 1.17vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+img.lazy-loading-img {
+    width: 7.8vw;
+    height: auto;
 }
