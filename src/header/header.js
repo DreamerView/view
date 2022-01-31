@@ -1,13 +1,12 @@
-// import Catalog from './catalog/catalog';
-import React from 'react';
+import {lazy,Suspense} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import MenuList from './menu/menu-list';
 import Panel from './panel/panel';
 import Search from './search/search.jsx';
 import { useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
-const Catalog = React.lazy(()=> import('./catalog/catalog'));
-const Show = React.lazy(()=> import('./show/show'));
+const Catalog = lazy(()=> import('./catalog/catalog'));
+const Show = lazy(()=> import('./show/show'));
 
 const Header = () => {
   const header = useSelector(state=>state.header);
@@ -43,14 +42,13 @@ const Header = () => {
             <MenuList/>
             {/* Catalog */}
             <Routes>
-              <Route path={"/"} element={<React.Suspense fallback={<div>Loading</div>}><Catalog/></React.Suspense>}/>
-              <Route path={"/products/:id"} element={<React.Suspense fallback={<div>Loading</div>}><Show/></React.Suspense>} />
+              <Route path={"/"} element={<Suspense fallback={<div>Loading</div>}><Catalog/></Suspense>}/>
+              <Route path={"/products/:id"} element={<Suspense fallback={<div>Loading</div>}><Show/></Suspense>} />
               <Route path={"/foryou"} element={<div/>}/>
               <Route path={"/basket"} element={<div/>}/>
               <Route path={"/favourite"} element={<div/>}/>
               <Route path={"/user"} element={<div/>}/>
               <Route path={"/*"} element={<div/>}/>
-              {/* <Route path="*" element={<div>Not found</div>} /> */}
             </Routes>
           </div>
         </div>

@@ -8,7 +8,7 @@ const LoginForm = () => {
               <div className="login-form-content">
                 <div className="login-form-content-part">
                   <input type="text" placeholder="Телефон или email" className="login-form-content-input" />
-                  <input type="text" placeholder="Пароль" className="login-form-content-input" />
+                  <input type="password" placeholder="Пароль" className="login-form-content-password" />
                   <button type="button" className="login-form-content-button">Войти</button>
                   <a href="s" className="login-form-content-forget">Забыли пароль?</a>
                 </div>
