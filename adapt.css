@@ -1599,7 +1599,7 @@ div.login-form-content-part-1 {
 }
 
 input.login-form-content-input {
-    background: url("images/person.svg") 2.1vw 1.56vw no-repeat;
+    background: url("images/person.svg") 2.1vw 1.4vw no-repeat;
     background-size: auto 1.33vw;
     width: 21.8vw;
     height: 4.22vw;
@@ -1614,7 +1614,27 @@ input.login-form-content-input {
 
 input.login-form-content-input::placeholder {
     color:var(--font-color-c);
-    font-weight: 300;
+    font-weight: normal;
+    font-size: 1.02vw;
+}
+
+input.login-form-content-password {
+    background: url("images/unlocked.svg") 2.1vw 1.4vw no-repeat;
+    background-size: auto 1.33vw;
+    width: 21.8vw;
+    height: 4.22vw;
+    border-radius: 1.17vw;
+    border:var(--border);
+    color:var(--font-color);
+    padding:0 0 0 5.94vw;
+    margin-bottom: 1.4vw;
+    font-size: 1.02vw;
+    font-weight: normal;
+}
+
+input.login-form-content-password::placeholder {
+    color:var(--font-color-c);
+    font-weight: normal;
     font-size: 1.02vw;
 }
 

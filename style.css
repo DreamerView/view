@@ -1613,7 +1613,7 @@ div.login-form-content-part-1 {
 }
 
 input.login-form-content-input {
-    background: url("images/person.svg") 27.5px 20px no-repeat;
+    background: url("images/person.svg") 27.5px 18px no-repeat;
     background-size: auto 17px;
     width: 279px;
     height: 54px;
@@ -1628,7 +1628,27 @@ input.login-form-content-input {
 
 input.login-form-content-input::placeholder {
     color:var(--font-color-c);
-    font-weight: 300;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+input.login-form-content-password {
+    background: url("images/unlocked.svg") 27.5px 18px no-repeat;
+    background-size: auto 17px;
+    width: 279px;
+    height: 54px;
+    border-radius: 15px;
+    border:var(--border);
+    color:var(--font-color);
+    padding:0 0 0 76px;
+    margin-bottom: 18px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+input.login-form-content-password::placeholder {
+    color:var(--font-color-c);
+    font-weight: normal;
     font-size: 13px;
 }
 
